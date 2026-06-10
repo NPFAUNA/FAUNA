@@ -23,35 +23,35 @@ const programs = [
     icon: Scissors,
     title: "Spay Natchitoches",
     description: "Affordable spay and neuter services to reduce overpopulation and improve pet health.",
-    color: "bg-blue-100 text-blue-700",
+    color: "bg-[#0099FF]/10 text-[#0099FF]",
     href: "/programs#spay",
   },
   {
     icon: Cat,
     title: "TNR Program",
     description: "Trap-Neuter-Return humanely manages community cat populations across the parish.",
-    color: "bg-orange-100 text-orange-700",
+    color: "bg-[#33CCCC]/10 text-[#33CCCC]",
     href: "/programs#tnr",
   },
   {
     icon: Stethoscope,
     title: "Community Health Fairs",
     description: "Mobile wellness clinics with bath & nail days, vaccines, and microchipping events.",
-    color: "bg-teal-100 text-teal-700",
+    color: "bg-[#33CCCC]/10 text-[#33CCCC]",
     href: "/programs#health",
   },
   {
     icon: Truck,
     title: "Emergency Transport",
     description: "Rapid-response transport moving animals in crisis situations to safety.",
-    color: "bg-red-100 text-red-700",
+    color: "bg-[#0099FF]/10 text-[#0099FF]",
     href: "/programs#transport",
   },
   {
     icon: Home,
     title: "Foster Network",
     description: "A caring volunteer network providing temporary shelter and rehabilitation.",
-    color: "bg-sky-100 text-[#33CCCC]",
+    color: "bg-[#8AFF00]/10 text-[#4a8800]",
     href: "/adopt-foster",
   },
 ]
@@ -68,45 +68,62 @@ export default function HomePage() {
     <main>
       {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,119,6,0.4),transparent)]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
-          <div className="max-w-2xl">
-            <span className="inline-block bg-[#33CCCC]/90 text-white text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
-              Natchitoches Parish, LA · 501(c)(3) Nonprofit
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              Because Every Animal
-              <span className="text-[#8AFF00] block mt-1">Deserves a Home</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-sky-50 mb-8 leading-relaxed">
-              FAUNA is an all-volunteer animal rescue serving Natchitoches Parish — providing shelter,
-              medical care, community programs, and second chances since 2022.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/adopt-foster">
-                <Button size="lg" className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold text-base px-6">
-                  Adopt or Foster
-                </Button>
-              </Link>
-              <Link href="/donate">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 font-semibold text-base px-6 bg-transparent"
-                >
-                  <Heart className="h-4 w-4 mr-2" />
-                  Support Our Mission
-                </Button>
-              </Link>
-              <Link href="/programs">
-                <Button
-                  size="lg"
-                  variant="ghost"
-                  className="text-sky-100 hover:text-white hover:bg-white/10 font-semibold text-base px-6"
-                >
-                  Our Programs <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </Link>
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(138,255,0,0.3),transparent)]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Text */}
+            <div>
+              <span className="inline-block bg-[#33CCCC]/90 text-white text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
+                Natchitoches Parish, LA &middot; 501(c)(3) Nonprofit
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                Because Every Animal
+                <span className="text-[#8AFF00] block mt-1">Deserves a Home</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-sky-50 mb-8 leading-relaxed">
+                FAUNA is an all-volunteer animal rescue serving Natchitoches Parish — providing shelter,
+                medical care, community programs, and second chances since 2022.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/adopt-foster">
+                  <Button size="lg" className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold text-base px-6">
+                    Adopt or Foster
+                  </Button>
+                </Link>
+                <Link href="/donate">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white/10 font-semibold text-base px-6 bg-transparent"
+                  >
+                    <Heart className="h-4 w-4 mr-2" />
+                    Support Our Mission
+                  </Button>
+                </Link>
+                <Link href="/programs">
+                  <Button
+                    size="lg"
+                    variant="ghost"
+                    className="text-sky-100 hover:text-white hover:bg-white/10 font-semibold text-base px-6"
+                  >
+                    Our Programs <ArrowRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Logo */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="bg-white rounded-3xl shadow-2xl p-6 lg:p-8 w-full max-w-sm">
+                <Image
+                  src="/fauna-logo.png"
+                  alt="FAUNA – Friends All United for Natchitoches Animals"
+                  width={400}
+                  height={454}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -162,6 +179,7 @@ export default function HomePage() {
                 alt="Animals in FAUNA's care"
                 fill
                 className="object-cover"
+                unoptimized
                 priority
               />
             </div>
@@ -190,7 +208,7 @@ export default function HomePage() {
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${p.color}`}>
                       <p.icon className="h-6 w-6" />
                     </div>
-                    <h3 className="font-bold text-[#0a1e3d] text-lg mb-2 group-hover:text-[#33CCCC] transition-colors">
+                    <h3 className="font-bold text-[#0a1e3d] text-lg mb-2 group-hover:text-[#0099FF] transition-colors">
                       {p.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{p.description}</p>
@@ -219,11 +237,12 @@ export default function HomePage() {
                 alt="New FAUNA Pet Adoption & Welfare Center under construction"
                 fill
                 className="object-cover"
+                unoptimized
               />
             </div>
             <div className="order-1 lg:order-2">
               <span className="inline-block bg-sky-100 text-[#0077aa] text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                🏗️ Construction Underway
+                Construction Underway
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1e3d] mb-4">
                 Building Brighter Futures for Pets

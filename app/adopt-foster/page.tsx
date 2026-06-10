@@ -229,12 +229,6 @@ export default function AdoptFosterPage() {
                 Every dog and cat in FAUNA&apos;s care arrived frightened, uncertain — but
                 <strong> full of potential</strong> to love and be loved.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                Local animal-control facilities give strays just <strong className="text-red-600">seven days</strong> before
-                euthanasia. Owner-surrendered pets receive no grace period at all.
-                When you adopt from FAUNA, you give an animal who has run out of time the chance
-                to begin an entirely new story.
-              </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 All FAUNA animals are spayed or neutered, vaccinated, and microchipped before
                 going home. You&apos;re not just adopting a pet — you&apos;re joining a community of people

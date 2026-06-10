@@ -45,18 +45,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Intro Context */}
-      <section className="bg-amber-50 border-b border-amber-200 py-6">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-amber-900 text-sm md:text-base font-medium">
-            Local animal-control facilities give strays{" "}
-            <strong className="text-amber-700">only 7 days on Facebook</strong> before being put down.{" "}
-            Owner-surrendered pets receive <strong className="text-amber-700">no grace period at all.</strong>{" "}
-            Spaying and neutering isn&apos;t simply wise—it is an urgent, lifesaving act.
-          </p>
-        </div>
-      </section>
-
       {/* ── Spay Natchitoches ── */}
       <section id="spay" className="py-20 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4">
@@ -73,7 +61,6 @@ export default function ProgramsPage() {
               <ul className="space-y-2 mb-6">
                 {[
                   "Thousands of unwanted litters are born in Natchitoches Parish every year.",
-                  "Strays at local animal control have only 7 days before they may be euthanized.",
                   "Preventive care is the only long-term solution.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
