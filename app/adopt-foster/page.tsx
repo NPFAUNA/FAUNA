@@ -66,7 +66,7 @@ export default function AdoptFosterPage() {
       <section className="relative overflow-hidden bg-[#061424] text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src={`${BASE22}/315084086_144718381640650_1920145290093752988_n.jpg`}
+           src={`${BASE05}/79.png`}
             alt="FAUNA rescue animals"
             fill
             className="object-cover"
