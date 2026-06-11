@@ -20,10 +20,9 @@ const photos = [
 ]
 
 const stats = [
-  { value: "92%",    label: "Live-Release Rate" },
-  { value: "2,500+", label: "Pets Saved Last Year" },
-  { value: "200+",   label: "Free Vaccines Given" },
-  { value: "150+",   label: "Community Cats TNR'd" },
+  { value: "97.5%",    label: "Live-Release Rate" },
+  { value: "482",   label: "Free Vaccines Given" },
+  { value: "251",   label: "Community Cats TNR'd" },
 ]
 
 export default function EmploymentPage() {
