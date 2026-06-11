@@ -14,7 +14,7 @@ const navItems = [
   { href: "/adopt-foster", label: "Adopt or Foster" },
   { href: "/events", label: "Events" },
   { href: "/employment", label: "Employment" },
-  { href: "/capital-campaign", label: "Friedman Center" },
+  { href: "/capital-campaign", label: "Edwina & Sam Friedman Pet Adoption and Welfare Center" },
   { href: "/resources", label: "Resources" },
 ]
 
