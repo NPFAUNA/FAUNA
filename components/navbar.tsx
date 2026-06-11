@@ -29,7 +29,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 py-1.5">
             <Image
-              src="/fauna-logo.png"
+              src="/fauna-footer-logo.png"
               alt="FAUNA – Friends All United for Natchitoches Animals"
               width={46}
               height={50}
