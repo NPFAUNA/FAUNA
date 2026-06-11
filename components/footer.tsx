@@ -22,11 +22,13 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-white rounded-xl p-1.5 shrink-0">
                 <Image
-                  src="/fauna-logo.png"
-                  alt="FAUNA"
-                  width={48}
-                  height={52}
-                  className="object-contain"
+        src="/fauna-footer-logo.png"
+        alt="FAUNA - Friends All United for Natchitoches Animals"
+        width={180}
+        height={180}
+        className="h-auto w-auto max-w-[180px]"
+        priority
+      />
                 />
               </div>
               <div>
