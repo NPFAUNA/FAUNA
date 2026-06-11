@@ -39,9 +39,9 @@ export default function EmploymentPage() {
               <span className="text-[#33CCCC]">Into a Career</span>
             </h1>
             <p className="text-sky-100 text-lg leading-relaxed mb-8">
-              Join the team that gave <strong className="text-[#8AFF00]">2,500+ pets</strong> a second
+              Join the team that gave <strong className="text-[#8AFF00]">2,thousands of pets a second
               chance last year and drives FAUNA&apos;s{" "}
-              <strong className="text-[#8AFF00]">92% live-release rate</strong>.
+              <strong className="text-[#8AFF00]">97.5% live-release rate</strong>.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="https://fauna.bamboohr.com/careers" target="_blank" rel="noopener noreferrer">
@@ -50,7 +50,7 @@ export default function EmploymentPage() {
     Some positions do not have a confirmed start date yet. Start dates will coincide with
     the opening of the new{" "}
     <strong className="text-[#8AFF00]">
-      Edwina and Sam Friedman Pet Adoption and Welfare Center
+      Edwina &  Sam Friedman Pet Adoption and Welfare Center
     </strong>
     , coming soon. Interested candidates are encouraged to apply now through FAUNA&apos;s
     careers page.
