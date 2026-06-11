@@ -29,7 +29,6 @@ export function Footer() {
         className="h-auto w-auto max-w-[180px]"
         priority
       />
-                />
               </div>
               <div>
                 <span className="font-extrabold text-xl block leading-tight">FAUNA</span>
