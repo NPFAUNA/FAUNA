@@ -3,121 +3,111 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Home, Scissors, Cat, Stethoscope, Truck, ArrowRight, Star, Users, Award } from "lucide-react"
+import { Heart, Home, Scissors, Cat, Stethoscope, Truck, ArrowRight, Users, PawPrint } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Building a Future for Natchitoches Parish Animals",
+  title: "FAUNA | Friends All United for Natchitoches Animals",
   description:
-    "FAUNA is an all-volunteer 501(c)(3) animal rescue in Natchitoches, LA offering foster care, spay/neuter, TNR, community health fairs, and emergency transport.",
+    "FAUNA is a nonprofit animal rescue serving Natchitoches Parish through rescue, foster care, adoption, transport, spay and neuter advocacy, and community outreach.",
 }
+
+const BASE05 = "http://www.npfauna.org/wp-content/uploads/2026/05"
+
+const stats = [
+  { value: "0", label: "Live Release Rate" },
+  { value: "0", label: "Dog Intake" },
+  { value: "0", label: "Dogs Adopted" },
+  { value: "0", label: "Dogs Transported" },
+  { value: "0", label: "Cat Intake" },
+  { value: "0", label: "Cats Adopted" },
+  { value: "0", label: "Cats Transported" },
+]
 
 const programs = [
   {
-    icon: Star,
-    title: "PACT Therapy",
-    description: "Pet-Assisted Crisis & Trauma therapy using the healing power of the human-animal bond.",
-    color: "bg-purple-100 text-purple-700",
+    icon: Scissors,
+    title: "Spay Natchitoches",
+    description: "Helping reduce pet overpopulation through spay and neuter advocacy and assistance.",
+    href: "/programs#spay",
+  },
+  {
+    icon: Heart,
+    title: "PACT",
+    description: "Providing Animal Comfort Therapy through the healing power of the human-animal bond.",
     href: "/programs#pact",
   },
   {
-    icon: Scissors,
-    title: "Spay Natchitoches",
-    description: "Affordable spay and neuter services to reduce overpopulation and improve pet health.",
-    color: "bg-[#0099FF]/10 text-[#0099FF]",
-    href: "/programs#spay",
+    icon: Stethoscope,
+    title: "Community Pet Bath & Health Fairs",
+    description: "Supporting pets and families through outreach, wellness, and community care events.",
+    href: "/programs#health",
   },
   {
     icon: Cat,
     title: "TNR Program",
-    description: "Trap-Neuter-Return humanely manages community cat populations across the parish.",
-    color: "bg-[#33CCCC]/10 text-[#33CCCC]",
+    description: "Trap-Neuter-Return helps humanely manage community cat populations.",
     href: "/programs#tnr",
   },
   {
-    icon: Stethoscope,
-    title: "Community Health Fairs",
-    description: "Mobile wellness clinics with bath & nail days, vaccines, and microchipping events.",
-    color: "bg-[#33CCCC]/10 text-[#33CCCC]",
-    href: "/programs#health",
-  },
-  {
     icon: Truck,
-    title: "Emergency Transport",
-    description: "Rapid-response transport moving animals in crisis situations to safety.",
-    color: "bg-[#0099FF]/10 text-[#0099FF]",
+    title: "Emergency Transportation",
+    description: "Helping move animals in urgent situations toward safety and care.",
     href: "/programs#transport",
   },
-  {
-    icon: Home,
-    title: "Foster Network",
-    description: "A caring volunteer network providing temporary shelter and rehabilitation.",
-    color: "bg-[#8AFF00]/10 text-[#4a8800]",
-    href: "/adopt-foster",
-  },
-]
-
-const stats = [
-  { value: "500+", label: "Animals Rescued" },
-  { value: "200+", label: "Spay/Neuters Performed" },
-  { value: "150+", label: "TNR Cats Returned" },
-  { value: "3+", label: "Years Serving Natchitoches" },
 ]
 
 export default function HomePage() {
   return (
     <main>
-      {/* ── Hero ── */}
-      <section className="relative bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(138,255,0,0.3),transparent)]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] text-white">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(138,255,0,0.35),transparent)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text */}
             <div>
               <span className="inline-block bg-[#33CCCC]/90 text-white text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
                 Natchitoches Parish, LA &middot; 501(c)(3) Nonprofit
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Because Every Animal
-                <span className="text-[#8AFF00] block mt-1">Deserves a Home</span>
+                Building a More Compassionate Future
+                <span className="text-[#8AFF00] block mt-1">for Animals in Natchitoches Parish</span>
               </h1>
-              <p className="text-lg sm:text-xl text-sky-50 mb-8 leading-relaxed">
-                FAUNA is an all-volunteer animal rescue serving Natchitoches Parish — providing shelter,
-                medical care, community programs, and second chances since 2022.
+              <p className="text-lg sm:text-xl text-sky-50 mb-4 leading-relaxed">
+                FAUNA is dedicated to rescuing homeless and neglected animals, supporting responsible pet
+                ownership, and expanding lifesaving opportunities throughout Natchitoches Parish.
+              </p>
+              <p className="text-base sm:text-lg text-sky-100 mb-8 leading-relaxed">
+                What began as a community-driven effort has grown into a parish-wide movement focused on rescue,
+                foster care, adoption, transport partnerships, spay and neuter advocacy, and outreach programs.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/adopt-foster">
-                  <Button size="lg" className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold text-base px-6">
-                    Adopt or Foster
+                  <Button size="lg" className="bg-[#0099FF] hover:bg-[#007acc] text-white font-semibold text-base px-6">
+                    Meet Adoptable Pets
                   </Button>
                 </Link>
                 <Link href="/donate">
+                  <Button size="lg" className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold text-base px-6">
+                    <Heart className="h-4 w-4 mr-2" />
+                    Support FAUNA
+                  </Button>
+                </Link>
+                <Link href="/capital-campaign">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10 font-semibold text-base px-6 bg-transparent"
                   >
-                    <Heart className="h-4 w-4 mr-2" />
-                    Support Our Mission
-                  </Button>
-                </Link>
-                <Link href="/programs">
-                  <Button
-                    size="lg"
-                    variant="ghost"
-                    className="text-sky-100 hover:text-white hover:bg-white/10 font-semibold text-base px-6"
-                  >
-                    Our Programs <ArrowRight className="h-4 w-4 ml-2" />
+                    New Adoption Center
                   </Button>
                 </Link>
               </div>
             </div>
 
-            {/* Right: Logo */}
             <div className="flex justify-center lg:justify-end">
               <div className="bg-white rounded-3xl shadow-2xl p-6 lg:p-8 w-full max-w-sm">
                 <Image
-                  src="/fauna-footer-logo.png"
-                  alt="FAUNA – Friends All United for Natchitoches Animals"
+                  src="/fauna-logo.png"
+                  alt="FAUNA - Friends All United for Natchitoches Animals"
                   width={400}
                   height={454}
                   className="w-full h-auto"
@@ -129,13 +119,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Stats Bar ── */}
-      <section className="bg-[#0099FF] text-white py-8">
+      <section className="bg-[#0099FF] text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-extrabold">2025 By the Numbers</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 text-center">
             {stats.map((s) => (
               <div key={s.label}>
-                <div className="text-3xl font-extrabold text-[#8AFF00]">{s.value}</div>
+                <div className="text-4xl font-extrabold text-[#8AFF00]">{s.value}</div>
                 <div className="text-sm text-sky-100 mt-1">{s.label}</div>
               </div>
             ))}
@@ -143,133 +135,154 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── About ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
-              <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">Who We Are</span>
+              <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">Programs &amp; Services</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1e3d] mt-2 mb-5">
-                Friends All United for Natchitoches Animals
+                Supporting Pets &amp; the People Who Love Them
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Formed in 2022 from the merger of two long-standing local rescues, FAUNA runs entirely
-                on the dedication of volunteers and the generosity of our community. We are a 501(c)(3)
-                nonprofit committed to humane care for every animal in Natchitoches Parish.
-              </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Our mission is to advocate for homeless and neglected animals, connect them with loving
-                families, and build a community of responsible pet owners — striving every day toward a
-                low-kill parish.
+                FAUNA hosts programs designed to help pet owners and stray animals across Natchitoches Parish
+                create the best quality of life for their pets.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="space-y-4">
+                {programs.map((program) => (
+                  <Link key={program.title} href={program.href} className="block group">
+                    <Card className="border-0 shadow-md group-hover:shadow-xl transition-all duration-200">
+                      <CardContent className="p-5 flex gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-[#33CCCC]/10 text-[#33CCCC] flex items-center justify-center shrink-0">
+                          <program.icon className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-[#0a1e3d] group-hover:text-[#0099FF] transition-colors">
+                            {program.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{program.description}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-8">
                 <Link href="/programs">
-                  <Button className="bg-[#0099FF] hover:bg-[#007acc] text-white">Our Programs</Button>
-                </Link>
-                <Link href="/adopt-foster">
-                  <Button variant="outline" className="border-[#0099FF] text-[#0099FF] hover:bg-sky-50">
-                    Adopt or Foster
+                  <Button className="bg-[#0099FF] hover:bg-[#007acc] text-white">
+                    Learn More About How FAUNA Serves the Community
+                    <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="relative h-80 lg:h-[420px] rounded-2xl overflow-hidden bg-sky-100 shadow-xl">
+
+            <div className="relative h-80 lg:h-[520px] rounded-3xl overflow-hidden bg-sky-100 shadow-xl">
               <Image
-                src="https://www.npfauna.org/wp-content/uploads/2025/07/F40-1-1024x683.jpg"
-                alt="Animals in FAUNA's care"
+                src={`${BASE05}/FAUNA-ProgramsGIF.gif`}
+                alt="FAUNA programs supporting animals and the community"
                 fill
                 className="object-cover"
                 unoptimized
-                priority
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Programs ── */}
       <section className="py-20 bg-sky-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">What We Do</span>
+            <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">Adopt or Foster</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1e3d] mt-2 mb-4">
-              Our Programs &amp; Services
+              Meet Pets Looking for a Second Chance
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From therapeutic programs to emergency transport, FAUNA provides comprehensive services
-              supporting both animals and the Natchitoches community.
+              Adoption and foster homes give animals the love, stability, and safety they need while they wait for
+              their next chapter.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {programs.map((p) => (
-              <Link key={p.title} href={p.href} className="group block">
-                <Card className="border-0 shadow-md group-hover:shadow-xl transition-all duration-200 h-full">
-                  <CardContent className="p-6">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${p.color}`}>
-                      <p.icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="font-bold text-[#0a1e3d] text-lg mb-2 group-hover:text-[#0099FF] transition-colors">
-                      {p.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{p.description}</p>
-                  </CardContent>
-                </Card>
-              </Link>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+            {["5-1.png", "32.png", "33.png"].map((image) => (
+              <div key={image} className="relative aspect-square rounded-3xl overflow-hidden shadow-lg bg-white">
+                <Image
+                  src={`${BASE05}/${image}`}
+                  alt="Adoptable pet through FAUNA"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/programs">
-              <Button size="lg" className="bg-[#0099FF] hover:bg-[#007acc] text-white">
-                View All Programs <ArrowRight className="h-4 w-4 ml-2" />
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/adopt-foster">
+              <Button size="lg" className="bg-[#0099FF] hover:bg-[#007acc] text-white font-semibold">
+                <PawPrint className="h-4 w-4 mr-2" />
+                Adopt
+              </Button>
+            </Link>
+            <Link href="/adopt-foster">
+              <Button size="lg" className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold">
+                <Home className="h-4 w-4 mr-2" />
+                Foster
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── New Shelter ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <div className="relative h-80 lg:h-[420px] rounded-2xl overflow-hidden bg-sky-100 shadow-xl order-2 lg:order-1">
+            <div className="relative h-80 lg:h-[460px] rounded-3xl overflow-hidden bg-sky-100 shadow-xl order-2 lg:order-1">
               <Image
-                src="https://www.npfauna.org/wp-content/uploads/2025/09/New-FAUNA-adoption-center-1.webp"
-                alt="New FAUNA Pet Adoption & Welfare Center under construction"
+                src={`${BASE05}/42-3.png`}
+                alt="Rendering of the Edwina and Sam Friedman Pet Adoption and Welfare Center"
                 fill
                 className="object-cover"
                 unoptimized
               />
             </div>
+
             <div className="order-1 lg:order-2">
-              <span className="inline-block bg-sky-100 text-[#0077aa] text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                Construction Underway
+              <span className="inline-block bg-[#33CCCC]/10 text-[#008b8b] text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+                Generations of Hope Capital &amp; Naming Campaign
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1e3d] mb-4">
-                Building Brighter Futures for Pets
+                The Future of Animal Welfare in Natchitoches Parish
               </h2>
+              <h3 className="text-xl font-bold text-[#0099FF] mb-4">
+                The Edwina and Sam Friedman Pet Adoption &amp; Welfare Center
+              </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Construction is officially underway on the{" "}
-                <strong className="text-[#0099FF]">
-                  Edwina &amp; Sam Friedman Pet Adoption &amp; Welfare Center
-                </strong>
-                — a state-of-the-art facility that will transform FAUNA&apos;s capacity to rescue,
-                rehabilitate, and rehome animals across Natchitoches Parish.
+                Help us leave a lasting legacy of hope for the animals and families of Natchitoches Parish.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                The <em>Generations of Hope Capital Campaign</em> is making this dream a reality.
-                Your support brings us one step closer to a community where every animal has a chance
-                at a loving home.
+                Together, through the Edwina and Sam Friedman Pet Adoption &amp; Welfare Center, we are building
+                a legacy of hope for animals across Natchitoches Parish.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/capital-campaign">
-                  <Button className="bg-[#33CCCC] hover:bg-[#269999] text-white font-semibold">
-                    Learn About the Campaign
+                <Link href="/donate">
+                  <Button className="bg-[#0099FF] hover:bg-[#007acc] text-white font-semibold">
+                    Donate
                   </Button>
                 </Link>
-                <Link href="/donate">
+                <Link href="/adopt-foster">
                   <Button variant="outline" className="border-[#0099FF] text-[#0099FF] hover:bg-sky-50">
-                    <Heart className="h-4 w-4 mr-2" />
-                    Donate to the Campaign
+                    Foster
+                  </Button>
+                </Link>
+                <Link href="/employment">
+                  <Button variant="outline" className="border-[#33CCCC] text-[#008b8b] hover:bg-cyan-50">
+                    Volunteer
+                  </Button>
+                </Link>
+                <Link href="/capital-campaign">
+                  <Button variant="ghost" className="text-[#0099FF] hover:bg-sky-50">
+                    Naming Opportunities
+                    <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 </Link>
               </div>
@@ -278,57 +291,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Values ── */}
-      <section className="py-14 bg-sky-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {[
-              { icon: Users, title: "Community-Driven", desc: "100% volunteer-run, rooted in Natchitoches Parish." },
-              { icon: Award, title: "Committed to Welfare", desc: "Advocating for low-kill outcomes through prevention and care." },
-              { icon: Heart, title: "Powered by Compassion", desc: "Every action is guided by love for animals and community." },
-            ].map((v) => (
-              <div key={v.title} className="flex flex-col items-center">
-                <div className="w-14 h-14 bg-[#0099FF] rounded-full flex items-center justify-center mb-4">
-                  <v.icon className="h-7 w-7 text-white" />
-                </div>
-                <h3 className="font-bold text-[#0a1e3d] text-lg mb-2">{v.title}</h3>
-                <p className="text-gray-600 text-sm">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
       <section className="py-20 bg-gradient-to-br from-[#0099FF] to-[#33CCCC] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Every Animal Deserves a Chance</h2>
+          <Users className="h-12 w-12 mx-auto mb-5 text-[#8AFF00]" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Be Part of the FAUNA Family</h2>
           <p className="text-sky-100 text-lg mb-8 max-w-2xl mx-auto">
-            Whether you adopt, foster, volunteer, or donate — there&apos;s a place for you in the FAUNA family.
+            Whether you donate, foster, volunteer, or adopt, your support gives animals and families a second chance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/adopt-foster">
+            <Link href="/donate">
               <Button size="lg" className="bg-white text-[#0077aa] hover:bg-sky-50 font-semibold text-base">
-                Adopt or Foster
+                Donate
               </Button>
             </Link>
-            <Link href="/donate">
+            <Link href="/adopt-foster">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 font-semibold text-base bg-transparent"
               >
-                <Heart className="h-4 w-4 mr-2" />
-                Make a Donation
+                Foster
               </Button>
             </Link>
             <Link href="/employment">
-              <Button
-                size="lg"
-                variant="ghost"
-                className="text-white hover:bg-white/10 font-semibold text-base"
-              >
-                Volunteer With Us <ArrowRight className="h-4 w-4 ml-2" />
+              <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 font-semibold text-base">
+                Volunteer
+                <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </Link>
           </div>
