@@ -107,25 +107,7 @@ export default function CapitalCampaignPage() {
           </div>
         </div>
       </section>
-
-      {/* Construction Photo Gallery */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#0a1e3d] text-center mb-6">Construction Progress</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {["42-2", "37-1", "38-1", "39-1", "40-1", "41-1"].map((n) => (
-              <div key={n} className="relative aspect-video rounded-xl overflow-hidden">
-                <Image
-                  src={`${BASE}/${n}.png`}
-                  alt="Friedman Center construction"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-6">
+      
             <Link
               href="https://natchitochesparishjournal.com/2025/09/04/construction-underway-on-new-pet-adoption-welfare-center-in-natchitoches/"
               target="_blank"
