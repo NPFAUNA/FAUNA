@@ -761,7 +761,7 @@ export default function ResourcesPage() {
 
               {/* Humane Society storm response */}
               <Link
-                href="https://louisianahumane.org/disaster-response"
+                href="https://humanela.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-md transition-shadow"
