@@ -156,7 +156,7 @@ export default function ProgramsPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Photo grid */}
             <div className="grid grid-cols-2 gap-3 order-2 md:order-1">
-              {["29-1", "19-1", "29-1", "19-1"].map((n, i) => (
+              {["29-1", "19-1"].map((n, i) => (
                 <div key={i} className="relative aspect-square rounded-xl overflow-hidden">
                   <Image
                     src={`${BASE}/${n}.png`}
