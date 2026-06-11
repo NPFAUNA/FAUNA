@@ -81,20 +81,6 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-[#0a1e3d] text-center mb-8">Lives You&apos;re Helping</h2>
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
-            {galleryImages.map((img) => (
-              <div key={img.src} className="relative aspect-square rounded-lg overflow-hidden">
-                <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" unoptimized />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Stripe Donate */}
       <section className="py-16 bg-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
@@ -283,3 +269,16 @@ export default function DonatePage() {
     </div>
   )
 }
+  {/* Photo Gallery */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-[#0a1e3d] text-center mb-8">Lives You&apos;re Helping</h2>
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+            {galleryImages.map((img) => (
+              <div key={img.src} className="relative aspect-square rounded-lg overflow-hidden">
+                <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" unoptimized />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
