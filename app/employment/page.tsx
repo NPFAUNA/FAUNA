@@ -33,7 +33,7 @@ export default function EmploymentPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <span className="inline-block bg-[#8AFF00]/90 text-[#0a1e3d] text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
-              Now Hiring - Natchitoches, LA
+              Future Opportunities - Natchitoches, LA
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-5">
               Turn Compassion<br />
@@ -45,11 +45,27 @@ export default function EmploymentPage() {
               <strong className="text-[#8AFF00]">92% live-release rate</strong>.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="https://forms.gle/GhUYXbKtettyEpVc8" target="_blank" rel="noopener noreferrer">
+              <Link href="https://fauna.bamboohr.com/careers" target="_blank" rel="noopener noreferrer">
+  <p className="text-sky-100 text-lg leading-relaxed mb-8">
+  Join the team that gave <strong className="text-[#8AFF00]">2,500+ pets</strong> a second
+  chance last year and drives FAUNA&apos;s{" "}
+  <strong className="text-[#8AFF00]">92% live-release rate</strong>.
+</p>
+                <div className="mb-8 rounded-2xl border border-[#33CCCC]/30 bg-white/10 p-5">
+  <p className="text-sky-50 leading-relaxed">
+    Some positions do not have a confirmed start date yet. Start dates will coincide with
+    the opening of the new{" "}
+    <strong className="text-[#8AFF00]">
+      Edwina and Sam Friedman Pet Adoption and Welfare Center
+    </strong>
+    , coming soon. Interested candidates are encouraged to apply now through FAUNA&apos;s
+    careers page.
+  </p>
+</div>
                 <Button size="lg" className="bg-[#8AFF00] hover:bg-[#7aee00] text-[#0a1e3d] font-bold">
-                  Apply Now <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </Link>
+    View Open Positions <ArrowRight className="h-4 w-4 ml-2" />
+  </Button>
+</Link>
               <Link href="https://new.shelterluv.com/form/volunteer/FAUN/14821-volunteer-application" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold bg-transparent">
                   Volunteer Application
