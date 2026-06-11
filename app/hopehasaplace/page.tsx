@@ -316,7 +316,7 @@ export default function CapitalCampaignPage() {
             A named space is more than a plaque on a wall. It is a permanent beacon of hope.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="mailto:npfauna@gmail.com">
+            <Link href="mailto:hopehasaplace@npfauna.org">
               <Button className="bg-[#8AFF00] hover:bg-[#7aee00] text-[#0a1e3d] font-bold text-base px-8 py-4 h-auto">
                 Contact Us About Naming Opportunities
               </Button>
