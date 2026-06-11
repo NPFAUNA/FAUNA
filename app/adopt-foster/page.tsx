@@ -2,7 +2,6 @@ import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowRight, Cat, CheckCircle, Dog, Heart, Home, PawPrint, Shield, Users } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
