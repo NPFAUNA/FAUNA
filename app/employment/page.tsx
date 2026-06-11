@@ -38,11 +38,10 @@ export default function EmploymentPage() {
               Turn Compassion<br />
               <span className="text-[#33CCCC]">Into a Career</span>
             </h1>
-            <p className="text-sky-100 text-lg leading-relaxed mb-8">
-              Join the team that gave <strong className="text-[#8AFF00]">2,thousands of pets a second
-              chance last year and drives FAUNA&apos;s{" "}
-              <strong className="text-[#8AFF00]">97.5% live-release rate</strong>.
-            </p>
+          <p className="text-sky-50 leading-relaxed">
+  Every foster, volunteer, and staff member helps give animals a second chance and drives FAUNA&apos;s{" "}
+  <strong className="text-[#8AFF00]">97.5% live-release rate</strong>.
+</p>
             <div className="flex flex-wrap gap-3">
               <Link href="https://fauna.bamboohr.com/careers" target="_blank" rel="noopener noreferrer">
                 <div className="mb-8 rounded-2xl border border-[#33CCCC]/30 bg-white/10 p-5">
