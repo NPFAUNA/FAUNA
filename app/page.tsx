@@ -116,7 +116,7 @@ export default function HomePage() {
             <div className="flex justify-center lg:justify-end">
               <div className="bg-white rounded-3xl shadow-2xl p-6 lg:p-8 w-full max-w-sm">
                 <Image
-                  src="/fauna-logo.png"
+                  src="/fauna-footer-logo.png"
                   alt="FAUNA – Friends All United for Natchitoches Animals"
                   width={400}
                   height={454}
