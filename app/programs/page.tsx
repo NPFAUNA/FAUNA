@@ -369,11 +369,11 @@ export default function ProgramsPage() {
                     Join the Transport Crew
                   </Button>
                 </Link>
-              <Link href="/donate">
-              <Button className="bg-[#8AFF00] hover:bg-[#78e000] text-[#061424] font-bold">
-                Donate Emergency Medical Funds
-              </Button>
-            </Link>
+             <Link href="/donate">
+  <Button className="bg-[#8AFF00] hover:bg-[#78e000] text-[#061424] font-bold">
+    Donate Emergency Medical Funds
+  </Button>
+</Link>
               </div>
             </div>
             {/* Photo grid */}
