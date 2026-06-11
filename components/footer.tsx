@@ -39,9 +39,6 @@ export function Footer() {
             <p className="text-sky-200/80 text-sm leading-relaxed mb-5 max-w-sm">
               An all-volunteer 501(c)(3) nonprofit dedicated to providing humane care for homeless
               animals in Natchitoches Parish, Louisiana — and finding every one of them a loving home.
-            Friends All United for Natchitoches Animals (FAUNA) is a registered 501(c)(3) nonprofit organization 
-              committed to animal welfare, rescue, adoption, and community support programs. Contributions help advance 
-              our mission and are tax-deductible to the extent permitted by law. EIN: 27-1004712.
             </p>
             <div className="flex gap-3">
               <a
