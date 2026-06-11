@@ -107,20 +107,6 @@ export default function CapitalCampaignPage() {
           </div>
         </div>
       </section>
-      
-            <Link
-              href="https://natchitochesparishjournal.com/2025/09/04/construction-underway-on-new-pet-adoption-welfare-center-in-natchitoches/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="border-[#0099FF] text-[#0099FF] hover:bg-sky-50">
-                Read the Full Story in the Natchitoches Parish Journal →
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Thank You — Friedman Family */}
       <section className="py-20 bg-gradient-to-br from-[#0a1e3d] to-[#0d2851] text-white">
         <div className="max-w-5xl mx-auto px-4">
