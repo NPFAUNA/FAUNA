@@ -160,16 +160,13 @@ const partners = [
     tier: "Statewide Allies",
     items: [
       { name: "Louisiana SPCA", href: "https://www.la-spca.org" },
-      { name: "Heart of Louisiana Humane Society", href: "https://www.hlhumane.org/" },
-    ],
-    color: "#8AFF00",
-  },
+     
   {
     tier: "National Content",
     items: [
       { name: "ASPCA", href: "https://www.aspca.org" },
       { name: "RedRover", href: "https://redrover.org" },
-      { name: "PetSmart Charities", href: "https://petsmartcharities.org" },
+      { name: "Pet Help Finder", href: "https://www.pethelpfinder.org/m/phf" },
     ],
     color: "#0a1e3d",
   },
