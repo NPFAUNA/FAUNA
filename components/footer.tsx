@@ -6,9 +6,10 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/programs", label: "Programs" },
   { href: "/adopt-foster", label: "Adopt or Foster" },
+  { href: "/resources", label: "Resources" },
   { href: "/events", label: "Events" },
   { href: "/employment", label: "Employment" },
-  { href: "/capital-campaign", label: "Edwina & Sam Friedman Pet Adoption and Welfare Center" },
+  { href: "/hopehasaplace", label: "Edwina & Sam Friedman Pet Adoption and Welfare Center" },
   { href: "/donate", label: "Donate" },
 ]
 
