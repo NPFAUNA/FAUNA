@@ -103,7 +103,7 @@ export function Footer() {
 
         <div className="border-t border-[#0d2851] mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-sky-900">
           <p>© {new Date().getFullYear()} FAUNA · Friends All United for Natchitoches Animals</p>
-          <p>501(c)(3) Nonprofit · EIN available upon request</p>
+          <p>501(c)(3) Nonprofit · EIN: 27-1004712 </p>
         </div>
       </div>
     </footer>
