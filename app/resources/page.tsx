@@ -159,7 +159,10 @@ const partners = [
     tier: "Statewide Allies",
     items: [
       { name: "Louisiana SPCA", href: "https://www.la-spca.org" },
-     
+      { name: "Heart of Louisiana Humane Society", href: "https://www.hlhumane.org/" },
+    ],
+    color: "#8AFF00",
+  },
   {
     tier: "National Content",
     items: [
@@ -293,7 +296,7 @@ export default function ResourcesPage() {
               <h2 className="text-2xl font-bold text-[#0a1e3d]">Low-Cost Spay / Neuter &amp; Preventive Care</h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {/* Spay Natchitoches */}
             <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
               <div className="flex items-center gap-2 mb-3">
@@ -321,54 +324,22 @@ export default function ResourcesPage() {
               </div>
             </div>
 
-            {/* Humane Society of Louisiana*/}
+            {/* Pet Help Finder */}
             <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
               <div className="flex items-center gap-2 mb-3">
-                <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 text-xs">Statewide</Badge>
+                <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 text-xs">National</Badge>
               </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana</h3>
+              <h3 className="font-bold text-[#0a1e3d] mb-2">Pet Help Finder</h3>
               <p className="text-sm text-gray-600 mb-4 flex-1">
-                Interactive parish-by-parish directory of free and low-cost spay/neuter clinics across
-                Louisiana.
+                Search for low-cost spay/neuter services, preventive veterinary care, financial assistance,
+                pet food resources, and other pet support programs throughout the United States.
               </p>
-              <Link href="https://humanela.org/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.pethelpfinder.org/m/phf" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="w-full bg-[#33CCCC] hover:bg-[#22bbbb] text-white text-xs">
-                  View Parish Directory <ExternalLink className="h-3 w-3 ml-1" />
+                  Find Low-Cost Care <ExternalLink className="h-3 w-3 ml-1" />
                 </Button>
               </Link>
             </div>
-
-           {/* Best Friends Animal Society */}
-<div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
-  <div className="flex items-center gap-2 mb-3">
-    <Badge className="bg-[#0099FF]/10 text-[#0099FF] border-[#0099FF]/20 text-xs">
-      National
-    </Badge>
-  </div>
-
-  <h3 className="font-bold text-[#0a1e3d] mb-2">
-    Best Friends Spay/Neuter Resource Map
-  </h3>
-
-  <p className="text-sm text-gray-600 mb-4 flex-1">
-    Search nationwide for low-cost spay/neuter clinics, financial assistance
-    programs, transport options, and voucher resources in your area.
-  </p>
-
-  <Link
-    href="https://network.bestfriends.org/spayneuter-resource-map"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      size="sm"
-      className="w-full bg-[#0099FF] hover:bg-[#0088ee] text-white text-xs"
-    >
-      Open Resource Map
-      <ExternalLink className="h-3 w-3 ml-1" />
-    </Button>
-  </Link>
-</div>
           </div>
         </div>
       </section>
@@ -493,7 +464,7 @@ export default function ResourcesPage() {
                 name: "Cane River Food Pantry – Pet Shelf",
                 location: "Natchitoches",
                 desc: "Local food pantry with a dedicated pet shelf for families in need in the Natchitoches area.",
-                href: "https://caneriverfoodpantry.weebly.com/",
+                href: "https://www.caneriverfoodpantry.org",
                 tag: "Local",
                 tagColor: "bg-[#8AFF00]/20 text-[#0a1e3d] border-[#8AFF00]/30",
               },
@@ -625,7 +596,7 @@ export default function ResourcesPage() {
 
             {/* Facebook group */}
             <Link
-              href="https://www.facebook.com/groups/2151791708419000/"
+              href="https://www.facebook.com/groups/natchitocheslostfoundpets"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-blue-50 rounded-2xl border border-blue-100 p-5 hover:shadow-md transition-shadow flex flex-col"
@@ -755,18 +726,19 @@ export default function ResourcesPage() {
                 </a>
               </div>
 
-              {/* Humane Society disaster relief */}
+              {/* Humane Society storm response */}
               <Link
-                href="https://humanela.org/"
+                href="https://humanela.org/programs/saving-lives/disaster-relief/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana — Disaster Relief</h3>
+                    <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana Disaster Relief</h3>
                     <p className="text-sm text-gray-600">
-                     Louisiana-specific hurricane preparedness, pet evacuation, disaster response, and recovery resources for pets and their families.
+                      Louisiana-specific hurricane preparedness, pet evacuation, disaster response, and recovery
+                      resources for pets and their families.
                     </p>
                   </div>
                   <ExternalLink className="h-4 w-4 text-gray-300 group-hover:text-[#0099FF] shrink-0 ml-3 mt-0.5 transition-colors" />
@@ -868,3 +840,4 @@ export default function ResourcesPage() {
     </div>
   )
 }
+
