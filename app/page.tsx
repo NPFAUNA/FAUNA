@@ -203,7 +203,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-            {["5-1.png", "32.png", "33.png"].map((image) => (
+            {["10.png", "11.png", "12.png"].map((image) => (
               <div key={image} className="relative aspect-square rounded-3xl overflow-hidden shadow-lg bg-white">
                 <Image
                   src={`${BASE05}/${image}`}
