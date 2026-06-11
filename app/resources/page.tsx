@@ -497,7 +497,7 @@ export default function ResourcesPage() {
                 name: "Cane River Food Pantry – Pet Shelf",
                 location: "Natchitoches",
                 desc: "Local food pantry with a dedicated pet shelf for families in need in the Natchitoches area.",
-                href: "https://www.caneriverfoodpantry.org",
+                href: "https://caneriverfoodpantry.weebly.com/",
                 tag: "Local",
                 tagColor: "bg-[#8AFF00]/20 text-[#0a1e3d] border-[#8AFF00]/30",
               },
