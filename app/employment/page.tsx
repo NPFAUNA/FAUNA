@@ -84,24 +84,6 @@ export default function EmploymentPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-sky-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
-            {photos.map((p, i) => (
-              <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-sky-100">
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -297,3 +279,20 @@ export default function EmploymentPage() {
     </div>
   )
 }
+ <section className="py-12 bg-sky-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
+            {photos.map((p, i) => (
+              <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-sky-100">
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  unoptimized
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
