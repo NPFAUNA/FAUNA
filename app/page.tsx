@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 const BASE05 = "http://www.npfauna.org/wp-content/uploads/2026/05"
 
 const stats = [
-  { value: "0", label: "Live Release Rate" },
-  { value: "0", label: "Dog Intake" },
-  { value: "0", label: "Dogs Adopted" },
-  { value: "0", label: "Dogs Transported" },
-  { value: "0", label: "Cat Intake" },
-  { value: "0", label: "Cats Adopted" },
-  { value: "0", label: "Cats Transported" },
+  { value: "97.5%", label: "Live Release Rate" },
+  { value: "243", label: "Dog Intake" },
+  { value: "53", label: "Dogs Adopted" },
+  { value: "232", label: "Dogs Transported" },
+  { value: "121", label: "Cat Intake" },
+  { value: "25", label: "Cats Adopted" },
+  { value: "84", label: "Cats Transported" },
 ]
 
 const programs = [
