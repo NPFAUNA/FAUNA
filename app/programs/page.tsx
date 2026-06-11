@@ -370,7 +370,9 @@ export default function ProgramsPage() {
                   </Button>
                 </Link>
                 <Link href="/donate">
-                  <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                  <Button className="bg-[#8AFF00] hover:bg-[#78e000] text-[#061424] font-bold">
+  Donate Emergency Medical Funds
+</Button>
                     Donate Emergency Medical Funds
                   </Button>
                 </Link>
