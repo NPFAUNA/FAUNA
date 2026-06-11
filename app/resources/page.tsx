@@ -342,22 +342,37 @@ export default function ResourcesPage() {
               </Link>
             </div>
 
-            {/* PetSmart Charities */}
-            <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
-              <div className="flex items-center gap-2 mb-3">
-                <Badge className="bg-purple-100 text-purple-700 border-purple-200 text-xs">National</Badge>
-              </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">PetSmart Charities Voucher Finder</h3>
-              <p className="text-sm text-gray-600 mb-4 flex-1">
-                Nation-wide search tool for discounted spay/neuter vouchers at participating clinics near
-                you.
-              </p>
-              <Link href="https://petsmartcharities.org/programs/spay-neuter" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="w-full bg-purple-600 hover:bg-purple-700 text-white text-xs">
-                  Search Vouchers <ExternalLink className="h-3 w-3 ml-1" />
-                </Button>
-              </Link>
-            </div>
+           {/* Best Friends Animal Society */}
+<div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
+  <div className="flex items-center gap-2 mb-3">
+    <Badge className="bg-[#0099FF]/10 text-[#0099FF] border-[#0099FF]/20 text-xs">
+      National
+    </Badge>
+  </div>
+
+  <h3 className="font-bold text-[#0a1e3d] mb-2">
+    Best Friends Spay/Neuter Resource Map
+  </h3>
+
+  <p className="text-sm text-gray-600 mb-4 flex-1">
+    Search nationwide for low-cost spay/neuter clinics, financial assistance
+    programs, transport options, and voucher resources in your area.
+  </p>
+
+  <Link
+    href="https://network.bestfriends.org/spayneuter-resource-map"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      size="sm"
+      className="w-full bg-[#0099FF] hover:bg-[#0088ee] text-white text-xs"
+    >
+      Open Resource Map
+      <ExternalLink className="h-3 w-3 ml-1" />
+    </Button>
+  </Link>
+</div>
           </div>
         </div>
       </section>
