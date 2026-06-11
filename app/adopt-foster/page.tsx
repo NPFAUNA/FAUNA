@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowRight, Cat, CheckCircle, Dog, Heart, Home, PawPrint, Shield, Users } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -14,7 +15,6 @@ export const metadata: Metadata = {
 
 const BASE22 = "https://www.npfauna.org/wp-content/uploads/2022/11"
 const BASE05 = "http://www.npfauna.org/wp-content/uploads/2026/05"
-const BASE06 = "http://www.npfauna.org/wp-content/uploads/2026/06"
 
 const adoptionLinks = [
   {
@@ -60,7 +60,7 @@ const fosterBenefits = [
   "It is a great option if you cannot adopt permanently.",
 ]
 
-export default function HomePage() {
+export default function AdoptFosterPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <section className="relative overflow-hidden bg-[#061424] text-white">
@@ -187,12 +187,36 @@ export default function HomePage() {
                 This list updates automatically through Shelterluv as adoptable animals become available.
               </p>
             </div>
-            <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white">
-              <iframe
-                src="https://www.shelterluv.com/available_pets/FAUN?embedded=1&columns=3"
-                title="Available FAUNA pets"
-                className="h-[1200px] w-full bg-white"
+
+            <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white p-4">
+              <div id="shelterluv_wrap_1682446298867" />
+
+              <div className="mt-4 text-center text-sm text-gray-600">
+                This page is powered by Shelterluv. Learn more{" "}
+                <a
+                  href="http://www.shelterluv.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#0099FF] hover:underline"
+                >
+                  www.shelterluv.com
+                </a>
+              </div>
+
+              <Script
+                src="https://www.shelterluv.com/misc/shelterluv_embed.js"
+                strategy="afterInteractive"
               />
+
+              <Script id="shelterluv-available-pets" strategy="afterInteractive">
+                {`
+                  var sourceDomain = "https://www.shelterluv.com";
+                  var base_path = "";
+                  var GID = 42566;
+                  var filters = {};
+                  EmbedAvailablePets("shelterluv_wrap_1682446298867", GID, filters, 1, sourceDomain, base_path, 2);
+                `}
+              </Script>
             </div>
           </div>
         </div>
@@ -343,4 +367,3 @@ export default function HomePage() {
     </main>
   )
 }
-
