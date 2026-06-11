@@ -159,7 +159,6 @@ const partners = [
     tier: "Statewide Allies",
     items: [
       { name: "Louisiana SPCA", href: "https://www.la-spca.org" },
-      { name: "Heart of Louisiana Humane Society", href: "https://www.hlhumane.org/" },
     ],
     color: "#8AFF00",
   },
