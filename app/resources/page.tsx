@@ -626,7 +626,7 @@ export default function ResourcesPage() {
 
             {/* Facebook group */}
             <Link
-              href="https://www.facebook.com/groups/natchitocheslostfoundpets"
+              href="https://www.facebook.com/groups/2151791708419000/"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-blue-50 rounded-2xl border border-blue-100 p-5 hover:shadow-md transition-shadow flex flex-col"
