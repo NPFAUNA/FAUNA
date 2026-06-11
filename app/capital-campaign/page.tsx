@@ -113,7 +113,7 @@ export default function CapitalCampaignPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-xl font-bold text-[#0a1e3d] text-center mb-6">Take a Peek!</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {["42-2", "37-1", "38-1", "39-1", "40-1", "41-1"].map((n) => (
+            {["42-2", "37-1", "41-1"].map((n) => (
               <div key={n} className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
                   src={`${BASE}/${n}.png`}
