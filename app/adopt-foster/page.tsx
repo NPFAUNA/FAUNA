@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Cat, CheckCircle, Dog, Heart, Home, PawPrint, Shield, Users } from "lucide-react"
 
-import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets.tsx"
+import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
