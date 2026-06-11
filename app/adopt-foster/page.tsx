@@ -1,9 +1,9 @@
-import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Cat, CheckCircle, Dog, Heart, Home, PawPrint, Shield, Users } from "lucide-react"
 
+import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
@@ -188,36 +188,7 @@ export default function AdoptFosterPage() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white p-4">
-              <div id="shelterluv_wrap_1682446298867" />
-
-              <div className="mt-4 text-center text-sm text-gray-600">
-                This page is powered by Shelterluv. Learn more{" "}
-                <a
-                  href="http://www.shelterluv.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-[#0099FF] hover:underline"
-                >
-                  www.shelterluv.com
-                </a>
-              </div>
-
-              <Script
-                src="https://www.shelterluv.com/misc/shelterluv_embed.js"
-                strategy="afterInteractive"
-              />
-
-              <Script id="shelterluv-available-pets" strategy="afterInteractive">
-                {`
-                  var sourceDomain = "https://www.shelterluv.com";
-                  var base_path = "";
-                  var GID = 42566;
-                  var filters = {};
-                  EmbedAvailablePets("shelterluv_wrap_1682446298867", GID, filters, 1, sourceDomain, base_path, 2);
-                `}
-              </Script>
-            </div>
+            <ShelterluvAvailablePets />
           </div>
         </div>
       </section>
@@ -244,13 +215,13 @@ export default function AdoptFosterPage() {
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
-          <Image
-  src={`${BASE05}/79.png`}
-  alt="FAUNA volunteer with adoptable dog"
-  fill
-  className="object-cover"
-  unoptimized
-/>
+            <Image
+             src={`${BASE05}/79.png`}
+              alt="FAUNA volunteer with adoptable dog"
+              fill
+              className="object-cover"
+              unoptimized
+            />
           </div>
         </div>
       </section>
