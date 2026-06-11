@@ -160,7 +160,7 @@ const partners = [
     tier: "Statewide Allies",
     items: [
       { name: "Louisiana SPCA", href: "https://www.la-spca.org" },
-      { name: "Humane Society of Louisiana", href: "https://louisianahumane.org" },
+      { name: "Heart of Louisiana Humane Society", href: "https://www.hlhumane.org/" },
     ],
     color: "#8AFF00",
   },
@@ -325,17 +325,17 @@ export default function ResourcesPage() {
               </div>
             </div>
 
-            {/* Humane Society of Louisiana */}
+            {/* Heart of Louisiana Humane Society*/}
             <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
               <div className="flex items-center gap-2 mb-3">
                 <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 text-xs">Statewide</Badge>
               </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana</h3>
+              <h3 className="font-bold text-[#0a1e3d] mb-2">Heart of Louisiana Humane Society</h3>
               <p className="text-sm text-gray-600 mb-4 flex-1">
                 Interactive parish-by-parish directory of free and low-cost spay/neuter clinics across
                 Louisiana.
               </p>
-              <Link href="https://louisianahumane.org" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.hlhumane.org/" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="w-full bg-[#33CCCC] hover:bg-[#22bbbb] text-white text-xs">
                   View Parish Directory <ExternalLink className="h-3 w-3 ml-1" />
                 </Button>
