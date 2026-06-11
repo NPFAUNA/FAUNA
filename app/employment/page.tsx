@@ -46,11 +46,6 @@ export default function EmploymentPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="https://fauna.bamboohr.com/careers" target="_blank" rel="noopener noreferrer">
-  <p className="text-sky-100 text-lg leading-relaxed mb-8">
-  Join the team that gave <strong className="text-[#8AFF00]">2,500+ pets</strong> a second
-  chance last year and drives FAUNA&apos;s{" "}
-  <strong className="text-[#8AFF00]">92% live-release rate</strong>.
-</p>
                 <div className="mb-8 rounded-2xl border border-[#33CCCC]/30 bg-white/10 p-5">
   <p className="text-sky-50 leading-relaxed">
     Some positions do not have a confirmed start date yet. Start dates will coincide with
