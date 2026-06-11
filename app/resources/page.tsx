@@ -322,17 +322,17 @@ export default function ResourcesPage() {
               </div>
             </div>
 
-            {/* Heart of Louisiana Humane Society*/}
+            {/* Humane Society of Louisiana*/}
             <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
               <div className="flex items-center gap-2 mb-3">
                 <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 text-xs">Statewide</Badge>
               </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">Heart of Louisiana Humane Society</h3>
+              <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana</h3>
               <p className="text-sm text-gray-600 mb-4 flex-1">
                 Interactive parish-by-parish directory of free and low-cost spay/neuter clinics across
                 Louisiana.
               </p>
-              <Link href="https://www.hlhumane.org/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://humanela.org/" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="w-full bg-[#33CCCC] hover:bg-[#22bbbb] text-white text-xs">
                   View Parish Directory <ExternalLink className="h-3 w-3 ml-1" />
                 </Button>
@@ -756,7 +756,7 @@ export default function ResourcesPage() {
                 </a>
               </div>
 
-              {/* Humane Society storm response */}
+              {/* Humane Society disaster relief */}
               <Link
                 href="https://humanela.org/"
                 target="_blank"
@@ -765,10 +765,9 @@ export default function ResourcesPage() {
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana — Storm Response</h3>
+                    <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana — Disaster Relief</h3>
                     <p className="text-sm text-gray-600">
-                      Statewide animal rescue and sheltering network that activates during hurricanes
-                      and major disasters. Coordinates transport, foster placement, and emergency supplies.
+                     Louisiana-specific hurricane preparedness, pet evacuation, disaster response, and recovery resources for pets and their families.
                     </p>
                   </div>
                   <ExternalLink className="h-4 w-4 text-gray-300 group-hover:text-[#0099FF] shrink-0 ml-3 mt-0.5 transition-colors" />
