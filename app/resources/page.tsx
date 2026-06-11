@@ -143,9 +143,9 @@ const partners = [
   {
     tier: "Local Core",
     items: [
-      { name: "Good Hope Veterinary Hospital", href: "https://www.goodhopevet.com" },
-      { name: "Many Veterinary Hospital", href: "https://www.manyanimalclinic.com" },
-      { name: "Red River Veterinary Center", href: "https://www.redrivervet.com" },
+      { name: "Good Hope Veterinary Hospital", href: "https://www.facebook.com/goodhopevet/" },
+      { name: "Many Veterinary Hospital", href: "https://www.manyvet.com/" },
+      { name: "Red River Veterinary Center", href: ""https://www.google.com/search?q=Red+River+Veterinary+Center+Coushatta+LA"" },
     ],
     color: "#0099FF",
   },
