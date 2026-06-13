@@ -29,7 +29,7 @@ export default function EmploymentPage() {
   return (
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <span className="inline-block bg-[#8AFF00]/90 text-[#0a1e3d] text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
               Future Opportunities - Natchitoches, LA
