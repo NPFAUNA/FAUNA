@@ -17,13 +17,13 @@ const photos = [
   { src: "http://www.npfauna.org/wp-content/uploads/2026/05/23-1.png", alt: "Dog care at FAUNA" },
   { src: "http://www.npfauna.org/wp-content/uploads/2026/05/25-1.png", alt: "FAUNA staff and animals" },
   { src: "http://www.npfauna.org/wp-content/uploads/2026/05/28-1.png", alt: "Animal rescue moment" },
-]
-
-const stats = [
-  { value: "97.5%",    label: "Live-Release Rate" },
-  { value: "482",   label: "Free Vaccines Given" },
-  { value: "251",   label: "Community Cats TNR'd" },
-]
+    ]
+    
+    const stats = [
+      { value: "97.5%",    label: "Live-Release Rate" },
+      { value: "482",   label: "Free Vaccines Given" },
+      { value: "251",   label: "Community Cats TNR'd" },
+    ]
 
 export default function EmploymentPage() {
   return (
