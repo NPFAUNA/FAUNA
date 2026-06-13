@@ -456,7 +456,56 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+      {/* KLAWS */}
+      <section id="klaws" className="py-20 bg-gray-50 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <Badge className="bg-[#33CCCC]/10 text-[#0099FF] border-[#33CCCC]/20 mb-3">KLAWS</Badge>
+            <h2 className="text-3xl font-bold text-[#0a1e3d] mb-4">
+              Kisatchie Louisiana Animal Welfare Society
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              KLAWS is a FAUNA-supported partner program dedicated to improving the lives of animals throughout
+              the Kisatchie region through rescue, advocacy, education, and community outreach.
+            </p>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              "Animal rescue and rehoming support",
+              "Community education and outreach",
+              "Advocacy for animal welfare initiatives",
+              "Collaboration with local rescue partners",
+              "Responsible pet ownership resources",
+              "Support for rural Louisiana animals",
+            ].map((item) => (
+              <div key={item} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-[#33CCCC] mb-3" />
+                <p className="font-semibold text-[#0a1e3d]">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 text-center">
+            <Heart className="w-10 h-10 text-[#8AFF00] mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-[#0a1e3d] mb-3">Why It Matters</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+              Many animals in rural areas face limited access to veterinary care, rescue resources, and support
+              services. Through partnerships and community engagement, KLAWS helps strengthen the safety net for
+              animals and the people who care for them.
+            </p>
+            <a
+              href="https://www.facebook.com/profile.php?id=61576190663306"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#0099FF] hover:bg-[#0077CC] text-white">
+                Visit KLAWS on Facebook <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
       {/* CTA Footer */}
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-14 text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
