@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -180,6 +181,7 @@ const navSections = [
   { id: "financial-aid", label: "Financial Aid" },
   { id: "food-supplies", label: "Food & Supplies" },
   { id: "training", label: "Training" },
+  { id: "found-cat", label: "Found a Cat?" },
   { id: "lost-found", label: "Lost & Found" },
   { id: "disaster", label: "Disaster Prep" },
   { id: "partners", label: "Partners" },
@@ -561,6 +563,43 @@ export default function ResourcesPage() {
               </p>
               <span className="inline-block mt-4 text-xs text-[#33CCCC] font-semibold">bestfriends.org/resources →</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Found a Cat Guide ── */}
+      <section id="found-cat" className="py-14 bg-sky-50 scroll-mt-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-full bg-[#33CCCC] flex items-center justify-center shrink-0">
+              <Search className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#0099FF]">Found Cat Guide</p>
+              <h2 className="text-2xl font-bold text-[#0a1e3d]">What to Do If You Find a Cat</h2>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl border border-sky-100 p-4 md:p-6 shadow-sm">
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-[#0a1e3d] mb-2">
+                Found a Cat in Natchitoches Parish?
+              </h3>
+              <p className="text-sm text-gray-600">
+                Use this quick guide to decide whether a cat needs TNR, foster help, an owned-cat voucher,
+                or a lost-and-found post. For kittens, always make sure they are truly abandoned before moving them.
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+              <Image
+                src="What to do if you find a cat.jpg"
+                alt="What to do if you find a cat in Natchitoches Parish"
+                width={1278}
+                height={1022}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
