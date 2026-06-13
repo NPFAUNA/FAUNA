@@ -462,11 +462,33 @@ export default function ProgramsPage() {
           <div className="text-center mb-10">
             <Badge className="bg-[#33CCCC]/10 text-[#0099FF] border-[#33CCCC]/20 mb-3">KLAWS</Badge>
             <h2 className="text-3xl font-bold text-[#0a1e3d] mb-4">
-              Kisatchie Louisiana Animal Welfare Society
+              KLAWS, Inc. (Kathy's Louisiana Wildlife Sanctuary)
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              KLAWS, Inc. (Kathy's Louisiana Wildlife Sanctuary) is a FAUNA-supported partner program dedicated to improving the lives of animals throughout
-              the Kisatchie region through rescue, advocacy, education, and community outreach. To learn more, contact katcamcal@yahoo.com
+              KLAWS — Kathy's Louisiana Wildlife Sanctuary
+
+              Kathy's Louisiana Wildlife Sanctuary (KLAWS) is a 501(c)(3) nonprofit organization dedicated to helping orphaned, injured, and displaced wildlife throughout Louisiana.
+              
+              Founded and operated by Kathy, a licensed Louisiana wildlife rehabilitator, KLAWS provides specialized care to native wildlife in need with the goal of rehabilitation and release whenever possible. From orphaned baby animals to injured wildlife requiring medical care and recovery, KLAWS serves as a vital resource for wildlife conservation and humane intervention in our region.
+              
+              What KLAWS Does
+              Rescues and rehabilitates orphaned wildlife
+              Provides care for injured native wildlife
+              Coordinates appropriate wildlife placement and release
+              Educates the public about wildlife stewardship and coexistence
+              Offers guidance on what to do when wildlife is found injured or abandoned
+              Supports conservation efforts through rehabilitation and community outreach
+              Why It Matters
+              
+              Wild animals play an important role in Louisiana's ecosystems, yet many face threats from habitat loss, vehicle strikes, storms, and human activity. KLAWS provides a second chance for wildlife that would otherwise have little opportunity for survival while helping educate the public on responsible wildlife practices.
+
+              Contact KLAWS
+              
+              For wildlife emergencies, orphaned animals, or questions about wildlife rehabilitation, contact Kathy directly.
+              
+              Facebook: https://www.facebook.com/profile.php?id=61576190663306
+              
+              FAUNA is proud to support KLAWS and its mission of protecting and rehabilitating Louisiana's native wildlife.
             </p>
           </div>
 
