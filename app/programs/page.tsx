@@ -11,7 +11,8 @@ const programSections = [
   { id: "tnr", label: "TNR Program" },
   { id: "health-fairs", label: "Community Health Fairs" },
   { id: "transport", label: "Emergency Transport" },
-  { id: "pact", label: "PACT Therapy" },
+    { id: "pact", label: "PACT Therapy" },
+  { id: "klaws", label: "KLAWS" },
 ]
 
 export default function ProgramsPage() {
