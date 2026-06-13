@@ -29,7 +29,7 @@ export default function EmploymentPage() {
   return (
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] text-white py-20">
-       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <span className="inline-block bg-[#8AFF00]/90 text-[#0a1e3d] text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-wider">
               Future Opportunities - Natchitoches, LA
@@ -70,7 +70,7 @@ export default function EmploymentPage() {
       </section>
 
       <section className="bg-[#0d2851] text-white py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((s) => (
               <div key={s.label}>
@@ -83,7 +83,7 @@ export default function EmploymentPage() {
       </section>
 
       <section className="py-16 bg-white">
-       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">Why Join Us</span>
             <h2 className="text-3xl font-extrabold text-[#0a1e3d] mt-2 mb-4">Why Work With FAUNA</h2>
@@ -237,7 +237,7 @@ export default function EmploymentPage() {
       </section>
 
       <section className="py-16 bg-white">
-       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="text-[#33CCCC] text-sm font-semibold uppercase tracking-wider">Not ready for a job?</span>
             <h2 className="text-3xl font-extrabold text-[#0a1e3d] mt-2 mb-3">Volunteer With FAUNA</h2>
@@ -278,7 +278,7 @@ export default function EmploymentPage() {
   )
 }
  <section className="py-12 bg-sky-50">
-       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
             {photos.map((p, i) => (
               <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-sky-100">
