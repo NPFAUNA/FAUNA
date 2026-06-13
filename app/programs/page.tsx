@@ -465,8 +465,8 @@ export default function ProgramsPage() {
               Kisatchie Louisiana Animal Welfare Society
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              KLAWS is a FAUNA-supported partner program dedicated to improving the lives of animals throughout
-              the Kisatchie region through rescue, advocacy, education, and community outreach.
+              KLAWS, Inc. (Kathy's Louisiana Wildlife Sanctuary) is a FAUNA-supported partner program dedicated to improving the lives of animals throughout
+              the Kisatchie region through rescue, advocacy, education, and community outreach. To learn more, contact katcamcal@yahoo.com
             </p>
           </div>
 
