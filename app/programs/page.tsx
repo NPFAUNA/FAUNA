@@ -11,7 +11,7 @@ const programSections = [
   { id: "tnr", label: "TNR Program" },
   { id: "health-fairs", label: "Community Health Fairs" },
   { id: "transport", label: "Emergency Transport" },
-    { id: "pact", label: "PACT Therapy" },
+  { id: "pact", label: "PACT Therapy" },
   { id: "klaws", label: "KLAWS" },
 ]
 
@@ -459,101 +459,100 @@ export default function ProgramsPage() {
       {/* KLAWS */}
       <section id="klaws" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <Badge className="bg-[#33CCCC]/10 text-[#0099FF] border-[#33CCCC]/20 mb-3">KLAWS</Badge>
-            <h2 className="text-3xl font-bold text-[#0a1e3d] mb-4">
-              KLAWS, Inc. (Kathy's Louisiana Wildlife Sanctuary)
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              KLAWS — Kathy's Louisiana Wildlife Sanctuary
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 mb-3">
+                KLAWS Wildlife Rehabilitation
+              </Badge>
 
-   Kathy's Louisiana Wildlife Sanctuary (KLAWS) is a 501(c)(3) nonprofit organization dedicated to helping orphaned, injured, and displaced wildlife throughout Louisiana.
-              
- Founded and operated by Kathy, a licensed Louisiana wildlife rehabilitator, KLAWS provides specialized care to native wildlife in need with the goal of rehabilitation and release whenever possible. From orphaned baby animals to injured wildlife requiring medical care and recovery, KLAWS serves as a vital resource for wildlife conservation and humane intervention in our region.
-              
-What KLAWS Does
- Rescues and rehabilitates orphaned wildlife
-              Provides care for injured native wildlife
-              Coordinates appropriate wildlife placement and release
-              Educates the public about wildlife stewardship and coexistence
-              Offers guidance on what to do when wildlife is found injured or abandoned
-              Supports conservation efforts through rehabilitation and community outreach
-              Why It Matters
-              
-              Wild animals play an important role in Louisiana's ecosystems, yet many face threats from habitat loss, vehicle strikes, storms, and human activity. KLAWS provides a second chance for wildlife that would otherwise have little opportunity for survival while helping educate the public on responsible wildlife practices.
-              <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-  <div>
-    {/* KLAWS text */}
-  </div>
+              <h2 className="text-3xl font-bold text-[#0a1e3d] mb-2">
+                Kathy&apos;s Louisiana Wildlife Sanctuary
+              </h2>
 
-  <div className="grid grid-cols-3 gap-2">
-    {["1.png", "2.png", "3.png"].map((img) => (
-      <div key={img} className="relative aspect-square rounded-lg overflow-hidden">
-        <Image
-          src={`/klaws/${img}.jpg`}
-          alt="KLAWS Wildlife Rehabilitation"
-          fill
-          className="object-cover"
-        />
-      </div>
-    ))}
-  </div>
-</div>
-              Contact KLAWS
-              <Link
-  href="https://www.facebook.com/profile.php?id=61576190663306"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button className="bg-[#0099FF] hover:bg-[#0077CC] text-white">
-    Follow KLAWS on Facebook
-    <ChevronRight className="h-4 w-4 ml-2" />
-  </Button>
-</Link>
-              
-              For wildlife emergencies, orphaned animals, or questions about wildlife rehabilitation, contact Kathy directly.
-          
-              
-              FAUNA is proud to support KLAWS and its mission of protecting and rehabilitating Louisiana's native wildlife.
-            </p>
-          </div>
+              <p className="text-sm text-gray-500 mb-4 italic">
+                Licensed Louisiana Wildlife Rehabilitator &amp; 501(c)(3) Nonprofit
+              </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {[
-              "Animal rescue and rehoming support",
-              "Community education and outreach",
-              "Advocacy for animal welfare initiatives",
-              "Collaboration with local rescue partners",
-              "Responsible pet ownership resources",
-              "Support for rural Louisiana animals",
-            ].map((item) => (
-              <div key={item} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <CheckCircle className="w-6 h-6 text-[#33CCCC] mb-3" />
-                <p className="font-semibold text-[#0a1e3d]">{item}</p>
+              <p className="text-gray-600 mb-6">
+                KLAWS, Inc. &mdash; Kathy&apos;s Louisiana Wildlife Sanctuary &mdash; helps orphaned,
+                injured, and displaced wildlife throughout Louisiana. Founded and operated by Kathy,
+                a licensed Louisiana wildlife rehabilitator, KLAWS provides specialized care to native
+                wildlife with the goal of rehabilitation and release whenever possible.
+              </p>
+
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  {
+                    title: "Orphaned Wildlife",
+                    body: "Provides care for young wildlife who have lost their mothers or need specialized support.",
+                  },
+                  {
+                    title: "Injured Animals",
+                    body: "Helps native wildlife recover from injury, trauma, illness, or displacement.",
+                  },
+                  {
+                    title: "Rehabilitation & Release",
+                    body: "Supports recovery with the goal of returning wildlife safely when possible.",
+                  },
+                  {
+                    title: "Public Guidance",
+                    body: "Helps the community know what to do when wildlife is found injured or abandoned.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="bg-white rounded-lg p-3 border border-gray-100">
+                    <p className="font-semibold text-[#0099FF] text-sm mb-1">{item.title}</p>
+                    <p className="text-xs text-gray-600">{item.body}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="bg-white rounded-2xl p-8 border border-gray-100 text-center">
-            <Heart className="w-10 h-10 text-[#8AFF00] mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-[#0a1e3d] mb-3">Why It Matters</h3>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-6">
-              Many animals in rural areas face limited access to veterinary care, rescue resources, and support
-              services. Through partnerships and community engagement, KLAWS helps strengthen the safety net for
-              animals and the people who care for them.
-            </p>
-            <a
-              href="https://www.facebook.com/profile.php?id=61576190663306"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-[#0099FF] hover:bg-[#0077CC] text-white">
-                Visit KLAWS on Facebook <ChevronRight className="w-4 h-4 ml-2" />
-              </Button>
-            </a>
+              <div className="bg-white rounded-2xl p-5 border border-gray-100 mb-8">
+                <h3 className="font-bold text-[#0a1e3d] mb-2">Why It Matters</h3>
+                <p className="text-sm text-gray-600">
+                  Wild animals play an important role in Louisiana&apos;s ecosystems, but many face
+                  threats from habitat loss, vehicle strikes, storms, and human activity. KLAWS gives
+                  injured and orphaned wildlife a second chance while helping educate the public on
+                  responsible wildlife practices.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61576190663306"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-[#0099FF] hover:bg-[#0088ee] text-white">
+                    Follow KLAWS on Facebook
+                    <ChevronRight className="h-4 w-4 ml-1" />
+                  </Button>
+                </Link>
+
+                <Link href="mailto:katcamcal@yahoo.com">
+                  <Button variant="outline" className="border-[#0099FF] text-[#0099FF] hover:bg-sky-50">
+                    Contact Kathy
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Photo grid */}
+            <div className="grid grid-cols-3 gap-2">
+              {["1", "2", "3"].map((n) => (
+                <div key={n} className="relative aspect-square rounded-lg overflow-hidden">
+                  <Image
+                    src={`/klaws/${n}.png`}
+                    alt="KLAWS Wildlife Rehabilitation"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
       {/* CTA Footer */}
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-14 text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
