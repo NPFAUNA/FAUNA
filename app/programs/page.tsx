@@ -467,12 +467,12 @@ export default function ProgramsPage() {
             <p className="text-gray-600 max-w-3xl mx-auto">
               KLAWS — Kathy's Louisiana Wildlife Sanctuary
 
-              Kathy's Louisiana Wildlife Sanctuary (KLAWS) is a 501(c)(3) nonprofit organization dedicated to helping orphaned, injured, and displaced wildlife throughout Louisiana.
+   Kathy's Louisiana Wildlife Sanctuary (KLAWS) is a 501(c)(3) nonprofit organization dedicated to helping orphaned, injured, and displaced wildlife throughout Louisiana.
               
-              Founded and operated by Kathy, a licensed Louisiana wildlife rehabilitator, KLAWS provides specialized care to native wildlife in need with the goal of rehabilitation and release whenever possible. From orphaned baby animals to injured wildlife requiring medical care and recovery, KLAWS serves as a vital resource for wildlife conservation and humane intervention in our region.
+ Founded and operated by Kathy, a licensed Louisiana wildlife rehabilitator, KLAWS provides specialized care to native wildlife in need with the goal of rehabilitation and release whenever possible. From orphaned baby animals to injured wildlife requiring medical care and recovery, KLAWS serves as a vital resource for wildlife conservation and humane intervention in our region.
               
-              What KLAWS Does
-              Rescues and rehabilitates orphaned wildlife
+What KLAWS Does
+ Rescues and rehabilitates orphaned wildlife
               Provides care for injured native wildlife
               Coordinates appropriate wildlife placement and release
               Educates the public about wildlife stewardship and coexistence
@@ -487,7 +487,7 @@ export default function ProgramsPage() {
   </div>
 
   <div className="grid grid-cols-3 gap-2">
-    {["klaws-1", "klaws-2", "klaws-3"].map((img) => (
+    {["1.png", "2.png", "3.png"].map((img) => (
       <div key={img} className="relative aspect-square rounded-lg overflow-hidden">
         <Image
           src={`/klaws/${img}.jpg`}
@@ -500,10 +500,19 @@ export default function ProgramsPage() {
   </div>
 </div>
               Contact KLAWS
+              <Link
+  href="https://www.facebook.com/profile.php?id=61576190663306"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="bg-[#0099FF] hover:bg-[#0077CC] text-white">
+    Follow KLAWS on Facebook
+    <ChevronRight className="h-4 w-4 ml-2" />
+  </Button>
+</Link>
               
               For wildlife emergencies, orphaned animals, or questions about wildlife rehabilitation, contact Kathy directly.
-              
-              Facebook: https://www.facebook.com/profile.php?id=61576190663306
+          
               
               FAUNA is proud to support KLAWS and its mission of protecting and rehabilitating Louisiana's native wildlife.
             </p>
