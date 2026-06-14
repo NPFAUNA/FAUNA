@@ -481,7 +481,24 @@ export default function ProgramsPage() {
               Why It Matters
               
               Wild animals play an important role in Louisiana's ecosystems, yet many face threats from habitat loss, vehicle strikes, storms, and human activity. KLAWS provides a second chance for wildlife that would otherwise have little opportunity for survival while helping educate the public on responsible wildlife practices.
+              <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+  <div>
+    {/* KLAWS text */}
+  </div>
 
+  <div className="grid grid-cols-3 gap-2">
+    {["klaws-1", "klaws-2", "klaws-3"].map((img) => (
+      <div key={img} className="relative aspect-square rounded-lg overflow-hidden">
+        <Image
+          src={`/klaws/${img}.jpg`}
+          alt="KLAWS Wildlife Rehabilitation"
+          fill
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</div>
               Contact KLAWS
               
               For wildlife emergencies, orphaned animals, or questions about wildlife rehabilitation, contact Kathy directly.
