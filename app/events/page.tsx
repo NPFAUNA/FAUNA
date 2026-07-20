@@ -23,7 +23,8 @@ const eventTypes = [
   {
     title: "Adoption Events",
     description:
-      "Meet animals looking for caring homes and learn more about FAUNA&apos;s adoption process.",
+      description:
+  "Meet animals looking for caring homes and learn more about FAUNA's adoption process.",
     icon: PawPrint,
   },
   {
