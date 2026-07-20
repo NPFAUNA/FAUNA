@@ -2,21 +2,29 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EmailSignupPopup } from "@/components/email-signup-popup"
 
 export const metadata: Metadata = {
-  title: { default: "FAUNA – Friends All United for Natchitoches Animals", template: "%s | FAUNA" },
+  title: {
+    default: "FAUNA - Friends All United for Natchitoches Animals",
+    template: "%s | FAUNA",
+  },
   description:
-    "FAUNA is an all-volunteer 501(c)(3) animal rescue based in Natchitoches, LA. We rescue, rehabilitate, and rehome animals in need across Natchitoches Parish.",
-  keywords: ["animal rescue", "Natchitoches", "Louisiana", "adopt", "foster", "FAUNA", "spay neuter", "TNR"],
+    "Friends All United for Natchitoches Animals provides humane care, animal rescue programs, adoption support, and community services throughout Natchitoches Parish, Louisiana.",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en">
-      <body className="antialiased min-h-screen flex flex-col">
+      <body className="min-h-screen bg-white font-sans text-[#0a1e3d] antialiased">
         <Navbar />
-        <div className="flex-1">{children}</div>
+        {children}
         <Footer />
+        <EmailSignupPopup />
       </body>
     </html>
   )
