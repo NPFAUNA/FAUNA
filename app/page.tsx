@@ -86,13 +86,13 @@ export default function HomePage() {
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex justify-center lg:justify-start">
-            <div className="rounded-[2.5rem] bg-white/95 p-8 shadow-2xl sm:p-10">
+            <div className="flex min-h-[420px] w-full max-w-lg items-center justify-center rounded-[2.5rem] bg-[#0a1e3d] p-8 shadow-2xl sm:p-12">
               <Image
-                src="/fauna-logo.png"
-                alt="FAUNA - Friends All United for Natchitoches Animals"
-                width={480}
-                height={350}
-                className="h-auto w-full max-w-md object-contain"
+                src="/fauna-logo-white.png"
+                alt="FAUNA animal rescue logo"
+                width={520}
+                height={600}
+                className="h-auto max-h-[500px] w-full object-contain"
                 priority
               />
             </div>
