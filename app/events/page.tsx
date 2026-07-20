@@ -23,8 +23,7 @@ const eventTypes = [
   {
     title: "Adoption Events",
     description:
-      description:
-  "Meet animals looking for caring homes and learn more about FAUNA's adoption process.",
+      "Meet animals looking for caring homes and learn more about FAUNA's adoption process.",
     icon: PawPrint,
   },
   {
@@ -36,8 +35,7 @@ const eventTypes = [
   {
     title: "Fundraisers",
     description:
-      description:
-  "Support FAUNA's rescue programs, animal care, and the future Friedman Center.",
+      "Support FAUNA's rescue programs, animal care, and the future Friedman Center.",
     icon: CalendarDays,
   },
   {
