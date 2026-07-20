@@ -96,7 +96,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-sky-100 bg-white/95 shadow-sm backdrop-blur">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-40 max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
           onClick={closeMobileMenu}
@@ -104,11 +104,11 @@ export function Navbar() {
           aria-label="FAUNA homepage"
         >
           <Image
-            src="/fauna-logo.png"
+            src="/fauna-logo-large.png"
             alt="FAUNA - Friends All United for Natchitoches Animals"
-            width={190}
-            height={110}
-            className="h-20 w-auto object-contain"
+            width={380}
+            height={320}
+            className="h-36 w-auto object-contain sm:h-40"
             priority
           />
         </Link>
