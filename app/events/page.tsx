@@ -36,7 +36,8 @@ const eventTypes = [
   {
     title: "Fundraisers",
     description:
-      "Support FAUNA&apos;s rescue programs, animal care, and the future Friedman Center.",
+      description:
+  "Support FAUNA's rescue programs, animal care, and the future Friedman Center.",
     icon: CalendarDays,
   },
   {
