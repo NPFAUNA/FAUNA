@@ -4,103 +4,325 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, Heart } from "lucide-react"
+import { ChevronDown, Heart, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/programs", label: "Programs" },
-  { href: "/adopt-foster", label: "Adopt or Foster" },
-  { href: "/events", label: "Events" },
-  { href: "/employment", label: "Employment" },
-  { href: "/capital-campaign", label: "Edwina & Sam Friedman Pet Adoption and Welfare Center" },
-  { href: "/resources", label: "Resources" },
+const aboutLinks = [
+  {
+    label: "History",
+    href: "/history",
+  },
+  {
+    label: "Board of Directors",
+    href: "/board-of-directors",
+  },
+  {
+    label: "Advisory Board",
+    href: "/advisory-board",
+  },
+  {
+    label: "Employment Opportunities",
+    href: "/employment",
+  },
+]
+
+const programLinks = [
+  {
+    label: "Programs Overview",
+    href: "/programs",
+  },
+  {
+    label: "Spay Natchitoches",
+    href: "/programs/spay-natchitoches",
+  },
+  {
+    label: "TNR Program",
+    href: "/programs/tnr",
+  },
+  {
+    label: "Community Health Fairs",
+    href: "/programs#community-health-fairs",
+  },
+  {
+    label: "PACT Therapy",
+    href: "/programs#pact",
+  },
+  {
+    label: "KLAWS",
+    href: "/programs#klaws",
+  },
+]
+
+const mainLinks = [
+  {
+    label: "Adopt & Foster",
+    href: "/adopt-foster",
+  },
+  {
+    label: "Events",
+    href: "/events",
+  },
+  {
+    label: "Friedman Center",
+    href: "/capital-campaign",
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+  },
 ]
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false)
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false)
+    setMobileAboutOpen(false)
+    setMobileProgramsOpen(false)
+  }
+
+  const linkIsActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    return pathname === href || pathname.startsWith(`${href}/`)
+  }
+
+  const aboutIsActive = aboutLinks.some((link) => linkIsActive(link.href))
+  const programsIsActive =
+    pathname === "/programs" || pathname.startsWith("/programs/")
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-sky-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0 py-1.5">
-            <Image
-              src="/fauna-footer-logo.png"
-              alt="FAUNA – Friends All United for Natchitoches Animals"
-              width={46}
-              height={50}
-              className="object-contain"
-              priority
-            />
-          </Link>
+    <header className="sticky top-0 z-50 border-b border-sky-100 bg-white/95 shadow-sm backdrop-blur">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          onClick={closeMobileMenu}
+          className="flex shrink-0 items-center"
+          aria-label="FAUNA homepage"
+        >
+          <Image
+            src="/fauna-logo.png"
+            alt="FAUNA - Friends All United for Natchitoches Animals"
+            width={190}
+            height={110}
+            className="h-20 w-auto object-contain"
+            priority
+          />
+        </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-0.5">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap",
-                  pathname === item.href
-                    ? "bg-sky-100 text-[#0099FF] font-semibold"
-                    : "text-gray-600 hover:text-[#0099FF] hover:bg-sky-50"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Donate + Hamburger */}
-          <div className="flex items-center gap-2 shrink-0">
-            <Link href="/donate" className="hidden sm:block">
-              <Button className="bg-[#8AFF00] hover:bg-[#7aee00] text-[#0a1e3d] font-bold text-sm px-4 h-9">
-                <Heart className="h-3.5 w-3.5 mr-1.5" />
-                Donate
-              </Button>
-            </Link>
+        <nav className="hidden items-center gap-1 lg:flex">
+          <div className="group relative">
             <button
-              onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile drawer */}
-      {open && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
+              type="button"
               className={cn(
-                "block px-3 py-2.5 rounded-md text-sm font-medium transition-colors",
-                pathname === item.href
-                  ? "bg-sky-100 text-[#0099FF] font-semibold"
-                  : "text-gray-600 hover:text-[#0099FF] hover:bg-sky-50"
+                "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition",
+                aboutIsActive
+                  ? "bg-sky-50 text-[#0099FF]"
+                  : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
               )}
             >
-              {item.label}
+              About
+              <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
+            </button>
+
+            <div className="invisible absolute left-0 top-full min-w-64 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <div className="overflow-hidden rounded-2xl border border-sky-100 bg-white p-2 shadow-xl">
+                {aboutLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "block rounded-xl px-4 py-3 text-sm font-semibold transition",
+                      linkIsActive(link.href)
+                        ? "bg-sky-50 text-[#0099FF]"
+                        : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <button
+              type="button"
+              className={cn(
+                "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition",
+                programsIsActive
+                  ? "bg-sky-50 text-[#0099FF]"
+                  : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
+              )}
+            >
+              Programs
+              <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
+            </button>
+
+            <div className="invisible absolute left-0 top-full min-w-64 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <div className="overflow-hidden rounded-2xl border border-sky-100 bg-white p-2 shadow-xl">
+                {programLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "block rounded-xl px-4 py-3 text-sm font-semibold transition",
+                      linkIsActive(link.href)
+                        ? "bg-sky-50 text-[#0099FF]"
+                        : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {mainLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "rounded-lg px-3 py-2 text-sm font-semibold transition",
+                linkIsActive(link.href)
+                  ? "bg-sky-50 text-[#0099FF]"
+                  : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
+              )}
+            >
+              {link.label}
             </Link>
           ))}
-          <Link href="/donate" onClick={() => setOpen(false)}>
-            <Button className="w-full bg-[#8AFF00] hover:bg-[#7aee00] text-[#0a1e3d] font-bold mt-2">
-              <Heart className="h-4 w-4 mr-2" />
+        </nav>
+
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link href="/volunteer">
+            <Button
+              variant="outline"
+              className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
+            >
+              Volunteer
+            </Button>
+          </Link>
+
+          <Link href="/donate">
+            <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+              <Heart className="mr-2 h-4 w-4" />
               Donate
             </Button>
           </Link>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setMobileOpen((current) => !current)}
+          className="rounded-lg p-2 text-[#0a1e3d] transition hover:bg-sky-50 lg:hidden"
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? (
+            <X className="h-7 w-7" />
+          ) : (
+            <Menu className="h-7 w-7" />
+          )}
+        </button>
+      </div>
+
+      {mobileOpen && (
+        <div className="border-t border-sky-100 bg-white px-4 pb-6 pt-3 shadow-lg lg:hidden">
+          <nav className="mx-auto max-w-7xl">
+            <button
+              type="button"
+              onClick={() => setMobileAboutOpen((current) => !current)}
+              className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left font-bold text-[#0a1e3d] hover:bg-sky-50"
+            >
+              About
+              <ChevronDown
+                className={cn(
+                  "h-5 w-5 transition",
+                  mobileAboutOpen && "rotate-180",
+                )}
+              />
+            </button>
+
+            {mobileAboutOpen && (
+              <div className="mb-2 ml-4 border-l-2 border-[#33CCCC] pl-3">
+                {aboutLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-[#0099FF]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setMobileProgramsOpen((current) => !current)}
+              className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left font-bold text-[#0a1e3d] hover:bg-sky-50"
+            >
+              Programs
+              <ChevronDown
+                className={cn(
+                  "h-5 w-5 transition",
+                  mobileProgramsOpen && "rotate-180",
+                )}
+              />
+            </button>
+
+            {mobileProgramsOpen && (
+              <div className="mb-2 ml-4 border-l-2 border-[#33CCCC] pl-3">
+                {programLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-[#0099FF]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {mainLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeMobileMenu}
+                className="block rounded-xl px-4 py-3 font-bold text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]"
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <Link href="/volunteer" onClick={closeMobileMenu}>
+                <Button
+                  variant="outline"
+                  className="w-full border-[#33CCCC] font-bold text-[#0a1e3d]"
+                >
+                  Volunteer
+                </Button>
+              </Link>
+
+              <Link href="/donate" onClick={closeMobileMenu}>
+                <Button className="w-full bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+                  <Heart className="mr-2 h-4 w-4" />
+                  Donate
+                </Button>
+              </Link>
+            </div>
+          </nav>
+        </div>
       )}
-    </nav>
+    </header>
   )
 }
