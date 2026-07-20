@@ -10,13 +10,13 @@
     --card-foreground: 210 60% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 60% 10%;
-    --primary: 204 100% 50%;        /* #0099FF */
+    --primary: 204 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 180 60% 50%;       /* #33CCCC */
+    --secondary: 180 60% 50%;
     --secondary-foreground: 0 0% 10%;
     --muted: 204 30% 95%;
     --muted-foreground: 204 20% 44%;
-    --accent: 88 100% 50%;          /* #8AFF00 */
+    --accent: 88 100% 50%;
     --accent-foreground: 210 60% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -25,15 +25,35 @@
     --ring: 204 100% 50%;
     --radius: 0.5rem;
   }
-}
 
-@layer base {
-  * { @apply border-border; }
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting",
+      cursive;
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 }
