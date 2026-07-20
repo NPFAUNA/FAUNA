@@ -1,190 +1,156 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  CalendarDays,
+  ExternalLink,
+  Facebook,
+  HeartPulse,
+  Instagram,
+  Music2,
+  PawPrint,
+  Users,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, Clock, Heart, Facebook, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Upcoming FAUNA events in Natchitoches, LA — adoption events, community health fairs, fundraisers, and more.",
+    "Find FAUNA adoption events, community health fairs, fundraisers, volunteer opportunities, and other events in Natchitoches Parish.",
 }
 
-type EventCategory = "Adoption" | "Health Fair" | "Fundraiser" | "Community" | "TNR"
-
-interface FaunaEvent {
-  month: string
-  day: string
-  title: string
-  time: string
-  location: string
-  category: EventCategory
-  description: string
-  featured?: boolean
-}
-
-const events: FaunaEvent[] = [
+const eventTypes = [
   {
-    month: "JUL",
-    day: "19",
-    title: "Summer Adoption Weekend",
-    time: "10:00 AM – 4:00 PM",
-    location: "Walmart Natchitoches, 5010 University Pkwy",
-    category: "Adoption",
+    title: "Adoption Events",
     description:
-      "Meet our adoptable dogs and cats! Bring the whole family. Adoption applications accepted on-site.",
-    featured: true,
+      "Meet animals looking for caring homes and learn more about FAUNA&apos;s adoption process.",
+    icon: PawPrint,
   },
   {
-    month: "JUL",
-    day: "26",
-    title: "Community Health Fair & Vaccine Clinic",
-    time: "9:00 AM – 1:00 PM",
-    location: "TBA – Natchitoches Parish",
-    category: "Health Fair",
+    title: "Community Health Fairs",
     description:
-      "Free or low-cost vaccines, microchipping, flea prevention, and spay/neuter referrals for cats and dogs.",
-    featured: true,
+      "Low-cost core vaccines, low-cost microchipping, and other basic wellness support for community pets.",
+    icon: HeartPulse,
   },
   {
-    month: "AUG",
-    day: "9",
-    title: "Bath & Nail Clipping Day",
-    time: "10:00 AM – 2:00 PM",
-    location: "TBA – Natchitoches",
-    category: "Community",
-    description: "Bring your pet for a free bath and nail trim. Hosted by FAUNA volunteers.",
-  },
-  {
-    month: "AUG",
-    day: "16",
-    title: "Annual FAUNA Fundraiser Dinner",
-    time: "6:00 PM – 9:00 PM",
-    location: "Natchitoches Event Center",
-    category: "Fundraiser",
+    title: "Fundraisers",
     description:
-      "Join us for our annual fundraiser dinner supporting the Generations of Hope Capital Campaign. Tickets required.",
-    featured: true,
+      "Support FAUNA&apos;s rescue programs, animal care, and the future Friedman Center.",
+    icon: CalendarDays,
   },
   {
-    month: "AUG",
-    day: "23",
-    title: "TNR Community Workshop",
-    time: "5:30 PM – 7:00 PM",
-    location: "Natchitoches Public Library",
-    category: "TNR",
+    title: "Volunteer Events",
     description:
-      "Learn how Trap-Neuter-Return works, how to humanely trap community cats, and how FAUNA can help.",
-  },
-  {
-    month: "SEP",
-    day: "6",
-    title: "Fall Adoption Event",
-    time: "11:00 AM – 3:00 PM",
-    location: "TBA – Natchitoches",
-    category: "Adoption",
-    description: "Meet available dogs and cats looking for their forever homes. All animals are spayed/neutered and vaccinated.",
+      "Help with adoption events, health fairs, animal care, outreach, and other community activities.",
+    icon: Users,
   },
 ]
 
-const categoryColors: Record<EventCategory, string> = {
-  Adoption: "bg-sky-100 text-[#0099FF]",
-  "Health Fair": "bg-teal-100 text-teal-800",
-  Fundraiser: "bg-sky-100 text-amber-800",
-  Community: "bg-blue-100 text-blue-800",
-  TNR: "bg-orange-100 text-orange-800",
-}
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/FaunaNatchitoches",
+    icon: Facebook,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/fauna_natchitoches/",
+    icon: Instagram,
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@faunanatchitochesrescue",
+    icon: Music2,
+  },
+]
 
 export default function EventsPage() {
-  const featured = events.filter((e) => e.featured)
-
   return (
     <main>
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#0a1e3d] to-[#0d2851] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-[#8AFF00] text-sm font-semibold uppercase tracking-wider">Mark Your Calendar</span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold mt-2 mb-4">Upcoming Events</h1>
-          <p className="text-sky-50 text-lg max-w-2xl">
-            From adoption weekends to community health fairs, FAUNA hosts events throughout the year.
-            Join us — every participant makes a difference.
+      <section className="bg-gradient-to-br from-[#061424] to-[#0a1e3d] px-6 py-20 text-white">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-script text-4xl text-[#8AFF00]">
+            Mark your calendar
+          </p>
+
+          <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">
+            FAUNA Events
+          </h1>
+
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
+            Join FAUNA at adoption events, Community Health Fairs,
+            fundraisers, volunteer activities, and other gatherings throughout
+            Natchitoches Parish.
           </p>
         </div>
       </section>
 
-      {/* Featured Events */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-extrabold text-[#0a1e3d] mb-8 flex items-center gap-2">
-            <span className="text-[#33CCCC] text-2xl">★</span>
-            Featured Events
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {featured.map((event) => (
-              <Card key={event.title} className="border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="bg-[#0099FF] text-white p-4 flex items-center gap-4">
-                  <div className="text-center shrink-0">
-                    <div className="text-xs font-semibold text-sky-200 uppercase">{event.month}</div>
-                    <div className="text-3xl font-extrabold leading-none">{event.day}</div>
-                  </div>
-                  <div>
-                    <Badge className={`${categoryColors[event.category]} text-xs mb-1`}>{event.category}</Badge>
-                    <h3 className="font-bold leading-tight text-sm">{event.title}</h3>
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{event.description}</p>
-                  <div className="space-y-1.5 text-xs text-gray-500">
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5 shrink-0" />
-                      {event.time}
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 shrink-0" />
-                      {event.location}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-3xl bg-[#8AFF00] p-8 text-center text-[#0a1e3d] shadow-lg md:p-12">
+            <CalendarDays className="mx-auto h-12 w-12" />
+
+            <p className="mt-4 font-script text-4xl text-[#0099FF]">
+              Upcoming dates
+            </p>
+
+            <h2 className="mt-2 text-3xl font-extrabold">
+              Follow Us for Current Event Announcements
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8">
+              Event dates, times, locations, weather updates, and registration
+              information are announced through FAUNA&apos;s social-media
+              pages.
+            </p>
+
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-[#0a1e3d] font-bold text-white hover:bg-[#061424]">
+                    <Icon className="mr-2 h-5 w-5" />
+                    {label}
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-sky-50 px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="font-script text-4xl text-[#33CCCC]">
+              Gather for good
+            </p>
+
+            <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d]">
+              Events You May See from FAUNA
+            </h2>
           </div>
 
-          {/* All Events */}
-          <h2 className="text-2xl font-extrabold text-[#0a1e3d] mb-6 flex items-center gap-2">
-            <Calendar className="h-6 w-6 text-[#33CCCC]" />
-            All Upcoming Events
-          </h2>
-          <div className="space-y-4">
-            {events.map((event) => (
-              <Card key={event.title + event.day} className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-5">
-                  <div className="flex items-start gap-5">
-                    <div className="bg-sky-100 text-[#0a1e3d] rounded-xl p-3 text-center min-w-[56px]">
-                      <div className="text-xs font-semibold text-[#33CCCC] uppercase">{event.month}</div>
-                      <div className="text-2xl font-extrabold leading-none">{event.day}</div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className="font-bold text-[#0a1e3d]">{event.title}</h3>
-                        <Badge className={`${categoryColors[event.category]} text-xs`}>{event.category}</Badge>
-                        {event.featured && (
-                          <Badge className="bg-sky-100 text-[#0077aa] text-xs">Featured</Badge>
-                        )}
-                      </div>
-                      <p className="text-gray-600 text-sm mb-2 leading-relaxed">{event.description}</p>
-                      <div className="flex flex-wrap gap-4 text-xs text-gray-500">
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3.5 w-3.5" />
-                          {event.time}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-3.5 w-3.5" />
-                          {event.location}
-                        </span>
-                      </div>
-                    </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {eventTypes.map(({ title, description, icon: Icon }) => (
+              <Card key={title} className="border-0 shadow-md">
+                <CardContent className="p-7">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8AFF00]/25">
+                    <Icon className="h-7 w-7 text-[#0a1e3d]" />
                   </div>
+
+                  <h3 className="mt-5 text-xl font-extrabold text-[#0a1e3d]">
+                    {title}
+                  </h3>
+
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    {description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -192,45 +158,68 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Stay Updated */}
-      <section className="py-14 bg-sky-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Facebook className="h-6 w-6 text-blue-600" />
-                  <h3 className="font-bold text-[#0a1e3d] text-lg">Follow Us on Facebook</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  For the most up-to-date event announcements, adoptable animals, and FAUNA news,
-                  follow us on Facebook. We post updates daily!
-                </p>
-                <a href="https://www.facebook.com/FaunaNatchitoches" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                    Follow FAUNA on Facebook
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Heart className="h-6 w-6 text-red-500" />
-                  <h3 className="font-bold text-[#0a1e3d] text-lg">Volunteer at Events</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  FAUNA events run on volunteer power. If you&apos;d like to help set up, work the
-                  adoption table, or assist with health fair activities, we&apos;d love your help!
-                </p>
-                <Link href="/employment">
-                  <Button className="bg-[#0099FF] hover:bg-[#007acc] text-white">
-                    Sign Up to Volunteer <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
+          <Card className="border-0 bg-[#0a1e3d] text-white shadow-xl">
+            <CardContent className="p-8">
+              <p className="font-script text-4xl text-[#8AFF00]">
+                Follow along
+              </p>
+
+              <h2 className="mt-2 text-2xl font-extrabold">
+                Follow Us on Social Media
+              </h2>
+
+              <p className="mt-4 leading-7 text-gray-200">
+                See event announcements, adoptable animals, volunteer
+                opportunities, community updates, and stories from animals in
+                FAUNA&apos;s care.
+              </p>
+
+              <div className="mt-6 space-y-3">
+                {socialLinks.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-xl bg-white/10 px-5 py-4 font-bold transition hover:bg-white/20"
+                  >
+                    <span className="flex items-center gap-3">
+                      <Icon className="h-6 w-6 text-[#8AFF00]" />
+                      Follow FAUNA on {label}
+                    </span>
+
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-[#33CCCC]/15 shadow-xl">
+            <CardContent className="p-8">
+              <p className="font-script text-4xl text-[#0099FF]">
+                Lend a hand
+              </p>
+
+              <h2 className="mt-2 text-2xl font-extrabold text-[#0a1e3d]">
+                Volunteer at FAUNA Events
+              </h2>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Volunteers help with setup, animal care, adoption tables,
+                Community Health Fair activities, cleanup, transportation, and
+                welcoming guests.
+              </p>
+
+              <Link href="/volunteer">
+                <Button className="mt-6 bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+                  Volunteer with FAUNA
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </main>
