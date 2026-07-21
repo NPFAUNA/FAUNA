@@ -232,6 +232,28 @@ export default function EmploymentPage() {
           </div>
         </div>
       </section>
+      <section className="bg-[#0a1e3d] py-16 text-white">
+  <div className="mx-auto max-w-4xl px-4 text-center">
+    <h2 className="font-script text-5xl text-[#33CCCC] sm:text-6xl">
+      Not Looking for Employment?
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-lg text-sky-100">
+      You can still make a life-saving difference. Whether you have one hour a
+      month or several days each week, FAUNA has volunteer opportunities for
+      every schedule.
+    </p>
+
+    <Link href="/volunteer">
+      <Button
+        size="lg"
+        className="mt-8 bg-[#0099FF] font-bold text-white hover:bg-[#007acc]"
+      >
+        Volunteer with FAUNA
+      </Button>
+    </Link>
+  </div>
+</section>
     </div>
   )
 }
