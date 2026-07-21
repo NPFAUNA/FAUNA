@@ -64,7 +64,7 @@ const photos = [
 ]
 
 const stats = [
-  { value: "92%", label: "Live-Release Rate" },
+  { value: "97.5%", label: "Live-Release Rate" },
   { value: "2,500+", label: "Pets Saved Last Year" },
   { value: "200+", label: "Free Vaccines Given" },
   { value: "150+", label: "Community Cats TNR'd" },
@@ -91,7 +91,7 @@ export default function EmploymentPage() {
               <strong className="text-[#8AFF00]">2,500+ pets</strong> a
               second chance last year and drives FAUNA&apos;s{" "}
               <strong className="text-[#8AFF00]">
-                92% live-release rate
+                97.5% live-release rate
               </strong>
               .
             </p>
