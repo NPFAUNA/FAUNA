@@ -18,17 +18,12 @@ const facilityFeatures = [
   {
     icon: "🏥",
     title: "Community Health & Safety",
-    body: "Modern facilities for high-volume spay/neuter clinics and public veterinary services.",
+    body: "Modern facilities for spay/neuter clinics and veterinary services.",
   },
   {
     icon: "🎓",
     title: "Education & Youth Engagement",
     body: "Dedicated spaces for youth programs, humane education, and community workshops.",
-  },
-  {
-    icon: "🚨",
-    title: "Emergency Readiness",
-    body: "Purpose-built kennels for disaster response and emergency animal intake.",
   },
   {
     icon: "🤝",
@@ -48,6 +43,10 @@ export default function CapitalCampaignPage() {
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-[#0a1e3d] via-[#0d2851] to-[#061424] py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#8AFF00] sm:text-base">
+            Coming Fall 2026
+          </p>
+
           <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 text-[#8AFF00]">
             Capital Campaign
           </Badge>
@@ -111,7 +110,7 @@ export default function CapitalCampaignPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {facilityFeatures.map((item) => (
               <div
                 key={item.title}
