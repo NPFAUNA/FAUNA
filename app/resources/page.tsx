@@ -1,343 +1,432 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import {
-  Phone,
   AlertCircle,
-  Heart,
-  Syringe,
-  MapPin,
-  DollarSign,
-  ShoppingBag,
   BookOpen,
-  Search,
-  CloudLightning,
-  Users,
-  ExternalLink,
   ChevronRight,
+  CloudLightning,
+  ExternalLink,
+  Heart,
+  MapPin,
+  Phone,
+  Search,
+  ShieldAlert,
+  Stethoscope,
+  Users,
+  WalletCards,
 } from "lucide-react"
 
-export const metadata = {
-  title: "Community Resources & Help Desk",
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Community Resources & Help Desk | FAUNA",
   description:
-    "Emergency numbers, low-cost vet care, financial aid, pet food, lost & found help, and disaster prep — all in one place for Natchitoches-area pet owners.",
+    "Emergency veterinary contacts, low-cost care, local veterinarians, financial assistance, pet food resources, training information, and disaster-preparedness resources for Natchitoches Parish.",
 }
 
-// ── data ───────────────────────────────────────────────────
-const emergencyNumbers = [
+const emergencyResources = [
   {
+    status: "24/7",
     name: "Crossroads Animal Emergency Clinic",
-    location: "Alexandria",
+    location: "Alexandria, LA",
     phone: "318-427-1292",
-    tel: "3184271292",
-    note: "24/7 regional ER",
-    badge: "24/7",
+    phoneHref: "tel:3184271292",
+    website: "http://crossroadsanimal.top/",
   },
   {
+    status: "After Hours",
     name: "Animal Emergency Clinic",
-    location: "Shreveport",
+    location: "Shreveport, LA",
     phone: "318-227-2345",
-    tel: "3182272345",
-    note: "Nights + weekends",
-    badge: "After Hours",
+    phoneHref: "tel:3182272345",
+    website: "http://www.aeclinic.com/",
   },
   {
+    status: "24/7",
     name: "LSU Veterinary Teaching Hospital",
-    location: "Baton Rouge",
+    location: "Baton Rouge, LA",
     phone: "225-578-9600",
-    tel: "2255789600",
-    note: "Open 24/7/365, small-animal ER",
-    badge: "24/7",
+    phoneHref: "tel:2255789600",
+    website: "https://www.lsu.edu/vetmed/",
   },
   {
+    status: "Poison",
     name: "ASPCA Poison Control",
     location: "National",
     phone: "888-426-4435",
-    tel: "8884264435",
-    note: "$95 fee may apply",
-    badge: "Poison",
+    phoneHref: "tel:8884264435",
+    website: "https://www.aspca.org/pet-care/aspca-poison-control",
   },
   {
+    status: "Poison",
     name: "Pet Poison Helpline",
     location: "National",
     phone: "855-764-7661",
-    tel: "8557647661",
-    note: "$89 flat fee",
-    badge: "Poison",
+    phoneHref: "tel:8557647661",
+    website: "https://www.petpoisonhelpline.com/",
   },
 ]
 
 const localVets = [
   {
     name: "Natchitoches Animal Hospital",
-    address: "1787 LA-6",
-    distance: "≈ 3 mi",
+    address: "1787 LA-6, Natchitoches, LA",
+    distance: "Approximately 3 miles",
     phone: "318-352-2103",
-    tel: "3183522103",
-    note: "General practice Mon–Fri; handles routine surgeries and daytime urgent care.",
-  },
-  {
-    name: "Cane River Veterinary Clinic",
-    address: "1841 South Dr",
-    distance: "≈ 2 mi",
-    phone: "318-352-6678",
-    tel: "3183526678",
-    note: "60-year fixture in town; weekday hours 8 a.m.–5 p.m.",
+    phoneHref: "tel:3183522103",
+    description:
+      "General practice offering routine care, surgeries, and daytime urgent care.",
   },
   {
     name: "Good Hope Veterinary Hospital",
-    address: "128 South Dr",
-    distance: "≈ 2 mi",
+    address: "128 South Dr, Natchitoches, LA",
+    distance: "Approximately 2 miles",
     phone: "318-238-3000",
-    tel: "3182383000",
-    note: "Full-service small-animal care; praised for quick appointments.",
-  },
-  {
-    name: "James Veterinary Clinic",
-    address: "7107 Hwy 1 Bypass",
-    distance: "≈ 4 mi",
-    phone: "318-357-8312",
-    tel: "3183578312",
-    note: "Long-standing mixed-animal clinic; weekday + half-day Friday.",
+    phoneHref: "tel:3182383000",
+    description:
+      "Full-service small-animal veterinary care in Natchitoches.",
   },
   {
     name: "Many Veterinary Hospital",
     address: "Many, LA",
-    distance: "29 mi W (≈ 30 min)",
+    distance: "Approximately 29 miles west",
     phone: "318-256-2608",
-    tel: "3182562608",
-    note: "Good fallback if in western parish; M–F 8–5.",
+    phoneHref: "tel:3182562608",
+    description:
+      "A regional veterinary option serving pets and families near western Natchitoches Parish.",
+    website: "https://www.manyvet.com/",
   },
   {
     name: "Red River Veterinary Center",
     address: "Coushatta, LA",
-    distance: "31 mi SE (≈ 35 min)",
+    distance: "Approximately 31 miles southeast",
     phone: "318-932-1000",
-    tel: "3189321000",
-    note: "Affordable wellness + farm-animal services; same-day sick visits.",
+    phoneHref: "tel:3189321000",
+    description:
+      "Wellness, sick-pet, and mixed-animal veterinary services in Coushatta.",
   },
 ]
 
-const financialAid = [
+const financialResources = [
   {
-    name: "RedRover Relief – Urgent-Care Grants",
-    covers: "Up to ≈ $250 toward life-saving treatment",
-    href: "https://redrover.org/relief",
-    domain: "redrover.org/relief",
+    name: "RedRover Relief",
+    description:
+      "Urgent-care grants that may help with the cost of lifesaving veterinary treatment.",
+    website: "https://redrover.org/relief/",
   },
   {
     name: "Brown Dog Foundation",
-    covers: "Bridge funding when a diagnosis is treatable but unaffordable",
-    href: "https://browndogfoundation.org",
-    domain: "browndogfoundation.org",
+    description:
+      "Financial assistance for families whose pets have a treatable condition but whose care is unaffordable.",
+    website: "https://www.browndogfoundation.org/",
   },
   {
     name: "Pet Help Finder",
-    covers: "Search tool for food, vet, and temporary care assistance",
-    href: "https://pethelpfinder.org",
-    domain: "pethelpfinder.org",
+    description:
+      "Search for veterinary care, pet food, temporary care, and other assistance programs.",
+    website: "https://www.pethelpfinder.org/",
   },
 ]
 
-const partners = [
+const foodResources = [
   {
-    tier: "Local Core",
-    items: [
-      { name: "Good Hope Veterinary Hospital", href: "https://www.facebook.com/goodhopevet/" },
-      { name: "Many Veterinary Hospital", href: "https://www.manyvet.com/" },
-    ],
-    color: "#0099FF",
+    name: "Cane River Food Pantry Pet Shelf",
+    location: "Natchitoches",
+    description:
+      "A local food pantry offering pet-food assistance for families in the Natchitoches area.",
+    website: "https://www.caneriverfoodpantry.org",
+    label: "Local",
   },
   {
-    tier: "Regional / Transport",
-    items: [
-      { name: "Best Friends Animal Society", href: "https://bestfriends.org" },
-    ],
-    color: "#33CCCC",
+    name: "Louisiana SPCA Pet Food Pantry",
+    location: "Statewide",
+    description:
+      "Emergency pet-food and supply assistance, including support during declared disasters.",
+    website: "https://www.la-spca.org",
+    label: "Statewide",
   },
   {
-    tier: "Statewide Allies",
-    items: [
-      { name: "Louisiana SPCA", href: "https://www.la-spca.org" },
-    ],
-    color: "#8AFF00",
-  },
-  {
-    tier: "National Content",
-    items: [
-      { name: "ASPCA", href: "https://www.aspca.org" },
-      { name: "RedRover", href: "https://redrover.org" },
-      { name: "Pet Help Finder", href: "https://www.pethelpfinder.org/m/phf" },
-    ],
-    color: "#0a1e3d",
+    name: "Feeding Pets of the Homeless",
+    location: "National",
+    description:
+      "Food and veterinary-care assistance for pets belonging to people experiencing homelessness.",
+    website: "https://www.petsofthehomeless.org",
+    label: "National",
   },
 ]
 
-const navSections = [
-  { id: "emergency", label: "Emergency" },
-  { id: "spay-neuter", label: "Spay & Neuter" },
-  { id: "local-vets", label: "Local Vets" },
-  { id: "financial-aid", label: "Financial Aid" },
-  { id: "food-supplies", label: "Food & Supplies" },
-  { id: "training", label: "Training" },
-  { id: "found-cat", label: "Found a Cat?" },
-  { id: "lost-found", label: "Lost & Found" },
-  { id: "disaster", label: "Disaster Prep" },
-  { id: "partners", label: "Partners" },
+const partnerGroups = [
+  {
+    title: "Local Core",
+    partners: [
+      {
+        name: "Good Hope Veterinary Hospital",
+        website: "https://www.facebook.com/GoodHopeVeterinaryHospital/",
+      },
+      {
+        name: "Many Veterinary Hospital",
+        website: "https://www.manyvet.com/",
+      },
+    ],
+  },
+  {
+    title: "Regional & Transport",
+    partners: [
+      {
+        name: "Best Friends Animal Society",
+        website: "https://bestfriends.org/",
+      },
+    ],
+  },
+  {
+    title: "Statewide Allies",
+    partners: [
+      {
+        name: "Louisiana SPCA",
+        website: "https://www.la-spca.org/",
+      },
+    ],
+  },
+  {
+    title: "National Resources",
+    partners: [
+      {
+        name: "ASPCA",
+        website: "https://www.aspca.org/",
+      },
+      {
+        name: "RedRover",
+        website: "https://redrover.org/",
+      },
+      {
+        name: "Pet Help Finder",
+        website: "https://www.pethelpfinder.org/",
+      },
+    ],
+  },
 ]
 
-// ── page ───────────────────────────────────────────────────
+const navigationLinks = [
+  { href: "#emergency", label: "Emergency" },
+  { href: "#spay-neuter", label: "Spay & Neuter" },
+  { href: "#local-vets", label: "Local Vets" },
+  { href: "#financial-aid", label: "Financial Aid" },
+  { href: "#food-supplies", label: "Food & Supplies" },
+  { href: "#training", label: "Training" },
+  { href: "#found-cat", label: "Found a Cat?" },
+  { href: "#lost-found", label: "Lost & Found" },
+  { href: "#disaster", label: "Disaster Prep" },
+  { href: "#partners", label: "Partners" },
+]
+
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <Badge className="mb-5 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
+            Community Resources
+          </Badge>
 
-      {/* ── Hero ── */}
-      <section className="bg-gradient-to-br from-[#0a1e3d] via-[#0d2851] to-[#061424] text-white py-14">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <Badge className="bg-[#8AFF00]/20 text-[#8AFF00] border-[#8AFF00]/30 mb-4">Community Resources</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
-            Community Resources &amp;{" "}
-            <span className="text-[#33CCCC]">Help Desk</span>
+          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+            Community Resources &amp; Help Desk
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            One hub for Natchitoches-area pet owners — emergencies, low-cost care, behaviour advice,
-            supplies, and long-term planning.
-          </p>
-          {/* Section nav */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {navSections.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#0099FF] text-white text-xs font-medium transition-colors"
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── Emergency CTA strip ── */}
-      <div className="bg-red-600 text-white py-3 px-4 text-center text-sm font-semibold tracking-wide">
-        <AlertCircle className="inline h-4 w-4 mr-2 mb-0.5" />
-        Need help right now? Call the numbers below.
-      </div>
-
-      {/* ── 24/7 Emergency Quick-Dial ── */}
-      <section id="emergency" className="py-14 bg-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center shrink-0">
-              <Phone className="h-5 w-5 text-white" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-red-500">24/7 Emergency</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Emergency Quick-Dial</h2>
-            </div>
-          </div>
-
-          {/* Mobile-first tappable rows */}
-          <div className="rounded-2xl border border-red-100 overflow-hidden shadow-sm">
-            {/* Table header — hidden on mobile */}
-            <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr] bg-red-50 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-red-600 border-b border-red-100">
-              <span>Service</span>
-              <span>Phone</span>
-              <span>Notes</span>
-            </div>
-            {emergencyNumbers.map((row, i) => (
-              <a
-                key={row.name}
-                href={`tel:${row.tel}`}
-                className={`flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] items-start md:items-center px-5 py-4 gap-1 md:gap-0 transition-colors hover:bg-red-50 active:bg-red-100 ${
-                  i !== emergencyNumbers.length - 1 ? "border-b border-gray-100" : ""
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <Badge
-                    className={`text-[10px] px-2 py-0 h-5 shrink-0 ${
-                      row.badge === "24/7"
-                        ? "bg-red-100 text-red-700 border-red-200"
-                        : row.badge === "Poison"
-                        ? "bg-orange-100 text-orange-700 border-orange-200"
-                        : "bg-amber-100 text-amber-700 border-amber-200"
-                    }`}
-                  >
-                    {row.badge}
-                  </Badge>
-                  <span className="font-semibold text-[#0a1e3d] text-sm">
-                    {row.name}
-                    <span className="font-normal text-gray-500 ml-1 hidden md:inline">— {row.location}</span>
-                  </span>
-                </div>
-                <span className="font-bold text-[#0099FF] text-base md:text-sm flex items-center gap-1.5">
-                  <Phone className="h-3.5 w-3.5 shrink-0 text-[#0099FF]" />
-                  {row.phone}
-                </span>
-                <span className="text-xs text-gray-500">{row.note}</span>
-              </a>
-            ))}
-          </div>
-          <p className="text-xs text-gray-400 mt-3 text-center">
-            Tap any row on mobile to dial directly.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
+            One hub for Natchitoches-area pet owners &mdash; emergencies,
+            low-cost care, behavior advice, supplies, and long-term planning.
           </p>
         </div>
       </section>
 
-      {/* ── Low-Cost Spay / Neuter ── */}
-      <section id="spay-neuter" className="py-14 bg-sky-50 scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#0099FF] flex items-center justify-center shrink-0">
-              <Syringe className="h-5 w-5 text-white" />
+      <nav className="sticky top-16 z-40 border-b border-sky-100 bg-white/95 shadow-sm backdrop-blur">
+        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+          {navigationLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="shrink-0 rounded-full border border-sky-100 bg-sky-50 px-3 py-1.5 text-xs font-semibold text-[#0a1e3d] transition-colors hover:border-[#0099FF] hover:bg-[#0099FF] hover:text-white"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
+      <section
+        id="emergency"
+        className="scroll-mt-32 bg-red-50 py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-600">
+              <ShieldAlert className="h-6 w-6 text-white" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0099FF]">Prevention</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Low-Cost Spay / Neuter &amp; Preventive Care</h2>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {/* Spay Natchitoches */}
-            <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
-              <div className="flex items-center gap-2 mb-3">
-                <Badge className="bg-[#8AFF00]/20 text-[#0a1e3d] border-[#8AFF00]/30 text-xs">FAUNA Program</Badge>
-              </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">Spay Natchitoches</h3>
-              <p className="text-sm text-gray-600 mb-4 flex-1">
-                Need-based vouchers covering a major portion of your pet&apos;s spay/neuter cost. Your
-                out-of-pocket is usually under $100.
+              <p className="text-sm font-bold uppercase tracking-wider text-red-600">
+                Need help right now? Call the numbers below.
               </p>
-              <div className="flex flex-col gap-2">
+
+              <h2 className="mt-1 text-3xl font-bold text-[#0a1e3d]">
+                Emergency Quick-Dial
+              </h2>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-red-100 bg-white shadow-lg">
+            <div className="hidden grid-cols-[120px_1fr_190px] gap-4 bg-[#0a1e3d] px-6 py-4 text-sm font-semibold text-white md:grid">
+              <span>Availability</span>
+              <span>Emergency Resource</span>
+              <span>Phone</span>
+            </div>
+
+            <div className="divide-y divide-gray-100">
+              {emergencyResources.map((resource) => (
+                <div
+                  key={resource.name}
+                  className="grid gap-4 px-5 py-5 transition-colors hover:bg-red-50/50 md:grid-cols-[120px_1fr_190px] md:items-center md:px-6"
+                >
+                  <div>
+                    <Badge
+                      className={
+                        resource.status === "Poison"
+                          ? "border-purple-200 bg-purple-100 text-purple-700"
+                          : resource.status === "After Hours"
+                            ? "border-amber-200 bg-amber-100 text-amber-700"
+                            : "border-red-200 bg-red-100 text-red-700"
+                      }
+                    >
+                      {resource.status}
+                    </Badge>
+                  </div>
+
+                  <div>
+                    <Link
+                      href={resource.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 font-bold text-[#0a1e3d] hover:text-[#0099FF]"
+                    >
+                      {resource.name}
+                      <ExternalLink className="h-4 w-4 shrink-0 opacity-50 transition-opacity group-hover:opacity-100" />
+                    </Link>
+
+                    <p className="mt-1 flex items-center gap-1.5 text-sm text-gray-500">
+                      <MapPin className="h-3.5 w-3.5" />
+                      {resource.location}
+                    </p>
+
+                    <Link
+                      href={resource.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-block text-xs font-semibold text-[#0099FF] hover:underline"
+                    >
+                      Visit website
+                    </Link>
+                  </div>
+
+                  <a
+                    href={resource.phoneHref}
+                    className="inline-flex w-fit items-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 font-bold text-white transition-colors hover:bg-red-700"
+                  >
+                    <Phone className="h-4 w-4" />
+                    {resource.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-4 text-center text-sm text-gray-600">
+            Tap a phone number to call or tap the resource name to visit its
+            website.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="spay-neuter"
+        className="scroll-mt-32 bg-white py-16"
+      >
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#33CCCC]">
+              <Heart className="h-5 w-5 text-white" />
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#33CCCC]">
+                Prevention
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                Low-Cost Spay, Neuter &amp; Preventive Care
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-sky-100 bg-sky-50 p-7">
+              <Badge className="mb-4 border-[#0099FF]/20 bg-[#0099FF]/10 text-[#0099FF]">
+                FAUNA Program
+              </Badge>
+
+              <h3 className="text-2xl font-bold text-[#0a1e3d]">
+                Spay Natchitoches
+              </h3>
+
+              <p className="mt-4 leading-relaxed text-gray-600">
+                Need-based vouchers cover a major portion of your pet&apos;s
+                spay or neuter cost. Your out-of-pocket cost is usually under
+                $100.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href="https://new.shelterluv.com/form/community/FAUN/14823-spay-natchitoches"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Button size="sm" className="w-full bg-[#0099FF] hover:bg-[#0088ee] text-white text-xs">
-                    Apply for a Voucher <ChevronRight className="h-3 w-3 ml-1" />
+                  <Button className="bg-[#0099FF] text-white hover:bg-[#0088ee]">
+                    Apply for a Voucher
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
+
                 <a href="mailto:SpayNatchitoches@yahoo.com">
-                  <Button size="sm" variant="outline" className="w-full border-[#0099FF] text-[#0099FF] text-xs">
-                    Email SpayNatchitoches@yahoo.com
-                  </Button>
+                  <Button variant="outline">Email the Program</Button>
                 </a>
               </div>
             </div>
 
-            {/* Pet Help Finder */}
-            <div className="bg-white rounded-2xl border border-sky-100 p-5 shadow-sm flex flex-col">
-              <div className="flex items-center gap-2 mb-3">
-                <Badge className="bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20 text-xs">National</Badge>
-              </div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2">Pet Help Finder</h3>
-              <p className="text-sm text-gray-600 mb-4 flex-1">
-                Search for low-cost spay/neuter services, preventive veterinary care, financial assistance,
-                pet food resources, and other pet support programs throughout the United States.
+            <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+              <Badge className="mb-4 border-purple-200 bg-purple-100 text-purple-700">
+                National
+              </Badge>
+
+              <h3 className="text-2xl font-bold text-[#0a1e3d]">
+                Pet Help Finder
+              </h3>
+
+              <p className="mt-4 leading-relaxed text-gray-600">
+                Search for low-cost spay and neuter services, preventive
+                veterinary care, financial assistance, pet food, and other
+                support programs throughout the United States.
               </p>
-              <Link href="https://www.pethelpfinder.org/m/phf" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="w-full bg-[#33CCCC] hover:bg-[#22bbbb] text-white text-xs">
-                  Find Low-Cost Care <ExternalLink className="h-3 w-3 ml-1" />
+
+              <Link
+                href="https://www.pethelpfinder.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block"
+              >
+                <Button variant="outline">
+                  Find Low-Cost Care
+                  <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -345,456 +434,551 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* ── Local Veterinary & Wellness Partners ── */}
-      <section id="local-vets" className="py-14 bg-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#33CCCC] flex items-center justify-center shrink-0">
-              <MapPin className="h-5 w-5 text-white" />
+      <section
+        id="local-vets"
+        className="scroll-mt-32 bg-gray-50 py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
+              <Stethoscope className="h-5 w-5 text-white" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#33CCCC]">Near You</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Local Veterinary &amp; Wellness Partners</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0099FF]">
+                Near You
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                Local Veterinary &amp; Wellness Partners
+              </h2>
             </div>
           </div>
 
-          {/* Desktop table */}
-          <div className="hidden md:block rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-            <div className="grid grid-cols-[2.5fr_1fr_1fr_2fr] bg-[#0d2851] text-white px-5 py-3 text-xs font-semibold uppercase tracking-wider">
-              <span>Clinic</span>
-              <span>Distance</span>
-              <span>Phone</span>
-              <span>Quick Notes</span>
-            </div>
-            {localVets.map((vet, i) => (
-              <div
-                key={vet.name}
-                className={`grid grid-cols-[2.5fr_1fr_1fr_2fr] items-start px-5 py-4 gap-2 ${
-                  i % 2 === 1 ? "bg-gray-50" : "bg-white"
-                } ${i !== localVets.length - 1 ? "border-b border-gray-100" : ""}`}
-              >
-                <div>
-                  <p className="font-semibold text-[#0a1e3d] text-sm">{vet.name}</p>
-                  <p className="text-xs text-gray-500">{vet.address}</p>
-                </div>
-                <span className="text-xs text-gray-600 pt-0.5">{vet.distance}</span>
-                <a
-                  href={`tel:${vet.tel}`}
-                  className="text-[#0099FF] font-bold text-sm hover:underline flex items-center gap-1"
-                >
-                  <Phone className="h-3 w-3 shrink-0" />
-                  {vet.phone}
-                </a>
-                <p className="text-xs text-gray-600 leading-relaxed">{vet.note}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile cards */}
-          <div className="md:hidden space-y-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {localVets.map((vet) => (
-              <div key={vet.name} className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <div>
-                    <p className="font-bold text-[#0a1e3d] text-sm">{vet.name}</p>
-                    <p className="text-xs text-gray-500">{vet.address} · {vet.distance}</p>
-                  </div>
+              <article
+                key={vet.name}
+                className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-xl font-bold text-[#0a1e3d]">
+                  {vet.name}
+                </h3>
+
+                <p className="mt-2 flex items-start gap-2 text-sm text-gray-500">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0099FF]" />
+                  <span>
+                    {vet.address}
+                    <br />
+                    {vet.distance}
+                  </span>
+                </p>
+
+                <p className="mt-4 leading-relaxed text-gray-600">
+                  {vet.description}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a href={vet.phoneHref}>
+                    <Button
+                      size="sm"
+                      className="bg-[#0099FF] text-white hover:bg-[#0088ee]"
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      {vet.phone}
+                    </Button>
+                  </a>
+
+                  {vet.website && (
+                    <Link
+                      href={vet.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="sm" variant="outline">
+                        Website
+                        <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
-                <a
-                  href={`tel:${vet.tel}`}
-                  className="inline-flex items-center gap-1.5 text-[#0099FF] font-bold text-base mb-2"
-                >
-                  <Phone className="h-4 w-4" />
-                  {vet.phone}
-                </a>
-                <p className="text-xs text-gray-600">{vet.note}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Financial Aid ── */}
-      <section id="financial-aid" className="py-14 bg-amber-50 scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center shrink-0">
-              <DollarSign className="h-5 w-5 text-white" />
+      <section
+        id="financial-aid"
+        className="scroll-mt-32 bg-white py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#8AFF00]">
+              <WalletCards className="h-5 w-5 text-[#0a1e3d]" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber-600">Help Paying Bills</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Financial Aid for Vet Bills</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#5a9900]">
+                Help Paying Bills
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                Financial Aid for Veterinary Bills
+              </h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {financialAid.map((prog) => (
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {financialResources.map((resource) => (
               <Link
-                key={prog.name}
-                href={prog.href}
+                key={resource.name}
+                href={resource.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl border border-amber-100 p-5 shadow-sm hover:shadow-md hover:border-amber-200 transition-all flex flex-col"
+                className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#0099FF]/30 hover:shadow-lg"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-bold text-[#0a1e3d] text-sm leading-tight pr-2">{prog.name}</h3>
-                  <ExternalLink className="h-4 w-4 text-gray-300 group-hover:text-amber-500 shrink-0 transition-colors" />
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-lg font-bold text-[#0a1e3d] group-hover:text-[#0099FF]">
+                    {resource.name}
+                  </h3>
+
+                  <ExternalLink className="h-4 w-4 shrink-0 text-gray-400" />
                 </div>
-                <p className="text-sm text-gray-600 flex-1 mb-4">{prog.covers}</p>
-                <span className="text-xs text-amber-600 font-semibold">{prog.domain} →</span>
+
+                <p className="mt-4 flex-1 leading-relaxed text-gray-600">
+                  {resource.description}
+                </p>
+
+                <span className="mt-5 text-sm font-semibold text-[#0099FF]">
+                  Visit resource
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Pet Food & Supplies ── */}
-      <section id="food-supplies" className="py-14 bg-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#8AFF00] flex items-center justify-center shrink-0">
-              <ShoppingBag className="h-5 w-5 text-[#0a1e3d]" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#5a9900]">Pantries &amp; Aid</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Pet Food &amp; Supplies</h2>
-            </div>
+      <section
+        id="food-supplies"
+        className="scroll-mt-32 bg-sky-50 py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#0099FF]">
+              Pantries &amp; Aid
+            </p>
+
+            <h2 className="mt-1 text-3xl font-bold text-[#0a1e3d]">
+              Pet Food &amp; Supplies
+            </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              {
-                name: "Cane River Food Pantry – Pet Shelf",
-                location: "Natchitoches",
-                desc: "Local food pantry with a dedicated pet shelf for families in need in the Natchitoches area.",
-                href: "https://www.caneriverfoodpantry.org",
-                tag: "Local",
-                tagColor: "bg-[#8AFF00]/20 text-[#0a1e3d] border-[#8AFF00]/30",
-              },
-              {
-                name: "Louisiana SPCA Pet Food Pantry",
-                location: "Statewide (ships during disasters)",
-                desc: "Ships statewide during declared disasters; provides emergency pet food and supply assistance.",
-                href: "https://www.la-spca.org",
-                tag: "Statewide",
-                tagColor: "bg-[#33CCCC]/10 text-[#33CCCC] border-[#33CCCC]/20",
-              },
-              {
-                name: "Feeding Pets of the Homeless",
-                location: "Pop-up wellness & food clinics",
-                desc: "Provides free food and veterinary care to pets of people experiencing homelessness; hosts pop-up clinics.",
-                href: "https://www.petsofthehomeless.org",
-                tag: "National",
-                tagColor: "bg-purple-100 text-purple-700 border-purple-200",
-              },
-            ].map((item) => (
-              <div key={item.name} className="bg-gray-50 rounded-2xl border border-gray-100 p-5 shadow-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge className={`text-xs ${item.tagColor}`}>{item.tag}</Badge>
-                </div>
-                <h3 className="font-bold text-[#0a1e3d] mb-1 text-sm">{item.name}</h3>
-                <p className="text-xs text-gray-500 mb-2">{item.location}</p>
-                <p className="text-sm text-gray-600 mb-4">{item.desc}</p>
-                <Link href={item.href} target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="text-xs w-full border-gray-200 hover:border-[#0099FF] hover:text-[#0099FF]">
-                    Visit Website <ExternalLink className="h-3 w-3 ml-1" />
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {foodResources.map((resource) => (
+              <div
+                key={resource.name}
+                className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm"
+              >
+                <Badge className="mb-4 border-[#33CCCC]/20 bg-[#33CCCC]/10 text-[#167f7f]">
+                  {resource.label}
+                </Badge>
+
+                <h3 className="text-lg font-bold text-[#0a1e3d]">
+                  {resource.name}
+                </h3>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  {resource.location}
+                </p>
+
+                <p className="mt-4 leading-relaxed text-gray-600">
+                  {resource.description}
+                </p>
+
+                <Link
+                  href={resource.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-block"
+                >
+                  <Button size="sm" variant="outline">
+                    Visit Website
+                    <ExternalLink className="ml-2 h-3.5 w-3.5" />
                   </Button>
                 </Link>
               </div>
             ))}
           </div>
-          {/* FAUNA wishlists callout */}
-          <div className="mt-6 bg-sky-50 rounded-2xl border border-sky-100 p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+          <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-2xl border border-sky-100 bg-white p-6 sm:flex-row">
             <div>
-              <p className="font-semibold text-[#0a1e3d] mb-1">Support FAUNA directly with supplies</p>
-              <p className="text-sm text-gray-600">
-                Shop our Amazon, Chewy, or Tractor Supply wishlists — items ship straight to our shelter.
+              <h3 className="font-bold text-[#0a1e3d]">
+                Support FAUNA directly with supplies
+              </h3>
+
+              <p className="mt-1 text-sm text-gray-600">
+                Shop FAUNA&apos;s wishlists and send needed supplies directly
+                to animals in our care.
               </p>
             </div>
-            <Link href="/donate" className="shrink-0">
-              <Button className="bg-[#0099FF] hover:bg-[#0088ee] text-white text-sm">
-                View FAUNA Wishlists <ChevronRight className="h-4 w-4 ml-1" />
+
+            <Link href="/donate">
+              <Button className="bg-[#0099FF] text-white hover:bg-[#0088ee]">
+                View FAUNA Wishlists
+                <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Training & Behavior ── */}
-      <section id="training" className="py-14 bg-[#0a1e3d] text-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#33CCCC] flex items-center justify-center shrink-0">
+      <section
+        id="training"
+        className="scroll-mt-32 bg-[#0a1e3d] py-16 text-white"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#33CCCC]">
               <BookOpen className="h-5 w-5 text-white" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#33CCCC]">Education</p>
-              <h2 className="text-2xl font-bold text-white">Training &amp; Behavior Libraries</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#33CCCC]">
+                Education
+              </p>
+
+              <h2 className="text-3xl font-bold">
+                Training &amp; Behavior Libraries
+              </h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+
+          <div className="grid gap-5 md:grid-cols-2">
             <Link
               href="https://www.aspca.org/pet-care"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/10 hover:bg-white/20 transition-colors rounded-2xl border border-white/10 p-6"
+              className="group rounded-2xl border border-white/10 bg-white/10 p-7 transition-colors hover:bg-white/15"
             >
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-white text-lg">ASPCA Pet-Care Guides</h3>
-                <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-[#33CCCC] transition-colors shrink-0" />
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-bold">ASPCA Pet-Care Guides</h3>
+                <ExternalLink className="h-4 w-4 shrink-0 text-[#33CCCC]" />
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Dog, cat, seasonal safety, and DIY enrichment guides — written and reviewed by
-                veterinary professionals. Great first stop for any behaviour question.
+
+              <p className="mt-4 leading-relaxed text-gray-300">
+                Dog and cat care, seasonal safety, enrichment, health, and
+                behavior information.
               </p>
-              <span className="inline-block mt-4 text-xs text-[#33CCCC] font-semibold">aspca.org/pet-care →</span>
             </Link>
+
             <Link
               href="https://bestfriends.org/resources"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/10 hover:bg-white/20 transition-colors rounded-2xl border border-white/10 p-6"
+              className="group rounded-2xl border border-white/10 bg-white/10 p-7 transition-colors hover:bg-white/15"
             >
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-white text-lg">Best Friends Animal Society</h3>
-                <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-[#33CCCC] transition-colors shrink-0" />
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-bold">
+                  Best Friends Animal Society
+                </h3>
+                <ExternalLink className="h-4 w-4 shrink-0 text-[#33CCCC]" />
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                800+ free how-to articles and videos covering training, health, behaviour modification,
-                enrichment, and responsible pet ownership for every stage of life.
+
+              <p className="mt-4 leading-relaxed text-gray-300">
+                Free articles and videos covering training, behavior,
+                enrichment, health, and responsible pet ownership.
               </p>
-              <span className="inline-block mt-4 text-xs text-[#33CCCC] font-semibold">bestfriends.org/resources →</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Found a Cat Guide ── */}
-      <section id="found-cat" className="py-14 bg-sky-50 scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#33CCCC] flex items-center justify-center shrink-0">
-              <Search className="h-5 w-5 text-white" />
-            </div>
+      <section
+        id="found-cat"
+        className="scroll-mt-32 bg-white py-16"
+      >
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0099FF]">Found Cat Guide</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">What to Do If You Find a Cat</h2>
-            </div>
-          </div>
+              <Badge className="mb-4 border-[#33CCCC]/20 bg-[#33CCCC]/10 text-[#167f7f]">
+                Found Cat Guide
+              </Badge>
 
-          <div className="bg-white rounded-2xl border border-sky-100 p-4 md:p-6 shadow-sm">
-            <div className="mb-4">
-              <h3 className="text-xl font-bold text-[#0a1e3d] mb-2">
-                Found a Cat in Natchitoches Parish?
-              </h3>
-              <p className="text-sm text-gray-600">
-                Use this quick guide to decide whether a cat needs TNR, foster help, an owned-cat voucher,
-                or a lost-and-found post. For kittens, always make sure they are truly abandoned before moving them.
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                What to Do If You Find a Cat
+              </h2>
+
+              <p className="mt-5 leading-relaxed text-gray-600">
+                Use this guide to decide whether a cat needs Trap-Neuter-Return,
+                foster assistance, an owned-cat voucher, or a lost-and-found
+                post. For kittens, always make sure they are truly abandoned
+                before moving them.
               </p>
+
+              <Link
+                href="https://new.shelterluv.com/form/community/FAUN/14823-tnr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block"
+              >
+                <Button className="bg-[#33CCCC] font-bold text-[#061424] hover:bg-[#29b8b8]">
+                  Submit a TNR Request
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+            <div className="relative aspect-square overflow-hidden rounded-2xl bg-sky-50">
               <Image
-                src="What to do if you find a cat.jpg"
+                src="http://www.npfauna.org/wp-content/uploads/2026/05/what-to-do-if-you-find-a-cat.png"
                 alt="What to do if you find a cat in Natchitoches Parish"
-                width={1278}
-                height={1022}
-                className="w-full h-auto"
+                fill
+                className="object-contain p-4"
+                unoptimized
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Lost & Found ── */}
-      <section id="lost-found" className="py-14 bg-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#0099FF] flex items-center justify-center shrink-0">
+      <section
+        id="lost-found"
+        className="scroll-mt-32 bg-gray-50 py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
               <Search className="h-5 w-5 text-white" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0099FF]">Missing Pet</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Lost &amp; Found Toolkit</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0099FF]">
+                Missing Pet
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                Lost &amp; Found Toolkit
+              </h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Microchip lookup */}
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             <Link
               href="https://petmicrochiplookup.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-sky-50 rounded-2xl border border-sky-100 p-5 hover:shadow-md transition-shadow flex flex-col"
+              className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="text-2xl mb-3">&#x1F4F1;</div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2 text-sm">Microchip Lookup</h3>
-              <p className="text-xs text-gray-600 flex-1 mb-3">
-                Search any microchip number across all major registries at once.
+              <h3 className="font-bold text-[#0a1e3d]">Microchip Lookup</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Search a microchip number across major registries.
               </p>
-              <span className="text-xs text-[#0099FF] font-semibold">petmicrochiplookup.org →</span>
+              <span className="mt-5 inline-block text-sm font-semibold text-[#0099FF]">
+                Search now
+              </span>
             </Link>
 
-            {/* Facebook group */}
             <Link
               href="https://www.facebook.com/groups/natchitocheslostfoundpets"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-blue-50 rounded-2xl border border-blue-100 p-5 hover:shadow-md transition-shadow flex flex-col"
+              className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="text-2xl mb-3">&#x1F4F8;</div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2 text-sm">Natchitoches Lost/Found Pets</h3>
-              <p className="text-xs text-gray-600 flex-1 mb-3">
-                Active Facebook community group — post a clear photo immediately when a pet goes missing.
+              <h3 className="font-bold text-[#0a1e3d]">
+                Natchitoches Lost/Found Pets
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Post a clear photo and identifying information in the local
+                Facebook group.
               </p>
-              <span className="text-xs text-[#1877F2] font-semibold">Facebook Group →</span>
+              <span className="mt-5 inline-block text-sm font-semibold text-[#0099FF]">
+                Open Facebook group
+              </span>
             </Link>
 
-            {/* Lost pet flyer */}
-            <div className="bg-green-50 rounded-2xl border border-green-100 p-5 flex flex-col">
-              <div className="text-2xl mb-3">&#x1F4CB;</div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2 text-sm">Printable &ldquo;Lost Pet&rdquo; Flyer</h3>
-              <p className="text-xs text-gray-600 flex-1 mb-3">
-                FAUNA-branded template — fill in your pet&apos;s photo and contact info, then post around the neighbourhood.
+            <div className="rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
+              <h3 className="font-bold text-[#0a1e3d]">
+                Printable Lost-Pet Flyer
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Request a template for your pet&apos;s photo, description, and
+                contact information.
               </p>
-              <a href="mailto:npfauna@gmail.com?subject=Lost Pet Flyer Template Request">
-                <Button size="sm" variant="outline" className="text-xs w-full border-green-300 text-green-700 hover:bg-green-100">
+              <a
+                href="mailto:rescue@npfauna.org?subject=Lost Pet Flyer Template Request"
+                className="mt-5 inline-block"
+              >
+                <Button size="sm" variant="outline">
                   Request Template
                 </Button>
               </a>
             </div>
 
-            {/* Local ordinances */}
-            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-5 flex flex-col">
-              <div className="text-2xl mb-3">&#x1F4DC;</div>
-              <h3 className="font-bold text-[#0a1e3d] mb-2 text-sm">Local Ordinances</h3>
-              <p className="text-xs text-gray-600 flex-1 mb-3">
-                Leash law and stray hold period quick-links for the City of Natchitoches and Natchitoches Parish.
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <h3 className="font-bold text-[#0a1e3d]">Local Ordinances</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Review local government information concerning animals and
+                community services.
               </p>
-              <div className="flex flex-col gap-1.5">
-                <Link href="https://www.natchitochesla.gov" target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="text-xs w-full border-gray-200 hover:border-[#0099FF] hover:text-[#0099FF]">
-                    City of Natchitoches <ExternalLink className="h-3 w-3 ml-1" />
+
+              <div className="mt-5 flex flex-col gap-2">
+                <Link
+                  href="https://www.natchitochesla.gov"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="sm" variant="outline" className="w-full">
+                    City of Natchitoches
                   </Button>
                 </Link>
-                <Link href="https://www.natchitochesparish.com" target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline" className="text-xs w-full border-gray-200 hover:border-[#0099FF] hover:text-[#0099FF]">
-                    Natchitoches Parish <ExternalLink className="h-3 w-3 ml-1" />
+
+                <Link
+                  href="https://www.natchitochesparish.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="sm" variant="outline" className="w-full">
+                    Natchitoches Parish
                   </Button>
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Contact animal control callout */}
-          <div className="mt-6 bg-amber-50 rounded-2xl border border-amber-200 p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <AlertCircle className="h-6 w-6 text-amber-600 shrink-0 mt-0.5 sm:mt-0" />
-            <div className="flex-1">
-              <p className="font-semibold text-[#0a1e3d] mb-0.5">Also contact Natchitoches Animal Control immediately.</p>
-              <p className="text-sm text-gray-600">
-                If your pet has been picked up, animal control is the first place to check — in person or by phone.
-                Time matters: stray hold periods are short.
+          <div className="mt-8 flex gap-4 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+            <AlertCircle className="h-6 w-6 shrink-0 text-amber-600" />
+
+            <div>
+              <h3 className="font-bold text-[#0a1e3d]">
+                Contact Natchitoches Animal Control immediately.
+              </h3>
+
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                If your pet has been picked up, animal control is one of the
+                first places to check. Time matters because stray-hold periods
+                may be short.
               </p>
             </div>
-            <a href="mailto:npfauna@gmail.com?subject=Animal Control Contact Info Request" className="shrink-0">
-              <Button size="sm" className="bg-amber-600 hover:bg-amber-700 text-white text-xs">
-                Ask FAUNA for Contact Info
-              </Button>
-            </a>
           </div>
         </div>
       </section>
 
-      {/* ── Disaster Preparedness ── */}
-      <section id="disaster" className="py-14 bg-gray-50 scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-[#0a1e3d] flex items-center justify-center shrink-0">
+      <section
+        id="disaster"
+        className="scroll-mt-32 bg-white py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0a1e3d]">
               <CloudLightning className="h-5 w-5 text-[#8AFF00]" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0a1e3d]">Storm Season</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">Disaster Preparedness</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0a1e3d]">
+                Storm Season
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                Disaster Preparedness
+              </h2>
             </div>
           </div>
 
-          {/* Checklist card */}
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="font-bold text-[#0a1e3d] mb-4 flex items-center gap-2">
-                <span className="text-xl">&#x2705;</span> Hurricane &amp; Disaster Checklist
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-[#0a1e3d]">
+                Hurricane &amp; Disaster Checklist
               </h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+
+              <ul className="mt-5 space-y-3 text-sm leading-relaxed text-gray-700">
                 {[
-                  "Keep a 2-week supply of food, water, and medications",
-                  "Store vet records, vaccination certificates, and microchip info in a waterproof bag",
-                  "Have a pet carrier and leash at the ready — always",
-                  "Identify pet-friendly hotels/shelters along your evacuation route in advance",
-                  "Photograph your pet monthly so you have a recent image if separated",
-                  "Program emergency vet numbers in your phone (see above)",
-                  "Know your parish's emergency shelter pet policy",
-                  "Tag your crate/carrier with your contact information",
+                  "Keep a two-week supply of food, water, and medications.",
+                  "Store veterinary records, vaccination certificates, and microchip information in a waterproof bag.",
+                  "Keep a pet carrier and leash ready.",
+                  "Identify pet-friendly hotels or shelters along your evacuation route.",
+                  "Keep a recent photograph of every pet.",
+                  "Program emergency veterinary numbers into your phone.",
+                  "Know your parish emergency shelter's pet policy.",
+                  "Label carriers with your contact information.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#8AFF00] shrink-0 mt-0.5">&#x2714;</span>
-                    {item}
+                    <span className="mt-0.5 font-bold text-[#5a9900]">
+                      &#10003;
+                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs text-gray-400 italic">
-                Need a printable PDF version? Email{" "}
-                <a href="mailto:npfauna@gmail.com" className="text-[#0099FF] underline">npfauna@gmail.com</a>.
-              </p>
             </div>
 
-            <div className="space-y-4">
-              {/* LSU Vet hotline */}
-              <div className="bg-[#0a1e3d] rounded-2xl p-5 text-white">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-[#8AFF00]/20 text-[#8AFF00] border-[#8AFF00]/30 text-xs">Activates during hurricanes</Badge>
-                </div>
-                <h3 className="font-bold text-white mb-2">LSU Vet School Disaster Hotline</h3>
-                <p className="text-gray-300 text-sm mb-3">
-                  Louisiana State University&apos;s veterinary teaching hospital activates a disaster
-                  response hotline during hurricanes and other declared emergencies.
+            <div className="space-y-5">
+              <div className="rounded-2xl bg-[#0a1e3d] p-7 text-white">
+                <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
+                  Activates During Hurricanes
+                </Badge>
+
+                <h3 className="text-xl font-bold">
+                  LSU Vet School Disaster Hotline
+                </h3>
+
+                <p className="mt-3 leading-relaxed text-gray-300">
+                  LSU&apos;s veterinary teaching hospital may activate disaster
+                  response services during hurricanes and other declared
+                  emergencies.
                 </p>
+
                 <a
                   href="tel:2255789600"
-                  className="inline-flex items-center gap-2 text-[#33CCCC] font-bold text-lg"
+                  className="mt-5 inline-flex items-center gap-2 text-xl font-bold text-[#33CCCC]"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-5 w-5" />
                   225-578-9600
                 </a>
               </div>
 
-              {/* Humane Society storm response */}
               <Link
-                href="https://humanela.org/programs/saving-lives/disaster-relief/"
+                href="https://humanela.org/disaster-relief/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-md transition-shadow"
+                className="block rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-bold text-[#0a1e3d] mb-2">Humane Society of Louisiana Disaster Relief</h3>
-                    <p className="text-sm text-gray-600">
-                      Louisiana-specific hurricane preparedness, pet evacuation, disaster response, and recovery
-                      resources for pets and their families.
+                    <h3 className="font-bold text-[#0a1e3d]">
+                      Humane Society of Louisiana Disaster Relief
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                      Louisiana-specific hurricane preparation, evacuation,
+                      response, and recovery information for pets and families.
                     </p>
                   </div>
-                  <ExternalLink className="h-4 w-4 text-gray-300 group-hover:text-[#0099FF] shrink-0 ml-3 mt-0.5 transition-colors" />
+
+                  <ExternalLink className="h-4 w-4 shrink-0 text-[#0099FF]" />
                 </div>
               </Link>
 
-              {/* FAUNA emergency note */}
-              <div className="bg-[#0099FF]/10 rounded-2xl border border-[#0099FF]/20 p-5">
-                <h3 className="font-bold text-[#0a1e3d] mb-2 flex items-center gap-2">
+              <div className="rounded-2xl border border-[#0099FF]/20 bg-[#0099FF]/10 p-6">
+                <h3 className="flex items-center gap-2 font-bold text-[#0a1e3d]">
                   <Heart className="h-4 w-4 text-[#0099FF]" />
                   FAUNA Emergency Response
                 </h3>
-                <p className="text-sm text-gray-600">
-                  During disasters, FAUNA coordinates emergency kenneling and transport for animals
-                  whose owners must evacuate. Email us as early as possible.
+
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  During disasters, FAUNA may help coordinate emergency
+                  kenneling and animal transport. Contact us as early as
+                  possible.
                 </p>
-                <a href="mailto:npfauna@gmail.com?subject=Disaster Pet Help" className="inline-block mt-3">
-                  <Button size="sm" className="bg-[#0099FF] hover:bg-[#0088ee] text-white text-xs">
+
+                <a
+                  href="mailto:rescue@npfauna.org?subject=Disaster Pet Help"
+                  className="mt-5 inline-block"
+                >
+                  <Button
+                    size="sm"
+                    className="bg-[#0099FF] text-white hover:bg-[#0088ee]"
+                  >
                     Contact FAUNA for Emergency Help
                   </Button>
                 </a>
@@ -804,45 +988,50 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* ── FAUNA & Strategic Partners ── */}
-      <section id="partners" className="py-14 bg-white scroll-mt-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-full bg-[#0099FF] flex items-center justify-center shrink-0">
+      <section
+        id="partners"
+        className="scroll-mt-32 bg-gray-50 py-16"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
               <Users className="h-5 w-5 text-white" />
             </div>
+
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0099FF]">Our Network</p>
-              <h2 className="text-2xl font-bold text-[#0a1e3d]">FAUNA &amp; Strategic Partners</h2>
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0099FF]">
+                Our Network
+              </p>
+
+              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+                FAUNA &amp; Strategic Partners
+              </h2>
             </div>
           </div>
-          <p className="text-gray-600 text-sm mb-8 max-w-2xl">
-            These organizations extend our reach and amplify lifesaving impact.
+
+          <p className="mb-8 max-w-2xl text-gray-600">
+            These organizations extend our reach and strengthen lifesaving
+            support for animals and families.
           </p>
 
-          <div className="space-y-6">
-            {partners.map((group) => (
-              <div key={group.tier}>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: group.color }} />
-                  <p
-                    className="text-xs font-bold uppercase tracking-wider"
-                    style={{ color: group.tier === "Statewide Allies" ? "#5a9900" : group.color }}
-                  >
-                    {group.tier}
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                  {group.items.map((item) => (
+          <div className="space-y-8">
+            {partnerGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-[#0a1e3d]">
+                  {group.title}
+                </h3>
+
+                <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+                  {group.partners.map((partner) => (
                     <Link
-                      key={item.name}
-                      href={item.href}
+                      key={partner.name}
+                      href={partner.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group bg-gray-50 hover:bg-sky-50 border border-gray-100 hover:border-[#0099FF]/30 rounded-xl px-4 py-3 flex items-center justify-between gap-2 transition-all text-sm font-semibold text-[#0a1e3d] hover:text-[#0099FF]"
+                      className="flex items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-5 py-4 font-semibold text-[#0a1e3d] transition-colors hover:border-[#0099FF]/30 hover:bg-sky-50 hover:text-[#0099FF]"
                     >
-                      <span className="leading-tight">{item.name}</span>
-                      <ExternalLink className="h-3.5 w-3.5 text-gray-300 group-hover:text-[#0099FF] shrink-0 transition-colors" />
+                      <span>{partner.name}</span>
+                      <ExternalLink className="h-4 w-4 shrink-0" />
                     </Link>
                   ))}
                 </div>
@@ -852,30 +1041,33 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* ── Bottom CTA ── */}
-      <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-14 text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-3">Still Can&apos;t Find What You Need?</h2>
-          <p className="text-white/90 mb-8">
-            FAUNA&apos;s team is happy to connect you with the right resource. We&apos;re a volunteer-run
-            organization — responses may take 1–3 business days.
+      <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-16 text-white">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold">
+            Still Can&apos;t Find What You Need?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-white/90">
+            FAUNA&apos;s team is happy to help connect you with the right
+            resource. We are a volunteer-run organization, so responses may
+            take one to three business days.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:npfauna@gmail.com">
-              <Button className="bg-[#8AFF00] hover:bg-[#7aee00] text-[#0a1e3d] font-bold text-base px-7 py-4 h-auto">
-                Email npfauna@gmail.com
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="mailto:rescue@npfauna.org">
+              <Button className="h-auto bg-[#8AFF00] px-7 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                Email rescue@npfauna.org
               </Button>
             </a>
+
             <Link href="/programs">
-              <Button className="bg-white text-[#0099FF] hover:bg-gray-100 font-bold text-base px-7 py-4 h-auto">
+              <Button className="h-auto bg-white px-7 py-3 font-bold text-[#0099FF] hover:bg-gray-100">
                 Explore Our Programs
               </Button>
             </Link>
           </div>
         </div>
       </section>
-
     </div>
   )
 }
-
