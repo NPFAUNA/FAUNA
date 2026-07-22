@@ -260,8 +260,8 @@ export default function DonatePage() {
 
           <p className="text-center text-gray-400 text-sm mt-6">
             Questions? Email us at{" "}
-            <a href="mailto:npfauna@gmail.com" className="text-[#33CCCC] underline">
-              npfauna@gmail.com
+            <a href="mailto:rescue@npfauna.org" className="text-[#33CCCC] underline">
+              rescue@npfauna.org
             </a>
           </p>
         </div>
