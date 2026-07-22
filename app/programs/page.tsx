@@ -6,7 +6,9 @@ import {
   Cat,
   CheckCircle,
   ExternalLink,
+  Heart,
   HeartPulse,
+  Mail,
   PawPrint,
   ShieldCheck,
   Stethoscope,
@@ -42,8 +44,9 @@ const programs = [
   },
   {
     title: "PACT Therapy",
-    body: "Human-animal connection programs that bring comfort, companionship, and joy to people in our community.",
-    href: "mailto:katcamcal@yahoo.com",
+    body: "Weekly animal-assisted visits that bring comfort, companionship, and joy to residents of local care centers and nursing homes.",
+    href: "#pact",
+    secondaryHref: "mailto:katcamcal@yahoo.com",
     icon: PawPrint,
   },
   {
@@ -66,6 +69,13 @@ const bathDayServices = [
   "Nail clipping",
   "Anal gland expression",
   "Bath and grooming bundles",
+]
+
+const pactBenefits = [
+  "Comfort and companionship for residents",
+  "Positive social interaction and conversation",
+  "Moments of happiness, connection, and calm",
+  "Regular visits from caring volunteers and loving animals",
 ]
 
 const wildlifeSafetyTips = [
@@ -98,29 +108,53 @@ export default function ProgramsPage() {
 
       <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
-          {programs.map(({ title, body, href, icon: Icon }) => (
-            <article
-              key={title}
-              className="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8AFF00]/20">
-                <Icon className="h-7 w-7 text-[#0a1e3d]" />
-              </div>
+          {programs.map(
+            ({
+              title,
+              body,
+              href,
+              secondaryHref,
+              icon: Icon,
+            }) => (
+              <article
+                key={title}
+                className="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8AFF00]/20">
+                  <Icon className="h-7 w-7 text-[#0a1e3d]" />
+                </div>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d]">
-                {title}
-              </h2>
+                <h2 className="font-script text-4xl text-[#0a1e3d]">
+                  {title}
+                </h2>
 
-              <p className="mt-3 text-lg leading-7 text-gray-600">{body}</p>
+                <p className="mt-3 text-lg leading-7 text-gray-600">
+                  {body}
+                </p>
 
-              <Link href={href}>
-                <Button className="mt-6 bg-[#0099FF] font-bold text-white hover:bg-[#0088ee]">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </article>
-          ))}
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link href={href}>
+                    <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#0088ee]">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+
+                  {secondaryHref && (
+                    <Link href={secondaryHref}>
+                      <Button
+                        variant="outline"
+                        className="border-[#33CCCC] font-bold text-[#167f7f] hover:bg-[#33CCCC]/10"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        PACT Inquiries
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </article>
+            ),
+          )}
         </div>
       </section>
 
@@ -189,9 +223,9 @@ export default function ProgramsPage() {
                 </p>
 
                 <p>
-                  Microchips can help reunite lost pets with their owners, while
-                  vaccines and basic wellness services help prevent illness and
-                  identify health concerns early.
+                  Microchips can help reunite lost pets with their owners,
+                  while vaccines and basic wellness services help prevent
+                  illness and identify health concerns early.
                 </p>
 
                 <p>
@@ -276,6 +310,111 @@ export default function ProgramsPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="pact"
+        className="scroll-mt-24 bg-white px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0099FF]">
+              People and Animals Connecting Together
+            </p>
+
+            <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
+              PACT Therapy
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-xl leading-8 text-gray-600">
+              Simply being around animals can bring comfort, connection, and
+              so much joy to people of every age.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl bg-[#0a1e3d] p-8 text-white shadow-lg sm:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8AFF00]/20">
+                <Heart className="h-7 w-7 text-[#8AFF00]" />
+              </div>
+
+              <h3 className="font-script mt-6 text-4xl text-[#33CCCC]">
+                Bringing Comfort Through Connection
+              </h3>
+
+              <div className="mt-6 space-y-5 leading-8 text-gray-300">
+                <p>
+                  FAUNA&apos;s dedicated PACT volunteers bring loving animals
+                  to visit community care centers and nursing homes each week.
+                  These visits create meaningful opportunities for residents
+                  to experience companionship, affection, and the simple
+                  happiness of spending time with an animal.
+                </p>
+
+                <p>
+                  A gentle greeting, a wagging tail, or a quiet moment with a
+                  friendly animal can brighten someone&apos;s day and create
+                  lasting memories. For residents who may be separated from
+                  their own pets, these visits can provide a familiar and
+                  reassuring connection.
+                </p>
+
+                <p>
+                  PACT visits also encourage conversation, social interaction,
+                  and engagement among residents, volunteers, caregivers, and
+                  staff.
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-3xl border border-sky-100 bg-sky-50 p-8 shadow-lg sm:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#33CCCC]/20">
+                <PawPrint className="h-7 w-7 text-[#167f7f]" />
+              </div>
+
+              <h3 className="font-script mt-6 text-4xl text-[#0a1e3d]">
+                The Joy Animals Bring
+              </h3>
+
+              <p className="mt-5 leading-8 text-gray-700">
+                Every visit is centered on kindness, patience, and positive
+                interaction. Our volunteers and their animals help create a
+                warm, welcoming experience for the people they meet.
+              </p>
+
+              <ul className="mt-7 space-y-4">
+                {pactBenefits.map((benefit) => (
+                  <li
+                    key={benefit}
+                    className="flex items-start gap-3 leading-7 text-gray-700"
+                  >
+                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#5a9900]" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 rounded-2xl bg-white p-6">
+                <h4 className="text-xl font-extrabold text-[#0a1e3d]">
+                  Interested in PACT?
+                </h4>
+
+                <p className="mt-2 leading-7 text-gray-600">
+                  Contact the PACT team to ask about volunteer participation,
+                  animal visits, or bringing the program to a community care
+                  facility.
+                </p>
+
+                <Link href="mailto:katcamcal@yahoo.com">
+                  <Button className="mt-5 bg-[#0099FF] font-bold text-white hover:bg-[#0088ee]">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Email PACT
+                  </Button>
+                </Link>
+              </div>
+            </article>
           </div>
         </div>
       </section>
