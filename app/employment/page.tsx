@@ -1,259 +1,198 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Heart, Star, TrendingUp } from "lucide-react"
+import {
+  ArrowRight,
+  Briefcase,
+  Heart,
+  PawPrint,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react"
 
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Employment | FAUNA",
+  title: "Employment Opportunities | FAUNA",
   description:
-    "Build a meaningful career helping animals with FAUNA in Natchitoches, Louisiana.",
+    "Explore employment opportunities with FAUNA and help improve the lives of animals throughout Natchitoches Parish.",
 }
 
-const photos = [
+const benefits = [
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/1-3.png",
-    alt: "FAUNA team with animals",
+    icon: Heart,
+    title: "Mission-Driven Work",
+    description:
+      "Help create safer, healthier outcomes for homeless and neglected animals throughout Natchitoches Parish.",
   },
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/2-1.png",
-    alt: "Dog in FAUNA's care",
+    icon: Users,
+    title: "Community Impact",
+    description:
+      "Work alongside volunteers, fosters, adopters, donors, veterinary partners, and community organizations.",
   },
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/5-1.png",
-    alt: "Cat at FAUNA",
+    icon: PawPrint,
+    title: "Animal-Centered Care",
+    description:
+      "Support compassionate, humane care while helping animals prepare for adoption and new beginnings.",
   },
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/29-1.png",
-    alt: "FAUNA volunteer with pets",
+    icon: ShieldCheck,
+    title: "Growing Organization",
+    description:
+      "Join FAUNA during an important period of growth as we prepare for expanded services and facilities.",
   },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/9-2.png",
-    alt: "Animal care at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/12-2.png",
-    alt: "FAUNA team member",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/15.png",
-    alt: "Happy pet at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/18.png",
-    alt: "Community event",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/20-1.png",
-    alt: "FAUNA shelter animals",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/23-1.png",
-    alt: "Dog care at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/25-1.png",
-    alt: "FAUNA staff and animals",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/28-1.png",
-    alt: "Animal rescue moment",
-  },
-]
-
-const stats = [
-  { value: "97.5%", label: "Live-Release Rate" },
-  { value: "2,500+", label: "Pets Saved Last Year" },
-  { value: "200+", label: "Free Vaccines Given" },
-  { value: "150+", label: "Community Cats TNR'd" },
 ]
 
 export default function EmploymentPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="mb-5 inline-block rounded-full bg-[#8AFF00]/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0a1e3d]">
-              Now Hiring - Natchitoches, LA
-            </span>
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <Badge className="mb-5 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
+            Join the FAUNA Team
+          </Badge>
 
-            <h1 className="font-script mb-5 text-5xl leading-tight sm:text-6xl lg:text-7xl">
-              Turn Compassion
-              <br />
-              <span className="text-[#33CCCC]">Into a Career</span>
-            </h1>
+          <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
+            Employment Opportunities
+          </h1>
 
-            <p className="mb-8 max-w-2xl text-lg leading-relaxed text-sky-100">
-              Join the team that gave{" "}
-              <strong className="text-[#8AFF00]">2,500+ pets a
-              second chance last year and drives FAUNA&apos;s{" "}
-              <strong className="text-[#8AFF00]">
-                97.5% live-release rate
-              </strong>
-              .
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
+            Build a meaningful career while helping FAUNA provide humane care,
+            lifesaving services, and second chances for animals throughout
+            Natchitoches Parish.
+          </p>
+        </div>
+      </section>
+
+      {/* Open Position */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <Briefcase className="mx-auto h-11 w-11 text-[#0099FF]" />
+
+            <h2 className="font-script mt-5 text-5xl leading-tight text-[#0a1e3d] sm:text-6xl">
+              Open Position
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-gray-700">
+              FAUNA is seeking a dedicated professional to help lead shelter
+              operations and support the organization&apos;s continued growth.
             </p>
+          </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="https://fauna.bamboohr.com/careers/23"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="h-auto whitespace-normal bg-[#8AFF00] px-6 py-3 text-center font-bold text-[#0a1e3d] hover:bg-[#7aee00]"
-                >
-                  Apply for Executive Director of Shelter Operations
-                  <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
-                </Button>
-              </Link>
+          <Card className="overflow-hidden border border-sky-100 bg-white shadow-xl">
+            <div className="bg-[#0a1e3d] px-6 py-7 text-white sm:px-8">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8AFF00]">
+                Now Hiring
+              </p>
 
-              <Link
-                href="https://new.shelterluv.com/form/community/FAUN/14823"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white bg-transparent font-semibold text-white hover:bg-white/10 hover:text-white"
+              <h3 className="font-script mt-2 text-4xl leading-tight sm:text-5xl">
+                Executive Director of Shelter Operations
+              </h3>
+            </div>
+
+            <CardContent className="p-6 sm:p-8">
+              <p className="text-lg leading-relaxed text-gray-700">
+                The Executive Director of Shelter Operations will help guide
+                daily shelter functions, animal-care standards, staff
+                leadership, community relationships, and the continued
+                development of FAUNA&apos;s lifesaving programs.
+              </p>
+
+              <p className="mt-5 leading-relaxed text-gray-700">
+                This position is ideal for a compassionate, organized, and
+                experienced leader who understands animal welfare and is ready
+                to help FAUNA grow into its next chapter.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="https://fauna.bamboohr.com/careers/23"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Volunteer Application
+                  <Button className="h-auto bg-[#0099FF] px-7 py-3 font-bold text-white hover:bg-[#0088ee]">
+                    View Job Posting
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Why Work with FAUNA */}
+      <section className="bg-sky-50 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <Sparkles className="mx-auto h-11 w-11 text-[#0099FF]" />
+
+            <h2 className="font-script mt-5 text-5xl leading-tight text-[#0a1e3d] sm:text-6xl">
+              Why Work with FAUNA?
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-gray-700">
+              A career with FAUNA is an opportunity to combine professional
+              experience with compassionate service to animals and the
+              community.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((benefit) => {
+              const Icon = benefit.icon
+
+              return (
+                <Card
+                  key={benefit.title}
+                  className="border border-sky-100 bg-white shadow-md"
+                >
+                  <CardContent className="p-7">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0099FF]">
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+
+                    <h3 className="font-script text-3xl text-[#0a1e3d]">
+                      {benefit.title}
+                    </h3>
+
+                    <p className="mt-4 leading-relaxed text-gray-600">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer CTA */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-[#0a1e3d] px-6 py-12 text-center text-white shadow-xl sm:px-10">
+            <Heart className="mx-auto h-11 w-11 text-[#8AFF00]" />
+
+            <h2 className="font-script mt-5 text-5xl leading-tight text-[#33CCCC] sm:text-6xl">
+              Not Ready for a Job?
+            </h2>
+
+            <div className="mt-8">
+              <Link href="/volunteer">
+                <Button className="h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                  Volunteer with FAUNA
                 </Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="bg-[#0d2851] py-8 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl font-extrabold text-[#8AFF00]">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-sm text-[#33CCCC]">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-sky-50 py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-6">
-            {photos.map((photo) => (
-              <div
-                key={photo.src}
-                className="relative aspect-square overflow-hidden rounded-lg bg-sky-100"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="font-script text-5xl text-[#0a1e3d] sm:text-6xl">
-              Why Work with FAUNA?
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="border border-sky-100 text-center shadow-md transition-shadow hover:shadow-lg">
-              <CardContent className="p-8">
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#0099FF]">
-                  <Heart className="h-7 w-7 text-white" />
-                </div>
-
-                <h3 className="font-script mb-3 text-3xl text-[#0a1e3d]">
-                  Mission That Matters
-                </h3>
-
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Every shift directly reduces euthanasia in Natchitoches
-                  Parish. You won&apos;t just have a job &mdash; you&apos;ll
-                  have a purpose.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border border-sky-100 text-center shadow-md transition-shadow hover:shadow-lg">
-              <CardContent className="p-8">
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#0099FF]">
-                  <TrendingUp className="h-7 w-7 text-white" />
-                </div>
-
-                <h3 className="font-script mb-3 text-3xl text-[#0a1e3d]">
-                  Hands-On Impact
-                </h3>
-
-                <p className="text-sm leading-relaxed text-gray-600">
-                  You&apos;ll feed, comfort, and advocate for animals who have
-                  nowhere else to turn. The difference you make is immediate
-                  and real.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border border-sky-100 text-center shadow-md transition-shadow hover:shadow-lg">
-              <CardContent className="p-8">
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#0099FF]">
-                  <Star className="h-7 w-7 text-white" />
-                </div>
-
-                <h3 className="font-script mb-3 text-3xl text-[#0a1e3d]">
-                  Grow With Us!
-                </h3>
-
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Training in animal handling, shelter medicine basics, and
-                  customer service &mdash; skills that open doors in vet tech,
-                  animal control, and nonprofit careers.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-      <section className="bg-[#0a1e3d] py-16 text-white">
-  <div className="mx-auto max-w-4xl px-4 text-center">
-    <h2 className="font-script text-5xl text-[#33CCCC] sm:text-6xl">
-      Not Looking for Employment?
-    </h2>
-
-    <p className="mx-auto mt-6 max-w-2xl text-lg text-sky-100">
-      You can still make a life-saving difference. Whether you have one hour a
-      month or several days each week, FAUNA has volunteer opportunities for
-      every schedule.
-    </p>
-
-    <Link href="/volunteer">
-      <Button
-        size="lg"
-        className="mt-8 bg-[#0099FF] font-bold text-white hover:bg-[#007acc]"
-      >
-        Volunteer with FAUNA
-      </Button>
-    </Link>
-  </div>
-</section>
-    </div>
+    </main>
   )
 }
