@@ -47,11 +47,14 @@ const programItems = [
   },
 ]
 
-const navItems = [
+const centerItems = [
   {
-    href: "/",
-    label: "Home",
+    href: "/capital-campaign",
+    label: "Generations of Hope Capital Campaign",
   },
+]
+
+const navItems = [
   {
     href: "/adopt-foster",
     label: "Adopt or Foster",
@@ -65,10 +68,6 @@ const navItems = [
     label: "Employment",
   },
   {
-    href: "/capital-campaign",
-    label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
-  },
-  {
     href: "/resources",
     label: "Resources",
   },
@@ -78,6 +77,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false)
+  const [mobileCenterOpen, setMobileCenterOpen] = useState(false)
 
   const pathname = usePathname()
 
@@ -85,31 +85,37 @@ export function Navbar() {
     setMobileOpen(false)
     setMobileAboutOpen(false)
     setMobileProgramsOpen(false)
+    setMobileCenterOpen(false)
   }
 
   const isProgramsActive = pathname.startsWith("/programs")
 
   const isAboutActive = aboutItems.some((item) => pathname === item.href)
 
+  const isCenterActive = centerItems.some((item) => pathname === item.href)
+
   return (
     <nav className="sticky top-0 z-50 border-b border-sky-100 bg-white shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <Link
             href="/"
-            className="flex shrink-0 items-center gap-2 py-1.5"
+            className="flex shrink-0 items-center py-1"
             aria-label="FAUNA home"
+            onClick={closeMobileMenu}
           >
             <Image
-              src="/fauna-logo.png"
-              alt="FAUNA - Friends All United for Natchitoches Animals"
-              width={46}
-              height={50}
-              className="object-contain"
+              src="/fauna-logo-large.png"
+              alt="FAUNA"
+              width={220}
+              height={70}
+              className="h-12 w-auto object-contain"
               priority
             />
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden items-center gap-0.5 lg:flex">
             <Link
               href="/"
@@ -123,6 +129,7 @@ export function Navbar() {
               Home
             </Link>
 
+            {/* About Dropdown */}
             <div className="group relative">
               <button
                 type="button"
@@ -158,6 +165,7 @@ export function Navbar() {
               </div>
             </div>
 
+            {/* Programs Dropdown */}
             <div className="group relative">
               <div
                 className={cn(
@@ -202,24 +210,77 @@ export function Navbar() {
               </div>
             </div>
 
-            {navItems
-              .filter((item) => item.href !== "/")
-              .map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                    pathname === item.href
-                      ? "bg-sky-100 font-semibold text-[#0099FF]"
-                      : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            {navItems.slice(0, 3).map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  pathname === item.href
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
+                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Friedman Center Dropdown */}
+            <div className="group relative">
+              <button
+                type="button"
+                className={cn(
+                  "flex max-w-[250px] items-center gap-1 rounded-md px-3 py-2 text-center text-sm font-medium leading-tight transition-colors",
+                  isCenterActive
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
+                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                )}
+                aria-haspopup="true"
+              >
+                <span>
+                  Edwina and Sam Friedman Pet Adoption &amp; Welfare Center
+                </span>
+
+                <ChevronDown className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+              </button>
+
+              <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 translate-y-2 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div className="overflow-hidden rounded-xl border border-sky-100 bg-white p-2 shadow-xl">
+                  {centerItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={cn(
+                        "block rounded-lg px-4 py-3 text-sm font-semibold transition-colors",
+                        pathname === item.href
+                          ? "bg-sky-100 text-[#0099FF]"
+                          : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {navItems.slice(3).map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  pathname === item.href
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
+                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
+          {/* Donate and Mobile Menu */}
           <div className="flex shrink-0 items-center gap-2">
             <Link href="/donate" className="hidden sm:block">
               <Button className="h-9 bg-[#8AFF00] px-4 text-sm font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
@@ -245,6 +306,7 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {mobileOpen && (
         <div className="border-t border-gray-100 bg-white px-4 pb-4 pt-2 shadow-lg lg:hidden">
           <div className="space-y-1">
@@ -261,6 +323,7 @@ export function Navbar() {
               Home
             </Link>
 
+            {/* Mobile About Dropdown */}
             <button
               type="button"
               onClick={() => setMobileAboutOpen((current) => !current)}
@@ -273,6 +336,7 @@ export function Navbar() {
               aria-expanded={mobileAboutOpen}
             >
               About
+
               <ChevronDown
                 className={cn(
                   "h-4 w-4 transition-transform",
@@ -301,6 +365,7 @@ export function Navbar() {
               </div>
             )}
 
+            {/* Mobile Programs Dropdown */}
             <div>
               <div
                 className={cn(
@@ -352,23 +417,81 @@ export function Navbar() {
               )}
             </div>
 
-            {navItems
-              .filter((item) => item.href !== "/")
-              .map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={closeMobileMenu}
-                  className={cn(
-                    "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
-                    pathname === item.href
-                      ? "bg-sky-100 font-semibold text-[#0099FF]"
-                      : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            {navItems.slice(0, 3).map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMobileMenu}
+                className={cn(
+                  "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
+                  pathname === item.href
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
+                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Mobile Friedman Center Dropdown */}
+            <button
+              type="button"
+              onClick={() => setMobileCenterOpen((current) => !current)}
+              className={cn(
+                "flex w-full items-center justify-between gap-3 rounded-md px-3 py-2.5 text-left text-sm font-medium transition-colors",
+                isCenterActive
+                  ? "bg-sky-100 font-semibold text-[#0099FF]"
+                  : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+              )}
+              aria-expanded={mobileCenterOpen}
+            >
+              <span>
+                Edwina and Sam Friedman Pet Adoption &amp; Welfare Center
+              </span>
+
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 shrink-0 transition-transform",
+                  mobileCenterOpen && "rotate-180",
+                )}
+              />
+            </button>
+
+            {mobileCenterOpen && (
+              <div className="ml-3 space-y-1 border-l-2 border-[#33CCCC] pl-3">
+                {centerItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    className={cn(
+                      "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
+                      pathname === item.href
+                        ? "bg-sky-100 font-semibold text-[#0099FF]"
+                        : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {navItems.slice(3).map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMobileMenu}
+                className={cn(
+                  "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
+                  pathname === item.href
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
+                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
 
             <Link href="/donate" onClick={closeMobileMenu}>
               <Button className="mt-2 w-full bg-[#8AFF00] font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
