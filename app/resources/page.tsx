@@ -230,7 +230,7 @@ export default function ResourcesPage() {
             Community Resources
           </Badge>
 
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+          <h1 <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
             Community Resources &amp; Help Desk
           </h1>
 
@@ -363,7 +363,7 @@ export default function ResourcesPage() {
                 Prevention
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 Low-Cost Spay, Neuter &amp; Preventive Care
               </h2>
             </div>
@@ -449,7 +449,7 @@ export default function ResourcesPage() {
                 Near You
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 Local Veterinary &amp; Wellness Partners
               </h2>
             </div>
@@ -523,7 +523,7 @@ export default function ResourcesPage() {
                 Help Paying Bills
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 Financial Aid for Veterinary Bills
               </h2>
             </div>
@@ -705,7 +705,7 @@ export default function ResourcesPage() {
                 Found Cat Guide
               </Badge>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 What to Do If You Find a Cat
               </h2>
 
@@ -757,7 +757,7 @@ export default function ResourcesPage() {
                 Missing Pet
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 Lost &amp; Found Toolkit
               </h2>
             </div>
@@ -879,7 +879,7 @@ export default function ResourcesPage() {
                 Storm Season
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 Disaster Preparedness
               </h2>
             </div>
@@ -1003,7 +1003,7 @@ export default function ResourcesPage() {
                 Our Network
               </p>
 
-              <h2 className="text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
                 FAUNA &amp; Strategic Partners
               </h2>
             </div>
