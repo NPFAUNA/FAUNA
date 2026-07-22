@@ -15,7 +15,7 @@ const aboutItems = [
     label: "Our History",
   },
   {
-    href: "/board",
+    href: "/board-of-director",
     label: "Board of Directors",
   },
   {
