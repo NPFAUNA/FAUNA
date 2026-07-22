@@ -22,6 +22,10 @@ const aboutItems = [
     href: "/advisory-board",
     label: "Advisory Board",
   },
+  {
+    href: "/employment",
+    label: "Employment",
+  },
 ]
 
 const programItems = [
@@ -60,12 +64,12 @@ const centerItems = [
 
 const navItems = [
   {
-    href: "/events",
-    label: "Events",
+    href: "/adopt-foster",
+    label: "Adopt or Foster",
   },
   {
-    href: "/employment",
-    label: "Employment",
+    href: "/events",
+    label: "Events",
   },
   {
     href: "/resources",
