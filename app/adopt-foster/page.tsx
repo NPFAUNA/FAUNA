@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 import {
   ArrowRight,
   Cat,
@@ -8,9 +7,7 @@ import {
   Dog,
   Heart,
   Home,
-  PawPrint,
   Shield,
-  Users,
 } from "lucide-react"
 
 import { ShelterluvAvailablePets } from "@/components/shelterluv-available-pets"
@@ -30,14 +27,14 @@ const adoptionLinks = [
     title: "Adopt a Dog",
     description:
       "View adoptable dogs and start your Shelterluv adoption application.",
-    href: "https://new.shelterluv.com/matchme/adoption/FAUN/Dog",
+    href: "https://new.shelterluv.com/matchme/adopt/FAUN/Dog",
     icon: Dog,
   },
   {
     title: "Adopt a Cat",
     description:
       "View adoptable cats and start your Shelterluv adoption application.",
-    href: "https://new.shelterluv.com/matchme/adoption/FAUN/Cat",
+    href: "https://new.shelterluv.com/matchme/adopt/FAUN/Cat",
     icon: Cat,
   },
 ]
@@ -191,12 +188,34 @@ export default function AdoptFosterPage() {
             </h2>
 
             <p className="mt-4 text-lg leading-8 text-gray-700">
-              Start with the dog or cat application below, or browse the live
-              list of available FAUNA pets.
+              Browse the live list of available FAUNA pets, then choose the dog
+              or cat adoption application below.
             </p>
           </div>
 
-          <div className="mb-12 grid gap-6 md:grid-cols-2">
+          <div
+            id="available-pets"
+            className="scroll-mt-28 rounded-[2rem] border border-sky-100 bg-white p-4 shadow-xl sm:p-6"
+          >
+            <div className="mb-6 text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#33CCCC]">
+                Live Shelterluv Listing
+              </p>
+
+              <h3 className="font-script mt-2 text-4xl text-[#0a1e3d] sm:text-5xl">
+                Available FAUNA Pets
+              </h3>
+
+              <p className="mx-auto mt-3 max-w-2xl text-gray-700">
+                This list updates automatically through Shelterluv as adoptable
+                animals become available.
+              </p>
+            </div>
+
+            <ShelterluvAvailablePets />
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             {adoptionLinks.map((item) => {
               const Icon = item.icon
 
@@ -225,28 +244,6 @@ export default function AdoptFosterPage() {
                 </a>
               )
             })}
-          </div>
-
-          <div
-            id="available-pets"
-            className="scroll-mt-28 rounded-[2rem] border border-sky-100 bg-white p-4 shadow-xl sm:p-6"
-          >
-            <div className="mb-6 text-center">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#33CCCC]">
-                Live Shelterluv Listing
-              </p>
-
-              <h3 className="font-script mt-2 text-4xl text-[#0a1e3d] sm:text-5xl">
-                Available FAUNA Pets
-              </h3>
-
-              <p className="mx-auto mt-3 max-w-2xl text-gray-700">
-                This list updates automatically through Shelterluv as adoptable
-                animals become available.
-              </p>
-            </div>
-
-            <ShelterluvAvailablePets />
           </div>
         </div>
       </section>
@@ -345,93 +342,6 @@ export default function AdoptFosterPage() {
                 </a>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Main CTA */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] bg-gradient-to-br from-[#0099FF] to-[#33CCCC] p-8 text-white sm:p-12">
-            <div className="grid gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
-              <div>
-                <PawPrint className="mb-5 h-12 w-12 text-[#8AFF00]" />
-
-                <h2 className="font-script text-4xl leading-tight text-white sm:text-5xl">
-                  Every Home Makes a Difference
-                </h2>
-
-                <p className="mt-4 max-w-3xl text-lg leading-8 text-white/90">
-                  Adopting, fostering, volunteering, and sharing available pets
-                  all help FAUNA care for animals across Natchitoches Parish.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="rounded-full bg-[#061424] text-white hover:bg-[#0a1e3d]"
-                >
-                  <a href="#available-pets">View Available Pets</a>
-                </Button>
-
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full border-white bg-transparent text-white hover:bg-white hover:text-[#061424]"
-                >
-                  <Link href="/donate">Support FAUNA</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Information */}
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl bg-white p-6 shadow-sm">
-              <Users className="mb-4 h-9 w-9 text-[#0099FF]" />
-
-              <h3 className="text-xl font-extrabold text-[#0a1e3d]">
-                Questions?
-              </h3>
-
-              <p className="mt-2 text-gray-700">
-                FAUNA volunteers can help you understand the adoption or foster
-                process.
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-white p-6 shadow-sm">
-              <Heart className="mb-4 h-9 w-9 text-[#33CCCC]" />
-
-              <h3 className="text-xl font-extrabold text-[#0a1e3d]">
-                Share Pets
-              </h3>
-
-              <p className="mt-2 text-gray-700">
-                Sharing adoptable animals helps them reach more potential
-                families.
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-white p-6 shadow-sm">
-              <Home className="mb-4 h-9 w-9 text-[#5a9900]" />
-
-              <h3 className="text-xl font-extrabold text-[#0a1e3d]">
-                Open Your Home
-              </h3>
-
-              <p className="mt-2 text-gray-700">
-                A foster home gives an animal comfort, stability, and a better
-                chance at adoption.
-              </p>
-            </div>
           </div>
         </div>
       </section>
