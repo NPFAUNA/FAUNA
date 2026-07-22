@@ -2,11 +2,13 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import {
   ArrowRight,
+  Bath,
   Cat,
   CheckCircle,
   ExternalLink,
   HeartPulse,
   PawPrint,
+  ShieldCheck,
   Stethoscope,
   Users,
 } from "lucide-react"
@@ -34,8 +36,8 @@ const programs = [
   },
   {
     title: "Community Health Fairs",
-    body: "Low-cost pop-up health fairs at central locations throughout Natchitoches Parish to assist community pet owners.",
-    href: "/events",
+    body: "Free or low-cost pop-up health fairs and partner events that help keep community pets healthy, microchipped, and loved.",
+    href: "#community-health-fairs",
     icon: HeartPulse,
   },
   {
@@ -50,6 +52,20 @@ const programs = [
     href: "#klaws",
     icon: Users,
   },
+]
+
+const communityHealthServices = [
+  "Vaccines",
+  "Microchips",
+  "Nail trims and wellness checks",
+  "Education on responsible pet ownership",
+]
+
+const bathDayServices = [
+  "Dog baths",
+  "Nail clipping",
+  "Anal gland expression",
+  "Bath and grooming bundles",
 ]
 
 const wildlifeSafetyTips = [
@@ -110,38 +126,158 @@ export default function ProgramsPage() {
 
       <section
         id="community-health-fairs"
-        className="scroll-mt-24 bg-[#8AFF00] px-6 py-12 text-center text-[#0a1e3d]"
+        className="scroll-mt-24 bg-[#8AFF00] px-6 py-20 text-[#0a1e3d]"
       >
-        <h2 className="font-script text-5xl">
-          Community Health Fairs
-        </h2>
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-sm font-extrabold uppercase tracking-[0.2em]">
+              Community Health Fairs
+            </p>
 
-        <p className="mx-auto mt-3 max-w-3xl text-lg leading-8">
-          FAUNA offers low-cost pop-up health fairs at central locations
-          throughout Natchitoches Parish to assist community pet owners. Visit
-          our Events page to see future dates.
-        </p>
+            <h2 className="font-script mx-auto mt-3 max-w-4xl text-5xl sm:text-6xl">
+              Keeping Pets Healthy, Microchipped, and Loved
+            </h2>
 
-        <div className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-3">
-          {[
-            "Low-cost Core Vaccines",
-            "Low-cost Microchipping",
-            "Basic Wellness Support",
-          ].map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-white px-5 py-3 text-base font-bold shadow-sm"
-            >
-              {item}
-            </span>
-          ))}
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8">
+              Through pop-up health fairs and partner events, FAUNA helps
+              community pet owners access essential services and trustworthy
+              information close to home.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl bg-white p-8 shadow-lg sm:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0099FF]/10">
+                <HeartPulse className="h-7 w-7 text-[#0099FF]" />
+              </div>
+
+              <h3 className="font-script mt-6 text-4xl">
+                Free or Low-Cost Pet Care
+              </h3>
+
+              <p className="mt-4 leading-8 text-gray-700">
+                Services vary by event and may be offered free or at a reduced
+                cost through FAUNA and our community partners.
+              </p>
+
+              <ul className="mt-7 space-y-4">
+                {communityHealthServices.map((service) => (
+                  <li
+                    key={service}
+                    className="flex items-start gap-3 text-lg text-gray-700"
+                  >
+                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#5a9900]" />
+                    <span>{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="rounded-3xl bg-[#0a1e3d] p-8 text-white shadow-lg sm:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#33CCCC]/20">
+                <ShieldCheck className="h-7 w-7 text-[#33CCCC]" />
+              </div>
+
+              <h3 className="font-script mt-6 text-4xl text-[#33CCCC]">
+                Accessible Care Strengthens Our Community
+              </h3>
+
+              <div className="mt-5 space-y-5 leading-8 text-gray-300">
+                <p>
+                  Preventive care helps pets remain healthy, protected, and
+                  safely connected to the families who love them.
+                </p>
+
+                <p>
+                  Microchips can help reunite lost pets with their owners, while
+                  vaccines and basic wellness services help prevent illness and
+                  identify health concerns early.
+                </p>
+
+                <p>
+                  Responsible pet-ownership education gives families practical
+                  information they can use to provide safe, lifelong care.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <article className="mt-8 overflow-hidden rounded-3xl bg-white shadow-lg">
+            <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
+              <div className="flex flex-col justify-center bg-[#33CCCC] p-8 text-[#0a1e3d] sm:p-10">
+                <Bath className="h-12 w-12" />
+
+                <p className="mt-6 text-sm font-extrabold uppercase tracking-[0.2em]">
+                  A FAUNA Community Tradition
+                </p>
+
+                <h3 className="font-script mt-3 text-5xl">
+                  Bath &amp; Nail Clipping Days
+                </h3>
+
+                <p className="mt-5 text-lg leading-8">
+                  Clean pets, happy homes, and vital support for animals in
+                  FAUNA&apos;s care.
+                </p>
+              </div>
+
+              <div className="p-8 sm:p-10">
+                <p className="text-lg leading-8 text-gray-700">
+                  FAUNA&apos;s Bath &amp; Nail Clipping Days give local pet
+                  owners access to affordable grooming services while raising
+                  funds to feed, provide veterinary care for, and find homes
+                  for rescue animals.
+                </p>
+
+                <h4 className="mt-8 text-xl font-extrabold text-[#0a1e3d]">
+                  Services may include:
+                </h4>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {bathDayServices.map((service) => (
+                    <div
+                      key={service}
+                      className="flex items-center gap-3 rounded-2xl bg-sky-50 px-4 py-4 font-semibold text-gray-700"
+                    >
+                      <CheckCircle className="h-5 w-5 shrink-0 text-[#0099FF]" />
+                      <span>{service}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 rounded-2xl border border-[#8AFF00]/50 bg-[#8AFF00]/10 p-6">
+                  <h4 className="text-xl font-extrabold text-[#0a1e3d]">
+                    Support for FAUNA Foster Dogs
+                  </h4>
+
+                  <p className="mt-2 leading-7 text-gray-700">
+                    Bath Day services are free for dogs currently in FAUNA
+                    foster homes, helping them stay clean, healthy, and ready
+                    for adoption.
+                  </p>
+                </div>
+
+                <p className="mt-7 leading-7 text-gray-600">
+                  These events also depend on volunteers who help with bathing,
+                  brushing, handling, cleanup, setup, and welcoming community
+                  members.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <div className="mt-10 text-center">
+            <Link href="/events">
+              <Button
+                size="lg"
+                className="h-auto bg-[#0a1e3d] px-8 py-4 font-bold text-white hover:bg-[#061424]"
+              >
+                View Upcoming Events
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
-
-        <Link href="/events">
-          <Button className="mt-7 bg-[#0a1e3d] text-white hover:bg-[#061424]">
-            View Events
-          </Button>
-        </Link>
       </section>
 
       <section
