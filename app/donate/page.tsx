@@ -3,7 +3,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Mail, MapPin, ShoppingCart, Grid3X3, Star } from "lucide-react"
-import { StripeDonateButton } from "@/components/stripe-donate-button"
 
 const BASE05 = "http://www.npfauna.org/wp-content/uploads/2026/05"
 const BASE06 = "http://www.npfauna.org/wp-content/uploads/2026/06"
@@ -81,17 +80,52 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Stripe Donate */}
-      <section className="py-16 bg-white">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <Badge className="bg-[#0099FF]/10 text-[#0099FF] border-[#0099FF]/20 mb-4">Donate by Card</Badge>
-          <h2 className="text-2xl font-bold text-[#0a1e3d] mb-2">Donate to Support Our Mission</h2>
-          <p className="text-gray-600 mb-8">
-            Secure online donation — all major credit cards accepted.
-          </p>
-          <StripeDonateButton />
-        </div>
-      </section>
+     {/* Square Donate */}
+<section className="py-16 bg-white">
+  <div className="max-w-2xl mx-auto px-4 text-center">
+    <Badge className="bg-[#0099FF]/10 text-[#0099FF] border-[#0099FF]/20 mb-4">
+      Donate by Card
+    </Badge>
+
+    <h2 className="text-2xl font-bold text-[#0a1e3d] mb-2">
+      Donate to Support Our Mission
+    </h2>
+
+    <p className="text-gray-600 mb-8">
+      Secure online donations powered by Square.
+    </p>
+
+    <div className="mx-auto max-w-[260px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg">
+      <Image
+        src="https://items-images-production.s3.us-west-2.amazonaws.com/files/75b961727e19d4d99ce5e130ce417058d3683009/original.png"
+        alt="Support Our Mission"
+        width={259}
+        height={160}
+        className="w-full h-auto"
+        unoptimized
+      />
+
+      <div className="p-6">
+        <p className="text-lg text-[#0a1e3d]">
+          Support Our Mission
+        </p>
+
+        <p className="mt-2 text-lg font-semibold text-[#0a1e3d]">
+          Entered by customer
+        </p>
+
+        <Link
+          href="https://square.link/u/cx8khPNs?src=embed"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-[#2693ff] px-6 font-bold text-white transition hover:bg-[#167ee6]"
+        >
+          Donate
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* PayPal + Venmo */}
       <section className="py-12 bg-sky-50 border-y border-sky-100">
