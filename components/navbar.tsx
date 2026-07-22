@@ -68,6 +68,10 @@ const navItems = [
     label: "Adopt or Foster",
   },
   {
+    href: "/volunteer",
+    label: "Volunteer",
+  },
+  {
     href: "/events",
     label: "Events",
   },
