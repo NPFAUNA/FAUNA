@@ -3,11 +3,14 @@ import Link from "next/link"
 import {
   ArrowRight,
   Cat,
+  CheckCircle,
+  ExternalLink,
   HeartPulse,
   PawPrint,
   Stethoscope,
   Users,
 } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -31,7 +34,7 @@ const programs = [
   },
   {
     title: "Community Health Fairs",
-    body: "Low-Cost Pop-Up Health Fairs at central locations throughout Natchitoches Parish to help assist all community pet owners.",
+    body: "Low-cost pop-up health fairs at central locations throughout Natchitoches Parish to assist community pet owners.",
     href: "/events",
     icon: HeartPulse,
   },
@@ -43,10 +46,18 @@ const programs = [
   },
   {
     title: "KLAWS",
-    body: "Youth-focused humane education that helps build compassionate, responsible future pet owners.",
-    href: "/volunteer",
+    body: "Wildlife rehabilitation that gives orphaned and injured native animals specialized care and the opportunity to return safely to the wild.",
+    href: "#klaws",
     icon: Users,
   },
+]
+
+const wildlifeSafetyTips = [
+  "Keep children and pets away.",
+  "Observe from a safe distance.",
+  "Do not offer food, water, or medication unless directed by a wildlife rehabilitator.",
+  "Avoid handling the animal with bare hands.",
+  "Contact KLAWS or another permitted wildlife rehabilitator for guidance.",
 ]
 
 export default function ProgramsPage() {
@@ -64,7 +75,7 @@ export default function ProgramsPage() {
 
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-200">
             Our programs support homeless animals, community cats, pet owners,
-            and families across Natchitoches Parish.
+            wildlife, and families across Natchitoches Parish.
           </p>
         </div>
       </section>
@@ -99,16 +110,16 @@ export default function ProgramsPage() {
 
       <section
         id="community-health-fairs"
-        className="bg-[#8AFF00] px-6 py-12 text-center text-[#0a1e3d]"
+        className="scroll-mt-24 bg-[#8AFF00] px-6 py-12 text-center text-[#0a1e3d]"
       >
-        <h2 className="text-3xl font-extrabold">
+        <h2 className="font-script text-5xl">
           Community Health Fairs
         </h2>
 
         <p className="mx-auto mt-3 max-w-3xl text-lg leading-8">
-          FAUNA offers Low-Cost Pop-Up Health Fairs at central locations
-          throughout Natchitoches Parish to help assist all community pet
-          owners. Check out our Events page to see future dates.
+          FAUNA offers low-cost pop-up health fairs at central locations
+          throughout Natchitoches Parish to assist community pet owners. Visit
+          our Events page to see future dates.
         </p>
 
         <div className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-3">
@@ -131,6 +142,152 @@ export default function ProgramsPage() {
             View Events
           </Button>
         </Link>
+      </section>
+
+      <section
+        id="klaws"
+        className="scroll-mt-24 bg-sky-50 px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0099FF]">
+              Wildlife Rehabilitation
+            </p>
+
+            <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
+              About KLAWS
+            </h2>
+
+            <p className="mt-3 text-xl font-semibold text-[#167f7f] sm:text-2xl">
+              Kathy&apos;s Louisiana Wildlife Sanctuary
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl border border-sky-100 bg-white p-8 shadow-lg sm:p-10">
+              <h3 className="font-script text-4xl text-[#0a1e3d]">
+                Compassionate Care for Native Wildlife
+              </h3>
+
+              <div className="mt-6 space-y-5 leading-8 text-gray-700">
+                <p>
+                  KLAWS, Inc. &mdash; Kathy&apos;s Louisiana Wildlife Sanctuary
+                  &mdash; is a Natchitoches-based nonprofit dedicated to
+                  helping orphaned and injured wildlife receive the specialized
+                  care they need.
+                </p>
+
+                <p>
+                  Led by wildlife rehabilitator Kathy Owsley, KLAWS provides
+                  compassionate, hands-on support for native animals such as
+                  raccoons, squirrels, opossums, and birds.
+                </p>
+
+                <p>
+                  Kathy trained with Dr. Gia Morgan and her veterinary staff in
+                  Shreveport and serves as a wildlife rehabilitation
+                  sub-permittee through WERLA.
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-3xl bg-[#0a1e3d] p-8 text-white shadow-lg sm:p-10">
+              <h3 className="font-script text-4xl text-[#33CCCC]">
+                Rescue, Rehabilitate, Release
+              </h3>
+
+              <div className="mt-6 space-y-5 leading-8 text-gray-300">
+                <p>
+                  The goal of wildlife rehabilitation is to give each animal
+                  the best possible opportunity to return safely to its natural
+                  habitat.
+                </p>
+
+                <p>
+                  Animals arriving at KLAWS may be orphaned, injured,
+                  displaced, or unable to survive without temporary human
+                  assistance. Their care can include species-appropriate
+                  housing, specialized feeding, medical support, monitoring,
+                  and gradual preparation for release.
+                </p>
+
+                <p>
+                  When an animal is healthy, independent, and ready to return
+                  to the wild, KLAWS works to place it in a suitable release
+                  environment.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl border border-sky-100 bg-white p-8 shadow-lg sm:p-10">
+              <h3 className="font-script text-4xl text-[#0a1e3d]">
+                Serving Wildlife and the Community
+              </h3>
+
+              <div className="mt-6 space-y-5 leading-8 text-gray-700">
+                <p>
+                  KLAWS fills an important need in Natchitoches and the
+                  surrounding region by offering residents a responsible
+                  resource when they encounter wildlife in distress.
+                </p>
+
+                <p>
+                  Its work also helps the community understand when a wild
+                  animal truly needs intervention, how to avoid accidentally
+                  separating young animals from their parents, and why wildlife
+                  should be handled only by trained rehabilitators.
+                </p>
+
+                <p>
+                  KLAWS is organized as a 501(c)(3) charitable nonprofit
+                  focused on wildlife sanctuary and rehabilitation work.
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-3xl border border-amber-200 bg-amber-50 p-8 shadow-lg sm:p-10">
+              <h3 className="font-script text-4xl text-[#0a1e3d]">
+                Before You Rescue a Wild Animal
+              </h3>
+
+              <p className="mt-6 leading-8 text-gray-700">
+                A young animal found alone is not always abandoned. In many
+                cases, a parent may be nearby gathering food or waiting for
+                people to leave.
+              </p>
+
+              <ul className="mt-7 space-y-4">
+                {wildlifeSafetyTips.map((tip) => (
+                  <li
+                    key={tip}
+                    className="flex items-start gap-3 leading-7 text-gray-700"
+                  >
+                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#5a9900]" />
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="https://www.facebook.com/p/KLAWS-Inc-Kathys-Louisiana-Wildlife-Sanctuary-61576190663306/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="h-auto bg-[#0099FF] px-7 py-3 font-bold text-white hover:bg-[#0088ee]"
+              >
+                Visit KLAWS on Facebook
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   )
