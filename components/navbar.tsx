@@ -52,6 +52,10 @@ const centerItems = [
     href: "/generations-of-hope",
     label: "Generations of Hope Capital Campaign",
   },
+  {
+    href: "/capital-campaign",
+    label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
+  },
 ]
 
 const navItems = [
