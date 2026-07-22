@@ -77,6 +77,25 @@ const socialLinks = [
   },
 ]
 
+const stats = [
+  {
+    value: "97.5%",
+    label: "2025 Live-Release Rate",
+  },
+  {
+    value: "364",
+    label: "Dogs & Cats Taken In",
+  },
+  {
+    value: "482",
+    label: "Vaccines Given in 2025",
+  },
+  {
+    value: "350+",
+    label: "Community Cats Helped",
+  },
+]
+
 export default function HomePage() {
   return (
     <main>
@@ -174,6 +193,25 @@ export default function HomePage() {
                 <Icon className="h-5 w-5" />
                 {label}
               </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Impact Statistics */}
+      <section className="bg-[#061424] px-6 py-10 text-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-9 text-center md:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-extrabold text-[#8AFF00] sm:text-4xl">
+                  {stat.value}
+                </p>
+
+                <p className="mx-auto mt-2 max-w-[190px] text-sm font-semibold leading-snug text-[#33CCCC] sm:text-base">
+                  {stat.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -329,7 +367,7 @@ export default function HomePage() {
                 </Button>
               </Link>
 
-              <Link href="/capital-campaign/generations-of-hope">
+              <Link href="/generations-of-hope">
                 <Button
                   variant="outline"
                   className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
