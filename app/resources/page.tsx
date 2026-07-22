@@ -230,7 +230,7 @@ export default function ResourcesPage() {
             Community Resources
           </Badge>
 
-          <h1 <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
+          <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
             Community Resources &amp; Help Desk
           </h1>
 
@@ -255,10 +255,7 @@ export default function ResourcesPage() {
         </div>
       </nav>
 
-      <section
-        id="emergency"
-        className="scroll-mt-32 bg-red-50 py-16"
-      >
+      <section id="emergency" className="scroll-mt-32 bg-red-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-start gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-600">
@@ -270,7 +267,7 @@ export default function ResourcesPage() {
                 Need help right now? Call the numbers below.
               </p>
 
-              <h2 className="mt-1 text-3xl font-bold text-[#0a1e3d]">
+              <h2 className="font-script mt-1 text-4xl text-[#0a1e3d] sm:text-5xl">
                 Emergency Quick-Dial
               </h2>
             </div>
@@ -348,10 +345,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="spay-neuter"
-        className="scroll-mt-32 bg-white py-16"
-      >
+      <section id="spay-neuter" className="scroll-mt-32 bg-white py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#33CCCC]">
@@ -363,7 +357,7 @@ export default function ResourcesPage() {
                 Prevention
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 Low-Cost Spay, Neuter &amp; Preventive Care
               </h2>
             </div>
@@ -434,10 +428,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="local-vets"
-        className="scroll-mt-32 bg-gray-50 py-16"
-      >
+      <section id="local-vets" className="scroll-mt-32 bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
@@ -449,7 +440,7 @@ export default function ResourcesPage() {
                 Near You
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 Local Veterinary &amp; Wellness Partners
               </h2>
             </div>
@@ -508,10 +499,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="financial-aid"
-        className="scroll-mt-32 bg-white py-16"
-      >
+      <section id="financial-aid" className="scroll-mt-32 bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#8AFF00]">
@@ -523,7 +511,7 @@ export default function ResourcesPage() {
                 Help Paying Bills
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 Financial Aid for Veterinary Bills
               </h2>
             </div>
@@ -559,17 +547,14 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="food-supplies"
-        className="scroll-mt-32 bg-sky-50 py-16"
-      >
+      <section id="food-supplies" className="scroll-mt-32 bg-sky-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <p className="text-xs font-bold uppercase tracking-wider text-[#0099FF]">
               Pantries &amp; Aid
             </p>
 
-            <h2 className="mt-1 text-3xl font-bold text-[#0a1e3d]">
+            <h2 className="font-script mt-1 text-4xl text-[#0a1e3d] sm:text-5xl">
               Pet Food &amp; Supplies
             </h2>
           </div>
@@ -648,7 +633,7 @@ export default function ResourcesPage() {
                 Education
               </p>
 
-              <h2 className="text-3xl font-bold">
+              <h2 className="font-script text-4xl text-white sm:text-5xl">
                 Training &amp; Behavior Libraries
               </h2>
             </div>
@@ -694,10 +679,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="found-cat"
-        className="scroll-mt-32 bg-white py-16"
-      >
+      <section id="found-cat" className="scroll-mt-32 bg-white py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
@@ -705,7 +687,7 @@ export default function ResourcesPage() {
                 Found Cat Guide
               </Badge>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 What to Do If You Find a Cat
               </h2>
 
@@ -742,10 +724,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="lost-found"
-        className="scroll-mt-32 bg-gray-50 py-16"
-      >
+      <section id="lost-found" className="scroll-mt-32 bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
@@ -757,7 +736,7 @@ export default function ResourcesPage() {
                 Missing Pet
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 Lost &amp; Found Toolkit
               </h2>
             </div>
@@ -771,9 +750,11 @@ export default function ResourcesPage() {
               className="rounded-2xl border border-sky-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <h3 className="font-bold text-[#0a1e3d]">Microchip Lookup</h3>
+
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 Search a microchip number across major registries.
               </p>
+
               <span className="mt-5 inline-block text-sm font-semibold text-[#0099FF]">
                 Search now
               </span>
@@ -788,10 +769,12 @@ export default function ResourcesPage() {
               <h3 className="font-bold text-[#0a1e3d]">
                 Natchitoches Lost/Found Pets
               </h3>
+
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 Post a clear photo and identifying information in the local
                 Facebook group.
               </p>
+
               <span className="mt-5 inline-block text-sm font-semibold text-[#0099FF]">
                 Open Facebook group
               </span>
@@ -801,10 +784,12 @@ export default function ResourcesPage() {
               <h3 className="font-bold text-[#0a1e3d]">
                 Printable Lost-Pet Flyer
               </h3>
+
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 Request a template for your pet&apos;s photo, description, and
                 contact information.
               </p>
+
               <a
                 href="mailto:rescue@npfauna.org?subject=Lost Pet Flyer Template Request"
                 className="mt-5 inline-block"
@@ -817,6 +802,7 @@ export default function ResourcesPage() {
 
             <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <h3 className="font-bold text-[#0a1e3d]">Local Ordinances</h3>
+
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 Review local government information concerning animals and
                 community services.
@@ -864,10 +850,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="disaster"
-        className="scroll-mt-32 bg-white py-16"
-      >
+      <section id="disaster" className="scroll-mt-32 bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0a1e3d]">
@@ -879,7 +862,7 @@ export default function ResourcesPage() {
                 Storm Season
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 Disaster Preparedness
               </h2>
             </div>
@@ -988,10 +971,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section
-        id="partners"
-        className="scroll-mt-32 bg-gray-50 py-16"
-      >
+      <section id="partners" className="scroll-mt-32 bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0099FF]">
@@ -1003,7 +983,7 @@ export default function ResourcesPage() {
                 Our Network
               </p>
 
-              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl"
+              <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
                 FAUNA &amp; Strategic Partners
               </h2>
             </div>
@@ -1043,7 +1023,7 @@ export default function ResourcesPage() {
 
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-16 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold">
+          <h2 className="font-script text-4xl text-white sm:text-5xl">
             Still Can&apos;t Find What You Need?
           </h2>
 
