@@ -49,15 +49,15 @@ const programItems = [
 
 const centerItems = [
   {
-    href: "/capital-campaign",
+    href: "/generations-of-hope",
     label: "Generations of Hope Capital Campaign",
   },
 ]
 
 const navItems = [
   {
-    href: "/adopt-foster",
-    label: "Adopt or Foster",
+    href: "/capital-campaign",
+    label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
   },
   {
     href: "/events",
