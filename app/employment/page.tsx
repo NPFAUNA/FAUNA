@@ -190,10 +190,14 @@ export default function EmploymentPage() {
               Join the FAUNA Team
             </Badge>
 
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
-              Turn Compassion
+            <p className="font-script text-4xl text-[#33CCCC] sm:text-5xl">
+              Turn Compassion Into a Career
+            </p>
+
+            <h1 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+              Build a Career That
               <br />
-              <span className="text-[#33CCCC]">Into a Career</span>
+              <span className="text-[#8AFF00]">Makes a Difference</span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sky-100">
@@ -225,7 +229,7 @@ export default function EmploymentPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white bg-transparent font-semibold text-white hover:bg-white/10"
+                  className="border-white bg-transparent font-semibold text-white hover:bg-white/10 hover:text-white"
                 >
                   Volunteer Application
                 </Button>
@@ -286,7 +290,7 @@ export default function EmploymentPage() {
               Why Join Us
             </p>
 
-            <h2 className="mt-2 text-4xl font-extrabold text-[#0a1e3d]">
+            <h2 className="mt-2 font-script text-5xl text-[#0a1e3d] sm:text-6xl">
               Why Work With FAUNA
             </h2>
 
@@ -338,7 +342,7 @@ export default function EmploymentPage() {
       <section className="bg-sky-50 py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex items-center gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0099FF]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0099FF]">
               <Briefcase className="h-6 w-6 text-white" />
             </div>
 
@@ -347,7 +351,7 @@ export default function EmploymentPage() {
                 Current Opening
               </p>
 
-              <h2 className="text-3xl font-extrabold text-[#0a1e3d]">
+              <h2 className="font-script text-4xl leading-tight text-[#0a1e3d] sm:text-5xl">
                 Executive Director of Shelter Operations
               </h2>
             </div>
@@ -359,7 +363,7 @@ export default function EmploymentPage() {
                 Now Hiring
               </p>
 
-              <h3 className="mt-2 text-3xl font-bold leading-tight sm:text-4xl">
+              <h3 className="mt-2 font-script text-4xl leading-tight text-white sm:text-5xl">
                 Help Lead FAUNA&apos;s Next Chapter
               </h3>
             </div>
@@ -399,7 +403,7 @@ export default function EmploymentPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#33CCCC]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#33CCCC]">
               <PawPrint className="h-6 w-6 text-white" />
             </div>
 
@@ -408,7 +412,7 @@ export default function EmploymentPage() {
                 Additional Employment Information
               </p>
 
-              <h2 className="text-3xl font-extrabold text-[#0a1e3d]">
+              <h2 className="font-script text-5xl leading-tight text-[#0a1e3d]">
                 Site Employee
               </h2>
             </div>
@@ -496,7 +500,7 @@ export default function EmploymentPage() {
           </Card>
 
           <div className="rounded-2xl bg-gradient-to-br from-[#0099FF] to-[#33CCCC] p-8 text-center text-white">
-            <h3 className="text-2xl font-extrabold">
+            <h3 className="font-script text-4xl text-white sm:text-5xl">
               Interested in Site Employment?
             </h3>
 
@@ -529,7 +533,7 @@ export default function EmploymentPage() {
       <section className="bg-sky-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#33CCCC]">
+            <p className="font-script text-4xl text-[#33CCCC] sm:text-5xl">
               Not Ready for a Job?
             </p>
 
