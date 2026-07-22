@@ -15,7 +15,7 @@ const aboutItems = [
     label: "Our History",
   },
   {
-    href: "/board-of-director",
+    href: "/board-of-directors",
     label: "Board of Directors",
   },
   {
@@ -56,7 +56,9 @@ const centerItems = [
     href: "/capital-campaign",
     label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
   },
+]
 
+const navItems = [
   {
     href: "/events",
     label: "Events",
@@ -96,7 +98,6 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-sky-100 bg-white shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Link
             href="/"
             className="flex shrink-0 items-center py-1"
@@ -113,7 +114,6 @@ export function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden items-center gap-0.5 lg:flex">
             <Link
               href="/"
@@ -127,7 +127,6 @@ export function Navbar() {
               Home
             </Link>
 
-            {/* About Dropdown */}
             <div className="group relative">
               <button
                 type="button"
@@ -163,7 +162,6 @@ export function Navbar() {
               </div>
             </div>
 
-            {/* Programs Dropdown */}
             <div className="group relative">
               <div
                 className={cn(
@@ -208,7 +206,7 @@ export function Navbar() {
               </div>
             </div>
 
-            {navItems.slice(0, 3).map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -223,7 +221,6 @@ export function Navbar() {
               </Link>
             ))}
 
-            {/* Friedman Center Dropdown */}
             <div className="group relative">
               <button
                 type="button"
@@ -242,7 +239,7 @@ export function Navbar() {
                 <ChevronDown className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
               </button>
 
-              <div className="invisible absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 translate-y-2 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div className="invisible absolute right-0 top-full z-50 w-80 translate-y-2 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <div className="overflow-hidden rounded-xl border border-sky-100 bg-white p-2 shadow-xl">
                   {centerItems.map((item) => (
                     <Link
@@ -261,24 +258,8 @@ export function Navbar() {
                 </div>
               </div>
             </div>
-
-            {navItems.slice(3).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                  pathname === item.href
-                    ? "bg-sky-100 font-semibold text-[#0099FF]"
-                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
           </div>
 
-          {/* Donate and Mobile Menu */}
           <div className="flex shrink-0 items-center gap-2">
             <Link href="/donate" className="hidden sm:block">
               <Button className="h-9 bg-[#8AFF00] px-4 text-sm font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
@@ -304,7 +285,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileOpen && (
         <div className="border-t border-gray-100 bg-white px-4 pb-4 pt-2 shadow-lg lg:hidden">
           <div className="space-y-1">
@@ -321,7 +301,6 @@ export function Navbar() {
               Home
             </Link>
 
-            {/* Mobile About Dropdown */}
             <button
               type="button"
               onClick={() => setMobileAboutOpen((current) => !current)}
@@ -363,7 +342,6 @@ export function Navbar() {
               </div>
             )}
 
-            {/* Mobile Programs Dropdown */}
             <div>
               <div
                 className={cn(
@@ -415,7 +393,7 @@ export function Navbar() {
               )}
             </div>
 
-            {navItems.slice(0, 3).map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -431,7 +409,6 @@ export function Navbar() {
               </Link>
             ))}
 
-            {/* Mobile Friedman Center Dropdown */}
             <button
               type="button"
               onClick={() => setMobileCenterOpen((current) => !current)}
@@ -474,22 +451,6 @@ export function Navbar() {
                 ))}
               </div>
             )}
-
-            {navItems.slice(3).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={closeMobileMenu}
-                className={cn(
-                  "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
-                  pathname === item.href
-                    ? "bg-sky-100 font-semibold text-[#0099FF]"
-                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
 
             <Link href="/donate" onClick={closeMobileMenu}>
               <Button className="mt-2 w-full bg-[#8AFF00] font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
