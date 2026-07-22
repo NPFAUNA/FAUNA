@@ -88,7 +88,7 @@ export default function EmploymentPage() {
 
             <p className="mb-8 max-w-2xl text-lg leading-relaxed text-sky-100">
               Join the team that gave{" "}
-              <strong className="text-[#8AFF00]">2,500+ pets</strong> a
+              <strong className="text-[#8AFF00]">2,500+ pets a
               second chance last year and drives FAUNA&apos;s{" "}
               <strong className="text-[#8AFF00]">
                 97.5% live-release rate
