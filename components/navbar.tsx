@@ -56,13 +56,7 @@ const centerItems = [
     href: "/capital-campaign",
     label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
   },
-]
 
-const navItems = [
-  {
-    href: "/capital-campaign",
-    label: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
-  },
   {
     href: "/events",
     label: "Events",
