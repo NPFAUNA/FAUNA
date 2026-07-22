@@ -1,7 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Heart, Mail, Sparkles } from "lucide-react"
+import {
+  ArrowRight,
+  ExternalLink,
+  Heart,
+  Mail,
+  Sparkles,
+  ZoomIn,
+} from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -54,6 +61,11 @@ const faqs = [
 ]
 
 export default function GenerationsOfHopePage() {
+  const spacesImageOne = `${BASE}/spaces1-1.png`
+  const spacesImageTwo = `${BASE}/Spaces-2-2.png`
+  const symbolsImage = `${BASE}/Symbols-of-Hope-2.png`
+  const circleImage = `${BASE}/Circle-of-Hope-2.png`
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
@@ -138,32 +150,59 @@ export default function GenerationsOfHopePage() {
               Select a giving level below to view the available opportunities
               and submit your interest directly to FAUNA.
             </p>
+
+            <p className="mx-auto mt-3 flex max-w-3xl items-center justify-center gap-2 text-sm font-semibold text-[#0099FF]">
+              <ZoomIn className="h-4 w-4" />
+              Click any giving-level image to open the full-size version.
+            </p>
           </div>
 
           <div className="space-y-12">
             <article className="overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-xl">
-              <div className="grid items-stretch lg:grid-cols-2">
+              <div className="grid items-stretch lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="bg-sky-50 p-5 sm:p-8">
-                  <div className="grid h-full gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                    <div className="relative min-h-[320px] overflow-hidden rounded-2xl bg-white shadow-sm">
+                  <div className="grid h-full gap-6 xl:grid-cols-2">
+                    <a
+                      href={spacesImageOne}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open the full-size Spaces of Hope naming opportunities image"
+                      className="group relative block min-h-[520px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    >
                       <Image
-                        src={`${BASE}/spaces1-1.png`}
+                        src={spacesImageOne}
                         alt="Spaces of Hope naming opportunities and giving levels"
                         fill
-                        className="object-contain p-2"
+                        className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
                         unoptimized
                       />
-                    </div>
 
-                    <div className="relative min-h-[320px] overflow-hidden rounded-2xl bg-white shadow-sm">
+                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                        <ZoomIn className="h-4 w-4" />
+                        Click to Enlarge
+                      </span>
+                    </a>
+
+                    <a
+                      href={spacesImageTwo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open the full-size additional Spaces of Hope naming opportunities image"
+                      className="group relative block min-h-[520px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    >
                       <Image
-                        src={`${BASE}/Spaces-2-2.png`}
+                        src={spacesImageTwo}
                         alt="Additional Spaces of Hope naming opportunities and giving levels"
                         fill
-                        className="object-contain p-2"
+                        className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
                         unoptimized
                       />
-                    </div>
+
+                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                        <ZoomIn className="h-4 w-4" />
+                        Click to Enlarge
+                      </span>
+                    </a>
                   </div>
                 </div>
 
@@ -205,7 +244,7 @@ export default function GenerationsOfHopePage() {
             </article>
 
             <article className="overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl">
-              <div className="grid items-stretch lg:grid-cols-2">
+              <div className="grid items-stretch lg:grid-cols-[0.8fr_1.2fr]">
                 <div className="flex flex-col justify-center p-8 sm:p-12 lg:order-1 lg:p-14">
                   <Badge className="mb-5 w-fit border-[#33CCCC]/30 bg-[#33CCCC]/10 text-[#167f7f]">
                     $100 &ndash; $7,500
@@ -242,31 +281,53 @@ export default function GenerationsOfHopePage() {
                 </div>
 
                 <div className="bg-teal-50 p-5 sm:p-8 lg:order-2">
-                  <div className="relative min-h-[440px] overflow-hidden rounded-2xl bg-white shadow-sm">
+                  <a
+                    href={symbolsImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full-size Symbols of Hope opportunities image"
+                    className="group relative block min-h-[620px] cursor-zoom-in overflow-hidden rounded-2xl border border-teal-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                  >
                     <Image
-                      src={`${BASE}/Symbols-of-Hope-2.png`}
+                      src={symbolsImage}
                       alt="Symbols of Hope recognition opportunities and giving levels"
                       fill
-                      className="object-contain p-3"
+                      className="object-contain p-4 transition duration-300 group-hover:scale-[1.02]"
                       unoptimized
                     />
-                  </div>
+
+                    <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                      <ZoomIn className="h-4 w-4" />
+                      Click to Enlarge
+                    </span>
+                  </a>
                 </div>
               </div>
             </article>
 
             <article className="overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-xl">
-              <div className="grid items-stretch lg:grid-cols-2">
+              <div className="grid items-stretch lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="bg-lime-50 p-5 sm:p-8">
-                  <div className="relative min-h-[440px] overflow-hidden rounded-2xl bg-white shadow-sm">
+                  <a
+                    href={circleImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full-size Circle of Hope membership image"
+                    className="group relative block min-h-[620px] cursor-zoom-in overflow-hidden rounded-2xl border border-lime-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                  >
                     <Image
-                      src={`${BASE}/Circle-of-Hope-2.png`}
+                      src={circleImage}
                       alt="Circle of Hope annual membership levels"
                       fill
-                      className="object-contain p-3"
+                      className="object-contain p-4 transition duration-300 group-hover:scale-[1.02]"
                       unoptimized
                     />
-                  </div>
+
+                    <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                      <ZoomIn className="h-4 w-4" />
+                      Click to Enlarge
+                    </span>
+                  </a>
                 </div>
 
                 <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-14">
@@ -339,6 +400,18 @@ export default function GenerationsOfHopePage() {
               title="Generations of Hope Campaign flipbook"
               allowFullScreen
             />
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
+            >
+              Open the campaign guide in a larger window
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
