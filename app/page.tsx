@@ -28,7 +28,7 @@ const programs = [
   {
     title: "TNR Program",
     description:
-      "Humane Trap-Neuter-Return support for community cats and their caregivers.",
+      "Humane Trap-Neuter-Return services that improve the health and stability of community cat colonies.",
     href: "/programs/tnr",
     icon: Cat,
     color: "bg-[#33CCCC]/20",
@@ -36,7 +36,7 @@ const programs = [
   {
     title: "Community Health Fairs",
     description:
-      "Low-cost core vaccines, microchipping, and basic wellness support for community pets.",
+      "Low-cost pop-up health fairs and partner events that help keep community pets healthy, microchipped, and loved.",
     href: "/programs#community-health-fairs",
     icon: HeartPulse,
     color: "bg-[#0099FF]/15",
@@ -44,7 +44,7 @@ const programs = [
   {
     title: "PACT Therapy",
     description:
-      "Building meaningful connections between people and animals through therapeutic visits.",
+      "Weekly animal-assisted visits that bring comfort, companionship, and joy to residents of local care centers and nursing homes.",
     href: "/programs#pact",
     icon: PawPrint,
     color: "bg-[#8AFF00]/25",
@@ -52,7 +52,7 @@ const programs = [
   {
     title: "KLAWS",
     description:
-      "Humane education that helps young people become compassionate and responsible pet owners.",
+      "Wildlife rehabilitation that gives orphaned and injured native animals specialized care and the opportunity to return safely to the wild.",
     href: "/programs#klaws",
     icon: Users,
     color: "bg-[#33CCCC]/20",
