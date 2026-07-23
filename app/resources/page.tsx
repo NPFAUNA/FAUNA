@@ -713,11 +713,10 @@ export default function ResourcesPage() {
 
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-sky-50">
               <Image
-                src="http://www.npfauna.org/wp-content/uploads/2026/05/what-to-do-if-you-find-a-cat.png"
+                src="/What to do if you find a cat.jpg"
                 alt="What to do if you find a cat in Natchitoches Parish"
                 fill
                 className="object-contain p-4"
-                unoptimized
               />
             </div>
           </div>
@@ -742,7 +741,7 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             <Link
               href="https://petmicrochiplookup.org"
               target="_blank"
@@ -779,26 +778,6 @@ export default function ResourcesPage() {
                 Open Facebook group
               </span>
             </Link>
-
-            <div className="rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
-              <h3 className="font-bold text-[#0a1e3d]">
-                Printable Lost-Pet Flyer
-              </h3>
-
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Request a template for your pet&apos;s photo, description, and
-                contact information.
-              </p>
-
-              <a
-                href="mailto:rescue@npfauna.org?subject=Lost Pet Flyer Template Request"
-                className="mt-5 inline-block"
-              >
-                <Button size="sm" variant="outline">
-                  Request Template
-                </Button>
-              </a>
-            </div>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <h3 className="font-bold text-[#0a1e3d]">Local Ordinances</h3>
@@ -941,31 +920,6 @@ export default function ResourcesPage() {
                   <ExternalLink className="h-4 w-4 shrink-0 text-[#0099FF]" />
                 </div>
               </Link>
-
-              <div className="rounded-2xl border border-[#0099FF]/20 bg-[#0099FF]/10 p-6">
-                <h3 className="flex items-center gap-2 font-bold text-[#0a1e3d]">
-                  <Heart className="h-4 w-4 text-[#0099FF]" />
-                  FAUNA Emergency Response
-                </h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  During disasters, FAUNA may help coordinate emergency
-                  kenneling and animal transport. Contact us as early as
-                  possible.
-                </p>
-
-                <a
-                  href="mailto:rescue@npfauna.org?subject=Disaster Pet Help"
-                  className="mt-5 inline-block"
-                >
-                  <Button
-                    size="sm"
-                    className="bg-[#0099FF] text-white hover:bg-[#0088ee]"
-                  >
-                    Contact FAUNA for Emergency Help
-                  </Button>
-                </a>
-              </div>
             </div>
           </div>
         </div>
