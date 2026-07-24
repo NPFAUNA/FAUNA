@@ -72,7 +72,7 @@ export default function TnrPage() {
           <div className="mx-auto lg:mx-0">
             <div className="relative h-64 w-64 overflow-hidden rounded-full border-8 border-white/15 bg-white shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/tnr-cat.jpg"
+                src="/publictnr-cat.jpg"
                 alt="Black and white community cat"
                 fill
                 className="object-cover object-center"
