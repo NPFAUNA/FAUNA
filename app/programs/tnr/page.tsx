@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -46,21 +48,38 @@ const steps = [
 export default function TnrPage() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[#061424] to-[#0a1e3d] px-6 py-20 text-white">
-        <div className="mx-auto max-w-5xl">
-          <p className="font-script text-4xl text-[#33CCCC]">
-            Community cat care
-          </p>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#061424] to-[#0a1e3d] px-6 py-20 text-white">
+        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#33CCCC]/10 blur-3xl" />
+        <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-[#8AFF00]/10 blur-3xl" />
 
-          <h1 className="mt-2 text-4xl font-extrabold md:text-6xl">
-            TNR Program
-          </h1>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_auto]">
+          <div className="max-w-3xl">
+            <p className="font-script text-4xl text-[#33CCCC]">
+              Community cat care
+            </p>
 
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
-            FAUNA&apos;s Trap-Neuter-Return Program humanely traps community
-            cats, provides spay/neuter surgery and core vaccinations, then
-            returns each cat to its familiar outdoor colony.
-          </p>
+            <h1 className="mt-2 text-4xl font-extrabold md:text-6xl">
+              TNR Program
+            </h1>
+
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
+              FAUNA&apos;s Trap-Neuter-Return Program humanely traps community
+              cats, provides spay/neuter surgery and core vaccinations, then
+              returns each cat to its familiar outdoor colony.
+            </p>
+          </div>
+
+          <div className="mx-auto lg:mx-0">
+            <div className="relative h-64 w-64 overflow-hidden rounded-full border-8 border-white/15 bg-white shadow-2xl sm:h-72 sm:w-72">
+              <Image
+                src="/tnr-cat.jpg"
+                alt="Black and white community cat"
+                fill
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
