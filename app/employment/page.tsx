@@ -9,7 +9,6 @@ import {
   PawPrint,
   ShieldCheck,
   Sparkles,
-  Star,
   TrendingUp,
   Users,
 } from "lucide-react"
@@ -106,12 +105,6 @@ const benefits = [
     title: "Hands-On Impact",
     description:
       "Feed, comfort, care for, and advocate for animals who need safety, compassion, and second chances.",
-  },
-  {
-    icon: Star,
-    title: "Grow With Us",
-    description:
-      "Build valuable experience in animal handling, shelter operations, customer service, and nonprofit work.",
   },
   {
     icon: Users,
@@ -301,7 +294,7 @@ export default function EmploymentPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-3">
             {benefits.map((benefit) => {
               const Icon = benefit.icon
 
@@ -566,7 +559,7 @@ export default function EmploymentPage() {
             ))}
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="https://new.shelterluv.com/form/community/FAUN/14823"
               target="_blank"
@@ -578,6 +571,17 @@ export default function EmploymentPage() {
               >
                 <Users className="mr-2 h-5 w-5" />
                 Submit Volunteer Application
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+
+            <Link href="/volunteer">
+              <Button
+                size="lg"
+                className="bg-[#0099FF] px-8 font-semibold text-white hover:bg-[#007acc]"
+              >
+                <Users className="mr-2 h-5 w-5" />
+                Learn About Volunteering
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
