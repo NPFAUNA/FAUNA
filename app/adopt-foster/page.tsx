@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import {
   ArrowRight,
   Cat,
@@ -299,6 +300,18 @@ export default function AdoptFosterPage() {
             <h2 className="font-script text-4xl leading-tight text-white sm:text-5xl">
               Not Ready to Adopt? Fostering Still Saves Lives
             </h2>
+
+            <div className="mt-6">
+              <Button
+                asChild
+                className="h-auto bg-[#8AFF00] px-6 py-3 font-bold text-[#061424] hover:bg-[#7aee00]"
+              >
+                <Link href="/foster-faq">
+                  Read the Foster FAQ
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
 
             <p className="mt-5 text-lg leading-8 text-sky-50">
               Foster homes give animals a calm, loving place to decompress while
