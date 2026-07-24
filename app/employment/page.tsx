@@ -317,13 +317,6 @@ export default function EmploymentPage() {
             })}
           </div>
 
-          <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-sky-100 bg-sky-50 p-8 text-center">
-            <p className="text-lg font-medium italic leading-relaxed text-[#0a1e3d]">
-              &ldquo;You&apos;ll be part of the heartbeat of daily shelter life
-              &mdash; helping ensure every dog and cat is safe, clean, cared
-              for, and given the opportunity to find a loving home.&rdquo;
-            </p>
-          </div>
         </div>
       </section>
 
