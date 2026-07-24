@@ -105,7 +105,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-sky-100 bg-white shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-28 items-center justify-between">
           <Link
             href="/"
             className="flex shrink-0 items-center py-1"
@@ -115,9 +115,9 @@ export function Navbar() {
             <Image
               src="/fauna-logo-large.png"
               alt="FAUNA"
-              width={220}
-              height={70}
-              className="h-12 w-auto object-contain"
+              width={440}
+              height={140}
+              className="h-24 w-auto object-contain"
               priority
             />
           </Link>
