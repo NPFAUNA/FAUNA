@@ -272,16 +272,12 @@ export default function EmploymentPage() {
           </div>
         </div>
       </section>
-
+      
+<h2 className="mt-2 font-script text-5xl text-[#0a1e3d] sm:text-6xl">
       {/* Why Work With FAUNA */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <Sparkles className="mx-auto h-11 w-11 text-[#0099FF]" />
-
-            <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#33CCCC]">
-              Why Join Us
-            </p>
 
             <h2 className="mt-2 font-script text-5xl text-[#0a1e3d] sm:text-6xl">
               Why Work With FAUNA
