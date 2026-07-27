@@ -14,6 +14,65 @@ export const metadata: Metadata = {
 
 const BASE = "http://www.npfauna.org/wp-content/uploads/2026/05"
 
+const constructionImages = [
+  {
+    src: "/Cat area 1.png",
+    alt: "Rendering of the Friedman Center cat adoption area",
+  },
+  {
+    src: "/Cat area 2.png",
+    alt: "Rendering of the Friedman Center cat housing area",
+  },
+  {
+    src: "/Kennel area 1.5.png",
+    alt: "Exterior rendering of the Friedman Center kennel area and play yard",
+  },
+  {
+    src: "/Kennel area 2.png",
+    alt: "Interior rendering of the Friedman Center kennel area",
+  },
+  {
+    src: "/Lot 3.png",
+    alt: "Rendering of the Friedman Center grounds and pond",
+  },
+  {
+    src: "/Rendering1.png",
+    alt: "Aerial rendering of the Friedman Center campus",
+  },
+  {
+    src: "/Rendering2.png",
+    alt: "Rendering of the Friedman Center parking area and grounds",
+  },
+  {
+    src: "/Rendering3.png",
+    alt: "Exterior rendering of the Friedman Center service area",
+  },
+  {
+    src: "/Rendering5.png",
+    alt: "Exterior rendering of the Friedman Center adoption entrance",
+  },
+  {
+    src: "/Rendering6.png",
+    alt: "Interior rendering of the Friedman Center community room",
+  },
+  {
+    src: "/Rendering7.png",
+    alt: "Interior rendering of the Friedman Center kennel wing",
+  },
+  {
+    src: "/Rendering8.png",
+    alt: "Rendering of the Friedman Center main entrance",
+  },
+  {
+    src: "/Rendering9.png",
+    alt: "Exterior rendering of the Friedman Center adoption center",
+  },
+  {
+    src: "/Rendering10.png",
+    alt: "Interior rendering of the Friedman Center education room",
+  },
+]
+
 const facilityFeatures = [
   {
     icon: "🏥",
@@ -137,23 +196,21 @@ export default function CapitalCampaignPage() {
             Construction Progress
           </h2>
 
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-            {["42-2", "37-1", "38-1", "39-1", "40-1", "41-1"].map(
-              (imageName) => (
-                <div
-                  key={imageName}
-                  className="relative aspect-video overflow-hidden rounded-xl"
-                >
-                  <Image
-                    src={`${BASE}/${imageName}.png`}
-                    alt="Friedman Center construction progress"
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                    unoptimized
-                  />
-                </div>
-              ),
-            )}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {constructionImages.map((image) => (
+              <div
+                key={image.src}
+                className="relative aspect-video overflow-hidden rounded-xl bg-gray-200 shadow-sm"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="mt-6 text-center">
