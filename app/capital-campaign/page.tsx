@@ -196,19 +196,27 @@ export default function CapitalCampaignPage() {
             Construction Progress
           </h2>
 
-          <div className="mx-auto mb-10 max-w-4xl overflow-hidden rounded-2xl bg-[#061424] shadow-xl">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              className="aspect-video w-full bg-black object-contain"
-            >
-              <source
-                src="/friedman-construction.mp4"
-                type="video/mp4"
+          <h3 className="font-script mb-3 text-center text-3xl text-[#0a1e3d]">
+            Watch the Vision Come to Life
+          </h3>
+
+          <p className="mx-auto mb-8 max-w-3xl text-center text-gray-600">
+            Construction is officially underway on the Edwina &amp; Sam
+            Friedman Pet Adoption &amp; Welfare Center. Take a quick look at
+            the exciting progress being made as we build a brighter future for
+            homeless animals throughout Natchitoches Parish.
+          </p>
+
+          <div className="mx-auto mb-10 max-w-md overflow-hidden rounded-2xl bg-[#061424] shadow-xl">
+            <div className="relative aspect-[9/16]">
+              <iframe
+                src="https://www.youtube.com/embed/fH3VRLuTwvA"
+                title="Friedman Center Construction Progress"
+                className="absolute inset-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
               />
-              Your browser does not support the video element.
-            </video>
+            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
