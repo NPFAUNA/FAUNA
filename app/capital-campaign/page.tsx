@@ -346,6 +346,16 @@ export default function CapitalCampaignPage() {
               animals throughout Natchitoches Parish.
             </p>
 
+            <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+              <Image
+                src="/generations-of-hope-cover.png"
+                alt="Building Generations of Hope capital campaign for the Edwina and Sam Friedman Pet Adoption and Welfare Center"
+                width={1080}
+                height={1080}
+                className="h-auto w-full"
+              />
+            </div>
+
             <Link href="https://npfauna.netlify.app/generations-of-hope">
               <Button className="mt-8 h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
                 View Naming &amp; Capital Opportunities
