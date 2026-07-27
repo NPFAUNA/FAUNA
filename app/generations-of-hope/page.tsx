@@ -93,13 +93,6 @@ export default function GenerationsOfHopePage() {
           </p>
 
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <Link href="#giving-opportunities">
-              <Button className="h-auto bg-[#8AFF00] px-7 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
-                Explore Giving Opportunities
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-
             <Link href={`mailto:${campaignEmail}`}>
               <Button
                 variant="outline"
@@ -113,22 +106,120 @@ export default function GenerationsOfHopePage() {
       </section>
 
       <section className="bg-sky-50 py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <Sparkles className="mx-auto mb-4 h-9 w-9 text-[#0099FF]" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Sparkles className="mx-auto mb-4 h-9 w-9 text-[#0099FF]" />
 
-          <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-            A Lasting Legacy of Compassion
-          </h2>
+            <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
+              A Lasting Legacy of Compassion
+            </h2>
 
-          <blockquote className="mx-auto mt-6 max-w-2xl text-2xl font-bold italic leading-relaxed text-[#0099FF]">
-            &ldquo;Someone believed you were worth this.&rdquo;
-          </blockquote>
+            <blockquote className="mx-auto mt-6 max-w-2xl text-2xl font-bold italic leading-relaxed text-[#0099FF]">
+              &ldquo;Someone believed you were worth this.&rdquo;
+            </blockquote>
+          </div>
 
-          <p className="mx-auto mt-6 max-w-3xl leading-relaxed text-gray-700">
-            Each campaign gift helps build a permanent foundation for
-            lifesaving care, community programs, and compassionate service
-            throughout Natchitoches Parish.
-          </p>
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-lg">
+              <div className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] px-6 py-5 text-center">
+                <h3 className="font-script text-3xl text-white">
+                  Spaces of Hope
+                </h3>
+              </div>
+
+              <div className="flex flex-1 flex-col p-7 text-center">
+                <p className="text-xl font-bold leading-relaxed text-[#0a1e3d]">
+                  Name a meaningful space within the facility.
+                </p>
+
+                <div className="mx-auto my-5 h-px w-16 bg-sky-200" />
+
+                <p className="leading-relaxed text-gray-600">
+                  Help create places where healing, compassionate care, and
+                  second chances begin.
+                </p>
+
+                <Badge className="mx-auto mt-6 border-[#0099FF]/20 bg-[#0099FF]/10 px-4 py-2 text-base text-[#0078c9]">
+                  $1,000 &ndash; $50,000
+                </Badge>
+
+                <Link href="#spaces-of-hope" className="mt-auto pt-7">
+                  <Button className="h-auto w-full bg-[#0099FF] px-6 py-3 font-bold text-white hover:bg-[#0088ee]">
+                    View Spaces of Hope
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </article>
+
+            <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-lg">
+              <div className="bg-gradient-to-r from-[#0099FF] to-[#8AFF00] px-6 py-5 text-center">
+                <h3 className="font-script text-3xl text-[#061424]">
+                  Symbols of Hope
+                </h3>
+              </div>
+
+              <div className="flex flex-1 flex-col p-7 text-center">
+                <p className="text-xl font-bold leading-relaxed text-[#0a1e3d]">
+                  Honor a beloved pet or person with a lasting tribute.
+                </p>
+
+                <div className="mx-auto my-5 h-px w-16 bg-teal-200" />
+
+                <p className="leading-relaxed text-gray-600">
+                  Choose from pavers, leaves, pawprints, benches, memorial
+                  trees, and other meaningful symbols.
+                </p>
+
+                <Badge className="mx-auto mt-6 border-[#33CCCC]/30 bg-[#33CCCC]/10 px-4 py-2 text-base text-[#167f7f]">
+                  $100 &ndash; $7,500+
+                </Badge>
+
+                <Link href="#symbols-of-hope" className="mt-auto pt-7">
+                  <Button className="h-auto w-full bg-[#33CCCC] px-6 py-3 font-bold text-[#061424] hover:bg-[#29b8b8]">
+                    View Symbols of Hope
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </article>
+
+            <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-lg">
+              <div className="bg-gradient-to-r from-[#33CCCC] to-[#8AFF00] px-6 py-5 text-center">
+                <h3 className="font-script text-3xl text-[#061424]">
+                  Circle of Hope
+                </h3>
+
+                <p className="mt-1 font-semibold italic text-[#0a1e3d]">
+                  Membership
+                </p>
+              </div>
+
+              <div className="flex flex-1 flex-col p-7 text-center">
+                <p className="text-xl font-bold leading-relaxed text-[#0a1e3d]">
+                  Provide dependable monthly or annual support.
+                </p>
+
+                <div className="mx-auto my-5 h-px w-16 bg-lime-200" />
+
+                <p className="leading-relaxed text-gray-600">
+                  Help sustain lifesaving animal care, rescue efforts, staffing,
+                  supplies, and community programs year-round.
+                </p>
+
+                <Badge className="mx-auto mt-6 border-[#8AFF00]/40 bg-[#8AFF00]/20 px-4 py-2 text-base text-[#356600]">
+                  $300 &ndash; $12,000 Per Year
+                </Badge>
+
+                <Link href="#circle-of-hope" className="mt-auto pt-7">
+                  <Button className="h-auto w-full bg-[#8AFF00] px-6 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                    View Circle of Hope
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -158,7 +249,10 @@ export default function GenerationsOfHopePage() {
           </div>
 
           <div className="space-y-12">
-            <article className="overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-xl">
+            <article
+              id="spaces-of-hope"
+              className="scroll-mt-24 overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-xl"
+            >
               <div className="grid items-stretch lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="bg-sky-50 p-5 sm:p-8">
                   <div className="grid h-full gap-6 xl:grid-cols-2">
@@ -243,7 +337,10 @@ export default function GenerationsOfHopePage() {
               </div>
             </article>
 
-            <article className="overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl">
+            <article
+              id="symbols-of-hope"
+              className="scroll-mt-24 overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl"
+            >
               <div className="grid items-stretch lg:grid-cols-[0.8fr_1.2fr]">
                 <div className="flex flex-col justify-center p-8 sm:p-12 lg:order-1 lg:p-14">
                   <Badge className="mb-5 w-fit border-[#33CCCC]/30 bg-[#33CCCC]/10 text-[#167f7f]">
@@ -305,7 +402,10 @@ export default function GenerationsOfHopePage() {
               </div>
             </article>
 
-            <article className="overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-xl">
+            <article
+              id="circle-of-hope"
+              className="scroll-mt-24 overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-xl"
+            >
               <div className="grid items-stretch lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="bg-lime-50 p-5 sm:p-8">
                   <a
