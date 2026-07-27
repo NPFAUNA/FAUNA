@@ -196,6 +196,21 @@ export default function CapitalCampaignPage() {
             Construction Progress
           </h2>
 
+          <div className="mx-auto mb-10 max-w-4xl overflow-hidden rounded-2xl bg-[#061424] shadow-xl">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="aspect-video w-full bg-black object-contain"
+            >
+              <source
+                src="/friedman-construction.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video element.
+            </video>
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {constructionImages.map((image) => (
               <div
