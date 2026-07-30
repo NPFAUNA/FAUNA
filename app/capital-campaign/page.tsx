@@ -97,6 +97,49 @@ const giftImpacts = [
   "Supporting the dedicated staff, essential supplies, and lifesaving programs that give homeless animals the care they need and the second chances they deserve.",
 ]
 
+const specialRecognitionLogos = [
+  {
+    src: "/special-recognition/southern-pipe.jpg",
+    alt: "Southern Pipe & Supply",
+  },
+  {
+    src: "/special-recognition/southern.png",
+    alt: "Southern logo mark",
+  },
+  {
+    src: "/special-recognition/shaw.png",
+    alt: "Shaw",
+  },
+  {
+    src: "/special-recognition/pellerin.png",
+    alt: "Pellerin",
+  },
+  {
+    src: "/special-recognition/national-solutions.png",
+    alt: "National Solutions",
+  },
+  {
+    src: "/special-recognition/lg.jpg",
+    alt: "LG",
+  },
+  {
+    src: "/special-recognition/jcla.png",
+    alt: "JCLA Studios",
+  },
+  {
+    src: "/special-recognition/element.png",
+    alt: "Element 5/26 Design and Purchasing",
+  },
+  {
+    src: "/special-recognition/coveworks.png",
+    alt: "The Coveworks",
+  },
+  {
+    src: "/special-recognition/associated.png",
+    alt: "Associated Food Equipment & Supplies",
+  },
+]
+
 export default function CapitalCampaignPage() {
   return (
     <div className="min-h-screen">
@@ -294,6 +337,44 @@ export default function CapitalCampaignPage() {
                 compassion, care, safety, and second chances.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="special-recognition" className="bg-gray-50 py-16">
+        <div className="mx-auto max-w-6xl px-4 text-center">
+          <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#0a1e3d]">
+            Special Recognition
+          </Badge>
+
+          <h2 className="font-script mb-5 text-4xl text-[#0a1e3d] md:text-5xl">
+            Special Recognition
+          </h2>
+
+          <p className="mx-auto mb-10 max-w-4xl text-lg leading-relaxed text-gray-600">
+            We gratefully acknowledge the companies and individuals whose
+            generous in-kind gifts helped turn the vision of the Edwina &amp;
+            Sam Friedman Pet Adoption &amp; Welfare Center into a reality.
+            Their support has left an indelible mark on the future of animal
+            welfare in our community.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {specialRecognitionLogos.map((logo) => (
+              <div
+                key={logo.src}
+                className="relative h-36 w-36 overflow-hidden rounded-full border border-gray-200 bg-white shadow-md"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain p-4"
+                  sizes="144px"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
