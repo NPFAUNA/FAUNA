@@ -23,54 +23,18 @@ export const metadata: Metadata = {
     "Explore employment and volunteer opportunities with FAUNA and help improve the lives of animals throughout Natchitoches Parish.",
 }
 
-const photos = [
+const employmentPhotos = [
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/1-3.png",
-    alt: "FAUNA team with animals",
+    src: "/Employment_1.jpg",
+    alt: "FAUNA employment and animal care photo",
   },
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/2-1.png",
-    alt: "Dog in FAUNA's care",
+    src: "/Employment_2.jpg",
+    alt: "FAUNA team member helping an animal",
   },
   {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/5-1.png",
-    alt: "Cat at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/29-1.png",
-    alt: "FAUNA volunteer with pets",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/9-2.png",
-    alt: "Animal care at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/12-2.png",
-    alt: "FAUNA team member",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/15.png",
-    alt: "Happy pet at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/18.png",
-    alt: "Community event",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/20-1.png",
-    alt: "FAUNA shelter animals",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/23-1.png",
-    alt: "Dog care at FAUNA",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/25-1.png",
-    alt: "FAUNA staff and animals",
-  },
-  {
-    src: "http://www.npfauna.org/wp-content/uploads/2026/05/28-1.png",
-    alt: "Animal rescue moment",
+    src: "/Employment_3.jpg",
+    alt: "FAUNA staff and volunteer animal care",
   },
 ]
 
@@ -176,8 +140,11 @@ export default function EmploymentPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#33CCCC]/10 blur-3xl" />
+        <div className="absolute -bottom-32 left-1/3 h-96 w-96 rounded-full bg-[#8AFF00]/10 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
           <div className="max-w-3xl">
             <Badge className="mb-5 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
               Join the FAUNA Team
@@ -229,6 +196,19 @@ export default function EmploymentPage() {
               </Link>
             </div>
           </div>
+
+          <div className="mx-auto lg:mx-0">
+            <div className="relative h-64 w-64 overflow-hidden rounded-full border-8 border-white/15 bg-white shadow-2xl sm:h-72 sm:w-72 lg:h-80 lg:w-80">
+              <Image
+                src="/Employment_Bubble.jpg"
+                alt="FAUNA employment and animal care"
+                fill
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -251,22 +231,24 @@ export default function EmploymentPage() {
         </div>
       </section>
 
-      {/* Photo Grid */}
-      <section className="bg-sky-50 py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-6">
-            {photos.map((photo) => (
+      {/* Employment Photos */}
+      <section className="bg-sky-50 py-14">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-3">
+            {employmentPhotos.map((photo) => (
               <div
                 key={photo.src}
-                className="relative aspect-square overflow-hidden rounded-lg bg-sky-100"
+                className="mx-auto w-full max-w-[280px]"
               >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  unoptimized
-                />
+                <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 280px, 30vw"
+                    className="object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
             ))}
           </div>
