@@ -3,8 +3,10 @@ import Link from "next/link"
 import {
   ArrowRight,
   Cat,
+  Download,
   ExternalLink,
   Facebook,
+  FileText,
   Heart,
   HeartPulse,
   Instagram,
@@ -230,6 +232,63 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2025 Impact Report */}
+      <section className="bg-sky-50 px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
+            <div className="grid items-center gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr_auto] lg:p-12">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#0099FF]/10">
+                <FileText className="h-10 w-10 text-[#0099FF]" />
+              </div>
+
+              <div>
+                <p className="font-script text-4xl text-[#33CCCC]">
+                  Our impact in action
+                </p>
+
+                <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                  Read FAUNA&apos;s 2025 Impact Report
+                </h2>
+
+                <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+                  Explore a year of compassion, community, and second chances
+                  across Natchitoches Parish. See how adoptions, foster homes,
+                  rescue partnerships, vaccines, spay and neuter programs, and
+                  community outreach helped animals and families in 2025.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <a
+                  href="/2025-impact-report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full bg-[#0099FF] font-bold text-white hover:bg-[#007acc]"
+                  >
+                    View Impact Report
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+
+                <a href="/2025-impact-report.pdf" download>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-2 border-[#0a1e3d] bg-white font-bold text-[#0a1e3d] hover:bg-sky-50"
+                  >
+                    Download PDF
+                    <Download className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
