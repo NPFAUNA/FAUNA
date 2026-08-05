@@ -209,7 +209,7 @@ export default function EmploymentPage() {
                   size="lg"
                   className="bg-[#8AFF00] font-bold text-[#0a1e3d] hover:bg-[#7aee00]"
                 >
-                  View Current Opening
+                  View Current Openings
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
