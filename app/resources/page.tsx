@@ -242,12 +242,12 @@ export default function ResourcesPage() {
       </section>
 
       <nav className="sticky top-16 z-40 border-b border-sky-100 bg-white/95 shadow-sm backdrop-blur">
-        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl gap-4 overflow-x-auto px-4 py-5 sm:px-6 lg:px-8">
           {navigationLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="shrink-0 rounded-full border border-sky-100 bg-sky-50 px-3 py-1.5 text-xs font-semibold text-[#0a1e3d] transition-colors hover:border-[#0099FF] hover:bg-[#0099FF] hover:text-white"
+              className="shrink-0 rounded-full border border-sky-100 bg-sky-50 px-6 py-3 text-sm font-semibold text-[#0a1e3d] transition-colors hover:border-[#0099FF] hover:bg-[#0099FF] hover:text-white"
             >
               {item.label}
             </Link>
@@ -458,6 +458,7 @@ export default function ResourcesPage() {
 
                 <p className="mt-2 flex items-start gap-2 text-sm text-gray-500">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0099FF]" />
+
                   <span>
                     {vet.address}
                     <br />
