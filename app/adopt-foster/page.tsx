@@ -58,6 +58,36 @@ const fosterLinks = [
   },
 ]
 
+const adoptionPhotos = [
+  {
+    src: "/Adopt_1.jpg",
+    alt: "FAUNA adoptable animal",
+  },
+  {
+    src: "/Adopt_2.jpg",
+    alt: "Animal available for adoption through FAUNA",
+  },
+  {
+    src: "/Adopt_3.jpg",
+    alt: "FAUNA rescue animal ready for a home",
+  },
+]
+
+const fosterPhotos = [
+  {
+    src: "/Foster_1.jpg",
+    alt: "FAUNA animal in foster care",
+  },
+  {
+    src: "/Foster_2.jpg",
+    alt: "Foster animal supported by FAUNA",
+  },
+  {
+    src: "/Foster_3.jpg",
+    alt: "FAUNA foster family helping an animal",
+  },
+]
+
 const steps = [
   "Browse available pets or choose the dog or cat adoption application.",
   "Complete the Shelterluv application with your household and pet-care information.",
@@ -193,7 +223,7 @@ export default function AdoptFosterPage() {
       {/* Adoption */}
       <section id="adopt" className="scroll-mt-28 bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
+          <div className="mx-auto mb-12 max-w-5xl text-center">
             <Badge className="mb-4 rounded-full bg-[#0099FF] px-4 py-2 text-white hover:bg-[#0099FF]">
               Adoption
             </Badge>
@@ -202,7 +232,26 @@ export default function AdoptFosterPage() {
               Ready to Meet Your New Best Friend?
             </h2>
 
-            <p className="mt-4 text-lg leading-8 text-gray-700">
+            <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
+              {adoptionPhotos.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="mx-auto w-full max-w-[230px]"
+                >
+                  <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 640px) 230px, 30vw"
+                      className="object-cover transition duration-300 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="mx-auto mt-10 max-w-3xl text-lg leading-8 text-gray-700">
               Browse the live list of available FAUNA pets, then choose the dog
               or cat adoption application below.
             </p>
@@ -325,70 +374,91 @@ export default function AdoptFosterPage() {
         id="foster"
         className="scroll-mt-28 bg-[#061424] py-20 text-white"
       >
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <Badge className="mb-4 rounded-full bg-[#33CCCC] px-4 py-2 text-[#061424] hover:bg-[#33CCCC]">
-              Foster
-            </Badge>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div>
+              <Badge className="mb-4 rounded-full bg-[#33CCCC] px-4 py-2 text-[#061424] hover:bg-[#33CCCC]">
+                Foster
+              </Badge>
 
-            <h2 className="font-script text-4xl leading-tight text-white sm:text-5xl">
-              Not Ready to Adopt? Fostering Still Saves Lives
-            </h2>
+              <h2 className="font-script text-4xl leading-tight text-white sm:text-5xl">
+                Not Ready to Adopt? Fostering Still Saves Lives
+              </h2>
 
-            <div className="mt-6">
-              <Button
-                asChild
-                className="h-auto bg-[#8AFF00] px-6 py-3 font-bold text-[#061424] hover:bg-[#7aee00]"
-              >
-                <Link href="/foster-faq">
-                  Read the Foster FAQ
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="mt-6">
+                <Button
+                  asChild
+                  className="h-auto bg-[#8AFF00] px-6 py-3 font-bold text-[#061424] hover:bg-[#7aee00]"
+                >
+                  <Link href="/foster-faq">
+                    Read the Foster FAQ
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+
+              <p className="mt-5 text-lg leading-8 text-sky-50">
+                Foster homes give animals a calm, loving place to decompress
+                while FAUNA works toward adoption.
+              </p>
+
+              <div className="mt-8 grid gap-4">
+                {fosterBenefits.map((benefit) => (
+                  <div key={benefit} className="flex items-start gap-3">
+                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#8AFF00]" />
+                    <p className="text-sky-50">{benefit}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <p className="mt-5 text-lg leading-8 text-sky-50">
-              Foster homes give animals a calm, loving place to decompress while
-              FAUNA works toward adoption.
-            </p>
+            <div className="space-y-5">
+              {fosterLinks.map((item) => {
+                const Icon = item.icon
 
-            <div className="mt-8 grid gap-4">
-              {fosterBenefits.map((benefit) => (
-                <div key={benefit} className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#8AFF00]" />
-                  <p className="text-sky-50">{benefit}</p>
-                </div>
-              ))}
+                return (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-3xl border border-white/10 bg-white/10 p-7 transition hover:bg-white/15"
+                  >
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#33CCCC] text-[#061424]">
+                      <Icon className="h-7 w-7" />
+                    </div>
+
+                    <h3 className="text-2xl font-extrabold">{item.title}</h3>
+
+                    <p className="mt-2 text-sky-50">{item.description}</p>
+
+                    <div className="mt-5 inline-flex items-center font-bold text-[#8AFF00]">
+                      Apply to foster
+                      <ArrowRight className="ml-2 h-5 w-5 transition group-hover:translate-x-1" />
+                    </div>
+                  </a>
+                )
+              })}
             </div>
           </div>
 
-          <div className="space-y-5">
-            {fosterLinks.map((item) => {
-              const Icon = item.icon
-
-              return (
-                <a
-                  key={item.title}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-3xl border border-white/10 bg-white/10 p-7 transition hover:bg-white/15"
-                >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#33CCCC] text-[#061424]">
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  <h3 className="text-2xl font-extrabold">{item.title}</h3>
-
-                  <p className="mt-2 text-sky-50">{item.description}</p>
-
-                  <div className="mt-5 inline-flex items-center font-bold text-[#8AFF00]">
-                    Apply to foster
-                    <ArrowRight className="ml-2 h-5 w-5 transition group-hover:translate-x-1" />
-                  </div>
-                </a>
-              )
-            })}
+          <div className="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-3">
+            {fosterPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="mx-auto w-full max-w-[230px]"
+              >
+                <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white/20 bg-white/10 shadow-2xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 230px, 30vw"
+                    className="object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
