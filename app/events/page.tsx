@@ -49,6 +49,25 @@ const eventTypes = [
   },
 ]
 
+const eventPhotos = [
+  {
+    src: "/Adoption_Event.jpg",
+    alt: "FAUNA adoption event",
+  },
+  {
+    src: "/Bath_Days2026.jpg",
+    alt: "FAUNA Bath Day event",
+  },
+  {
+    src: "/Pub_Crawl.jpg",
+    alt: "FAUNA St. Patrick's Day Pub Crawl",
+  },
+  {
+    src: "/Pet_Parade.jpg",
+    alt: "FAUNA pet parade event",
+  },
+]
+
 const socialLinks = [
   {
     label: "Facebook",
@@ -336,7 +355,24 @@ export default function EventsPage() {
             </h2>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {/* Circular Event Photos */}
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-6 sm:grid-cols-4">
+            {eventPhotos.map((photo) => (
+              <div key={photo.src} className="mx-auto w-full max-w-[220px]">
+                <div className="relative aspect-square overflow-hidden rounded-full border-8 border-sky-50 bg-sky-100 shadow-xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 45vw, 220px"
+                    className="object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             {eventTypes.map(({ title, description, icon: Icon }) => (
               <Card key={title} className="border-0 shadow-md">
                 <CardContent className="p-7">
