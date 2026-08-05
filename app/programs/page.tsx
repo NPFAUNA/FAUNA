@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
@@ -57,6 +58,21 @@ const programs = [
   },
 ]
 
+const healthFairPhotos = [
+  {
+    src: "/Healthfair1.jpg",
+    alt: "FAUNA community pet health fair",
+  },
+  {
+    src: "/Healthfair2.jpg",
+    alt: "Pet receiving care at a FAUNA community health fair",
+  },
+  {
+    src: "/Healthfair3.jpg",
+    alt: "FAUNA volunteers and community members at a pet health fair",
+  },
+]
+
 const communityHealthServices = [
   "Vaccines",
   "Microchips",
@@ -109,13 +125,7 @@ export default function ProgramsPage() {
       <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
           {programs.map(
-            ({
-              title,
-              body,
-              href,
-              secondaryHref,
-              icon: Icon,
-            }) => (
+            ({ title, body, href, secondaryHref, icon: Icon }) => (
               <article
                 key={title}
                 className="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
@@ -128,9 +138,7 @@ export default function ProgramsPage() {
                   {title}
                 </h2>
 
-                <p className="mt-3 text-lg leading-7 text-gray-600">
-                  {body}
-                </p>
+                <p className="mt-3 text-lg leading-7 text-gray-600">{body}</p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link href={href}>
@@ -177,6 +185,25 @@ export default function ProgramsPage() {
               community pet owners access essential services and trustworthy
               information close to home.
             </p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
+            {healthFairPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="mx-auto w-full max-w-[260px]"
+              >
+                <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 260px, 30vw"
+                    className="object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -314,10 +341,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section
-        id="pact"
-        className="scroll-mt-24 bg-white px-6 py-20"
-      >
+      <section id="pact" className="scroll-mt-24 bg-white px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0099FF]">
@@ -419,10 +443,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section
-        id="klaws"
-        className="scroll-mt-24 bg-sky-50 px-6 py-20"
-      >
+      <section id="klaws" className="scroll-mt-24 bg-sky-50 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0099FF]">
