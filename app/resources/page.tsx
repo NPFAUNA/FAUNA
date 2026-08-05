@@ -15,6 +15,7 @@ import {
   Stethoscope,
   Users,
   WalletCards,
+  ZoomIn,
 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -712,14 +713,25 @@ export default function ResourcesPage() {
               </Link>
             </div>
 
-            <div className="relative aspect-square overflow-hidden rounded-2xl bg-sky-50">
+            <a
+              href="/What to do if you find a cat.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the What to Do If You Find a Cat guide at full size"
+              className="group relative block aspect-square cursor-zoom-in overflow-hidden rounded-2xl bg-sky-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#0099FF]/30"
+            >
               <Image
                 src="/What to do if you find a cat.jpg"
                 alt="What to do if you find a cat in Natchitoches Parish"
                 fill
-                className="object-contain p-4"
+                className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
               />
-            </div>
+
+              <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                <ZoomIn className="h-4 w-4" />
+                Click to Enlarge
+              </span>
+            </a>
           </div>
         </div>
       </section>
