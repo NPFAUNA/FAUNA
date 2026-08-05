@@ -14,7 +14,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Generations of Hope Campaign | FAUNA",
+  title: "Hope Has a Place Campaign | FAUNA",
   description:
     "Explore naming and capital opportunities supporting the Edwina and Sam Friedman Pet Adoption and Welfare Center.",
 }
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Can a business or foundation participate?",
     answer:
-      "Yes. Individuals, families, businesses, civic groups, and foundations are invited to participate in the Generations of Hope Campaign.",
+      "Yes. Individuals, families, businesses, civic groups, and foundations are invited to participate in the Hope Has a Place Campaign.",
   },
   {
     question: "How do I select an available opportunity?",
@@ -60,7 +60,7 @@ const faqs = [
   },
 ]
 
-export default function GenerationsOfHopePage() {
+export default function HopeHasAPlaceCampaignPage() {
   const spacesImageOne = `${BASE}/spaces1-1.png`
   const spacesImageTwo = `${BASE}/Spaces-2-2.png`
   const symbolsImage = `${BASE}/Symbols-of-Hope-2.png`
@@ -78,7 +78,7 @@ export default function GenerationsOfHopePage() {
           </Badge>
 
           <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
-            Generations of Hope Campaign
+            Hope Has a Place Campaign
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100 md:text-xl">
@@ -485,8 +485,8 @@ export default function GenerationsOfHopePage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-sky-100">
-              Browse the complete Generations of Hope Campaign guide to learn
-              more about the Friedman Center and the opportunities available.
+              Browse the complete Hope Has a Place Campaign guide to learn more
+              about the Friedman Center and the opportunities available.
             </p>
           </div>
 
@@ -497,7 +497,7 @@ export default function GenerationsOfHopePage() {
             <iframe
               src="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
               className="absolute inset-0 h-full w-full"
-              title="Generations of Hope Campaign flipbook"
+              title="Hope Has a Place Campaign flipbook"
               allowFullScreen
             />
           </div>
