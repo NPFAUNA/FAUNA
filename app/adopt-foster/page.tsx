@@ -8,6 +8,7 @@ import {
   Dog,
   Heart,
   Home,
+  Mail,
   Shield,
 } from "lucide-react"
 
@@ -271,6 +272,26 @@ export default function AdoptFosterPage() {
                   <p className="pt-1 text-gray-700">{step}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-sky-100 bg-sky-50 p-6">
+              <h3 className="text-xl font-extrabold text-[#0a1e3d]">
+                Questions about the adoption process or fees?
+              </h3>
+
+              <p className="mt-2 leading-7 text-gray-700">
+                Contact FAUNA and our team will be happy to help.
+              </p>
+
+              <a
+                href="mailto:rescue@npfauna.org?subject=Adoption Process Question"
+                className="mt-5 inline-block"
+              >
+                <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007ad1]">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Email Us
+                </Button>
+              </a>
             </div>
           </div>
 
