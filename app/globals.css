@@ -25,13 +25,11 @@
     --ring: 204 100% 50%;
     --radius: 0.5rem;
   }
+}
 
+@layer base {
   * {
     @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 
   body {
@@ -51,8 +49,7 @@
 
 @layer utilities {
   .font-script {
-    font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting",
-      cursive;
+    font-family: var(--font-sacramento), cursive;
     font-weight: 400;
     letter-spacing: 0.01em;
   }
