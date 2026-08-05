@@ -21,6 +21,49 @@ export const metadata: Metadata = {
     "Learn about the volunteer leadership, governance, and responsibilities of FAUNA's Board of Directors.",
 }
 
+const boardMembers = [
+  {
+    role: "President",
+    name: "Leah Forsyth",
+  },
+  {
+    role: "Vice President",
+    name: "Rachel Leblanc",
+  },
+  {
+    role: "Secretary",
+    name: "Karn Richoux",
+  },
+  {
+    role: "Treasurer",
+    name: "Tina Brown",
+  },
+  {
+    role: "Board Member",
+    name: "Kay Kaufman",
+  },
+  {
+    role: "Board Member",
+    name: "Jennifer Long",
+  },
+  {
+    role: "Board Member",
+    name: "Kathy Owsley",
+  },
+  {
+    role: "Board Member",
+    name: "Juanita Murphy",
+  },
+  {
+    role: "Board Member",
+    name: "Greg St. Andre",
+  },
+  {
+    role: "Board Member",
+    name: "Debbie Tebbetts",
+  },
+]
+
 const responsibilities = [
   {
     icon: Target,
@@ -105,6 +148,37 @@ export default function BoardOfDirectorsPage() {
             financially responsible, transparent, and prepared to meet the
             changing needs of animals and families in the community.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-[#0a1e3d] py-20 text-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
+              Volunteer Leadership
+            </Badge>
+
+            <h2 className="font-script text-5xl text-white sm:text-6xl">
+              Board of Directors
+            </h2>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {boardMembers.map((member) => (
+              <div
+                key={`${member.role}-${member.name}`}
+                className="rounded-2xl border border-white/10 bg-white/10 px-6 py-6 text-center shadow-md"
+              >
+                <p className="text-sm font-extrabold uppercase tracking-wider text-[#33CCCC]">
+                  {member.role}
+                </p>
+
+                <p className="mt-2 text-xl font-bold text-white">
+                  {member.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
