@@ -90,14 +90,14 @@ export default function AdoptFosterPage() {
 
         <div className="absolute inset-0 bg-gradient-to-br from-[#061424] via-[#0a1e3d]/95 to-[#0099FF]/45" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
           <div className="max-w-3xl">
             <Badge className="mb-6 rounded-full bg-[#33CCCC] px-4 py-2 text-[#061424] hover:bg-[#33CCCC]">
               Adopt &amp; Foster
             </Badge>
 
             <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
-              Help a FAUNA Animal Find Home
+              Help a FAUNA Animal Find A Home
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-sky-50">
@@ -126,6 +126,19 @@ export default function AdoptFosterPage() {
               >
                 <a href="#foster">Learn About Fostering</a>
               </Button>
+            </div>
+          </div>
+
+          <div className="mx-auto w-full max-w-md lg:mx-0 lg:justify-self-end">
+            <div className="relative aspect-square overflow-hidden rounded-[2.5rem] border-8 border-white/15 bg-white shadow-2xl">
+              <Image
+                src="/Adopt_Header.jpg"
+                alt="FAUNA adoptable animal"
+                fill
+                sizes="(max-width: 1024px) 90vw, 420px"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
