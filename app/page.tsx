@@ -13,6 +13,7 @@ import {
   Stethoscope,
   Users,
 } from "lucide-react"
+import PhotoCarousel from "@/components/photo-carousel"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -99,11 +100,27 @@ const stats = [
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-[#8AFF00] px-6 py-16 text-[#0a1e3d] md:py-24">
+      <section className="relative overflow-hidden bg-[#8AFF00] px-6 py-12 text-[#0a1e3d] md:py-16">
         <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/25" />
         <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-[#33CCCC]/20" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="text-center">
+            <p className="font-script text-3xl text-[#0099FF] sm:text-4xl">
+              Meet some of the lives touched by FAUNA
+            </p>
+
+            <p className="mt-2 font-semibold text-[#0a1e3d]">
+              Select a photo to see it full size
+            </p>
+          </div>
+
+          <div className="mt-5">
+            <PhotoCarousel />
+          </div>
+        </div>
+
+        <div className="relative mx-auto mt-10 grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex justify-center lg:justify-start">
             <div className="flex min-h-[420px] w-full max-w-lg items-center justify-center rounded-[2.5rem] bg-[#0a1e3d] p-8 shadow-2xl sm:p-12">
               <Image
@@ -220,9 +237,7 @@ export default function HomePage() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div>
-            <p className="font-script text-4xl text-[#33CCCC]">
-              Who we are
-            </p>
+            <p className="font-script text-4xl text-[#33CCCC]">Who we are</p>
 
             <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
               Friends All United for Natchitoches Animals
