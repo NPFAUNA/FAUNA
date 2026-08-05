@@ -45,6 +45,21 @@ const steps = [
   },
 ]
 
+const tnrPhotos = [
+  {
+    src: "/TNR_1.jpg",
+    alt: "Community cats supported through FAUNA's TNR program",
+  },
+  {
+    src: "/TNR_2.jpg",
+    alt: "FAUNA Trap-Neuter-Return community cat care",
+  },
+  {
+    src: "/TNR_3.jpg",
+    alt: "Community cats participating in FAUNA's TNR program",
+  },
+]
+
 export default function TnrPage() {
   return (
     <main>
@@ -79,6 +94,39 @@ export default function TnrPage() {
                 priority
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TNR Flyer and Photos */}
+      <section className="bg-sky-50 px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl bg-white shadow-xl">
+            <Image
+              src="/TNR_Flyer.png"
+              alt="FAUNA Trap-Neuter-Return informational flyer"
+              width={1088}
+              height={1408}
+              className="h-auto w-full"
+              priority
+            />
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {tnrPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-lg"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
