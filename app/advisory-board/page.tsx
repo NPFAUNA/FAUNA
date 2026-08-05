@@ -69,6 +69,35 @@ const advisoryGoals = [
   },
 ]
 
+const advisoryBoardMembers = [
+  "Louie Bernard",
+  "Melissa Cloutier",
+  "Brandon Donahue",
+  "Camille Donahue",
+  "Edwina Friedman",
+  "Greg Friedman",
+  "Greg Handel",
+  "Angela Lasyone",
+  "Brittany McCoy",
+  "Tiffanie Mitchell",
+  "Graham Ragland",
+  "Connie Soong",
+  "Herman Soong",
+  "Ralph Thiergart",
+  "Pearl Walker",
+]
+
+const exOfficioMembers = [
+  {
+    name: "Leah Forsyth",
+    role: "President, FAUNA Board of Directors",
+  },
+  {
+    name: "Rachel LeBlanc",
+    role: "Vice President, FAUNA Board of Directors",
+  },
+]
+
 export default function AdvisoryBoardPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -116,6 +145,53 @@ export default function AdvisoryBoardPage() {
             Friedman Center&apos;s foundation, broaden its reach, and prepare
             the organization for responsible long-term growth.
           </p>
+        </div>
+      </section>
+
+      {/* Advisory Board Members */}
+      <section className="bg-[#0a1e3d] py-20 text-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
+              Our Members
+            </Badge>
+
+            <h2 className="font-script text-5xl text-white sm:text-6xl">
+              Advisory Board Members
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {advisoryBoardMembers.map((member) => (
+              <div
+                key={member}
+                className="rounded-2xl border border-white/10 bg-white/10 px-6 py-5 text-center shadow-md"
+              >
+                <p className="text-lg font-bold text-white">{member}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-14 max-w-4xl">
+            <h3 className="text-center text-sm font-extrabold uppercase tracking-[0.2em] text-[#33CCCC]">
+              Ex-Officio Members
+            </h3>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {exOfficioMembers.map((member) => (
+                <div
+                  key={member.name}
+                  className="rounded-2xl border border-[#33CCCC]/30 bg-[#061424] px-6 py-5 text-center shadow-md"
+                >
+                  <p className="text-lg font-bold text-white">{member.name}</p>
+
+                  <p className="mt-2 text-sm font-semibold text-[#8AFF00]">
+                    {member.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
