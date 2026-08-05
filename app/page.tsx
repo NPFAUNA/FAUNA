@@ -102,17 +102,17 @@ const stats = [
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-[#8AFF00] px-6 py-12 text-[#0a1e3d] md:py-16">
-        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/25" />
-        <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-[#33CCCC]/20" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0099FF] to-[#33CCCC] px-6 py-12 text-white md:py-16">
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/20" />
+        <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-[#8AFF00]/15" />
 
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center">
-            <p className="font-script text-3xl text-[#0099FF] sm:text-4xl">
+            <p className="font-script text-3xl text-[#8AFF00] sm:text-4xl">
               Meet some of the lives touched by FAUNA
             </p>
 
-            <p className="mt-2 font-semibold text-[#0a1e3d]">
+            <p className="mt-2 font-semibold text-white/90">
               Select a photo to see it full size
             </p>
           </div>
@@ -137,15 +137,15 @@ export default function HomePage() {
           </div>
 
           <div>
-            <p className="font-script text-4xl text-[#0099FF] sm:text-5xl">
+            <p className="font-script text-4xl text-[#8AFF00] sm:text-5xl">
               Friends helping animals
             </p>
 
-            <h1 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
               A Voice for Animals in Natchitoches Parish
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/95">
               FAUNA&apos;s mission is to provide and promote humane treatment
               for homeless and neglected animals in need, working together with
               the community to find them caring homes. Striving to be a
@@ -159,7 +159,7 @@ export default function HomePage() {
               <Link href="/adopt-foster">
                 <Button
                   size="lg"
-                  className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]"
+                  className="bg-white font-bold text-[#0a1e3d] hover:bg-sky-50"
                 >
                   Adopt or Foster
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -180,7 +180,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-[#0a1e3d] bg-transparent font-bold text-[#0a1e3d] hover:bg-white/40"
+                  className="border-2 border-white bg-transparent font-bold text-white hover:bg-white/10"
                 >
                   Volunteer
                 </Button>
