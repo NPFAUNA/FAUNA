@@ -15,7 +15,6 @@ import {
   Stethoscope,
   Users,
 } from "lucide-react"
-import PhotoCarousel from "@/components/photo-carousel"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
