@@ -469,7 +469,7 @@ export default function ProgramsPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-6">
               {[
                 {src:"/KLAWS_1.jpg",alt:"KLAWS wildlife rehabilitation"},
-                {src:"/KLAW_logo.jpg",alt:"KLAWS logo"},
+                {src:"/KLAWS_logo.jpg",alt:"KLAWS logo"},
                 {src:"/KLAWS_3.jpg",alt:"Wildlife cared for by KLAWS"},
               ].map((photo)=>(
                 <div key={photo.src} className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white shadow-xl">
