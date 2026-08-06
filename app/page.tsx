@@ -98,6 +98,21 @@ const stats = [
   },
 ]
 
+const connectedPhotos = [
+  {
+    src: "/Home_1.jpg",
+    alt: "An animal supported by FAUNA",
+  },
+  {
+    src: "/Home_2.jpg",
+    alt: "A FAUNA rescue animal",
+  },
+  {
+    src: "/Home_3.jpg",
+    alt: "An animal receiving care through FAUNA",
+  },
+]
+
 export default function HomePage() {
   return (
     <main>
@@ -105,30 +120,15 @@ export default function HomePage() {
         <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/20" />
         <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-[#8AFF00]/15" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="font-script text-3xl text-[#8AFF00] sm:text-4xl">
-              Meet some of the lives touched by FAUNA
-            </p>
-
-            <p className="mt-2 font-semibold text-white/90">
-              Select a photo to see it full size
-            </p>
-          </div>
-
-          <div className="mt-5">
-          </div>
-        </div>
-
-        <div className="relative mx-auto mt-10 grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex justify-center lg:justify-start">
-            <div className="flex min-h-[420px] w-full max-w-lg items-center justify-center rounded-[2.5rem] bg-[#0a1e3d] p-8 shadow-2xl sm:p-12">
+            <div className="relative aspect-square w-full max-w-[440px] overflow-hidden rounded-full border-8 border-white/25 bg-[#0a1e3d] shadow-2xl">
               <Image
-                src="/fauna-logo-white.png"
-                alt="FAUNA animal rescue logo"
-                width={520}
-                height={600}
-                className="h-auto max-h-[500px] w-full object-contain"
+                src="/Homepage_Pup.jpg"
+                alt="FAUNA rescue dog"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 440px"
                 priority
               />
             </div>
@@ -188,34 +188,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#0a1e3d] px-6 py-8 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 md:flex-row">
-          <div>
-            <p className="font-script text-3xl text-[#8AFF00]">
-              Stay connected
-            </p>
+      <section className="bg-[#0a1e3d] px-6 py-12 text-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
+            <div className="text-center md:text-left">
+              <p className="font-script text-3xl text-[#8AFF00]">
+                Stay connected
+              </p>
 
-            <h2 className="text-xl font-bold">Follow FAUNA on Social Media</h2>
+              <h2 className="text-xl font-bold">Follow FAUNA on Social Media</h2>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-full bg-white px-5 py-3 font-bold text-[#0a1e3d] transition hover:-translate-y-1 hover:bg-[#8AFF00]"
+                >
+                  <Icon className="h-5 w-5" />
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {socialLinks.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full bg-white px-5 py-3 font-bold text-[#0a1e3d] transition hover:-translate-y-1 hover:bg-[#8AFF00]"
+          <div className="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8">
+            {connectedPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-52 sm:w-52 lg:h-64 lg:w-64"
               >
-                <Icon className="h-5 w-5" />
-                {label}
-              </a>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 208px, 256px"
+                />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Community Impact Statistics */}
       <section className="bg-[#061424] px-6 py-10 text-white">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-x-6 gap-y-9 text-center md:grid-cols-4">
@@ -234,7 +252,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2025 Impact Report */}
       <section className="bg-sky-50 px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
@@ -326,14 +343,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative min-h-[340px] overflow-hidden rounded-3xl bg-sky-100 shadow-xl lg:min-h-[450px]">
-            <Image
-              src="https://www.npfauna.org/wp-content/uploads/2025/07/F40-1-1024x683.jpg"
-              alt="An animal receiving care through FAUNA"
-              fill
-              className="object-cover"
-              unoptimized
-            />
+          <div className="flex justify-center">
+            <div className="relative aspect-square w-full max-w-[460px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <Image
+                src="/Who_We_Are.jpg"
+                alt="FAUNA volunteers and animals"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 460px"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -356,12 +375,16 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
             {programs.map(
               ({ title, description, href, icon: Icon, color }) => (
-                <Link key={title} href={href} className="group">
+                <Link
+                  key={title}
+                  href={href}
+                  className="group w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                >
                   <Card className="h-full border-0 shadow-md transition group-hover:-translate-y-1 group-hover:shadow-xl">
-                    <CardContent className="p-7">
+                    <CardContent className="flex h-full flex-col items-center p-7 text-center">
                       <div
                         className={`flex h-14 w-14 items-center justify-center rounded-2xl ${color}`}
                       >
@@ -376,7 +399,7 @@ export default function HomePage() {
                         {description}
                       </p>
 
-                      <span className="mt-5 inline-flex items-center font-bold text-[#0099FF]">
+                      <span className="mt-auto inline-flex items-center pt-5 font-bold text-[#0099FF]">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </span>
