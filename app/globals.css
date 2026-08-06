@@ -51,8 +51,113 @@
   .font-script {
     font-family: var(--font-sacramento), cursive;
     font-weight: 400;
-    font-size: 1.3em;
     line-height: 1.1;
     letter-spacing: 0.01em;
+  }
+
+  .font-script.text-xl {
+    font-size: 1.6rem !important;
+  }
+
+  .font-script.text-2xl {
+    font-size: 2rem !important;
+  }
+
+  .font-script.text-3xl {
+    font-size: 2.5rem !important;
+  }
+
+  .font-script.text-4xl {
+    font-size: 3rem !important;
+  }
+
+  .font-script.text-5xl {
+    font-size: 4rem !important;
+  }
+
+  .font-script.text-6xl {
+    font-size: 5rem !important;
+  }
+
+  .font-script.text-7xl {
+    font-size: 6rem !important;
+  }
+
+  @media (min-width: 640px) {
+    .font-script.sm\:text-2xl {
+      font-size: 2rem !important;
+    }
+
+    .font-script.sm\:text-3xl {
+      font-size: 2.5rem !important;
+    }
+
+    .font-script.sm\:text-4xl {
+      font-size: 3rem !important;
+    }
+
+    .font-script.sm\:text-5xl {
+      font-size: 4rem !important;
+    }
+
+    .font-script.sm\:text-6xl {
+      font-size: 5rem !important;
+    }
+
+    .font-script.sm\:text-7xl {
+      font-size: 6rem !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .font-script.md\:text-2xl {
+      font-size: 2rem !important;
+    }
+
+    .font-script.md\:text-3xl {
+      font-size: 2.5rem !important;
+    }
+
+    .font-script.md\:text-4xl {
+      font-size: 3rem !important;
+    }
+
+    .font-script.md\:text-5xl {
+      font-size: 4rem !important;
+    }
+
+    .font-script.md\:text-6xl {
+      font-size: 5rem !important;
+    }
+
+    .font-script.md\:text-7xl {
+      font-size: 6rem !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-script.lg\:text-2xl {
+      font-size: 2rem !important;
+    }
+
+    .font-script.lg\:text-3xl {
+      font-size: 2.5rem !important;
+    }
+
+    .font-script.lg\:text-4xl {
+      font-size: 3rem !important;
+    }
+
+    .font-script.lg\:text-5xl {
+      font-size: 4rem !important;
+    }
+
+    .font-script.lg\:text-6xl {
+      font-size: 5rem !important;
+    }
+
+    .font-script.lg\:text-7xl {
+      font-size: 6rem !important;
+    }
   }
 }
