@@ -117,7 +117,6 @@ export default function HomePage() {
           </div>
 
           <div className="mt-5">
-            <PhotoCarousel />
           </div>
         </div>
 
