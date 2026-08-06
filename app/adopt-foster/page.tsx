@@ -357,7 +357,7 @@ export default function AdoptFosterPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-[720px] overflow-hidden rounded-[2rem]">
             <Image
               src={`${BASE05}/34.png`}
               alt="FAUNA volunteer with adoptable dog"
