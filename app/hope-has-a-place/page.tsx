@@ -486,44 +486,6 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
-            <Badge className="mb-4 border-[#0099FF]/20 bg-[#0099FF]/10 text-[#0099FF]">
-              Helpful Information
-            </Badge>
-
-            <h2 className="font-script text-5xl text-[#0a1e3d]">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-[#0a1e3d] transition-colors hover:bg-sky-50">
-                  <span>{faq.question}</span>
-
-                  <span
-                    className="text-2xl font-light text-[#0099FF] transition-transform group-open:rotate-45"
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-                </summary>
-
-                <div className="border-t border-gray-100 px-6 py-5">
-                  <p className="leading-relaxed text-gray-600">{faq.answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <Heart className="mx-auto mb-5 h-10 w-10 fill-white text-white" />
@@ -533,7 +495,7 @@ export default function HopeHasAPlaceCampaignPage() {
           </h2>
 
           <div className="mt-10 mb-10 text-center">
-            <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
+            <Badge className="mb-4 border-white/30 bg-white/15 text-white">
               Campaign Guide
             </Badge>
 
@@ -549,19 +511,27 @@ export default function HopeHasAPlaceCampaignPage() {
 
           <div
             className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
-            style={{ paddingBottom: "60%" }}
+            style={{
+              paddingTop: "max(60%, 324px)",
+              width: "100%",
+              height: 0,
+            }}
           >
             <iframe
-              src="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
-              className="absolute inset-0 h-full w-full"
-              title="Hope Has a Place Campaign flipbook"
+              src="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
+              title="Hope Has a Place Campaign"
+              className="absolute left-0 top-0 h-full w-full border-0"
+              seamless
+              scrolling="no"
+              frameBorder="0"
+              allowTransparency
               allowFullScreen
             />
           </div>
 
           <div className="mt-6 text-center">
             <a
-              href="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              href="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
@@ -603,6 +573,45 @@ export default function HopeHasAPlaceCampaignPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <Badge className="mb-4 border-[#0099FF]/20 bg-[#0099FF]/10 text-[#0099FF]">
+              Helpful Information
+            </Badge>
+
+            <h2 className="font-script text-5xl text-[#0a1e3d]">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-[#0a1e3d] transition-colors hover:bg-sky-50">
+                  <span>{faq.question}</span>
+
+                  <span
+                    className="text-2xl font-light text-[#0099FF] transition-transform group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+
+                <div className="border-t border-gray-100 px-6 py-5">
+                  <p className="leading-relaxed text-gray-600">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
