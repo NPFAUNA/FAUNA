@@ -214,7 +214,7 @@ export default function DonatePage() {
       </section>
 
       {/* PayPal and Venmo */}
-      <section className="border-y border-sky-100 bg-gradient-to-r from-[#0a1e3d] via-[#1d4f91] to-[#3D95CE] py-14 text-white">
+      <section className="border-y border-sky-100 bg-[#33CCCC] py-14 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
             Donate via PayPal or Venmo
@@ -274,13 +274,19 @@ export default function DonatePage() {
               >
                 <div className="h-full cursor-pointer rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all hover:border-gray-200 hover:shadow-md">
                   <div
-                    className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full transition-transform group-hover:scale-110"
+                    className="mx-auto mb-5 flex h-32 w-32 items-center justify-center rounded-full transition-transform group-hover:scale-110"
                     style={{
                       backgroundColor: `${store.color}20`,
                       color: store.color,
                     }}
                   >
-                    <Image src={store.logo} alt={store.name} width={64} height={64} className="h-12 w-12 rounded-full object-contain bg-white p-1" />
+                    <Image
+                      src={store.logo}
+                      alt={store.name}
+                      width={128}
+                      height={128}
+                      className="h-24 w-24 rounded-full bg-white object-contain p-2"
+                    />
                   </div>
 
                   <h3 className="mb-2 font-bold text-[#0a1e3d]">
