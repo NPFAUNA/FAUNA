@@ -496,7 +496,7 @@ export default function CapitalCampaignPage() {
               />
             </div>
 
-            <Link href="https://npfauna.netlify.app/generations-of-hope">
+            <Link href="/hope-has-a-place">
               <Button className="mt-8 h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
                 View Naming &amp; Capital Opportunities
               </Button>
