@@ -239,6 +239,12 @@ export default function ResourcesPage() {
             One hub for Natchitoches-area pet owners &mdash; emergencies,
             low-cost care, behavior advice, supplies, and long-term planning.
           </p>
+
+          <div className="mt-12 flex justify-center">
+            <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl">
+              <Image src="/Resources_Header.jpg" alt="Community resources" fill className="object-cover" sizes="320px" priority />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -956,10 +962,17 @@ export default function ResourcesPage() {
             </div>
           </div>
 
-          <p className="mb-8 max-w-2xl text-gray-600">
-            These organizations extend our reach and strengthen lifesaving
-            support for animals and families.
-          </p>
+          <div className="mb-8 grid gap-8 lg:grid-cols-[1fr_320px] lg:items-center">
+            <p className="max-w-2xl text-gray-600">
+              These organizations extend our reach and strengthen lifesaving
+              support for animals and families.
+            </p>
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white shadow-xl">
+                <Image src="/Resources_Partners.jpg" alt="FAUNA strategic partners" fill className="object-cover" sizes="288px" />
+              </div>
+            </div>
+          </div>
 
           <div className="space-y-8">
             {partnerGroups.map((group) => (
