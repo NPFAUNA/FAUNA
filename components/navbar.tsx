@@ -52,10 +52,14 @@ const programItems = [
 ]
 
 const centerItems = [
- {
-  title: "Hope Has a Place Campaign",
-  href: "/hope-has-a-place",
-},
+  {
+    title: "Edwina and Sam Friedman Pet Adoption & Welfare Center",
+    href: "/capital-campaign",
+  },
+  {
+    title: "Hope Has a Place Campaign",
+    href: "/hope-has-a-place",
+  },
 ]
 
 const navItems = [
