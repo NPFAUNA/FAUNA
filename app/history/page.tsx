@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import {
   Building2,
@@ -82,6 +83,18 @@ export default function HistoryPage() {
               families throughout Natchitoches Parish.
             </p>
           </div>
+
+          <div className="mt-12 flex justify-center">
+            <div className="relative aspect-square w-full max-w-[440px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <Image
+                src="/History.jpg"
+                alt="FAUNA volunteers and animals throughout the organization&apos;s history"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 85vw, 440px"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -136,18 +149,29 @@ export default function HistoryPage() {
 
               <p className="mt-6 leading-relaxed text-gray-700">
                 Through foster homes, local adoptions, rescue transports,
-                veterinary assistance, vaccination events,
-                Trap-Neuter-Return, and community outreach, FAUNA has helped
-                thousands of animals find safety, care, and loving homes.
+                veterinary assistance, vaccination events, Trap-Neuter-Return,
+                and community outreach, FAUNA has helped thousands of animals
+                find safety, care, and loving homes.
               </p>
 
               <p className="mt-5 leading-relaxed text-gray-700">
                 FAUNA also works to address the causes of animal homelessness.
-                Programs such as Spay Natchitoches, community cat TNR,
-                low-cost vaccinations, pet-retention support, and humane
-                education help prevent animals from entering shelters in the
-                first place.
+                Programs such as Spay Natchitoches, community cat TNR, low-cost
+                vaccinations, pet-retention support, and humane education help
+                prevent animals from entering shelters in the first place.
               </p>
+
+              <div className="mt-10 flex justify-center">
+                <div className="relative aspect-square w-full max-w-[360px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+                  <Image
+                    src="/History_Lifesaving.jpg"
+                    alt="An animal helped through FAUNA&apos;s lifesaving programs"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 80vw, 360px"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="rounded-3xl bg-[#0a1e3d] p-8 text-white sm:p-10">
@@ -184,7 +208,19 @@ export default function HistoryPage() {
             Building the Future
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/95">
+          <div className="mt-10 flex justify-center">
+            <div className="relative aspect-square w-full max-w-[460px] overflow-hidden rounded-full border-8 border-white/40 shadow-2xl">
+              <Image
+                src="/History_Rendering.jpg"
+                alt="Rendering of the Edwina and Sam Friedman Pet Adoption and Welfare Center"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 85vw, 460px"
+              />
+            </div>
+          </div>
+
+          <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-white/95">
             The Edwina &amp; Sam Friedman Pet Adoption &amp; Welfare Center
             represents the next chapter in FAUNA&apos;s history.
           </p>
