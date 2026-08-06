@@ -256,7 +256,7 @@ export function Navbar() {
                           : "text-[#0a1e3d] hover:bg-sky-50 hover:text-[#0099FF]",
                       )}
                     >
-                      {item.label}
+                      {item.title}
                     </Link>
                   ))}
                 </div>
