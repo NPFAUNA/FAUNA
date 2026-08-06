@@ -115,7 +115,7 @@ const specialRecognitionLogos = [
     alt: "Pellerin",
   },
   {
-    src: "/special-recognition/national-solutions.png",
+    src: "/special-recognition/National.png",
     alt: "National Solutions",
   },
   {
