@@ -102,6 +102,19 @@ export default function HopeHasAPlaceCampaignPage() {
               </Button>
             </Link>
           </div>
+
+          <div className="mt-12 flex justify-center">
+            <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl sm:h-96 sm:w-96">
+              <Image
+                src="/Rendering1.png"
+                alt="Rendering of the future Friedman Center"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 320px, 384px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -473,49 +486,6 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
-      <section className="bg-[#0a1e3d] py-20 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
-            <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
-              Campaign Guide
-            </Badge>
-
-            <h2 className="font-script text-5xl text-white sm:text-6xl">
-              Explore the Campaign Flipbook
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-sky-100">
-              Browse the complete Hope Has a Place Campaign guide to learn more
-              about the Friedman Center and the opportunities available.
-            </p>
-          </div>
-
-          <div
-            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
-            style={{ paddingBottom: "60%" }}
-          >
-            <iframe
-              src="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
-              className="absolute inset-0 h-full w-full"
-              title="Hope Has a Place Campaign flipbook"
-              allowFullScreen
-            />
-          </div>
-
-          <div className="mt-6 text-center">
-            <a
-              href="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
-            >
-              Open the campaign guide in a larger window
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -562,7 +532,46 @@ export default function HopeHasAPlaceCampaignPage() {
             Be Part of the Legacy
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/95">
+          <div className="mt-10 mb-10 text-center">
+            <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
+              Campaign Guide
+            </Badge>
+
+            <h2 className="font-script text-5xl text-white sm:text-6xl">
+              Explore the Campaign Flipbook
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-sky-100">
+              Browse the complete Hope Has a Place Campaign guide to learn more
+              about the Friedman Center and the opportunities available.
+            </p>
+          </div>
+
+          <div
+            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
+            style={{ paddingBottom: "60%" }}
+          >
+            <iframe
+              src="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              className="absolute inset-0 h-full w-full"
+              title="Hope Has a Place Campaign flipbook"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
+            >
+              Open the campaign guide in a larger window
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-white/95">
             A campaign gift is more than recognition. It is a permanent
             expression of compassion and a promise of hope for animals and
             families throughout Natchitoches Parish.
