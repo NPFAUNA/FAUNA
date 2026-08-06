@@ -87,8 +87,8 @@ export default function TnrPage() {
           <div className="mx-auto lg:mx-0">
             <div className="relative h-64 w-64 overflow-hidden rounded-full border-8 border-white/15 bg-white shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/publictnr-cat.jpg"
-                alt="Black and white community cat"
+                src="/TNR_Header.jpg"
+                alt="Community cat supported through FAUNA's TNR program"
                 fill
                 className="object-cover object-center"
                 priority
