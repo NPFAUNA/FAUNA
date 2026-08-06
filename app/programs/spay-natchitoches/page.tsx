@@ -85,6 +85,19 @@ export default function SpayNatchitochesPage() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
+
+          <div className="mt-12 flex justify-center">
+            <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl sm:h-96 sm:w-96">
+              <Image
+                src="/Spay.jpg"
+                alt="Spay Natchitoches"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 320px, 384px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
