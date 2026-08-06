@@ -75,6 +75,7 @@ const wishlistStores = [
     href: "https://www.amazon.com/hz/wishlist/ls/2WFXZFAZO4DZX?ref_=list_d_wl_lfu_nav_1",
     description:
       "Food, bedding, toys, and supplies delivered directly to FAUNA.",
+    logo: "/Amazon.png",
   },
   {
     name: "Chewy Wishlist",
@@ -82,6 +83,7 @@ const wishlistStores = [
     href: "https://www.chewy.com/g/natchitoches-hope-for-paws_b71124533#wish-list&wishlistsortby=DEFAULT",
     description:
       "Premium pet food, treats, and health products from Chewy.",
+    logo: "/Chewy.png",
   },
   {
     name: "Tractor Supply Wishlist",
@@ -89,6 +91,7 @@ const wishlistStores = [
     href: "https://www.tractorsupply.com/SharedWishListView?catalogId=10051&wishListEMail=true&langId=-1&storeId=10151&guestAccessKey=-46bfe9b5:192d4e589ad:-7ae0&externalId=8535798&wishListEMail=true",
     description:
       "Farm and pet supplies from our local Tractor Supply Co.",
+    logo: "/Tractor_Supply.jpeg",
   },
 ]
 
@@ -172,7 +175,7 @@ export default function DonatePage() {
             Donate by Card
           </Badge>
 
-          <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
+          <h2 className="font-script text-4xl text-white sm:text-5xl">
             Donate to Support Our Mission
           </h2>
 
@@ -211,7 +214,7 @@ export default function DonatePage() {
       </section>
 
       {/* PayPal and Venmo */}
-      <section className="border-y border-sky-100 bg-white py-14">
+      <section className="border-y border-sky-100 bg-gradient-to-r from-[#0a1e3d] via-[#1d4f91] to-[#3D95CE] py-14 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
             Donate via PayPal or Venmo
@@ -234,6 +237,7 @@ export default function DonatePage() {
               rel="noopener noreferrer"
             >
               <Button className="h-auto bg-[#3D95CE] px-8 py-4 text-base font-bold text-white hover:bg-[#3080b0]">
+                <Image src="/Venmo.png" alt="Venmo" width={24} height={24} className="mr-2 h-6 w-6 rounded-full" />
                 Donate via Venmo @NPFauna
               </Button>
             </Link>
@@ -276,7 +280,7 @@ export default function DonatePage() {
                       color: store.color,
                     }}
                   >
-                    <ShoppingCart className="h-8 w-8" />
+                    <Image src={store.logo} alt={store.name} width={64} height={64} className="h-12 w-12 rounded-full object-contain bg-white p-1" />
                   </div>
 
                   <h3 className="mb-2 font-bold text-[#0a1e3d]">
