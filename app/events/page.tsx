@@ -265,7 +265,7 @@ export default function EventsPage() {
                   className="group relative block min-h-[420px] cursor-zoom-in overflow-hidden bg-teal-50 lg:order-2"
                 >
                   <Image
-                    src="/Farm_To_Table.jpg"
+                    src="/Farm_To_Table.png"
                     alt="FAUNA Farm to Table Dinner event announcement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
