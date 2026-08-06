@@ -510,17 +510,24 @@ export default function HopeHasAPlaceCampaignPage() {
           </div>
 
           <div
-            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
+            className="relative mx-auto overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
             style={{
-              paddingTop: "max(60%, 324px)",
-              width: "100%",
-              height: 0,
+              width: "900px",
+              maxWidth: "100%",
+              height: "500px",
             }}
           >
             <iframe
+              style={{
+                position: "absolute",
+                border: "none",
+                width: "100%",
+                height: "100%",
+                left: 0,
+                top: 0,
+              }}
               src="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
               title="Hope Has a Place Campaign"
-              className="absolute left-0 top-0 h-full w-full border-0"
               seamless
               scrolling="no"
               frameBorder="0"
