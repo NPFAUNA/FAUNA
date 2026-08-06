@@ -119,6 +119,14 @@ export default function ProgramsPage() {
             Our programs support homeless animals, community cats, pet owners,
             wildlife, and families across Natchitoches Parish.
           </p>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            {["/Program_1.jpg","/Program_2.jpg","/Program_3.jpg","/Program_4.jpg","/Program_5.jpg"].map((src,index)=>(
+              <div key={src} className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-44 sm:w-44">
+                <Image src={src} alt={`FAUNA program ${index+1}`} fill className="object-cover" sizes="176px" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -457,6 +465,18 @@ export default function ProgramsPage() {
             <p className="mt-3 text-xl font-semibold text-[#167f7f] sm:text-2xl">
               Kathy&apos;s Louisiana Wildlife Sanctuary
             </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-6">
+              {[
+                {src:"/KLAWS_1.jpg",alt:"KLAWS wildlife rehabilitation"},
+                {src:"/KLAW_logo.jpg",alt:"KLAWS logo"},
+                {src:"/KLAWS_3.jpg",alt:"Wildlife cared for by KLAWS"},
+              ].map((photo)=>(
+                <div key={photo.src} className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white shadow-xl">
+                  <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="192px" />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
