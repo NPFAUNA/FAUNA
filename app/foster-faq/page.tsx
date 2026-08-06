@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
@@ -303,6 +304,12 @@ export default function FosterFaqPage() {
             animals prepare for their next chapter.
           </p>
 
+          <div className="mt-10 flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl">
+              <Image src="/Foster_FAQ1.jpg" alt="Opening your home to foster" fill className="object-cover" sizes="288px"/>
+            </div>
+          </div>
+
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link
               href="https://new.shelterluv.com/matchme/foster/FAUN/Dog"
@@ -337,6 +344,12 @@ export default function FosterFaqPage() {
           <h2 className="mt-4 font-script text-5xl text-[#0a1e3d] sm:text-6xl">
             Every Foster Saves Lives
           </h2>
+
+          <div className="mt-8 flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <Image src="/Foster_FAQ2.jpg" alt="Every foster saves lives" fill className="object-cover" sizes="288px"/>
+            </div>
+          </div>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-700">
             Every time a foster family opens their home, space becomes
@@ -445,6 +458,12 @@ export default function FosterFaqPage() {
           <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">
             Sometimes the Perfect Home Is Yours
           </h2>
+
+          <div className="mt-8 flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl">
+              <Image src="/Foster_FAQ.jpg" alt="Foster failure" fill className="object-cover" sizes="288px"/>
+            </div>
+          </div>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/95">
             Falling in love with your foster pet happens all the time. We may
