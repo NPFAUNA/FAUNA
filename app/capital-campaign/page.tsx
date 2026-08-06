@@ -115,7 +115,7 @@ const specialRecognitionLogos = [
     alt: "Pellerin",
   },
   {
-    src: "/special-recognition/National.png",
+    src: "/special-recognition/national-solutions.png",
     alt: "National Solutions",
   },
   {
@@ -168,6 +168,36 @@ export default function CapitalCampaignPage() {
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             A Home for Hope and a Hub for the Whole Community
           </p>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-8">
+            {[
+              {
+                src: "/Rendering1.png",
+                alt: "Aerial rendering of the Friedman Center campus",
+              },
+              {
+                src: "/Rendering8.png",
+                alt: "Rendering of the Friedman Center main entrance",
+              },
+              {
+                src: "/Rendering9.png",
+                alt: "Exterior rendering of the Friedman Center",
+              },
+            ].map((photo) => (
+              <div
+                key={photo.src}
+                className="relative h-56 w-56 overflow-hidden rounded-full border-8 border-white/25 shadow-2xl"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="224px"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -181,6 +211,18 @@ export default function CapitalCampaignPage() {
             <h2 className="font-script mb-6 text-4xl text-[#0a1e3d] md:text-5xl">
               From Grass-Roots Rescue to Parish-Wide Lifesaving
             </h2>
+
+            <div className="flex justify-center">
+              <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+                <Image
+                  src="/Carousel_1.jpg"
+                  alt="FAUNA grassroots rescue and lifesaving work"
+                  fill
+                  className="object-cover"
+                  sizes="288px"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="mx-auto max-w-none text-center text-gray-700">
@@ -212,19 +254,19 @@ export default function CapitalCampaignPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
             {facilityFeatures.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-sky-100 bg-sky-50 p-5 text-center"
+                className="min-h-[340px] rounded-3xl border border-sky-100 bg-sky-50 p-10 text-center shadow-md"
               >
-                <div className="mb-3 text-3xl">{item.icon}</div>
+                <div className="mb-6 text-6xl">{item.icon}</div>
 
-                <h3 className="font-script mb-2 text-2xl text-[#0a1e3d]">
+                <h3 className="font-script mb-4 text-4xl text-[#0a1e3d]">
                   {item.title}
                 </h3>
 
-                <p className="text-xs leading-relaxed text-gray-600">
+                <p className="text-lg leading-8 text-gray-600">
                   {item.body}
                 </p>
               </div>
@@ -235,15 +277,15 @@ export default function CapitalCampaignPage() {
 
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-script mb-6 text-center text-4xl text-[#0a1e3d]">
+          <h2 className="font-script mb-8 text-center text-7xl text-[#0a1e3d]">
             Construction Progress
           </h2>
 
-          <h3 className="font-script mb-3 text-center text-3xl text-[#0a1e3d]">
+          <h3 className="font-script mb-6 text-center text-5xl text-[#0a1e3d]">
             Watch the Vision Come to Life
           </h3>
 
-          <p className="mx-auto mb-8 max-w-3xl text-center text-gray-600">
+          <p className="mx-auto mb-10 max-w-4xl text-center text-xl leading-9 text-gray-600">
             Construction is officially underway on the Edwina &amp; Sam
             Friedman Pet Adoption &amp; Welfare Center. Take a quick look at
             the exciting progress being made as we build a brighter future for
@@ -262,18 +304,35 @@ export default function CapitalCampaignPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {constructionImages.map((image) => (
+          <div className="mt-12 flex flex-wrap justify-center gap-8">
+            {[
+              {
+                src: "/Construction_1.JPG",
+                alt: "Friedman Center construction progress",
+              },
+              {
+                src: "/Construction_2.JPG",
+                alt: "Construction underway at the Friedman Center",
+              },
+              {
+                src: "/Construction_3.JPG",
+                alt: "Friedman Center construction site",
+              },
+              {
+                src: "/Construction_4.JPG",
+                alt: "Progress on the Friedman Center",
+              },
+            ].map((photo) => (
               <div
-                key={image.src}
-                className="relative aspect-video overflow-hidden rounded-xl bg-gray-200 shadow-sm"
+                key={photo.src}
+                className="relative h-56 w-56 overflow-hidden rounded-full border-8 border-white shadow-xl"
               >
                 <Image
-                  src={image.src}
-                  alt={image.alt}
+                  src={photo.src}
+                  alt={photo.alt}
                   fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="224px"
                 />
               </div>
             ))}
