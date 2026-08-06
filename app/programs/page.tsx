@@ -361,13 +361,14 @@ export default function ProgramsPage() {
             </h2>
 
             <div className="mt-10 flex justify-center">
-              <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl shadow-xl">
                 <Image
                   src="/PACT_Header.png"
                   alt="PACT Therapy"
-                  fill
-                  className="object-cover"
-                  sizes="288px"
+                  width={1200}
+                  height={675}
+                  className="h-auto w-full object-contain"
+                  priority
                 />
               </div>
             </div>
