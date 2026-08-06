@@ -121,7 +121,7 @@ export default function ProgramsPage() {
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-            {["/Program_1.jpg","/Program_2.jpg","/Program_3.jpg","/Program_4.jpg","/Program_5.jpg"].map((src,index)=>(
+           {["/Program_2.jpg","/Program_3.jpg","/Program_4.jpg"].map((src,index)=>(
               <div key={src} className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-44 sm:w-44">
                 <Image src={src} alt={`FAUNA program ${index+1}`} fill className="object-cover" sizes="176px" />
               </div>
@@ -360,10 +360,43 @@ export default function ProgramsPage() {
               PACT Therapy
             </h2>
 
+            <div className="mt-10 flex justify-center">
+              <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+                <Image
+                  src="/PACT_Header.png"
+                  alt="PACT Therapy"
+                  fill
+                  className="object-cover"
+                  sizes="288px"
+                />
+              </div>
+            </div>
+
             <p className="mx-auto mt-5 max-w-3xl text-xl leading-8 text-gray-600">
               Simply being around animals can bring comfort, connection, and
               so much joy to people of every age.
             </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-6">
+              {[
+                { src: "/PACT_1.jpg", alt: "PACT Therapy visit" },
+                { src: "/PACT_2.jpg", alt: "PACT Therapy volunteer and therapy animal" },
+                { src: "/PACT_3.jpg", alt: "PACT Therapy bringing comfort" },
+              ].map((photo) => (
+                <div
+                  key={photo.src}
+                  className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white shadow-xl"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="192px"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
