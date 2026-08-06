@@ -169,7 +169,7 @@ export default function DonatePage() {
       </section>
 
       {/* Square Donate */}
-      <section className="bg-sky-50 py-16">
+      <section className="bg-gradient-to-r from-[#1DA1F2] via-[#2CBFD3] to-[#33CCCC] py-16">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
           <Badge className="mb-4 border-[#0099FF]/20 bg-[#0099FF]/10 text-[#0099FF]">
             Donate by Card
