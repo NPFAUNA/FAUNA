@@ -194,34 +194,16 @@ export default function AdvisoryBoardPage() {
             </div>
           </div>
 
-          <div className="mt-16 flex flex-wrap justify-center gap-8">
-            {[
-              {
-                src: "/Advisory_Board1.png",
-                alt: "Friedman Center Advisory Board members",
-              },
-              {
-                src: "/Advisory_Board2.png",
-                alt: "Friedman Center Advisory Board meeting",
-              },
-              {
-                src: "/Advisory_Board3.png",
-                alt: "Community members supporting the Friedman Center",
-              },
-            ].map((photo) => (
-              <div
-                key={photo.src}
-                className="relative h-56 w-56 overflow-hidden rounded-full border-8 border-white shadow-2xl"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover"
-                  sizes="224px"
-                />
-              </div>
-            ))}
+          <div className="mt-16 flex justify-center">
+            <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white shadow-2xl sm:h-96 sm:w-96">
+              <Image
+                src="/Rachel_Leah_Board.jpeg"
+                alt="Rachel LeBlanc and Leah Forsyth"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 320px, 384px"
+              />
+            </div>
           </div>
         </div>
       </section>
