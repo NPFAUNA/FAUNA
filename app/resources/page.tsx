@@ -740,7 +740,7 @@ export default function ResourcesPage() {
               href="/What to do if you find a cat.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open the <ScriptTitle title="What to Do If You Find a Cat" /> guide at full size"
+              aria-label="Open the What to Do If You Find a Cat guide at full size"
               className="group relative block aspect-square cursor-zoom-in overflow-hidden rounded-2xl bg-sky-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#0099FF]/30"
             >
               <Image
