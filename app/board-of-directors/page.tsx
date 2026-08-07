@@ -103,17 +103,38 @@ const responsibilities = [
   },
 ]
 
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/(\s+)/).map((part, index) => {
+        const lettersOnly = part.replace(/[^A-Za-z]/g, "")
+        const isAllCaps =
+          lettersOnly.length > 1 &&
+          lettersOnly === lettersOnly.toUpperCase()
+
+        return isAllCaps ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      })}
+    </>
+  )
+}
+
 export default function BoardOfDirectorsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
+    <div>
+      <section className="bg-gradient-to-br from-[#061424] to-[#0a1e3d] py-20 text-white">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <Badge className="mb-5 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
             Volunteer Leadership
           </Badge>
 
           <h1 className="font-script text-6xl leading-tight text-white sm:text-7xl">
-            Board of Directors
+            <ScriptTitle title="Board of Directors" />
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
@@ -128,7 +149,7 @@ export default function BoardOfDirectorsPage() {
           <BadgeCheck className="mx-auto h-10 w-10 text-[#0099FF]" />
 
           <h2 className="font-script mt-5 text-5xl text-[#0a1e3d]">
-            Leadership and Responsibility
+            <ScriptTitle title="Leadership and Responsibility" />
           </h2>
 
           <p className="mt-7 text-lg leading-relaxed text-gray-700">
@@ -159,7 +180,7 @@ export default function BoardOfDirectorsPage() {
             </Badge>
 
             <h2 className="font-script text-5xl text-white sm:text-6xl">
-              Board of Directors
+              <ScriptTitle title="Board of Directors" />
             </h2>
           </div>
 
@@ -190,7 +211,7 @@ export default function BoardOfDirectorsPage() {
             </Badge>
 
             <h2 className="font-script text-5xl text-[#0a1e3d] sm:text-6xl">
-              Stewarding FAUNA&apos;s Mission
+              <ScriptTitle title="Stewarding FAUNA's Mission" />
             </h2>
           </div>
 
@@ -209,7 +230,7 @@ export default function BoardOfDirectorsPage() {
                     </div>
 
                     <h3 className="font-script text-3xl text-[#0a1e3d]">
-                      {responsibility.title}
+                      <ScriptTitle title={responsibility.title} />
                     </h3>
 
                     <p className="mt-4 leading-relaxed text-gray-600">
@@ -227,13 +248,13 @@ export default function BoardOfDirectorsPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-[#0a1e3d] p-8 text-center text-white sm:p-12">
             <h2 className="font-script text-5xl text-[#33CCCC] sm:text-6xl">
-              Volunteer Leadership. Lasting Impact.
+              <ScriptTitle title="Volunteer Leadership. Lasting Impact." />
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
-              FAUNA&apos;s board members bring diverse professional
-              experience, community knowledge, and a shared commitment to
-              compassionate animal welfare.
+              FAUNA&apos;s board members bring diverse professional experience,
+              community knowledge, and a shared commitment to compassionate
+              animal welfare.
             </p>
 
             <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-gray-300">
@@ -248,7 +269,9 @@ export default function BoardOfDirectorsPage() {
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <Mail className="mx-auto h-9 w-9 text-white" />
 
-          <h2 className="font-script mt-4 text-5xl">Board Inquiries</h2>
+          <h2 className="font-script mt-4 text-5xl">
+            <ScriptTitle title="Board Inquiries" />
+          </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-white/95">
             For governance, partnership, or board-related questions, contact
