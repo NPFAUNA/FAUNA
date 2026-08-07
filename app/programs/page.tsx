@@ -102,6 +102,27 @@ const wildlifeSafetyTips = [
   "Contact KLAWS or another permitted wildlife rehabilitator for guidance.",
 ]
 
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/(\s+)/).map((part, index) => {
+        const lettersOnly = part.replace(/[^A-Za-z]/g, "")
+        const isAllCaps =
+          lettersOnly.length > 1 &&
+          lettersOnly === lettersOnly.toUpperCase()
+
+        return isAllCaps ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      })}
+    </>
+  )
+}
+
 export default function ProgramsPage() {
   return (
     <main>
@@ -121,11 +142,22 @@ export default function ProgramsPage() {
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-           {["/Program_2.jpg","/Program_3.jpg","/Program_4.jpg"].map((src,index)=>(
-              <div key={src} className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-44 sm:w-44">
-                <Image src={src} alt={`FAUNA program ${index+1}`} fill className="object-cover" sizes="176px" />
-              </div>
-            ))}
+            {["/Program_2.jpg", "/Program_3.jpg", "/Program_4.jpg"].map(
+              (src, index) => (
+                <div
+                  key={src}
+                  className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-44 sm:w-44"
+                >
+                  <Image
+                    src={src}
+                    alt={`FAUNA program ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="176px"
+                  />
+                </div>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -143,7 +175,7 @@ export default function ProgramsPage() {
                 </div>
 
                 <h2 className="font-script text-4xl text-[#0a1e3d]">
-                  {title}
+                  <ScriptTitle title={title} />
                 </h2>
 
                 <p className="mt-3 text-lg leading-7 text-gray-600">{body}</p>
@@ -197,10 +229,7 @@ export default function ProgramsPage() {
 
           <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
             {healthFairPhotos.map((photo) => (
-              <div
-                key={photo.src}
-                className="mx-auto w-full max-w-[260px]"
-              >
+              <div key={photo.src} className="mx-auto w-full max-w-[260px]">
                 <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
                   <Image
                     src={photo.src}
@@ -357,7 +386,7 @@ export default function ProgramsPage() {
             </p>
 
             <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
-              PACT Therapy
+              <ScriptTitle title="PACT Therapy" />
             </h2>
 
             <div className="mt-10 flex justify-center">
@@ -381,8 +410,14 @@ export default function ProgramsPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-6">
               {[
                 { src: "/PACT_1.jpg", alt: "PACT Therapy visit" },
-                { src: "/PACT_2.jpg", alt: "PACT Therapy volunteer and therapy animal" },
-                { src: "/PACT_3.jpg", alt: "PACT Therapy bringing comfort" },
+                {
+                  src: "/PACT_2.jpg",
+                  alt: "PACT Therapy volunteer and therapy animal",
+                },
+                {
+                  src: "/PACT_3.jpg",
+                  alt: "PACT Therapy bringing comfort",
+                },
               ].map((photo) => (
                 <div
                   key={photo.src}
@@ -493,7 +528,7 @@ export default function ProgramsPage() {
             </p>
 
             <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
-              About KLAWS
+              <ScriptTitle title="About KLAWS" />
             </h2>
 
             <p className="mt-3 text-xl font-semibold text-[#167f7f] sm:text-2xl">
@@ -502,12 +537,27 @@ export default function ProgramsPage() {
 
             <div className="mt-10 flex flex-wrap justify-center gap-6">
               {[
-                {src:"/KLAWS_1.jpg",alt:"KLAWS wildlife rehabilitation"},
-                {src:"/KLAWS_logo.jpg",alt:"KLAWS logo"},
-                {src:"/KLAWS_3.jpg",alt:"Wildlife cared for by KLAWS"},
-              ].map((photo)=>(
-                <div key={photo.src} className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white shadow-xl">
-                  <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="192px" />
+                {
+                  src: "/KLAWS_1.jpg",
+                  alt: "KLAWS wildlife rehabilitation",
+                },
+                { src: "/KLAWS_logo.jpg", alt: "KLAWS logo" },
+                {
+                  src: "/KLAWS_3.jpg",
+                  alt: "Wildlife cared for by KLAWS",
+                },
+              ].map((photo) => (
+                <div
+                  key={photo.src}
+                  className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white shadow-xl"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="192px"
+                  />
                 </div>
               ))}
             </div>
@@ -528,13 +578,15 @@ export default function ProgramsPage() {
                 </p>
 
                 <p>
-                  Led by state-licensed wildlife rehabilitator Kathy Owsley, KLAWS provides
-                  compassionate, hands-on support for native animals such as
-                  raccoons, squirrels, opossums, foxes, and skunks.
+                  Led by state-licensed wildlife rehabilitator Kathy Owsley,
+                  KLAWS provides compassionate, hands-on support for native
+                  animals such as raccoons, squirrels, opossums, foxes, and
+                  skunks.
                 </p>
 
                 <p>
-                  Kathy trained with Dr. Gia Morgan and her staff and was a sub-permittee under WERLA prior to getting her license.
+                  Kathy trained with Dr. Gia Morgan and her staff and was a
+                  sub-permittee under WERLA prior to getting her license.
                 </p>
               </div>
             </article>
