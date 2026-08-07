@@ -222,6 +222,23 @@ const navigationLinks = [
   { href: "#partners", label: "Partners" },
 ]
 
+
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/([A-Z]{2,})/).map((part, index) =>
+        /^[A-Z]{2,}$/.test(part) ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}
+
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -232,7 +249,7 @@ export default function ResourcesPage() {
           </Badge>
 
           <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
-            Community Resources &amp; Help Desk
+            <ScriptTitle title="Community Resources & Help Desk" />
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
@@ -275,7 +292,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script mt-1 text-4xl text-[#0a1e3d] sm:text-5xl">
-                Emergency Quick-Dial
+                <ScriptTitle title="Emergency Quick-Dial" />
               </h2>
             </div>
           </div>
@@ -365,7 +382,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                Low-Cost Spay, Neuter &amp; Preventive Care
+                <ScriptTitle title="Low-Cost Spay, Neuter & Preventive Care" />
               </h2>
             </div>
           </div>
@@ -448,7 +465,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                Local Veterinary &amp; Wellness Partners
+                <ScriptTitle title="Local Veterinary & Wellness Partners" />
               </h2>
             </div>
           </div>
@@ -520,7 +537,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                Financial Aid for Veterinary Bills
+                <ScriptTitle title="Financial Aid for Veterinary Bills" />
               </h2>
             </div>
           </div>
@@ -563,7 +580,7 @@ export default function ResourcesPage() {
             </p>
 
             <h2 className="font-script mt-1 text-4xl text-[#0a1e3d] sm:text-5xl">
-              Pet Food &amp; Supplies
+              <ScriptTitle title="Pet Food & Supplies" />
             </h2>
           </div>
 
@@ -642,7 +659,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-white sm:text-5xl">
-                Training &amp; Behavior Libraries
+                <ScriptTitle title="Training & Behavior Libraries" />
               </h2>
             </div>
           </div>
@@ -696,7 +713,7 @@ export default function ResourcesPage() {
               </Badge>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                What to Do If You Find a Cat
+                <ScriptTitle title="What to Do If You Find a Cat" />
               </h2>
 
               <p className="mt-5 leading-relaxed text-gray-600">
@@ -723,7 +740,7 @@ export default function ResourcesPage() {
               href="/What to do if you find a cat.jpg"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open the What to Do If You Find a Cat guide at full size"
+              aria-label="Open the <ScriptTitle title="What to Do If You Find a Cat" /> guide at full size"
               className="group relative block aspect-square cursor-zoom-in overflow-hidden rounded-2xl bg-sky-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#0099FF]/30"
             >
               <Image
@@ -755,7 +772,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                Lost &amp; Found Toolkit
+                <ScriptTitle title="Lost & Found Toolkit" />
               </h2>
             </div>
           </div>
@@ -861,7 +878,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                Disaster Preparedness
+                <ScriptTitle title="Disaster Preparedness" />
               </h2>
             </div>
           </div>
@@ -957,7 +974,7 @@ export default function ResourcesPage() {
               </p>
 
               <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-                FAUNA &amp; Strategic Partners
+                <ScriptTitle title="FAUNA & Strategic Partners" />
               </h2>
             </div>
           </div>
@@ -1004,7 +1021,7 @@ export default function ResourcesPage() {
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-16 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-script text-4xl text-white sm:text-5xl">
-            Still Can&apos;t Find What You Need?
+            <ScriptTitle title="Still Can&apos;t Find What You Need?" />
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-white/90">
