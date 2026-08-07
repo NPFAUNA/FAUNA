@@ -102,6 +102,22 @@ const fosterBenefits = [
   "It is a great option if you cannot adopt permanently.",
 ]
 
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/([A-Z]{2,})/).map((part, index) =>
+        /^[A-Z]{2,}$/.test(part) ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}
+
 export default function AdoptFosterPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -127,7 +143,7 @@ export default function AdoptFosterPage() {
             </Badge>
 
             <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
-              Help a FAUNA Animal Find A Home
+              <ScriptTitle title="Help a FAUNA Animal Find A Home" />
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-sky-50">
@@ -229,7 +245,7 @@ export default function AdoptFosterPage() {
             </Badge>
 
             <h2 className="font-script text-4xl leading-tight text-[#0a1e3d] sm:text-5xl">
-              Ready to Meet Your New Best Friend?
+              <ScriptTitle title="Ready to Meet Your New Best Friend?" />
             </h2>
 
             <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
@@ -267,7 +283,7 @@ export default function AdoptFosterPage() {
               </p>
 
               <h3 className="font-script mt-2 text-4xl text-[#0a1e3d] sm:text-5xl">
-                Available FAUNA Pets
+                <ScriptTitle title="Available FAUNA Pets" />
               </h3>
 
               <p className="mx-auto mt-3 max-w-2xl text-gray-700">
@@ -321,7 +337,7 @@ export default function AdoptFosterPage() {
             </Badge>
 
             <h2 className="font-script text-4xl leading-tight text-[#0a1e3d] sm:text-5xl">
-              How Adoption Works
+              <ScriptTitle title="How Adoption Works" />
             </h2>
 
             <div className="mt-8 space-y-5">
@@ -382,7 +398,7 @@ export default function AdoptFosterPage() {
               </Badge>
 
               <h2 className="font-script text-4xl leading-tight text-white sm:text-5xl">
-                Not Ready to Adopt? Fostering Still Saves Lives
+                <ScriptTitle title="Not Ready to Adopt? Fostering Still Saves Lives" />
               </h2>
 
               <div className="mt-6">
