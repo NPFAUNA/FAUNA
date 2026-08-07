@@ -102,6 +102,23 @@ const memorialInstructions = [
   "The FAUNA program or cause you would like to support. Gifts without a designation will support our general animal-care fund.",
 ]
 
+
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/([A-Z]{2,})/).map((part, index) =>
+        /^[A-Z]{2,}$/.test(part) ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}
+
 export default function DonatePage() {
   return (
     <main className="min-h-screen bg-white">
@@ -113,7 +130,7 @@ export default function DonatePage() {
           </Badge>
 
           <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
-            Help Build Brighter Futures for Natchitoches Animals
+            <ScriptTitle title="Help Build Brighter Futures for Natchitoches Animals" />
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
@@ -133,7 +150,7 @@ export default function DonatePage() {
             </p>
 
             <h2 className="font-script mt-2 text-4xl text-[#0a1e3d] sm:text-5xl">
-              Your Gift in Action
+              <ScriptTitle title="Your Gift in Action" />
             </h2>
           </div>
 
@@ -176,7 +193,7 @@ export default function DonatePage() {
           </Badge>
 
           <h2 className="font-script text-4xl text-white sm:text-5xl">
-            Donate to Support Our Mission
+            <ScriptTitle title="Donate to Support Our Mission" />
           </h2>
 
           <p className="mb-8 mt-3 text-gray-600">
@@ -217,7 +234,7 @@ export default function DonatePage() {
       <section className="border-y border-sky-100 bg-[#33CCCC] py-14 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-            Donate via PayPal or Venmo
+            <ScriptTitle title="Donate via PayPal or Venmo" />
           </h2>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -254,7 +271,7 @@ export default function DonatePage() {
             </Badge>
 
             <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-              Send Supplies Directly to FAUNA
+              <ScriptTitle title="Send Supplies Directly to FAUNA" />
             </h2>
 
             <p className="mx-auto mt-4 max-w-3xl text-gray-600">
@@ -322,7 +339,7 @@ export default function DonatePage() {
           </Badge>
 
           <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-            Every Square Saves a Life
+            <ScriptTitle title="Every Square Saves a Life" />
           </h2>
 
           <p className="mt-4 text-gray-700">
@@ -350,14 +367,14 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Mail a Check */}
+      {/* <ScriptTitle title="Mail a Check" /> */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 text-center">
             <MapPin className="mx-auto mb-4 h-10 w-10 text-[#0099FF]" />
 
             <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-              Mail a Check
+              <ScriptTitle title="Mail a Check" />
             </h2>
 
             <p className="mb-4 mt-4 text-gray-600">
@@ -380,7 +397,7 @@ export default function DonatePage() {
             <Heart className="mx-auto mb-4 h-10 w-10 text-[#8AFF00]" />
 
             <h2 className="font-script text-4xl text-white sm:text-5xl">
-              Donate in Memory or Honor
+              <ScriptTitle title="Donate in Memory or Honor" />
             </h2>
 
             <p className="mt-4 text-gray-300">
@@ -449,7 +466,7 @@ export default function DonatePage() {
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-script mb-8 text-center text-4xl text-[#0a1e3d] sm:text-5xl">
-            Lives You&apos;re Helping
+            <ScriptTitle title="Lives You&apos;re Helping" />
           </h2>
 
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
