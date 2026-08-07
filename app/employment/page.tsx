@@ -136,6 +136,22 @@ const volunteerRoles = [
   },
 ]
 
+function ScriptTitle({ title }: { title: string }) {
+  return (
+    <>
+      {title.split(/([A-Z]{2,})/).map((part, index) =>
+        /^[A-Z]{2,}$/.test(part) ? (
+          <span key={`${part}-${index}`} className="font-brand-caps">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}
+
 export default function EmploymentPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -151,7 +167,7 @@ export default function EmploymentPage() {
             </Badge>
 
             <p className="font-script text-4xl text-[#33CCCC] sm:text-5xl">
-              Turn Compassion Into a Career
+              <ScriptTitle title="Turn Compassion Into a Career" />
             </p>
 
             <h1 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
@@ -236,10 +252,7 @@ export default function EmploymentPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-3">
             {employmentPhotos.map((photo) => (
-              <div
-                key={photo.src}
-                className="mx-auto w-full max-w-[280px]"
-              >
+              <div key={photo.src} className="mx-auto w-full max-w-[280px]">
                 <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
                   <Image
                     src={photo.src}
@@ -262,7 +275,7 @@ export default function EmploymentPage() {
             <Sparkles className="mx-auto h-11 w-11 text-[#0099FF]" />
 
             <h2 className="mt-2 font-script text-5xl text-[#0a1e3d] sm:text-6xl">
-              Why Work With FAUNA
+              <ScriptTitle title="Why Work With FAUNA" />
             </h2>
 
             <p className="mt-5 text-lg leading-relaxed text-gray-700">
@@ -315,7 +328,7 @@ export default function EmploymentPage() {
               </p>
 
               <h2 className="font-script text-4xl leading-tight text-[#0a1e3d] sm:text-5xl">
-                Executive Director of Shelter Operations
+                <ScriptTitle title="Executive Director of Shelter Operations" />
               </h2>
             </div>
           </div>
@@ -327,7 +340,7 @@ export default function EmploymentPage() {
               </p>
 
               <h3 className="mt-2 font-script text-4xl leading-tight text-white sm:text-5xl">
-                Help Lead FAUNA&apos;s Next Chapter
+                <ScriptTitle title="Help Lead FAUNA's Next Chapter" />
               </h3>
             </div>
 
@@ -376,7 +389,7 @@ export default function EmploymentPage() {
               </p>
 
               <h2 className="font-script text-5xl leading-tight text-[#0a1e3d]">
-                Site Employee
+                <ScriptTitle title="Site Employee" />
               </h2>
             </div>
           </div>
@@ -464,7 +477,7 @@ export default function EmploymentPage() {
 
           <div className="rounded-2xl bg-gradient-to-br from-[#0099FF] to-[#33CCCC] p-8 text-center text-white">
             <h3 className="font-script text-4xl text-white sm:text-5xl">
-              Interested in Site Employment?
+              <ScriptTitle title="Interested in Site Employment?" />
             </h3>
 
             <p className="mt-3 text-sky-50">
@@ -497,7 +510,7 @@ export default function EmploymentPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center">
             <p className="font-script text-4xl text-[#33CCCC] sm:text-5xl">
-              Not Ready for a Job?
+              <ScriptTitle title="Not Ready for a Job?" />
             </p>
 
             <h2 className="mt-2 text-4xl font-extrabold text-[#0a1e3d]">
