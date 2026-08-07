@@ -115,7 +115,7 @@ const specialRecognitionLogos = [
     alt: "Pellerin",
   },
   {
-    src: "/special-recognition/national-solutions.png",
+    src: "/special-recognition/National_Solutions.png",
     alt: "National Solutions",
   },
   {
@@ -162,7 +162,7 @@ export default function CapitalCampaignPage() {
           </h1>
 
           <p className="text-xl text-gray-300">
-            Generations of Hope Campaign
+            Hope Has a Place Campaign
           </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
@@ -441,7 +441,7 @@ export default function CapitalCampaignPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 text-[#0a1e3d]">
-            Generations of Hope
+            Hope Has a Place
           </Badge>
 
           <h2 className="font-script mb-4 text-5xl text-[#0a1e3d] md:text-6xl">
@@ -477,7 +477,7 @@ export default function CapitalCampaignPage() {
 
           <div className="rounded-2xl bg-[#0a1e3d] px-6 py-12 text-white">
             <h2 className="font-script text-4xl text-[#33CCCC] md:text-5xl">
-              Explore the Generations of Hope Campaign
+              Explore the Hope Has a Place Campaign
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-sky-100">
