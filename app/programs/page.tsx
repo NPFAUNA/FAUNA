@@ -528,15 +528,13 @@ export default function ProgramsPage() {
                 </p>
 
                 <p>
-                  Led by wildlife rehabilitator Kathy Owsley, KLAWS provides
+                  Led by state-licensed wildlife rehabilitator Kathy Owsley, KLAWS provides
                   compassionate, hands-on support for native animals such as
-                  raccoons, squirrels, opossums, and birds.
+                  raccoons, squirrels, opossums, foxes, and skunks.
                 </p>
 
                 <p>
-                  Kathy trained with Dr. Gia Morgan and her veterinary staff in
-                  Shreveport and serves as a wildlife rehabilitation
-                  sub-permittee through WERLA.
+                  Kathy trained with Dr. Gia Morgan and her staff and was a sub-permittee under WERLA prior to getting her license.
                 </p>
               </div>
             </article>
