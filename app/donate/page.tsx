@@ -4,7 +4,6 @@ import Link from "next/link"
 import {
   Grid3X3,
   Heart,
-  Mail,
   MapPin,
   ShoppingCart,
   Star,
@@ -94,14 +93,6 @@ const wishlistStores = [
     logo: "/Tractor_Supply.jpeg",
   },
 ]
-
-const memorialInstructions = [
-  "Your name and address so we can provide a tax-deductible receipt or letter.",
-  "The name of the person or animal the donation is in memory or honor of.",
-  "The name and address of the person who should receive the acknowledgment letter.",
-  "The FAUNA program or cause you would like to support. Gifts without a designation will support our general animal-care fund.",
-]
-
 
 function ScriptTitle({ title }: { title: string }) {
   return (
@@ -254,7 +245,13 @@ export default function DonatePage() {
               rel="noopener noreferrer"
             >
               <Button className="h-auto bg-[#3D95CE] px-8 py-4 text-base font-bold text-white hover:bg-[#3080b0]">
-                <Image src="/Venmo.png" alt="Venmo" width={24} height={24} className="mr-2 h-6 w-6 rounded-full" />
+                <Image
+                  src="/Venmo.png"
+                  alt="Venmo"
+                  width={24}
+                  height={24}
+                  className="mr-2 h-6 w-6 rounded-full"
+                />
                 Donate via Venmo @NPFauna
               </Button>
             </Link>
@@ -367,7 +364,7 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* <ScriptTitle title="Mail a Check" /> */}
+      {/* Mail a Check */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 text-center">
@@ -393,7 +390,7 @@ export default function DonatePage() {
       {/* In Memory or Honor */}
       <section className="bg-[#0a1e3d] py-16 text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 text-center">
+          <div className="text-center">
             <Heart className="mx-auto mb-4 h-10 w-10 text-[#8AFF00]" />
 
             <h2 className="font-script text-4xl text-white sm:text-5xl">
@@ -408,46 +405,18 @@ export default function DonatePage() {
                 All donations are tax deductible.
               </strong>
             </p>
-          </div>
 
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-6">
-            <p className="mb-4 text-gray-300">
-              Use the{" "}
-              <Link
-                href="https://www.paypal.com/donate/?hosted_button_id=7KDF67TNWVHLL"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#33CCCC] underline"
-              >
-                PayPal
-              </Link>{" "}
-              or{" "}
-              <Link
-                href="https://account.venmo.com/u/NPFauna"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#33CCCC] underline"
-              >
-                Venmo
-              </Link>{" "}
-              links, or mail a check to the address above.
-            </p>
-
-            <h3 className="mb-3 flex items-center gap-2 font-semibold text-white">
-              <Mail className="h-5 w-5 text-[#8AFF00]" />
-              In the memo box, please include:
-            </h3>
-
-            <ul className="space-y-2 text-sm text-gray-300">
-              {memorialInstructions.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-0.5 shrink-0 text-[#8AFF00]">
-                    &#9733;
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSckj10hj7yi5qJf4DCxXAG0SoVHqB-Mj1y-tfJ4J9vZLPGrnQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block"
+            >
+              <Button className="h-auto bg-[#8AFF00] px-8 py-4 text-base font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                <Heart className="mr-2 h-5 w-5" />
+                Memorial &amp; Honor Donation Form
+              </Button>
+            </Link>
           </div>
 
           <p className="mt-6 text-center text-sm text-gray-400">
