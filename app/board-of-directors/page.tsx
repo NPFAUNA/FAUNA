@@ -59,7 +59,7 @@ const boardMembers = [
   {
     role: "Board Member",
     name: "Jennifer Long",
-    image: "/Jennifer_long.jpg",
+    image: "/Jennifer_Long.jpg",
   },
   {
     role: "Board Member",
