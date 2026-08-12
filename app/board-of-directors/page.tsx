@@ -74,7 +74,7 @@ const boardMembers = [
   {
     role: "Board Member",
     name: "Juanita Murphy",
-    image: "/Juanita_Murphy.jpeg",
+    image: "/juanita.jpg",
     bio: [
       "Since 2009, Juanita has been dedicated to animal rescue, first with the Natchitoches Humane Society and now with FAUNA. From animals arriving at the shelter near death to becoming beloved and deeply important companions, she says the most rewarding part of rescue is seeing those changes happen right before her eyes.",
       "Her journey into animal rescue began when two Natchitoches women, Sharon Gahagan and Conna Cloutier, encouraged her to help a dying dog at the City Shelter. Their encouragement changed the course of her life.",
@@ -139,13 +139,13 @@ export default function BoardOfDirectorsPage() {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white/25 shadow-2xl sm:h-80 sm:w-80">
+            <div className="relative aspect-[3/2] w-full max-w-3xl overflow-hidden rounded-3xl border-8 border-white/25 bg-white/10 shadow-2xl">
               <Image
                 src="/Board.jpg"
                 alt="FAUNA Board of Directors"
                 fill
-                className="object-cover"
-                sizes="(max-width: 640px) 288px, 320px"
+                className="object-contain"
+                sizes="(max-width: 768px) 92vw, 768px"
                 priority
               />
             </div>
@@ -208,7 +208,7 @@ export default function BoardOfDirectorsPage() {
                             src={member.image}
                             alt={member.name}
                             fill
-                            className="object-cover"
+                            className="object-contain p-1"
                             sizes="192px"
                           />
                         </div>
