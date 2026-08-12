@@ -283,6 +283,15 @@ export default function EmploymentPage() {
               experience with compassionate service to animals and the
               community.
             </p>
+
+            <blockquote className="mx-auto mt-7 max-w-2xl border-l-4 border-[#33CCCC] pl-5 text-left text-lg italic leading-relaxed text-gray-700">
+              &ldquo;It&apos;s nice to be a part of a local program that has a
+              genuine interest and drive to help good dogs find good
+              owners.&rdquo;
+              <span className="mt-2 block text-sm font-semibold not-italic text-[#0a1e3d]">
+                - Chris (FAUNA employee)
+              </span>
+            </blockquote>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -483,16 +492,16 @@ export default function EmploymentPage() {
             <p className="mt-3 text-sky-50">
               Contact FAUNA at{" "}
               <a
-                href="mailto:npfauna@gmail.com"
+                href="mailto:rescue@npfauna.org"
                 className="font-semibold underline hover:text-white"
               >
-                npfauna@gmail.com
+                rescue@npfauna.org
               </a>{" "}
               to ask about current availability.
             </p>
 
             <div className="mt-6">
-              <a href="mailto:npfauna@gmail.com">
+              <a href="mailto:rescue@npfauna.org">
                 <Button
                   size="lg"
                   className="bg-[#8AFF00] px-8 font-bold text-[#0a1e3d] hover:bg-[#7aee00]"
