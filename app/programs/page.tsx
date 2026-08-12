@@ -174,7 +174,7 @@ export default function ProgramsPage() {
                   <Icon className="h-7 w-7 text-[#0a1e3d]" />
                 </div>
 
-                <h2 className="font-script text-4xl text-[#0a1e3d]">
+                <h2 className="text-4xl text-[#0a1e3d]">
                   <ScriptTitle title={title} />
                 </h2>
 
@@ -216,7 +216,7 @@ export default function ProgramsPage() {
               Community Health Fairs
             </p>
 
-            <h2 className="font-script mx-auto mt-3 max-w-4xl text-5xl sm:text-6xl">
+            <h2 className="mx-auto mt-3 max-w-4xl text-5xl sm:text-6xl">
               Keeping Pets Healthy, Microchipped, and Loved
             </h2>
 
@@ -249,7 +249,7 @@ export default function ProgramsPage() {
                 <HeartPulse className="h-7 w-7 text-[#0099FF]" />
               </div>
 
-              <h3 className="font-script mt-6 text-4xl">
+              <h3 className="mt-6 text-4xl">
                 Free or Low-Cost Pet Care
               </h3>
 
@@ -276,7 +276,7 @@ export default function ProgramsPage() {
                 <ShieldCheck className="h-7 w-7 text-[#33CCCC]" />
               </div>
 
-              <h3 className="font-script mt-6 text-4xl text-[#33CCCC]">
+              <h3 className="mt-6 text-4xl text-[#33CCCC]">
                 Accessible Care Strengthens Our Community
               </h3>
 
@@ -309,7 +309,7 @@ export default function ProgramsPage() {
                   A FAUNA Community Tradition
                 </p>
 
-                <h3 className="font-script mt-3 text-5xl">
+                <h3 className="mt-3 text-5xl">
                   Bath &amp; Nail Clipping Days
                 </h3>
 
@@ -385,7 +385,7 @@ export default function ProgramsPage() {
               People and Animals Connecting Together
             </p>
 
-            <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
+            <h2 className="mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
               <ScriptTitle title="PACT Therapy" />
             </h2>
 
@@ -441,7 +441,7 @@ export default function ProgramsPage() {
                 <Heart className="h-7 w-7 text-[#8AFF00]" />
               </div>
 
-              <h3 className="font-script mt-6 text-4xl text-[#33CCCC]">
+              <h3 className="mt-6 text-4xl text-[#33CCCC]">
                 Bringing Comfort Through Connection
               </h3>
 
@@ -475,7 +475,7 @@ export default function ProgramsPage() {
                 <PawPrint className="h-7 w-7 text-[#167f7f]" />
               </div>
 
-              <h3 className="font-script mt-6 text-4xl text-[#0a1e3d]">
+              <h3 className="mt-6 text-4xl text-[#0a1e3d]">
                 The Joy Animals Bring
               </h3>
 
@@ -527,7 +527,7 @@ export default function ProgramsPage() {
               Wildlife Rehabilitation
             </p>
 
-            <h2 className="font-script mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
+            <h2 className="mt-3 text-5xl text-[#0a1e3d] sm:text-6xl">
               <ScriptTitle title="About KLAWS" />
             </h2>
 
@@ -565,7 +565,7 @@ export default function ProgramsPage() {
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
             <article className="rounded-3xl border border-sky-100 bg-white p-8 shadow-lg sm:p-10">
-              <h3 className="font-script text-4xl text-[#0a1e3d]">
+              <h3 className="text-4xl text-[#0a1e3d]">
                 Compassionate Care for Native Wildlife
               </h3>
 
@@ -592,7 +592,7 @@ export default function ProgramsPage() {
             </article>
 
             <article className="rounded-3xl bg-[#0a1e3d] p-8 text-white shadow-lg sm:p-10">
-              <h3 className="font-script text-4xl text-[#33CCCC]">
+              <h3 className="text-4xl text-[#33CCCC]">
                 Rescue, Rehabilitate, Release
               </h3>
 
@@ -622,7 +622,7 @@ export default function ProgramsPage() {
 
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <article className="rounded-3xl border border-sky-100 bg-white p-8 shadow-lg sm:p-10">
-              <h3 className="font-script text-4xl text-[#0a1e3d]">
+              <h3 className="text-4xl text-[#0a1e3d]">
                 Serving Wildlife and the Community
               </h3>
 
@@ -648,7 +648,7 @@ export default function ProgramsPage() {
             </article>
 
             <article className="rounded-3xl border border-amber-200 bg-amber-50 p-8 shadow-lg sm:p-10">
-              <h3 className="font-script text-4xl text-[#0a1e3d]">
+              <h3 className="text-4xl text-[#0a1e3d]">
                 Before You Rescue a Wild Animal
               </h3>
 
