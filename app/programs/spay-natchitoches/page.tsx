@@ -108,9 +108,9 @@ export default function SpayNatchitochesPage() {
               The Reality in Our Community
             </Badge>
 
-            <h2 className="font-script text-5xl leading-tight text-[#0a1e3d] sm:text-6xl">
+            <h2 className="text-4xl font-extrabold leading-tight text-[#0a1e3d] sm:text-5xl">
               The Truth Is Tough: Natchitoches Parish Has Too Many Homeless
-              Pets
+              Animals
             </h2>
           </div>
 
