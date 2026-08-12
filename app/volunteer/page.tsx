@@ -15,7 +15,7 @@ const opportunities = [
   {
     title: "Foster Caregiver",
     description:
-      "Provide temporary housing for animals. FAUNA covers all veterinary costs — you provide love.",
+      "Provide temporary housing for animals. FAUNA covers all veterinary costs; you provide love.",
   },
   {
     title: "Event Volunteer",
@@ -98,7 +98,7 @@ export default function VolunteerPage() {
                 className="w-full max-w-sm border-0 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <CardContent className="p-8 text-center">
-                  <h2 className="font-script text-3xl text-[#0099FF]">
+                  <h2 className="text-2xl font-extrabold text-[#0099FF]">
                     {item.title}
                   </h2>
 
@@ -138,7 +138,7 @@ export default function VolunteerPage() {
             </p>
 
             <Link
-              href="https://new.shelterluv.com/form/volunteer/FAUN/14821-volunteer-application"
+              href="https://new.shelterluv.com/form/community/FAUN/14823"
               target="_blank"
               rel="noopener noreferrer"
             >
