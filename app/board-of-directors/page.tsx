@@ -74,7 +74,7 @@ const boardMembers = [
   {
     role: "Board Member",
     name: "Juanita Murphy",
-    image: "/juanita.jpg",
+    image: "/Juanita_Murphy.jpeg",
     bio: [
       "Since 2009, Juanita has been dedicated to animal rescue, first with the Natchitoches Humane Society and now with FAUNA. From animals arriving at the shelter near death to becoming beloved and deeply important companions, she says the most rewarding part of rescue is seeing those changes happen right before her eyes.",
       "Her journey into animal rescue began when two Natchitoches women, Sharon Gahagan and Conna Cloutier, encouraged her to help a dying dog at the City Shelter. Their encouragement changed the course of her life.",
