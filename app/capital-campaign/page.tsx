@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Learn about FAUNA's Edwina and Sam Friedman Pet Adoption and Welfare Center in Natchitoches Parish.",
 }
 
-const BASE = "http://www.npfauna.org/wp-content/uploads/2026/05"
+const BASE = "https://www.npfauna.org/wp-content/uploads/2026/05"
 
 const constructionImages = [
   {
@@ -149,21 +149,13 @@ export default function CapitalCampaignPage() {
             Coming Fall 2026
           </p>
 
-          <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 text-[#8AFF00]">
-            Capital Campaign
-          </Badge>
-
-          <h1 className="font-script mb-4 text-5xl leading-tight md:text-6xl">
+          <h1 className="mb-4 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
             The Edwina and Sam Friedman
             <br />
             <span className="text-[#33CCCC]">
               Pet Adoption &amp; Welfare Center
             </span>
           </h1>
-
-          <p className="text-xl text-gray-300">
-            Hope Has a Place Campaign
-          </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             A Home for Hope and a Hub for the Whole Community
