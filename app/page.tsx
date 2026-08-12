@@ -188,6 +188,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+          <div>
+            <p className="font-script text-4xl text-[#33CCCC]">Who we are</p>
+
+            <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+              Friends All United for Natchitoches Animals
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-gray-600">
+              FAUNA is a 501(c)(3) nonprofit dedicated to providing humane care
+              for homeless animals in Natchitoches Parish, Louisiana. Through
+              rescue, adoption, prevention programs, education, and community
+              partnerships, we work to create better outcomes for animals and
+              the people who care for them.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/history">
+                <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+                  Learn Our History
+                </Button>
+              </Link>
+
+              <Link href="/programs">
+                <Button
+                  variant="outline"
+                  className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
+                >
+                  Explore Our Programs
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="relative aspect-square w-full max-w-[460px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <Image
+                src="/Who_We_Are.jpg"
+                alt="FAUNA volunteers and animals"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 460px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#0a1e3d] px-6 py-12 text-white">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
@@ -308,54 +357,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-          <div>
-            <p className="font-script text-4xl text-[#33CCCC]">Who we are</p>
-
-            <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
-              Friends All United for Natchitoches Animals
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-gray-600">
-              FAUNA is a 501(c)(3) nonprofit dedicated to providing humane care
-              for homeless animals in Natchitoches Parish, Louisiana. Through
-              rescue, adoption, prevention programs, education, and community
-              partnerships, we work to create better outcomes for animals and
-              the people who care for them.
-            </p>
-
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/history">
-                <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
-                  Learn Our History
-                </Button>
-              </Link>
-
-              <Link href="/programs">
-                <Button
-                  variant="outline"
-                  className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
-                >
-                  Explore Our Programs
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="relative aspect-square w-full max-w-[460px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
-              <Image
-                src="/Who_We_Are.jpg"
-                alt="FAUNA volunteers and animals"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 80vw, 460px"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="bg-sky-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
