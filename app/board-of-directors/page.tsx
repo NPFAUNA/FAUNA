@@ -1,19 +1,8 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import {
-  BadgeCheck,
-  Handshake,
-  HeartHandshake,
-  Landmark,
-  Mail,
-  Scale,
-  ShieldCheck,
-  Target,
-} from "lucide-react"
+import Image from "next/image"
+import { BadgeCheck } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: "Board of Directors | FAUNA",
@@ -64,45 +53,6 @@ const boardMembers = [
   },
 ]
 
-const responsibilities = [
-  {
-    icon: Target,
-    title: "Strategic Direction",
-    description:
-      "Establishing organizational policies, priorities, and long-term goals.",
-  },
-  {
-    icon: Landmark,
-    title: "Financial Oversight",
-    description:
-      "Providing fiduciary oversight and supporting responsible use of charitable resources.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Ethical Governance",
-    description:
-      "Supporting transparent, accountable, and mission-focused operations.",
-  },
-  {
-    icon: Handshake,
-    title: "Community Partnerships",
-    description:
-      "Strengthening relationships with donors, volunteers, veterinarians, businesses, and public partners.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Sustainability",
-    description:
-      "Advancing fundraising, resource development, and FAUNA's long-term stability.",
-  },
-  {
-    icon: Scale,
-    title: "Mission Stewardship",
-    description:
-      "Protecting FAUNA's mission, reputation, and commitment to compassionate animal welfare.",
-  },
-]
-
 function ScriptTitle({ title }: { title: string }) {
   return (
     <>
@@ -141,6 +91,19 @@ export default function BoardOfDirectorsPage() {
             Providing governance, financial oversight, strategic leadership,
             and long-term stewardship for FAUNA.
           </p>
+
+          <div className="mt-10 flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white/25 shadow-2xl sm:h-80 sm:w-80">
+              <Image
+                src="/Board.jpg"
+                alt="FAUNA Board of Directors"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 288px, 320px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -200,92 +163,6 @@ export default function BoardOfDirectorsPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-sky-50 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <Badge className="mb-4 border-[#0099FF]/20 bg-[#0099FF]/10 text-[#0099FF]">
-              Board Responsibilities
-            </Badge>
-
-            <h2 className="font-script text-5xl text-[#0a1e3d] sm:text-6xl">
-              <ScriptTitle title="Stewarding FAUNA's Mission" />
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {responsibilities.map((responsibility) => {
-              const Icon = responsibility.icon
-
-              return (
-                <Card
-                  key={responsibility.title}
-                  className="border border-sky-100 bg-white shadow-md"
-                >
-                  <CardContent className="p-7">
-                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0099FF]">
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-
-                    <h3 className="font-script text-3xl text-[#0a1e3d]">
-                      <ScriptTitle title={responsibility.title} />
-                    </h3>
-
-                    <p className="mt-4 leading-relaxed text-gray-600">
-                      {responsibility.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-[#0a1e3d] p-8 text-center text-white sm:p-12">
-            <h2 className="font-script text-5xl text-[#33CCCC] sm:text-6xl">
-              <ScriptTitle title="Volunteer Leadership. Lasting Impact." />
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
-              FAUNA&apos;s board members bring diverse professional experience,
-              community knowledge, and a shared commitment to compassionate
-              animal welfare.
-            </p>
-
-            <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-gray-300">
-              Their leadership helps ensure that every donation, partnership,
-              and program creates meaningful and lasting impact.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-16 text-white">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <Mail className="mx-auto h-9 w-9 text-white" />
-
-          <h2 className="font-script mt-4 text-5xl">
-            <ScriptTitle title="Board Inquiries" />
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-white/95">
-            For governance, partnership, or board-related questions, contact
-            FAUNA.
-          </p>
-
-          <Link
-            href="mailto:rescue@npfauna.org?subject=FAUNA Board Inquiry"
-            className="mt-8 inline-block"
-          >
-            <Button className="h-auto bg-[#8AFF00] px-7 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
-              Email rescue@npfauna.org
-            </Button>
-          </Link>
         </div>
       </section>
     </div>
