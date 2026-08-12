@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   Building2,
-  Heart,
   HandHeart,
   PawPrint,
   Users,
@@ -59,28 +58,33 @@ export default function HistoryPage() {
             Our History
           </h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
-            FAUNA began with a simple but urgent belief: homeless animals in
-            Natchitoches Parish deserved better.
-          </p>
+          <div className="mt-10 flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white/25 shadow-2xl sm:h-80 sm:w-80">
+              <Image
+                src="/Paw.jpg"
+                alt="FAUNA animal welfare history"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 288px, 320px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-7 text-lg leading-relaxed text-gray-700">
+          <div className="text-lg leading-relaxed text-gray-700">
             <p>
-              For decades, compassionate residents and volunteers worked to
-              protect vulnerable animals, support families struggling to care
-              for their pets, and reduce unnecessary euthanasia. Their efforts
-              laid the foundation for Friends All United for Natchitoches
-              Animals, now known throughout the community as FAUNA.
-            </p>
-
-            <p>
-              What began as a small network of volunteers grew into a
-              coordinated animal-welfare organization serving animals and
-              families throughout Natchitoches Parish.
+              For decades, compassionate volunteers have worked to protect
+              vulnerable animals, reduce unnecessary euthanasia, and find loving
+              homes for animals in Natchitoches, LA. In 2022, the Natchitoches
+              Humane Society and Natchitoches Hope for Paws, two rescue
+              organizations serving Natchitoches Parish, combined to create
+              FAUNA - Friends All United for Natchitoches Animals. What began
+              years ago as a small network of volunteers has grown into a
+              strong, thriving, animal-welfare organization.
             </p>
           </div>
 
@@ -140,63 +144,34 @@ export default function HistoryPage() {
       </section>
 
       <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h2 className="font-script text-5xl text-[#0a1e3d]">
-                Lifesaving Programs
-              </h2>
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="font-script text-5xl text-[#0a1e3d]">
+            Lifesaving Programs
+          </h2>
 
-              <p className="mt-6 leading-relaxed text-gray-700">
-                Through foster homes, local adoptions, rescue transports,
-                veterinary assistance, vaccination events, Trap-Neuter-Return,
-                and community outreach, FAUNA has helped thousands of animals
-                find safety, care, and loving homes.
-              </p>
+          <p className="mt-6 leading-relaxed text-gray-700">
+            Through foster homes, local adoptions, rescue transports,
+            veterinary assistance, vaccination events, Trap-Neuter-Return,
+            and community outreach, FAUNA has helped thousands of animals
+            find safety, care, and loving homes.
+          </p>
 
-              <p className="mt-5 leading-relaxed text-gray-700">
-                FAUNA also works to address the causes of animal homelessness.
-                Programs such as Spay Natchitoches, community cat TNR, low-cost
-                vaccinations, pet-retention support, and humane education help
-                prevent animals from entering shelters in the first place.
-              </p>
+          <p className="mt-5 leading-relaxed text-gray-700">
+            FAUNA also works to address the causes of animal homelessness.
+            Programs such as Spay Natchitoches, community cat TNR, low-cost
+            vaccinations, pet-retention support, and humane education help
+            prevent animals from entering shelters in the first place.
+          </p>
 
-              <div className="mt-10 flex justify-center">
-                <div className="relative aspect-square w-full max-w-[360px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
-                  <Image
-                    src="/History_Lifesaving.jpg"
-                    alt="An animal helped through FAUNA&apos;s lifesaving programs"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 80vw, 360px"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl bg-[#0a1e3d] p-8 text-white sm:p-10">
-              <Heart className="h-9 w-9 text-[#8AFF00]" />
-
-              <h2 className="font-script mt-5 text-5xl text-[#33CCCC]">
-                A Community That Refused to Give Up
-              </h2>
-
-              <p className="mt-6 leading-relaxed text-sky-100">
-                Every chapter of FAUNA&apos;s history has been written by
-                people who chose to act.
-              </p>
-
-              <p className="mt-5 leading-relaxed text-gray-300">
-                Volunteers opened their homes. Donors provided food, medicine,
-                and lifesaving treatment. Veterinary partners made care more
-                accessible. Rescue organizations helped move animals to
-                communities where adoptive homes were available.
-              </p>
-
-              <p className="mt-5 leading-relaxed text-gray-300">
-                Local businesses, foundations, civic leaders, and residents
-                joined together to create lasting change.
-              </p>
+          <div className="mt-10 flex justify-center">
+            <div className="relative aspect-square w-full max-w-[360px] overflow-hidden rounded-full border-8 border-sky-100 shadow-xl">
+              <Image
+                src="/History_Lifesaving.jpg"
+                alt="An animal helped through FAUNA&apos;s lifesaving programs"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 80vw, 360px"
+              />
             </div>
           </div>
         </div>
