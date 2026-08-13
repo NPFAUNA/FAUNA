@@ -432,7 +432,7 @@ export default function CapitalCampaignPage() {
 
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 text-center">
-          <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 text-[#0a1e3d]">
+          <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 font-sans text-[#0a1e3d]">
             Hope Has a Place
           </Badge>
 
@@ -468,8 +468,8 @@ export default function CapitalCampaignPage() {
           </div>
 
           <div className="rounded-2xl bg-[#0a1e3d] px-6 py-12 text-white">
-            <h2 className="font-script text-4xl text-[#33CCCC] md:text-5xl">
-              Explore the Hope Has a Place Campaign
+            <h2 className="font-sans text-4xl font-bold text-[#33CCCC] md:text-5xl">
+              Explore the Campaign Flipbook
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-sky-100">
@@ -488,11 +488,26 @@ export default function CapitalCampaignPage() {
               />
             </div>
 
-            <Link href="/hope-has-a-place">
-              <Button className="mt-8 h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
-                View Naming &amp; Capital Opportunities
-              </Button>
-            </Link>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link href="/hope-has-a-place">
+                <Button className="h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                  View Naming &amp; Capital Opportunities
+                </Button>
+              </Link>
+
+              <Link
+                href="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  className="h-auto border-[#33CCCC] bg-transparent px-8 py-4 font-bold text-[#33CCCC] hover:bg-[#33CCCC]/10 hover:text-[#33CCCC]"
+                >
+                  Open Campaign Flipbook
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
