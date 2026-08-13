@@ -68,7 +68,7 @@ const faqs = [
 ]
 
 export default function HopeHasAPlaceCampaignPage() {
-  const spacesImageOne = `${BASE}/spaces1-1.png`
+  const spacesImageOne = "/Spaces_1.png"
   const spacesImageTwo = `${BASE}/Spaces-2-2.png`
   const symbolsImage = `${BASE}/Symbols-of-Hope-2.png`
   const circleImage = `${BASE}/Circle-of-Hope-2.png`
