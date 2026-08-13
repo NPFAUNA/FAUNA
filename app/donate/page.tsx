@@ -116,12 +116,23 @@ export default function DonatePage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-[#8AFF00] shadow-xl sm:h-52 sm:w-52">
+            <Image
+              src="/Donate_Dog.jpeg"
+              alt="FAUNA rescue dog"
+              width={208}
+              height={208}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
+
           <Badge className="mb-5 border-[#8AFF00]/30 bg-[#8AFF00]/15 text-[#8AFF00]">
             Make a Difference
           </Badge>
 
-          <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
-            <ScriptTitle title="Help Build Brighter Futures for Natchitoches Animals" />
+          <h1 className="font-sans text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl">
+            Every Contribution (Big or Small) Saves Lives
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
