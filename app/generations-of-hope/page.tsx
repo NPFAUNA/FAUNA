@@ -32,6 +32,13 @@ const CIRCLE_OF_HOPE_FORM =
 
 const campaignEmail = "hopehasaplace@npfauna.org"
 
+const CAMPAIGN_FLIPBOOK =
+  "https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
+
+const SPACES_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=5`
+const SYMBOLS_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=9`
+const CIRCLE_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=12`
+
 const faqs = [
   {
     question: "Are campaign gifts tax-deductible?",
@@ -77,7 +84,7 @@ export default function HopeHasAPlaceCampaignPage() {
             Naming &amp; Capital Opportunities
           </Badge>
 
-          <h1 className="font-script text-5xl leading-tight text-white sm:text-6xl md:text-7xl">
+          <h1 className="font-sans text-5xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl">
             Hope Has a Place Campaign
           </h1>
 
@@ -335,17 +342,32 @@ export default function HopeHasAPlaceCampaignPage() {
                     opportunities.
                   </p>
 
-                  <Link
-                    href={SPACES_OF_HOPE_FORM}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 w-fit"
-                  >
-                    <Button className="h-auto bg-[#0099FF] px-7 py-3 font-bold text-white hover:bg-[#0088ee]">
-                      Reserve a Space
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link
+                      href={SPACES_OF_HOPE_FORM}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="h-auto bg-[#0099FF] px-7 py-3 font-bold text-white hover:bg-[#0088ee]">
+                        Reserve a Space
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+
+                    <Link
+                      href={SPACES_FLIPBOOK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        className="h-auto border-[#0099FF] px-7 py-3 font-bold text-[#0099FF] hover:bg-sky-50"
+                      >
+                        View in Flipbook
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </article>
@@ -377,17 +399,32 @@ export default function HopeHasAPlaceCampaignPage() {
                     center&apos;s lasting story.
                   </p>
 
-                  <Link
-                    href={SYMBOLS_OF_HOPE_FORM}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 w-fit"
-                  >
-                    <Button className="h-auto bg-[#33CCCC] px-7 py-3 font-bold text-[#061424] hover:bg-[#29b8b8]">
-                      Reserve a Symbol
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link
+                      href={SYMBOLS_OF_HOPE_FORM}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="h-auto bg-[#33CCCC] px-7 py-3 font-bold text-[#061424] hover:bg-[#29b8b8]">
+                        Reserve a Symbol
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+
+                    <Link
+                      href={SYMBOLS_FLIPBOOK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        className="h-auto border-[#33CCCC] px-7 py-3 font-bold text-[#167f7f] hover:bg-teal-50"
+                      >
+                        View in Flipbook
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="bg-teal-50 p-5 sm:p-8 lg:order-2">
@@ -468,17 +505,32 @@ export default function HopeHasAPlaceCampaignPage() {
                     community programs.
                   </p>
 
-                  <Link
-                    href={CIRCLE_OF_HOPE_FORM}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 w-fit"
-                  >
-                    <Button className="h-auto bg-[#8AFF00] px-7 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
-                      Join the Circle of Hope
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link
+                      href={CIRCLE_OF_HOPE_FORM}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="h-auto bg-[#8AFF00] px-7 py-3 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                        Join the Circle of Hope
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+
+                    <Link
+                      href={CIRCLE_FLIPBOOK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        className="h-auto border-[#8AFF00] px-7 py-3 font-bold text-[#356600] hover:bg-lime-50"
+                      >
+                        View in Flipbook
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </article>
@@ -537,7 +589,7 @@ export default function HopeHasAPlaceCampaignPage() {
               Campaign Guide
             </Badge>
 
-            <h2 className="font-script text-5xl text-white sm:text-6xl">
+            <h2 className="font-sans text-5xl font-extrabold text-white sm:text-6xl">
               Explore the Campaign Flipbook
             </h2>
 
@@ -552,7 +604,7 @@ export default function HopeHasAPlaceCampaignPage() {
             style={{ paddingBottom: "60%" }}
           >
             <iframe
-              src="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              src={CAMPAIGN_FLIPBOOK}
               className="absolute inset-0 h-full w-full"
               title="Hope Has a Place Campaign flipbook"
               allowFullScreen
@@ -561,7 +613,7 @@ export default function HopeHasAPlaceCampaignPage() {
 
           <div className="mt-6 text-center">
             <a
-              href="https://online.fliphtml5.com/placeforhope/Generations-of-Hope---Updated-Tables/"
+              href={CAMPAIGN_FLIPBOOK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
