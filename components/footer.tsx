@@ -27,7 +27,7 @@ const footerLinks = [
   },
   {
     label: "Friedman Center",
-    href: "/capital-campaign",
+    href: "/friedmancenter",
   },
   {
     label: "Resources",
