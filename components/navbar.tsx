@@ -38,15 +38,15 @@ const programItems = [
     label: "TNR",
   },
   {
-    href: "/healthfairs",
+    href: "/programs#community-health-fairs",
     label: "Community Health Fairs",
   },
   {
-    href: "/pact",
+    href: "/programs#pact",
     label: "PACT Therapy",
   },
   {
-    href: "/klaws",
+    href: "/programs#klaws",
     label: "KLAWS",
   },
 ]
@@ -109,7 +109,8 @@ export function Navbar() {
 
   const isProgramsActive =
     pathname === "/programs" ||
-    programItems.some((item) => pathname === item.href)
+    pathname === "/spay" ||
+    pathname === "/tnr"
 
   const isAdoptActive = adoptFosterItems.some(
     (item) => pathname === item.href,
@@ -463,12 +464,7 @@ export function Navbar() {
                       key={item.href}
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className={cn(
-                        "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
-                        pathname === item.href
-                          ? "bg-sky-100 text-[#0099FF]"
-                          : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                      )}
+                      className="block rounded-md px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-sky-50 hover:text-[#0099FF]"
                     >
                       {item.label}
                     </Link>
