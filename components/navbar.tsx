@@ -105,9 +105,7 @@ export function Navbar() {
     setMobileCenterOpen(false)
   }
 
-  const isAboutActive =
-    pathname === "/about" ||
-    aboutItems.some((item) => pathname === item.href)
+  const isAboutActive = aboutItems.some((item) => pathname === item.href)
 
   const isProgramsActive =
     pathname === "/programs" ||
@@ -155,33 +153,19 @@ export function Navbar() {
             </Link>
 
             <div className="group relative">
-              <div
+              <button
+                type="button"
                 className={cn(
-                  "flex items-center rounded-md transition-colors",
+                  "flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   isAboutActive
-                    ? "bg-sky-100 text-[#0099FF]"
+                    ? "bg-sky-100 font-semibold text-[#0099FF]"
                     : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
                 )}
+                aria-haspopup="true"
               >
-                <Link
-                  href="/about"
-                  className={cn(
-                    "whitespace-nowrap py-2 pl-3 text-sm font-medium",
-                    isAboutActive && "font-semibold",
-                  )}
-                >
-                  About
-                </Link>
-
-                <button
-                  type="button"
-                  className="py-2 pl-1 pr-3"
-                  aria-label="Show About menu"
-                  aria-haspopup="true"
-                >
-                  <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
-                </button>
-              </div>
+                About
+                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+              </button>
 
               <div className="invisible absolute left-0 top-full z-50 min-w-56 translate-y-2 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <div className="overflow-hidden rounded-xl border border-sky-100 bg-white p-2 shadow-xl">
@@ -396,61 +380,46 @@ export function Navbar() {
               Home
             </Link>
 
-            <div>
-              <div
-                className={cn(
-                  "flex items-center rounded-md transition-colors",
-                  isAboutActive
-                    ? "bg-sky-100 font-semibold text-[#0099FF]"
-                    : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                )}
-              >
-                <Link
-                  href="/about"
-                  onClick={closeMobileMenu}
-                  className="flex-1 px-3 py-2.5 text-sm font-medium"
-                >
-                  About
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={() =>
-                    setMobileAboutOpen((current) => !current)
-                  }
-                  className="px-3 py-2.5"
-                  aria-label="Show About menu"
-                  aria-expanded={mobileAboutOpen}
-                >
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform",
-                      mobileAboutOpen && "rotate-180",
-                    )}
-                  />
-                </button>
-              </div>
-
-              {mobileAboutOpen && (
-                <div className="ml-3 mt-1 space-y-1 border-l-2 border-sky-100 pl-3">
-                  {aboutItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={closeMobileMenu}
-                      className={cn(
-                        "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
-                        pathname === item.href
-                          ? "bg-sky-100 text-[#0099FF]"
-                          : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
+            <button
+              type="button"
+              onClick={() => setMobileAboutOpen((current) => !current)}
+              className={cn(
+                "flex w-full items-center justify-between rounded-md px-3 py-2.5 text-left text-sm font-medium transition-colors",
+                isAboutActive
+                  ? "bg-sky-100 font-semibold text-[#0099FF]"
+                  : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
               )}
-            </div>
+              aria-expanded={mobileAboutOpen}
+            >
+              About
+
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  mobileAboutOpen && "rotate-180",
+                )}
+              />
+            </button>
+
+            {mobileAboutOpen && (
+              <div className="ml-3 space-y-1 border-l-2 border-sky-100 pl-3">
+                {aboutItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    className={cn(
+                      "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
+                      pathname === item.href
+                        ? "bg-sky-100 text-[#0099FF]"
+                        : "text-gray-600 hover:bg-sky-50 hover:text-[#0099FF]",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
 
             <div>
               <div
