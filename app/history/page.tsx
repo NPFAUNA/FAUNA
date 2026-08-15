@@ -213,7 +213,7 @@ export default function HistoryPage() {
           </p>
 
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href="/capital-campaign">
+            <Link href="/friedmancenter">
               <Button className="h-auto bg-[#0a1e3d] px-7 py-3 font-bold text-white hover:bg-[#061424]">
                 Explore the Friedman Center
               </Button>
@@ -230,3 +230,4 @@ export default function HistoryPage() {
     </div>
   )
 }
+
