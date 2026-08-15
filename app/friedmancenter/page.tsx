@@ -12,8 +12,6 @@ export const metadata: Metadata = {
     "Learn about FAUNA's Edwina and Sam Friedman Pet Adoption and Welfare Center in Natchitoches Parish.",
 }
 
-const BASE = "https://www.npfauna.org/wp-content/uploads/2026/05"
-
 const constructionImages = [
   {
     src: "/Cat area 1.png",
@@ -103,8 +101,8 @@ const specialRecognitionLogos = [
     alt: "Southern Pipe & Supply",
   },
   {
-    src: "/special-recognition/southern.png",
-    alt: "Southern logo mark",
+    src: "/special-recognition/Southern_Aluminum.jpg",
+    alt: "Southern Aluminum",
   },
   {
     src: "/special-recognition/shaw.png",
@@ -352,11 +350,10 @@ export default function CapitalCampaignPage() {
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-2xl md:mx-0">
               <Image
-                src={`${BASE}/43.png`}
+                src="/Edwina_Sam.jpg"
                 alt="Edwina and Sam Friedman"
                 fill
                 className="object-cover"
-                unoptimized
               />
             </div>
 
@@ -391,7 +388,6 @@ export default function CapitalCampaignPage() {
           </div>
         </div>
       </section>
-
 
       <section id="special-recognition" className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 text-center">
@@ -489,7 +485,7 @@ export default function CapitalCampaignPage() {
             </div>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/hope-has-a-place">
+              <Link href="/hopehasaplace">
                 <Button className="h-auto bg-[#8AFF00] px-8 py-4 font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
                   View Naming &amp; Capital Opportunities
                 </Button>
