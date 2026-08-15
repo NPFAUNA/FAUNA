@@ -103,6 +103,7 @@ const specialRecognitionLogos = [
   {
     src: "/special-recognition/Southern_Aluminum.png",
     alt: "Southern Aluminum",
+    darkBackground: true,
   },
   {
     src: "/special-recognition/shaw.png",
@@ -138,9 +139,10 @@ const specialRecognitionLogos = [
   },
 ]
 
-export default function CapitalCampaignPage() {
+export default function FriedmanCenterPage() {
   return (
     <div className="min-h-screen">
+      {/* Hero */}
       <section className="bg-gradient-to-br from-[#0a1e3d] via-[#0d2851] to-[#061424] py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#8AFF00] sm:text-base">
@@ -191,6 +193,7 @@ export default function CapitalCampaignPage() {
         </div>
       </section>
 
+      {/* Our Story */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-4xl px-4">
           <div className="mb-8 text-center">
@@ -265,6 +268,7 @@ export default function CapitalCampaignPage() {
         </div>
       </section>
 
+      {/* Construction Progress */}
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-script mb-8 text-center text-7xl text-[#0a1e3d]">
@@ -345,6 +349,7 @@ export default function CapitalCampaignPage() {
         </div>
       </section>
 
+      {/* Edwina and Sam Friedman */}
       <section className="bg-gradient-to-br from-[#0a1e3d] to-[#0d2851] py-20 text-white">
         <div className="mx-auto max-w-5xl px-4">
           <div className="grid items-center gap-12 md:grid-cols-2">
@@ -354,6 +359,7 @@ export default function CapitalCampaignPage() {
                 alt="Edwina and Sam Friedman"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 90vw, 384px"
               />
             </div>
 
@@ -389,6 +395,7 @@ export default function CapitalCampaignPage() {
         </div>
       </section>
 
+      {/* Special Recognition */}
       <section id="special-recognition" className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 text-center">
           <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#0a1e3d]">
@@ -411,13 +418,21 @@ export default function CapitalCampaignPage() {
             {specialRecognitionLogos.map((logo) => (
               <div
                 key={logo.src}
-                className="relative h-36 w-36 overflow-hidden rounded-full border border-gray-200 bg-white shadow-md"
+                className={`relative h-36 w-36 overflow-hidden rounded-full border shadow-md ${
+                  logo.darkBackground
+                    ? "border-[#33CCCC]/40 bg-[#0a1e3d]"
+                    : "border-gray-200 bg-white"
+                }`}
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   fill
-                  className="object-contain p-4"
+                  className={
+                    logo.darkBackground
+                      ? "object-contain p-2"
+                      : "object-contain p-4"
+                  }
                   sizes="144px"
                 />
               </div>
@@ -426,6 +441,7 @@ export default function CapitalCampaignPage() {
         </div>
       </section>
 
+      {/* Naming Campaign */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <Badge className="mb-4 border-[#8AFF00]/30 bg-[#8AFF00]/20 font-sans text-[#0a1e3d]">
