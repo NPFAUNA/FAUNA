@@ -101,7 +101,7 @@ const specialRecognitionLogos = [
     alt: "Southern Pipe & Supply",
   },
   {
-    src: "/special-recognition/Southern_Aluminum.jpg",
+    src: "/special-recognition/Southern_Aluminum.png",
     alt: "Southern Aluminum",
   },
   {
