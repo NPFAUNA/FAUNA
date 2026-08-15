@@ -19,8 +19,6 @@ export const metadata: Metadata = {
     "Explore naming and capital opportunities supporting the Edwina and Sam Friedman Pet Adoption and Welfare Center.",
 }
 
-const BASE = "http://www.npfauna.org/wp-content/uploads/2026/05"
-
 const SPACES_OF_HOPE_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLSd9ON6iD-ia_VU0ypZTPr5bwkaI0vqVyBTXf0_p8D63S_08xg/viewform?usp=header"
 
@@ -38,6 +36,10 @@ const CAMPAIGN_FLIPBOOK =
 const SPACES_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=5`
 const SYMBOLS_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=9`
 const CIRCLE_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=12`
+
+const spacesImage = "/Spaces_1.png"
+const symbolsImage = "/Symbols-of-Hope-2.png"
+const circleImage = "/Circle-of-Hope-2.png"
 
 const faqs = [
   {
@@ -68,13 +70,9 @@ const faqs = [
 ]
 
 export default function HopeHasAPlaceCampaignPage() {
-  const spacesImageOne = `${BASE}/spaces1-1.png`
-  const spacesImageTwo = `${BASE}/Spaces-2-2.png`
-  const symbolsImage = `${BASE}/Symbols-of-Hope-2.png`
-  const circleImage = `${BASE}/Circle-of-Hope-2.png`
-
   return (
     <div className="min-h-screen bg-white">
+      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white md:py-28">
         <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-[#0099FF]/10 blur-3xl" />
         <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#8AFF00]/10 blur-3xl" />
@@ -125,6 +123,7 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
+      {/* Campaign Categories */}
       <section className="bg-sky-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -243,6 +242,7 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
+      {/* Giving Opportunities */}
       <section
         id="giving-opportunities"
         className="scroll-mt-24 bg-white py-20"
@@ -269,55 +269,33 @@ export default function HopeHasAPlaceCampaignPage() {
           </div>
 
           <div className="space-y-12">
+            {/* Spaces of Hope */}
             <article
               id="spaces-of-hope"
               className="scroll-mt-24 overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-xl"
             >
-              <div className="grid items-stretch lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="grid items-stretch lg:grid-cols-[1.15fr_0.85fr]">
                 <div className="bg-sky-50 p-5 sm:p-8">
-                  <div className="grid h-full gap-6 xl:grid-cols-2">
-                    <a
-                      href={spacesImageOne}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Open the full-size Spaces of Hope naming opportunities image"
-                      className="group relative block min-h-[520px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                    >
-                      <Image
-                        src={spacesImageOne}
-                        alt="Spaces of Hope naming opportunities and giving levels"
-                        fill
-                        className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
-                        unoptimized
-                      />
+                  <a
+                    href={spacesImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full-size Spaces of Hope naming opportunities image"
+                    className="group relative mx-auto block aspect-[864/1760] w-full max-w-[620px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <Image
+                      src={spacesImage}
+                      alt="Spaces of Hope naming opportunities and giving levels"
+                      fill
+                      className="object-contain p-2 transition duration-300 group-hover:scale-[1.01]"
+                      sizes="(max-width: 1024px) 90vw, 620px"
+                    />
 
-                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
-                        <ZoomIn className="h-4 w-4" />
-                        Click to Enlarge
-                      </span>
-                    </a>
-
-                    <a
-                      href={spacesImageTwo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Open the full-size additional Spaces of Hope naming opportunities image"
-                      className="group relative block min-h-[520px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                    >
-                      <Image
-                        src={spacesImageTwo}
-                        alt="Additional Spaces of Hope naming opportunities and giving levels"
-                        fill
-                        className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
-                        unoptimized
-                      />
-
-                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
-                        <ZoomIn className="h-4 w-4" />
-                        Click to Enlarge
-                      </span>
-                    </a>
-                  </div>
+                    <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                      <ZoomIn className="h-4 w-4" />
+                      Click to Enlarge
+                    </span>
+                  </a>
                 </div>
 
                 <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-14">
@@ -337,7 +315,7 @@ export default function HopeHasAPlaceCampaignPage() {
                   </p>
 
                   <p className="mt-4 leading-relaxed text-gray-600">
-                    Review the giving-level images to explore available rooms,
+                    Review the giving-level image to explore available rooms,
                     care areas, gathering spaces, and other naming
                     opportunities.
                   </p>
@@ -372,6 +350,7 @@ export default function HopeHasAPlaceCampaignPage() {
               </div>
             </article>
 
+            {/* Symbols of Hope */}
             <article
               id="symbols-of-hope"
               className="scroll-mt-24 overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl"
@@ -440,7 +419,7 @@ export default function HopeHasAPlaceCampaignPage() {
                       alt="Symbols of Hope recognition opportunities and giving levels"
                       fill
                       className="object-contain p-4 transition duration-300 group-hover:scale-[1.02]"
-                      unoptimized
+                      sizes="(max-width: 1024px) 90vw, 700px"
                     />
 
                     <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
@@ -452,6 +431,7 @@ export default function HopeHasAPlaceCampaignPage() {
               </div>
             </article>
 
+            {/* Circle of Hope */}
             <article
               id="circle-of-hope"
               className="scroll-mt-24 overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-xl"
@@ -470,7 +450,7 @@ export default function HopeHasAPlaceCampaignPage() {
                       alt="Circle of Hope annual membership levels"
                       fill
                       className="object-contain p-4 transition duration-300 group-hover:scale-[1.02]"
-                      unoptimized
+                      sizes="(max-width: 1024px) 90vw, 700px"
                     />
 
                     <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
@@ -538,6 +518,7 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
+      {/* FAQs */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -576,6 +557,7 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
+      {/* Campaign Flipbook */}
       <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <Heart className="mx-auto mb-5 h-10 w-10 fill-white text-white" />
@@ -584,7 +566,7 @@ export default function HopeHasAPlaceCampaignPage() {
             Be Part of the Legacy
           </h2>
 
-          <div className="mt-10 mb-10 text-center">
+          <div className="mb-10 mt-10 text-center">
             <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
               Campaign Guide
             </Badge>
