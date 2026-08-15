@@ -357,7 +357,6 @@ export default function HomePage() {
         </div>
       </section>
 
-
       <section className="bg-sky-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
@@ -429,11 +428,11 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div className="relative min-h-[340px] overflow-hidden rounded-3xl bg-sky-100 shadow-xl lg:min-h-[450px]">
             <Image
-              src="https://www.npfauna.org/wp-content/uploads/2025/09/New-FAUNA-adoption-center-1.webp"
-              alt="The new FAUNA adoption and welfare center"
+              src="/Rendering5.png"
+              alt="The Edwina and Sam Friedman Pet Adoption and Welfare Center"
               fill
               className="object-cover"
-              unoptimized
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
@@ -537,4 +536,3 @@ export default function HomePage() {
     </main>
   )
 }
-
