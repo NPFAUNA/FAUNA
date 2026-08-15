@@ -138,7 +138,7 @@ export default function VolunteerPage() {
             </p>
 
             <Link
-              href="https://new.shelterluv.com/form/community/FAUN/14823"
+              href="https://new.shelterluv.com/form/volunteer/FAUN/14821-volunteer-application"
               target="_blank"
               rel="noopener noreferrer"
             >
