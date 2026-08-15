@@ -137,7 +137,7 @@ const foodResources = [
     location: "Natchitoches",
     description:
       "A local food pantry offering pet-food assistance for families in the Natchitoches area.",
-    website: "https://www.caneriverfoodpantry.org",
+    website: "https://caneriverfoodpantry.weebly.com/",
     label: "Local",
   },
   {
