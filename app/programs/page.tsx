@@ -5,7 +5,7 @@ import {
   ArrowRight,
   Bath,
   Cat,
-  CheckCircle,
+  CheckCircle,	
   ExternalLink,
   Heart,
   HeartPulse,
@@ -28,13 +28,13 @@ const programs = [
   {
     title: "Spay Natchitoches",
     body: "Voucher assistance that helps community pet owners access affordable spay and neuter services.",
-    href: "/programs/spay-natchitoches",
+    href: "/spay",
     icon: Stethoscope,
   },
   {
     title: "TNR Program",
     body: "Humane Trap-Neuter-Return services that improve the health and stability of community cat colonies.",
-    href: "/programs/tnr",
+    href: "/tnr",
     icon: Cat,
   },
   {
@@ -692,3 +692,4 @@ export default function ProgramsPage() {
     </main>
   )
 }
+
