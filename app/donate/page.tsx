@@ -110,7 +110,7 @@ export default function DonatePage() {
           </Badge>
 
           <h1 className="font-sans text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl">
-            Every Contribution (Big or Small) Saves Lives
+            Support Our Mission
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-sky-100">
