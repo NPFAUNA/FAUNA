@@ -5,7 +5,6 @@ import {
   Grid3X3,
   Heart,
   MapPin,
-  ShoppingCart,
   Star,
 } from "lucide-react"
 
@@ -18,53 +17,32 @@ export const metadata: Metadata = {
     "Support FAUNA through online donations, PayPal, Venmo, wishlists, mailed checks, and memorial or honorary gifts.",
 }
 
-const BASE05 = "http://www.npfauna.org/wp-content/uploads/2026/05"
-const BASE06 = "http://www.npfauna.org/wp-content/uploads/2026/06"
-
 const donationTiers = [
   {
     amount: "$20",
     label: "Feeds a rescued animal for one week.",
-    img: `${BASE06}/8.png`,
+    img: "/Bath_Days.jpg",
   },
   {
     amount: "$50",
     label: "Provides lifesaving vaccinations.",
-    img: `${BASE05}/1-4.png`,
+    img: "/Employment_1.jpg",
   },
   {
     amount: "$100",
     label: "Sponsors a spay or neuter surgery.",
-    img: `${BASE05}/2-2.png`,
+    img: "/Carousel_3.jpg",
   },
   {
     amount: "$250",
     label: "Helps transport animals to loving homes.",
-    img: `${BASE05}/14.png`,
+    img: "/Pup2.jpg",
   },
   {
     amount: "$500",
     label: "Provides emergency medical care for an animal in crisis.",
-    img: `${BASE05}/29-1.png`,
+    img: "/Adoption_Event1.jpg",
   },
-]
-
-const galleryImages = [
-  { src: `${BASE06}/4.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/52.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE06}/8.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/16-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/1-5.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/25-2.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/19-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE06}/12.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/15-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/18-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/47.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE06}/9.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/13-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE05}/27-1.png`, alt: "FAUNA rescue animal" },
-  { src: `${BASE06}/10.png`, alt: "FAUNA rescue animal" },
 ]
 
 const wishlistStores = [
@@ -168,7 +146,6 @@ export default function DonatePage() {
                     alt={tier.label}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    unoptimized
                   />
                 </div>
 
@@ -442,28 +419,37 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="bg-gray-50 py-12">
+      {/* Lives You're Helping */}
+      <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-script mb-8 text-center text-4xl text-[#0a1e3d] sm:text-5xl">
+          <h2 className="font-script mb-10 text-center text-4xl text-[#0a1e3d] sm:text-5xl">
             <ScriptTitle title="Lives You&apos;re Helping" />
           </h2>
 
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
-            {galleryImages.map((image, index) => (
-              <div
-                key={`${image.src}-${index}`}
-                className="relative aspect-square overflow-hidden rounded-lg"
-              >
+          <div className="mx-auto grid max-w-4xl gap-10 md:grid-cols-2">
+            <div className="mx-auto w-full max-w-[380px]">
+              <div className="relative aspect-square overflow-hidden rounded-full border-8 border-[#33CCCC] bg-white shadow-xl">
                 <Image
-                  src={image.src}
-                  alt={image.alt}
+                  src="/Carousel_10.jpg"
+                  alt="FAUNA rescue animal"
                   fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  unoptimized
+                  sizes="(max-width: 768px) 90vw, 380px"
+                  className="object-cover"
                 />
               </div>
-            ))}
+            </div>
+
+            <div className="mx-auto w-full max-w-[380px]">
+              <div className="relative aspect-square overflow-hidden rounded-full border-8 border-[#33CCCC] bg-white shadow-xl">
+                <Image
+                  src="/Carousel_6.jpg"
+                  alt="FAUNA rescue animal"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 380px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
