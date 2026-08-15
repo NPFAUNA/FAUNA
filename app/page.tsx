@@ -23,7 +23,7 @@ const programs = [
     title: "Spay Natchitoches",
     description:
       "Helping Natchitoches Parish pet owners access affordable spay and neuter services.",
-    href: "/programs/spay-natchitoches",
+    href: "/spay",
     icon: Stethoscope,
     color: "bg-[#8AFF00]/25",
   },
@@ -31,7 +31,7 @@ const programs = [
     title: "TNR Program",
     description:
       "Humane Trap-Neuter-Return services that improve the health and stability of community cat colonies.",
-    href: "/programs/tnr",
+    href: "/tnr",
     icon: Cat,
     color: "bg-[#33CCCC]/20",
   },
@@ -457,18 +457,18 @@ export default function HomePage() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/capital-campaign">
+              <Link href="/friedmancenter">
                 <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
                   Explore the Friedman Center
                 </Button>
               </Link>
 
-              <Link href="/generations-of-hope">
+              <Link href="/hopehasaplace">
                 <Button
                   variant="outline"
                   className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
                 >
-                  Generations of Hope
+                  Hope Has a Place Campaign
                 </Button>
               </Link>
             </div>
@@ -537,3 +537,4 @@ export default function HomePage() {
     </main>
   )
 }
+
