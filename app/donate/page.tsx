@@ -23,11 +23,11 @@ const donationTiers = [
     label: "Feeds a rescued animal for one week.",
     img: "/Bath_Days.jpg",
   },
-  {
-    amount: "$50",
-    label: "Provides lifesaving vaccinations.",
-    img: "/Employment_1.jpg",
-  },
+ {
+  amount: "$50",
+  label: "Provides lifesaving vaccinations.",
+  img: "/Donate_50.jpg",
+},
   {
     amount: "$100",
     label: "Sponsors a spay or neuter surgery.",
@@ -39,10 +39,10 @@ const donationTiers = [
     img: "/Pup2.jpg",
   },
   {
-    amount: "$500",
-    label: "Provides emergency medical care for an animal in crisis.",
-    img: "/Adoption_Event1.jpg",
-  },
+  amount: "$500",
+  label: "Provides emergency medical care for an animal in crisis.",
+  img: "/Donate_500.jpg",
+},
 ]
 
 const wishlistStores = [
