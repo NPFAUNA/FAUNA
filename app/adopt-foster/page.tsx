@@ -67,10 +67,10 @@ const adoptionPhotos = [
     src: "/Adopt_2.jpg",
     alt: "Animal available for adoption through FAUNA",
   },
-  {
-    src: "/Adopt_3.jpg",
-    alt: "FAUNA rescue animal ready for a home",
-  },
+ {
+  src: "/Adopt_Foster.JPEG",
+  alt: "FAUNA cat ready for adoption",
+},
 ]
 
 const fosterPhotos = [
@@ -82,10 +82,10 @@ const fosterPhotos = [
     src: "/Foster_2.jpg",
     alt: "Foster animal supported by FAUNA",
   },
-  {
-    src: "/Foster_3.jpg",
-    alt: "FAUNA foster family helping an animal",
-  },
+ {
+  src: "/Bottom_Right.jpg",
+  alt: "FAUNA animal in foster care",
+},
 ]
 
 const steps = [
