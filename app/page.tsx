@@ -107,10 +107,10 @@ const connectedPhotos = [
     src: "/Home_2.jpg",
     alt: "A FAUNA rescue animal",
   },
-  {
-    src: "/Home_3.jpg",
-    alt: "An animal receiving care through FAUNA",
-  },
+    {
+  src: "/Boy_Dog.jpeg",
+  alt: "FAUNA supporter with a dog",
+},
 ]
 
 export default function HomePage() {
