@@ -102,7 +102,7 @@ const localVets = [
   {
     name: "Red River Veterinary Center",
     address: "Coushatta, LA",
-    distance: "Approximately 31 miles southeast",
+    distance: "Approximately 31 miles northwest",
     phone: "318-932-1000",
     phoneHref: "tel:3189321000",
     description:
