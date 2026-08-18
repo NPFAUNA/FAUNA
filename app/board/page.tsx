@@ -15,7 +15,7 @@ const boardMembers = [
   {
     role: "President",
     name: "Leah Forsyth",
-    image: "/Leah.jpg",
+    image: "/Leah_2.jpg",
     bio: [
       "Leah Forsyth has been involved in animal rescue in Natchitoches since 2011 when she adopted her beagle mix Maggie. She has previously served as Secretary and Vice President for FAUNA.",
       "She is a member of the Northwestern State University Music Faculty and a professional oboist. Leah loves gardening, doing yoga, and spending time with her husband, son, dog, and two cats. You can get Leah to do anything by suggesting getting a coffee along the way.",
