@@ -31,7 +31,7 @@ const CIRCLE_OF_HOPE_FORM =
 const campaignEmail = "hopehasaplace@npfauna.org"
 
 const CAMPAIGN_FLIPBOOK =
-  "https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
+  "https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-bLME/"
 
 const SPACES_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=5`
 const SYMBOLS_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=9`
