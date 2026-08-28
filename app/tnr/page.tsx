@@ -177,7 +177,7 @@ export default function TnrPage() {
 
           <div className="mt-10 text-center">
             <Link
-              href="https://new.shelterluv.com/form/community/FAUN/14823-tnr"
+              href="https://new.shelterluv.com/form/cat/FAUN/14825-community-cats-tnr"
               target="_blank"
               rel="noopener noreferrer"
             >
