@@ -222,7 +222,6 @@ const navigationLinks = [
   { href: "#partners", label: "Partners" },
 ]
 
-
 function ScriptTitle({ title }: { title: string }) {
   return (
     <>
@@ -259,7 +258,14 @@ export default function ResourcesPage() {
 
           <div className="mt-12 flex justify-center">
             <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl">
-              <Image src="/Resources_Header.jpg" alt="Community resources" fill className="object-cover" sizes="320px" priority />
+              <Image
+                src="/Resources_Header.jpg"
+                alt="Community resources"
+                fill
+                className="object-cover"
+                sizes="320px"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -724,7 +730,7 @@ export default function ResourcesPage() {
               </p>
 
               <Link
-                href="https://new.shelterluv.com/form/community/FAUN/14823-tnr"
+                href="https://new.shelterluv.com/form/cat/FAUN/14825-community-cats-tnr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block"
@@ -984,9 +990,16 @@ export default function ResourcesPage() {
               These organizations extend our reach and strengthen lifesaving
               support for animals and families.
             </p>
+
             <div className="flex justify-center lg:justify-end">
               <div className="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white shadow-xl">
-                <Image src="/Resources_Partners.jpg" alt="FAUNA strategic partners" fill className="object-cover" sizes="288px" />
+                <Image
+                  src="/Resources_Partners.jpg"
+                  alt="FAUNA strategic partners"
+                  fill
+                  className="object-cover"
+                  sizes="288px"
+                />
               </div>
             </div>
           </div>
