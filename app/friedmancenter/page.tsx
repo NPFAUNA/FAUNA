@@ -508,7 +508,7 @@ export default function FriedmanCenterPage() {
               </Link>
 
               <Link
-                href="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-GfbZ/"
+                href="https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-bLME/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
