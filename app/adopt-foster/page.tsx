@@ -67,10 +67,10 @@ const adoptionPhotos = [
     src: "/Adopt_2.jpg",
     alt: "Animal available for adoption through FAUNA",
   },
- {
-  src: "/Adopt_Foster.JPEG",
-  alt: "FAUNA cat ready for adoption",
-},
+  {
+    src: "/Adopt_Foster.JPEG",
+    alt: "FAUNA cat ready for adoption",
+  },
 ]
 
 const fosterPhotos = [
@@ -82,10 +82,10 @@ const fosterPhotos = [
     src: "/Foster_2.jpg",
     alt: "Foster animal supported by FAUNA",
   },
- {
-  src: "/Bottom_Right.jpg",
-  alt: "FAUNA animal in foster care",
-},
+  {
+    src: "/Bottom_Right.jpg",
+    alt: "FAUNA animal in foster care",
+  },
 ]
 
 const steps = [
@@ -250,10 +250,7 @@ export default function AdoptFosterPage() {
 
             <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
               {adoptionPhotos.map((photo) => (
-                <div
-                  key={photo.src}
-                  className="mx-auto w-full max-w-[230px]"
-                >
+                <div key={photo.src} className="mx-auto w-full max-w-[230px]">
                   <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white bg-white shadow-xl">
                     <Image
                       src={photo.src}
@@ -373,11 +370,12 @@ export default function AdoptFosterPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[720px] overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-[720px] overflow-hidden rounded-[2rem] bg-sky-50 shadow-xl">
             <Image
-              src={`${BASE05}/34.png`}
-              alt="FAUNA volunteer with adoptable dog"
+              src="https://www.npfauna.org/wp-content/uploads/2026/05/34.png"
+              alt="FAUNA volunteer spending time with an adoptable dog"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
               unoptimized
             />
@@ -460,10 +458,7 @@ export default function AdoptFosterPage() {
 
           <div className="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-3">
             {fosterPhotos.map((photo) => (
-              <div
-                key={photo.src}
-                className="mx-auto w-full max-w-[230px]"
-              >
+              <div key={photo.src} className="mx-auto w-full max-w-[230px]">
                 <div className="relative aspect-square overflow-hidden rounded-full border-8 border-white/20 bg-white/10 shadow-2xl">
                   <Image
                     src={photo.src}
