@@ -372,12 +372,11 @@ export default function AdoptFosterPage() {
 
           <div className="relative min-h-[720px] overflow-hidden rounded-[2rem] bg-sky-50 shadow-xl">
             <Image
-              src="https://www.npfauna.org/wp-content/uploads/2026/05/34.png"
-              alt="FAUNA volunteer spending time with an adoptable dog"
+              src="/Girl & pup.png"
+              alt="FAUNA volunteer with a dog"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
-              unoptimized
             />
           </div>
         </div>
