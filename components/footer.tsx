@@ -18,7 +18,7 @@ const footerLinks = [
     href: "/programs",
   },
   {
-    label: "Adopt & Foster",
+    label: "Adopt",
     href: "/adopt-foster",
   },
   {
@@ -85,6 +85,10 @@ export function Footer() {
               A 501(c)(3) nonprofit dedicated to providing humane care for
               homeless animals in Natchitoches Parish, Louisiana - We are a
               voice for those creatures who can not speak for themselves.
+            </p>
+
+            <p className="mt-3 text-sm font-semibold text-gray-300">
+              EIN: 27-1004712
             </p>
 
             <div className="mt-6 space-y-3 text-gray-300">
