@@ -31,11 +31,11 @@ const CIRCLE_OF_HOPE_FORM =
 const campaignEmail = "hopehasaplace@npfauna.org"
 
 const CAMPAIGN_FLIPBOOK =
-  "https://online.fliphtml5.com/placeforhope/Hope-Has-a-Place-Campaign-bLME/"
+  "https://online.fliphtml5.com/placeforhope/ainw/"
 
-const SPACES_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=5`
-const SYMBOLS_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=9`
-const CIRCLE_FLIPBOOK = `${CAMPAIGN_FLIPBOOK}#p=12`
+const SPACES_FLIPBOOK = CAMPAIGN_FLIPBOOK
+const SYMBOLS_FLIPBOOK = CAMPAIGN_FLIPBOOK
+const CIRCLE_FLIPBOOK = CAMPAIGN_FLIPBOOK
 
 const spacesImage = "/Spaces_1.png"
 const symbolsImage = "/Symbols-of-Hope-2.png"
@@ -267,13 +267,28 @@ export default function HopeHasAPlaceCampaignPage() {
           </div>
 
           <div
-            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
-            style={{ paddingBottom: "60%" }}
+            style={{
+              position: "relative",
+              paddingTop: "max(60%,324px)",
+              width: "100%",
+              height: 0,
+            }}
           >
             <iframe
-              src={CAMPAIGN_FLIPBOOK}
-              className="absolute inset-0 h-full w-full"
-              title="Hope Has a Place Campaign flipbook"
+              style={{
+                position: "absolute",
+                border: "none",
+                width: "100%",
+                height: "100%",
+                left: 0,
+                top: 0,
+              }}
+              src="https://online.fliphtml5.com/placeforhope/ainw/"
+              title="Hope Has a Place Campaign (2)"
+              seamless
+              scrolling="no"
+              frameBorder="0"
+              allowTransparency
               allowFullScreen
             />
           </div>
