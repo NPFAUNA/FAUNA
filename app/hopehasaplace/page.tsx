@@ -38,6 +38,7 @@ const SYMBOLS_FLIPBOOK = CAMPAIGN_FLIPBOOK
 const CIRCLE_FLIPBOOK = CAMPAIGN_FLIPBOOK
 
 const spacesImage = "/Spaces_1.png"
+const spacesImage2 = "/Spaces__2.png"
 const symbolsImage = "/Symbols-of-Hope-2.png"
 const circleImage = "/Circle-of-Hope-2.png"
 
@@ -372,26 +373,49 @@ export default function HopeHasAPlaceCampaignPage() {
             >
               <div className="grid items-stretch lg:grid-cols-[1.15fr_0.85fr]">
                 <div className="bg-sky-50 p-5 sm:p-8">
-                  <a
-                    href={spacesImage}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Open the full-size Spaces of Hope naming opportunities image"
-                    className="group relative mx-auto block aspect-[864/1760] w-full max-w-[620px] cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                  >
-                    <Image
-                      src={spacesImage}
-                      alt="Spaces of Hope naming opportunities and giving levels"
-                      fill
-                      className="object-contain p-2 transition duration-300 group-hover:scale-[1.01]"
-                      sizes="(max-width: 1024px) 90vw, 620px"
-                    />
+                  <div className="mx-auto grid w-full max-w-[720px] gap-5 sm:grid-cols-2">
+                    <a
+                      href={spacesImage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open the full-size Spaces of Hope naming opportunities image"
+                      className="group relative block aspect-[864/1760] w-full cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <Image
+                        src={spacesImage}
+                        alt="Spaces of Hope naming opportunities and giving levels"
+                        fill
+                        className="object-contain p-2 transition duration-300 group-hover:scale-[1.01]"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 360px"
+                      />
 
-                    <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
-                      <ZoomIn className="h-4 w-4" />
-                      Click to Enlarge
-                    </span>
-                  </a>
+                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                        <ZoomIn className="h-4 w-4" />
+                        Click to Enlarge
+                      </span>
+                    </a>
+
+                    <a
+                      href={spacesImage2}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open the second full-size Spaces of Hope naming opportunities image"
+                      className="group relative block aspect-[864/1760] w-full cursor-zoom-in overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <Image
+                        src={spacesImage2}
+                        alt="Additional Spaces of Hope naming opportunities and giving levels"
+                        fill
+                        className="object-contain p-2 transition duration-300 group-hover:scale-[1.01]"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 360px"
+                      />
+
+                      <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                        <ZoomIn className="h-4 w-4" />
+                        Click to Enlarge
+                      </span>
+                    </a>
+                  </div>
                 </div>
 
                 <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-14">
