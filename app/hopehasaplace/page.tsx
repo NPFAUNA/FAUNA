@@ -38,7 +38,7 @@ const SYMBOLS_FLIPBOOK = CAMPAIGN_FLIPBOOK
 const CIRCLE_FLIPBOOK = CAMPAIGN_FLIPBOOK
 
 const spacesImage = "/Spaces_1.png"
-const spacesImage2 = "/Spaces__2.png"
+const spacesImage2 = "/Spaces_2.png"
 const symbolsImage = "/Symbols-of-Hope-2.png"
 const circleImage = "/Circle-of-Hope-2.png"
 
