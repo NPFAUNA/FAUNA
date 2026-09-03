@@ -242,6 +242,87 @@ export default function HopeHasAPlaceCampaignPage() {
         </div>
       </section>
 
+      {/* Campaign Flipbook */}
+      <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-20 text-white">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <Heart className="mx-auto mb-5 h-10 w-10 fill-white text-white" />
+
+          <h2 className="font-script text-5xl sm:text-6xl">
+            Be Part of the Legacy
+          </h2>
+
+          <div className="mb-10 mt-10 text-center">
+            <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
+              Campaign Guide
+            </Badge>
+
+            <h2 className="font-sans text-5xl font-extrabold text-white sm:text-6xl">
+              Explore the Campaign Flipbook
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-sky-100">
+              Browse the complete Hope Has a Place Campaign guide to learn more
+              about the Friedman Center and the opportunities available.
+            </p>
+          </div>
+
+          <div
+            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
+            style={{ paddingBottom: "60%" }}
+          >
+            <iframe
+              src={CAMPAIGN_FLIPBOOK}
+              className="absolute inset-0 h-full w-full"
+              title="Hope Has a Place Campaign flipbook"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href={CAMPAIGN_FLIPBOOK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
+            >
+              Open the campaign guide in a larger window
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-white/95">
+            A campaign gift is more than recognition. It is a permanent
+            expression of compassion and a promise of hope for animals and
+            families throughout Natchitoches Parish.
+          </p>
+
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <Link href={`mailto:${campaignEmail}`}>
+              <Button className="h-auto bg-[#0a1e3d] px-7 py-3 font-bold text-white hover:bg-[#061424]">
+                <Mail className="mr-2 h-4 w-4" />
+                Contact the Campaign Team
+              </Button>
+            </Link>
+
+            <Link href="/donate">
+              <Button className="h-auto bg-white px-7 py-3 font-bold text-[#0099FF] hover:bg-gray-100">
+                <Heart className="mr-2 h-4 w-4" />
+                Make a General Donation
+              </Button>
+            </Link>
+          </div>
+
+          <p className="mt-6 text-sm text-white/90">
+            <Link
+              href={`mailto:${campaignEmail}`}
+              className="font-semibold underline underline-offset-4"
+            >
+              {campaignEmail}
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* Giving Opportunities */}
       <section
         id="giving-opportunities"
@@ -554,87 +635,6 @@ export default function HopeHasAPlaceCampaignPage() {
               </details>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Campaign Flipbook */}
-      <section className="bg-gradient-to-r from-[#0099FF] to-[#33CCCC] py-20 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <Heart className="mx-auto mb-5 h-10 w-10 fill-white text-white" />
-
-          <h2 className="font-script text-5xl sm:text-6xl">
-            Be Part of the Legacy
-          </h2>
-
-          <div className="mb-10 mt-10 text-center">
-            <Badge className="mb-4 border-[#33CCCC]/30 bg-[#33CCCC]/15 text-[#33CCCC]">
-              Campaign Guide
-            </Badge>
-
-            <h2 className="font-sans text-5xl font-extrabold text-white sm:text-6xl">
-              Explore the Campaign Flipbook
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-sky-100">
-              Browse the complete Hope Has a Place Campaign guide to learn more
-              about the Friedman Center and the opportunities available.
-            </p>
-          </div>
-
-          <div
-            className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
-            style={{ paddingBottom: "60%" }}
-          >
-            <iframe
-              src={CAMPAIGN_FLIPBOOK}
-              className="absolute inset-0 h-full w-full"
-              title="Hope Has a Place Campaign flipbook"
-              allowFullScreen
-            />
-          </div>
-
-          <div className="mt-6 text-center">
-            <a
-              href={CAMPAIGN_FLIPBOOK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-semibold text-[#8AFF00] underline underline-offset-4"
-            >
-              Open the campaign guide in a larger window
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-
-          <p className="mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-white/95">
-            A campaign gift is more than recognition. It is a permanent
-            expression of compassion and a promise of hope for animals and
-            families throughout Natchitoches Parish.
-          </p>
-
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href={`mailto:${campaignEmail}`}>
-              <Button className="h-auto bg-[#0a1e3d] px-7 py-3 font-bold text-white hover:bg-[#061424]">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact the Campaign Team
-              </Button>
-            </Link>
-
-            <Link href="/donate">
-              <Button className="h-auto bg-white px-7 py-3 font-bold text-[#0099FF] hover:bg-gray-100">
-                <Heart className="mr-2 h-4 w-4" />
-                Make a General Donation
-              </Button>
-            </Link>
-          </div>
-
-          <p className="mt-6 text-sm text-white/90">
-            <Link
-              href={`mailto:${campaignEmail}`}
-              className="font-semibold underline underline-offset-4"
-            >
-              {campaignEmail}
-            </Link>
-          </p>
         </div>
       </section>
     </div>
