@@ -462,7 +462,7 @@ export default function HomePage() {
                 </Button>
               </Link>
 
-              <Link href="/hopehasaplace">
+              <Link href="https://online.fliphtml5.com/placeforhope/ainw/" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
