@@ -107,10 +107,10 @@ const connectedPhotos = [
     src: "/Home_2.jpg",
     alt: "A FAUNA rescue animal",
   },
-    {
-  src: "/Boy_Dog.jpeg",
-  alt: "FAUNA supporter with a dog",
-},
+  {
+    src: "/Boy_Dog.jpeg",
+    alt: "FAUNA supporter with a dog",
+  },
 ]
 
 export default function HomePage() {
@@ -462,7 +462,7 @@ export default function HomePage() {
                 </Button>
               </Link>
 
-              <Link href="https://online.fliphtml5.com/placeforhope/ainw/" target="_blank" rel="noopener noreferrer">
+              <Link href="/hopehasaplace">
                 <Button
                   variant="outline"
                   className="border-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#33CCCC]/10"
