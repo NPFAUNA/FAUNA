@@ -98,7 +98,6 @@ export default function EventsPage() {
           <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">
             FAUNA Events
           </h1>
-
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
             Join FAUNA at adoption events, Community Health Fairs,
             fundraisers, volunteer activities, and other gatherings throughout
@@ -119,13 +118,11 @@ export default function EventsPage() {
             <h2 className="mt-2 text-3xl font-extrabold">
               Follow Us for Current Event Announcements
             </h2>
-
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8">
               Event times, locations, weather updates, registration details,
               and ticket information are announced through FAUNA&apos;s
               social-media pages.
             </p>
-
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a
@@ -157,7 +154,6 @@ export default function EventsPage() {
             <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
               Upcoming FAUNA Events
             </h2>
-
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gray-600">
               Join us for community traditions, special fundraisers, and
               memorable events that support animals throughout Natchitoches
@@ -183,7 +179,6 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
                   />
-
                   <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
                     <ZoomIn className="h-4 w-4" />
                     Click to Enlarge
@@ -254,6 +249,16 @@ export default function EventsPage() {
                       Reserve your spot and help us create a better future for
                       animals in our parish.
                     </p>
+
+                    <a
+                      href="https://FAUNAFarmToTable2026.eventbrite.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                    >
+                      Reserve Your Seat
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
                   </div>
                 </CardContent>
 
@@ -271,7 +276,6 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
                   />
-
                   <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
                     <ZoomIn className="h-4 w-4" />
                     Click to Enlarge
@@ -425,7 +429,6 @@ export default function EventsPage() {
                       <Icon className="h-6 w-6 text-[#8AFF00]" />
                       Follow FAUNA on {label}
                     </span>
-
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 ))}
