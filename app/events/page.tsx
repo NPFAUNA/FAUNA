@@ -251,12 +251,12 @@ export default function EventsPage() {
                     </p>
 
                     <a
-                      href="https://FAUNAFarmToTable2026.eventbrite.com"
+                      href="/2026-Farm-to-Table-Tri-Fold.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                      className="mt-5 inline-flex w-fit items-center rounded-full bg-[#0099FF] px-5 py-3 font-bold text-white transition hover:bg-[#007acc]"
                     >
-                      Reserve Your Seat
+                      View Printable 2026 Brochure
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </div>
