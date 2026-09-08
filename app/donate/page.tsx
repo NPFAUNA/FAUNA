@@ -23,11 +23,11 @@ const donationTiers = [
     label: "Feeds a rescued animal for one week.",
     img: "/Bath_Days.jpg",
   },
- {
-  amount: "$50",
-  label: "Provides lifesaving vaccinations.",
-  img: "/Donate_50.jpg",
-},
+  {
+    amount: "$50",
+    label: "Provides lifesaving vaccinations.",
+    img: "/Donate_50.jpg",
+  },
   {
     amount: "$100",
     label: "Sponsors a spay or neuter surgery.",
@@ -39,10 +39,10 @@ const donationTiers = [
     img: "/Pup2.jpg",
   },
   {
-  amount: "$500",
-  label: "Provides emergency medical care for an animal in crisis.",
-  img: "/Donate_500.jpg",
-},
+    amount: "$500",
+    label: "Provides emergency medical care for an animal in crisis.",
+    img: "/Donate_500.jpg",
+  },
 ]
 
 const wishlistStores = [
@@ -94,12 +94,12 @@ export default function DonatePage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#061424] via-[#0a1e3d] to-[#0d2851] py-20 text-white">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-[#8AFF00] shadow-xl sm:h-52 sm:w-52">
+          <div className="mx-auto mb-6 h-56 w-56 overflow-hidden rounded-full border-4 border-[#8AFF00] shadow-xl sm:h-64 sm:w-64">
             <Image
               src="/Donate_Dog.jpeg"
               alt="FAUNA rescue dog"
-              width={208}
-              height={208}
+              width={256}
+              height={256}
               className="h-full w-full object-cover"
               priority
             />
@@ -204,6 +204,10 @@ export default function DonatePage() {
               >
                 Donate
               </Link>
+
+              <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                If you wish to Donate &quot;In Memory/Honor&quot; of someone, see link below.
+              </p>
             </div>
           </div>
         </div>
@@ -244,6 +248,50 @@ export default function DonatePage() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* In Memory or Honor */}
+      <section className="bg-[#0a1e3d] py-16 text-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Heart className="mx-auto mb-4 h-10 w-10 text-[#8AFF00]" />
+
+            <h2 className="font-script text-4xl text-white sm:text-5xl">
+              <ScriptTitle title="Donate in Memory or Honor" />
+            </h2>
+
+            <p className="mt-4 text-gray-300">
+              Donations made in remembrance or honor are a meaningful way to
+              celebrate the legacy of a loved one or animal while helping the
+              animals in FAUNA&apos;s care.{" "}
+              <strong className="text-white">
+                All donations are tax deductible.
+              </strong>
+            </p>
+
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSckj10hj7yi5qJf4DCxXAG0SoVHqB-Mj1y-tfJ4J9vZLPGrnQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block"
+            >
+              <Button className="h-auto bg-[#8AFF00] px-8 py-4 text-base font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
+                <Heart className="mr-2 h-5 w-5" />
+                Memorial &amp; Honor Donation Form
+              </Button>
+            </Link>
+          </div>
+
+          <p className="mt-6 text-center text-sm text-gray-400">
+            Questions? Email us at{" "}
+            <a
+              href="mailto:rescue@npfauna.org"
+              className="text-[#33CCCC] underline"
+            >
+              rescue@npfauna.org
+            </a>
+          </p>
         </div>
       </section>
 
@@ -372,50 +420,6 @@ export default function DonatePage() {
               <p className="text-gray-700">Natchitoches, LA 71457</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* In Memory or Honor */}
-      <section className="bg-[#0a1e3d] py-16 text-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Heart className="mx-auto mb-4 h-10 w-10 text-[#8AFF00]" />
-
-            <h2 className="font-script text-4xl text-white sm:text-5xl">
-              <ScriptTitle title="Donate in Memory or Honor" />
-            </h2>
-
-            <p className="mt-4 text-gray-300">
-              Donations made in remembrance or honor are a meaningful way to
-              celebrate the legacy of a loved one or animal while helping the
-              animals in FAUNA&apos;s care.{" "}
-              <strong className="text-white">
-                All donations are tax deductible.
-              </strong>
-            </p>
-
-            <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSckj10hj7yi5qJf4DCxXAG0SoVHqB-Mj1y-tfJ4J9vZLPGrnQ/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-block"
-            >
-              <Button className="h-auto bg-[#8AFF00] px-8 py-4 text-base font-bold text-[#0a1e3d] hover:bg-[#7aee00]">
-                <Heart className="mr-2 h-5 w-5" />
-                Memorial &amp; Honor Donation Form
-              </Button>
-            </Link>
-          </div>
-
-          <p className="mt-6 text-center text-sm text-gray-400">
-            Questions? Email us at{" "}
-            <a
-              href="mailto:rescue@npfauna.org"
-              className="text-[#33CCCC] underline"
-            >
-              rescue@npfauna.org
-            </a>
-          </p>
         </div>
       </section>
 
