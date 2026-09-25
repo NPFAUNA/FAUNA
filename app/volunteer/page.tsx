@@ -66,14 +66,12 @@ export default function VolunteerPage() {
           <h1 className="mt-3 text-5xl font-extrabold sm:text-6xl">
             Volunteer With FAUNA
           </h1>
-
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-sky-100">
             Every volunteer helps save lives. Whether you&apos;re fostering,
             photographing pets, helping at adoption events, or supporting our
             veterinary clinics, your time creates brighter futures for animals
             in Natchitoches Parish.
           </p>
-
           <div className="mt-12 flex justify-center">
             <div className="relative h-80 w-80 overflow-hidden rounded-full border-8 border-white/30 shadow-2xl">
               <Image
@@ -101,7 +99,6 @@ export default function VolunteerPage() {
                   <h2 className="text-2xl font-extrabold text-[#0099FF]">
                     {item.title}
                   </h2>
-
                   <p className="mt-4 leading-7 text-gray-600">
                     {item.description}
                   </p>
@@ -137,18 +134,41 @@ export default function VolunteerPage() {
               volunteer application to get started.
             </p>
 
-            <Link
-              href="https://new.shelterluv.com/form/volunteer/FAUN/14821-volunteer-application"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                size="lg"
-                className="mt-8 bg-[#0099FF] font-bold hover:bg-[#007acc]"
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="https://new.shelterluv.com/form/volunteer/FAUN/14821-volunteer-application"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Submit Volunteer Application
-              </Button>
-            </Link>
+                <Button
+                  size="lg"
+                  className="bg-[#0099FF] font-bold hover:bg-[#007acc]"
+                >
+                  Submit Volunteer Application
+                </Button>
+              </Link>
+            </div>
+
+            <div className="mt-10 text-center">
+              <p className="text-lg font-semibold text-[#0a1e3d]">
+                Volunteering with a Group? Complete the Waiver below
+              </p>
+
+              <div className="mt-4 flex justify-center">
+                <Link
+                  href="https://new.shelterluv.com/form/volunteer/FAUN/14822-volunteer-waiver"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#33CCCC] font-bold text-[#0a1e3d] hover:bg-[#28b8b8]"
+                  >
+                    Volunteer Waiver
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
