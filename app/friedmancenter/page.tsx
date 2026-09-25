@@ -125,10 +125,6 @@ const specialRecognitionLogos = [
     alt: "LG Fulfillment",
   },
   {
-    src: "/special-recognition/mdm-commercial.png",
-    alt: "MDM Commercial",
-  },
-  {
     src: "/special-recognition/National.png",
     alt: "National Solutions",
   },
