@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -110,8 +109,8 @@ const specialRecognitionLogos = [
     alt: "Daltile",
   },
   {
-    src: "/special-recognition/element.png",
-    alt: "Element 5/26 Design and Purchasing",
+    src: "/special-recognition/e526_logo.png",
+    alt: "Element 5/26 Design & Purchasing",
   },
   {
     src: "/special-recognition/jcla.png",
@@ -120,6 +119,10 @@ const specialRecognitionLogos = [
   {
     src: "/special-recognition/lg.jpg",
     alt: "LG",
+  },
+  {
+    src: "/special-recognition/lg-fulfillment.png",
+    alt: "LG Fulfillment",
   },
   {
     src: "/special-recognition/mdm-commercial.png",
