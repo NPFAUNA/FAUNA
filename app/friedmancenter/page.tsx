@@ -97,8 +97,44 @@ const giftImpacts = [
 
 const specialRecognitionLogos = [
   {
-    src: "/special-recognition/southern-pipe.jpg",
-    alt: "Southern Pipe & Supply",
+    src: "/special-recognition/associated.png",
+    alt: "Associated Food Equipment & Supplies",
+  },
+  {
+    src: "/special-recognition/artisan-kulture.jpg",
+    alt: "Artisan Kulture",
+  },
+  {
+    src: "/special-recognition/daltile.png",
+    alt: "Daltile",
+  },
+  {
+    src: "/special-recognition/element.png",
+    alt: "Element 5/26 Design and Purchasing",
+  },
+  {
+    src: "/special-recognition/jcla.png",
+    alt: "JCLA Studios",
+  },
+  {
+    src: "/special-recognition/lg.jpg",
+    alt: "LG",
+  },
+  {
+    src: "/special-recognition/mdm-commercial.png",
+    alt: "MDM Commercial",
+  },
+  {
+    src: "/special-recognition/National.png",
+    alt: "National Solutions",
+  },
+  {
+    src: "/special-recognition/pellerin.png",
+    alt: "Pellerin",
+  },
+  {
+    src: "/special-recognition/shaw.png",
+    alt: "Shaw",
   },
   {
     src: "/special-recognition/Southern_Aluminum.png",
@@ -106,36 +142,12 @@ const specialRecognitionLogos = [
     darkBackground: true,
   },
   {
-    src: "/special-recognition/shaw.png",
-    alt: "Shaw",
-  },
-  {
-    src: "/special-recognition/pellerin.png",
-    alt: "Pellerin",
-  },
-  {
-    src: "/special-recognition/National.png",
-    alt: "National Solutions",
-  },
-  {
-    src: "/special-recognition/lg.jpg",
-    alt: "LG",
-  },
-  {
-    src: "/special-recognition/jcla.png",
-    alt: "JCLA Studios",
-  },
-  {
-    src: "/special-recognition/element.png",
-    alt: "Element 5/26 Design and Purchasing",
+    src: "/special-recognition/southern-pipe.jpg",
+    alt: "Southern Pipe & Supply",
   },
   {
     src: "/special-recognition/coveworks.png",
     alt: "The Coveworks",
-  },
-  {
-    src: "/special-recognition/associated.png",
-    alt: "Associated Food Equipment & Supplies",
   },
 ]
 
