@@ -94,7 +94,6 @@ export default function EventsPage() {
           <p className="font-script text-4xl text-[#8AFF00]">
             Mark your calendar
           </p>
-
           <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">
             FAUNA Events
           </h1>
@@ -114,7 +113,6 @@ export default function EventsPage() {
             <p className="mt-4 font-script text-4xl text-[#0099FF]">
               Upcoming dates
             </p>
-
             <h2 className="mt-2 text-3xl font-extrabold">
               Follow Us for Current Event Announcements
             </h2>
@@ -150,7 +148,6 @@ export default function EventsPage() {
             <p className="font-script text-4xl text-[#33CCCC]">
               Save the date
             </p>
-
             <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
               Upcoming FAUNA Events
             </h2>
@@ -166,15 +163,15 @@ export default function EventsPage() {
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[0.9fr_1.1fr]">
                 <a
-                  href="/Bath_Days2026.jpg"
+                  href="/Bath Day.png"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open the Bath Day 2026 event image at full size"
+                  aria-label="Open the Bath Day October 10, 2026 event image at full size"
                   className="group relative block min-h-[360px] cursor-zoom-in overflow-hidden bg-sky-100"
                 >
                   <Image
-                    src="/Bath_Days2026.jpg"
-                    alt="FAUNA Bath Day 2026 event announcement"
+                    src="/Bath Day.png"
+                    alt="FAUNA Bath Day October 10, 2026 event announcement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
@@ -187,7 +184,7 @@ export default function EventsPage() {
 
                 <CardContent className="flex flex-col justify-center p-8 sm:p-10">
                   <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
-                    September 12, 2026
+                    October 10, 2026
                   </p>
 
                   <h3 className="font-script mt-3 text-5xl text-[#0a1e3d]">
@@ -250,7 +247,6 @@ export default function EventsPage() {
                       animals in our parish.
                     </p>
 
-                    {/* Reserve Your Seat */}
                     <a
                       href="https://FAUNAFarmToTable2026.eventbrite.com"
                       target="_blank"
@@ -258,17 +254,6 @@ export default function EventsPage() {
                       className="inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
                     >
                       Reserve Your Seat
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-
-                    {/* Printable Brochure */}
-                    <a
-                      href="/2026-Farm-to-Table-Tri-Fold.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-fit items-center rounded-lg bg-[#33CCCC] px-6 py-3 font-bold text-[#0a1e3d] shadow-md transition hover:bg-[#25b5b5]"
-                    >
-                      View Printable 2026 Brochure
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </div>
