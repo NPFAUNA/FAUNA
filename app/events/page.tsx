@@ -1,4 +1,3 @@
-```tsx
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -172,7 +171,7 @@ export default function EventsPage() {
           </div>
 
           <div className="mt-12 space-y-10">
-            {/* FARM TO TABLE */}
+            {/* Farm to Table */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[1.1fr_0.9fr]">
                 <CardContent className="flex flex-col justify-center p-8 sm:p-10 lg:order-1">
@@ -248,7 +247,7 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* PET HEALTH FAIR INTRODUCTION */}
+            {/* Pet Health Fair Information */}
             <Card className="border-0 bg-white shadow-lg">
               <CardContent className="p-8 sm:p-10">
                 <div className="mx-auto max-w-4xl text-center">
@@ -297,7 +296,7 @@ export default function EventsPage() {
               </CardContent>
             </Card>
 
-            {/* OCTOBER 24 PET HEALTH FAIR */}
+            {/* October 24 Pet Health Fair */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
                 <a
@@ -380,7 +379,7 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* NOVEMBER 14 PET HEALTH FAIR */}
+            {/* November 14 Pet Health Fair */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
                 <a
@@ -463,7 +462,7 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* ST. PATRICK'S DAY PUB CRAWL */}
+            {/* St. Patrick's Day Pub Crawl */}
             <Card className="overflow-hidden border-0 bg-[#0a1e3d] text-white shadow-xl">
               <CardContent className="p-8 sm:p-10 lg:p-12">
                 <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
@@ -488,9 +487,8 @@ export default function EventsPage() {
 
                       <p>
                         Get ready to hop between restaurants, bars, and shops
-                        in historic downtown Natchitoches, Louisiana, and
-                        enjoy great drink specials, music, shopping, and
-                        company.
+                        in historic downtown Natchitoches, Louisiana, and enjoy
+                        great drink specials, music, shopping, and company.
                       </p>
 
                       <p>
@@ -527,7 +525,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* EVENTS GALLERY AND EVENT TYPES */}
+      {/* Events Gallery and Event Types */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
@@ -578,7 +576,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* SOCIAL MEDIA AND VOLUNTEERING */}
+      {/* Social Media and Volunteering */}
       <section className="bg-sky-50 px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
           <Card className="border-0 bg-[#0a1e3d] text-white shadow-xl">
@@ -646,4 +644,3 @@ export default function EventsPage() {
     </main>
   )
 }
-```
