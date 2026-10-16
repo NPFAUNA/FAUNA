@@ -93,14 +93,17 @@ const healthFairRegistration =
 export default function EventsPage() {
   return (
     <main>
+      {/* Page Header */}
       <section className="bg-gradient-to-br from-[#061424] to-[#0a1e3d] px-6 py-20 text-white">
         <div className="mx-auto max-w-6xl">
           <p className="font-script text-4xl text-[#8AFF00]">
             Mark your calendar
           </p>
+
           <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">
             FAUNA Events
           </h1>
+
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
             Join FAUNA at adoption events, Community Health Fairs,
             fundraisers, volunteer activities, and other gatherings throughout
@@ -109,6 +112,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Social Media Announcements */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-3xl bg-[#8AFF00] p-8 text-center text-[#0a1e3d] shadow-lg md:p-12">
@@ -117,14 +121,17 @@ export default function EventsPage() {
             <p className="mt-4 font-script text-4xl text-[#0099FF]">
               Upcoming dates
             </p>
+
             <h2 className="mt-2 text-3xl font-extrabold">
               Follow Us for Current Event Announcements
             </h2>
+
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8">
               Event times, locations, weather updates, registration details,
               and ticket information are announced through FAUNA&apos;s
               social-media pages.
             </p>
+
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a
@@ -152,9 +159,11 @@ export default function EventsPage() {
             <p className="font-script text-4xl text-[#33CCCC]">
               Save the date
             </p>
+
             <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
               Upcoming FAUNA Events
             </h2>
+
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gray-600">
               Join us for community traditions, special fundraisers, and
               memorable events that support animals throughout Natchitoches
@@ -163,7 +172,7 @@ export default function EventsPage() {
           </div>
 
           <div className="mt-12 space-y-10">
-            {/* Farm to Table */}
+            {/* FARM TO TABLE */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[1.1fr_0.9fr]">
                 <CardContent className="flex flex-col justify-center p-8 sm:p-10 lg:order-1">
@@ -230,6 +239,7 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
                   />
+
                   <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
                     <ZoomIn className="h-4 w-4" />
                     Click to Enlarge
@@ -238,54 +248,56 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* Pet Health Fair Introduction */}
-            <div className="rounded-3xl border border-[#33CCCC]/40 bg-white p-8 shadow-md sm:p-10">
-              <div className="mx-auto max-w-4xl text-center">
-                <HeartPulse className="mx-auto h-12 w-12 text-[#0099FF]" />
+            {/* PET HEALTH FAIR INTRODUCTION */}
+            <Card className="border-0 bg-white shadow-lg">
+              <CardContent className="p-8 sm:p-10">
+                <div className="mx-auto max-w-4xl text-center">
+                  <HeartPulse className="mx-auto h-12 w-12 text-[#0099FF]" />
 
-                <p className="mt-4 font-script text-4xl text-[#33CCCC]">
-                  Healthy Pets, Healthy Community
-                </p>
+                  <p className="mt-4 font-script text-4xl text-[#33CCCC]">
+                    Healthy Pets, Healthy Community
+                  </p>
 
-                <h3 className="mt-2 text-2xl font-extrabold text-[#0a1e3d] sm:text-3xl">
-                  Petco Love Vaccinated and Loved Initiative
-                </h3>
+                  <h3 className="mt-2 text-2xl font-extrabold text-[#0a1e3d] sm:text-3xl">
+                    Petco Love Vaccinated and Loved Initiative
+                  </h3>
 
-                <p className="mt-5 text-lg leading-8 text-gray-600">
-                  The free vaccines distributed at events through the Petco
-                  Love Vaccinated and Loved initiative will be the DAPPv
-                  Canine and HCP Feline vaccines. Through this national effort,
-                  FAUNA aims to vaccinate 500 pets.
-                </p>
+                  <p className="mt-5 text-lg leading-8 text-gray-600">
+                    The free vaccines distributed at events through the Petco
+                    Love Vaccinated and Loved initiative will be the DAPPv
+                    Canine and HCP Feline vaccines. Through this national
+                    effort, FAUNA aims to vaccinate 500 pets.
+                  </p>
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  Please fill out the registration form in advance to speed
-                  up the process. The form can include up to five pets.
-                </p>
+                  <p className="mt-4 leading-7 text-gray-600">
+                    Please fill out the registration form in advance to speed
+                    up the process. The form can take up to five pets.
+                  </p>
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  FAUNA will also provide rabies vaccines for $10 for cats and
-                  dogs who are old enough, approximately 16 weeks of age.
-                  Microchips are available for $15. A microchip can be scanned
-                  at veterinary offices or by FAUNA if a pet is lost and found,
-                  provided the contact information is up to date. Unlike a
-                  collar tag, a microchip cannot fall off.
-                </p>
+                  <p className="mt-4 leading-7 text-gray-600">
+                    FAUNA will also provide rabies vaccines for $10 for cats
+                    and dogs who are old enough, approximately 16 weeks of age.
+                    We&apos;re offering $15 microchips which can be scanned at
+                    veterinary offices or with FAUNA if a pet is lost and
+                    found and has up-to-date contact information registered.
+                    This is like a tag but cannot fall off!
+                  </p>
 
-                <a
-                  href={healthFairRegistration}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-7 inline-flex items-center justify-center rounded-lg bg-[#0099FF] px-7 py-4 text-center font-bold text-white shadow-md transition hover:bg-[#007acc]"
-                >
-                  <HeartPulse className="mr-2 h-5 w-5" />
-                  Pre-Register for a Pet Health Fair
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+                  <a
+                    href={healthFairRegistration}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-7 inline-flex items-center justify-center rounded-lg bg-[#0099FF] px-7 py-4 text-center font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                  >
+                    <HeartPulse className="mr-2 h-5 w-5" />
+                    Pre-Register for a Pet Health Fair
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
 
-            {/* October 24 Pet Health Fair */}
+            {/* OCTOBER 24 PET HEALTH FAIR */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
                 <a
@@ -302,6 +314,7 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
                   />
+
                   <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
                     <ZoomIn className="h-4 w-4" />
                     Click to Enlarge
@@ -338,12 +351,14 @@ export default function EventsPage() {
                       </span>{" "}
                       DAPPv canine and HCP feline vaccines.
                     </p>
+
                     <p>
                       <span className="font-bold text-[#0a1e3d]">
                         Rabies vaccines:
                       </span>{" "}
                       $10 for eligible cats and dogs.
                     </p>
+
                     <p>
                       <span className="font-bold text-[#0a1e3d]">
                         Microchips:
@@ -365,7 +380,7 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* November 14 Pet Health Fair */}
+            {/* NOVEMBER 14 PET HEALTH FAIR */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
                 <a
@@ -382,6 +397,7 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
                   />
+
                   <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
                     <ZoomIn className="h-4 w-4" />
                     Click to Enlarge
@@ -418,12 +434,14 @@ export default function EventsPage() {
                       </span>{" "}
                       DAPPv canine and HCP feline vaccines.
                     </p>
+
                     <p>
                       <span className="font-bold text-[#0a1e3d]">
                         Rabies vaccines:
                       </span>{" "}
                       $10 for eligible cats and dogs.
                     </p>
+
                     <p>
                       <span className="font-bold text-[#0a1e3d]">
                         Microchips:
@@ -445,7 +463,7 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* Pub Crawl */}
+            {/* ST. PATRICK'S DAY PUB CRAWL */}
             <Card className="overflow-hidden border-0 bg-[#0a1e3d] text-white shadow-xl">
               <CardContent className="p-8 sm:p-10 lg:p-12">
                 <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
@@ -469,9 +487,10 @@ export default function EventsPage() {
                       </p>
 
                       <p>
-                        Get ready to hop between restaurants, bars, and shops in
-                        historic downtown Natchitoches, Louisiana, and enjoy
-                        great drink specials, music, shopping, and company.
+                        Get ready to hop between restaurants, bars, and shops
+                        in historic downtown Natchitoches, Louisiana, and
+                        enjoy great drink specials, music, shopping, and
+                        company.
                       </p>
 
                       <p>
@@ -508,6 +527,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* EVENTS GALLERY AND EVENT TYPES */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
@@ -520,7 +540,6 @@ export default function EventsPage() {
             </h2>
           </div>
 
-          {/* Circular Event Photos */}
           <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-6 sm:grid-cols-4">
             {eventPhotos.map((photo) => (
               <div key={photo.src} className="mx-auto w-full max-w-[220px]">
@@ -559,6 +578,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* SOCIAL MEDIA AND VOLUNTEERING */}
       <section className="bg-sky-50 px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
           <Card className="border-0 bg-[#0a1e3d] text-white shadow-xl">
@@ -590,6 +610,7 @@ export default function EventsPage() {
                       <Icon className="h-6 w-6 text-[#8AFF00]" />
                       Follow FAUNA on {label}
                     </span>
+
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 ))}
