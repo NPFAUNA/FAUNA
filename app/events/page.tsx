@@ -1,3 +1,4 @@
+```tsx
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -55,8 +56,8 @@ const eventPhotos = [
     alt: "FAUNA adoption event",
   },
   {
-    src: "/Bath_Days2026.jpg",
-    alt: "FAUNA Bath Day event",
+    src: "/pet-health-fair-october-24.jpg",
+    alt: "FAUNA Pet Health Fair",
   },
   {
     src: "/Pub_Crawl.jpg",
@@ -85,6 +86,9 @@ const socialLinks = [
     icon: Music2,
   },
 ]
+
+const healthFairRegistration =
+  "https://new.shelterluv.com/form/community/FAUN/14824-health-fair"
 
 export default function EventsPage() {
   return (
@@ -159,53 +163,6 @@ export default function EventsPage() {
           </div>
 
           <div className="mt-12 space-y-10">
-            {/* Bath Day */}
-            <Card className="overflow-hidden border-0 bg-white shadow-xl">
-              <div className="grid items-stretch lg:grid-cols-[0.9fr_1.1fr]">
-                <a
-                  href="/Bath Day.png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open the Bath Day October 10, 2026 event image at full size"
-                  className="group relative block min-h-[360px] cursor-zoom-in overflow-hidden bg-sky-100"
-                >
-                  <Image
-                    src="/Bath Day.png"
-                    alt="FAUNA Bath Day October 10, 2026 event announcement"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
-                  />
-                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
-                    <ZoomIn className="h-4 w-4" />
-                    Click to Enlarge
-                  </span>
-                </a>
-
-                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
-                    October 10, 2026
-                  </p>
-
-                  <h3 className="font-script mt-3 text-5xl text-[#0a1e3d]">
-                    Bath Day
-                  </h3>
-
-                  <p className="mt-5 text-lg leading-8 text-gray-600">
-                    Join FAUNA for one of our favorite community traditions.
-                    Bath Day provides affordable pet-care services while raising
-                    funds to support animals in FAUNA&apos;s care.
-                  </p>
-
-                  <p className="mt-4 leading-7 text-gray-600">
-                    Follow FAUNA on social media for the event location, service
-                    menu, pricing, volunteer information, and additional
-                    details.
-                  </p>
-                </CardContent>
-              </div>
-            </Card>
-
             {/* Farm to Table */}
             <Card className="overflow-hidden border-0 bg-white shadow-xl">
               <div className="grid items-stretch lg:grid-cols-[1.1fr_0.9fr]">
@@ -278,6 +235,213 @@ export default function EventsPage() {
                     Click to Enlarge
                   </span>
                 </a>
+              </div>
+            </Card>
+
+            {/* Pet Health Fair Introduction */}
+            <div className="rounded-3xl border border-[#33CCCC]/40 bg-white p-8 shadow-md sm:p-10">
+              <div className="mx-auto max-w-4xl text-center">
+                <HeartPulse className="mx-auto h-12 w-12 text-[#0099FF]" />
+
+                <p className="mt-4 font-script text-4xl text-[#33CCCC]">
+                  Healthy Pets, Healthy Community
+                </p>
+
+                <h3 className="mt-2 text-2xl font-extrabold text-[#0a1e3d] sm:text-3xl">
+                  Petco Love Vaccinated and Loved Initiative
+                </h3>
+
+                <p className="mt-5 text-lg leading-8 text-gray-600">
+                  The free vaccines distributed at events through the Petco
+                  Love Vaccinated and Loved initiative will be the DAPPv
+                  Canine and HCP Feline vaccines. Through this national effort,
+                  FAUNA aims to vaccinate 500 pets.
+                </p>
+
+                <p className="mt-4 leading-7 text-gray-600">
+                  Please fill out the registration form in advance to speed
+                  up the process. The form can include up to five pets.
+                </p>
+
+                <p className="mt-4 leading-7 text-gray-600">
+                  FAUNA will also provide rabies vaccines for $10 for cats and
+                  dogs who are old enough, approximately 16 weeks of age.
+                  Microchips are available for $15. A microchip can be scanned
+                  at veterinary offices or by FAUNA if a pet is lost and found,
+                  provided the contact information is up to date. Unlike a
+                  collar tag, a microchip cannot fall off.
+                </p>
+
+                <a
+                  href={healthFairRegistration}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-7 inline-flex items-center justify-center rounded-lg bg-[#0099FF] px-7 py-4 text-center font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                >
+                  <HeartPulse className="mr-2 h-5 w-5" />
+                  Pre-Register for a Pet Health Fair
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* October 24 Pet Health Fair */}
+            <Card className="overflow-hidden border-0 bg-white shadow-xl">
+              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+                <a
+                  href="/pet-health-fair-october-24.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the October 24 Pet Health Fair graphic at full size"
+                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+                >
+                  <Image
+                    src="/pet-health-fair-october-24.jpg"
+                    alt="Pet Health Fair on Saturday, October 24, 2026, at Flying Heart Brewery"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                  />
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+
+                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+                    Saturday, October 24, 2026
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                    Pet Health Fair
+                  </h3>
+
+                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+                    9:00 a.m. - 12:00 p.m.
+                  </p>
+
+                  <p className="mt-4 text-xl font-bold text-[#0a1e3d]">
+                    Flying Heart Brewery
+                  </p>
+
+                  <p className="mt-2 leading-7 text-gray-600">
+                    108 Mill Street
+                    <br />
+                    Natchitoches, LA 71457
+                  </p>
+
+                  <div className="mt-5 space-y-2 text-gray-600">
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Free vaccines:
+                      </span>{" "}
+                      DAPPv canine and HCP feline vaccines.
+                    </p>
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Rabies vaccines:
+                      </span>{" "}
+                      $10 for eligible cats and dogs.
+                    </p>
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Microchips:
+                      </span>{" "}
+                      $15.
+                    </p>
+                  </div>
+
+                  <a
+                    href={healthFairRegistration}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-7 inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                  >
+                    Pre-Register
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </CardContent>
+              </div>
+            </Card>
+
+            {/* November 14 Pet Health Fair */}
+            <Card className="overflow-hidden border-0 bg-white shadow-xl">
+              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+                <a
+                  href="/pet-health-fair-november-14.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the November 14 Pet Health Fair graphic at full size"
+                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+                >
+                  <Image
+                    src="/pet-health-fair-november-14.jpg"
+                    alt="Pet Health Fair on Saturday, November 14, 2026, at Northeast Branch Natchitoches Public Library"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                  />
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+
+                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+                    Saturday, November 14, 2026
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                    Pet Health Fair
+                  </h3>
+
+                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+                    9:00 a.m. - 12:00 p.m.
+                  </p>
+
+                  <p className="mt-4 text-xl font-bold text-[#0a1e3d]">
+                    Northeast Branch Natchitoches Public Library
+                  </p>
+
+                  <p className="mt-2 leading-7 text-gray-600">
+                    3129 Hwy. 71
+                    <br />
+                    Campti, LA 71411
+                  </p>
+
+                  <div className="mt-5 space-y-2 text-gray-600">
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Free vaccines:
+                      </span>{" "}
+                      DAPPv canine and HCP feline vaccines.
+                    </p>
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Rabies vaccines:
+                      </span>{" "}
+                      $10 for eligible cats and dogs.
+                    </p>
+                    <p>
+                      <span className="font-bold text-[#0a1e3d]">
+                        Microchips:
+                      </span>{" "}
+                      $15.
+                    </p>
+                  </div>
+
+                  <a
+                    href={healthFairRegistration}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-7 inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                  >
+                    Pre-Register
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </CardContent>
               </div>
             </Card>
 
@@ -461,3 +625,4 @@ export default function EventsPage() {
     </main>
   )
 }
+```
