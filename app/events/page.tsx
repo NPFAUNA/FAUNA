@@ -202,4 +202,82 @@ export default function EventsPage() {
                     </p>
 
                     <p>
-                      All proceeds benefit FAUNA&apos;s lifes
+                      All proceeds benefit FAUNA&apos;s lifesaving programs,
+                      including transport, medical care, and community outreach.
+                      Limited seating is available.
+                    </p>
+
+                    <p className="font-bold text-[#0a1e3d]">
+                      Reserve your spot and help us create a better future for
+                      animals in our parish.
+                    </p>
+
+                    <a
+                      href="https://FAUNAFarmToTable2026.eventbrite.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+                    >
+                      Reserve Your Seat
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
+                </CardContent>
+
+                <a
+                  href="/Farm_To_Table.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the Farm to Table event image at full size"
+                  className="group relative block min-h-[420px] cursor-zoom-in overflow-hidden bg-teal-50 lg:order-2"
+                >
+                  <Image
+                    src="/Farm_To_Table.jpg"
+                    alt="FAUNA Farm to Table Dinner event announcement"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-4 transition duration-300 group-hover:scale-[1.03]"
+                  />
+
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+              </div>
+            </Card>
+
+            {/* October 24 Pet Health Fair */}
+            <Card className="overflow-hidden border-0 bg-white shadow-xl">
+              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+                <a
+                  href="/pet-health-fair-october-24.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the October 24 Pet Health Fair graphic at full size"
+                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+                >
+                  <Image
+                    src="/pet-health-fair-october-24.jpg"
+                    alt="Pet Health Fair on Saturday, October 24, 2026, at Flying Heart Brewery"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                  />
+
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+
+                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+                    Saturday, October 24, 2026
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                    Pet Health Fair
+                  </h3>
+
+                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
