@@ -22,6 +22,40 @@ export const metadata: Metadata = {
     "Find FAUNA adoption events, community health fairs, fundraisers, volunteer opportunities, and other events in Natchitoches Parish.",
 }
 
+const healthFairRegistration =
+  "https://new.shelterluv.com/form/community/FAUN/14824-health-fair"
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/FaunaNatchitoches",
+    icon: Facebook,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/fauna_natchitoches/",
+    icon: Instagram,
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@faunanatchitochesrescue",
+    icon: Music2,
+  },
+]
+
+const eventPhotos = [
+  { src: "/Adoption_Event.jpg", alt: "FAUNA adoption event" },
+  {
+    src: "/pet-health-fair-october-24.jpg",
+    alt: "FAUNA Pet Health Fair",
+  },
+  {
+    src: "/Pub_Crawl.jpg",
+    alt: "FAUNA St. Patrick's Day Pub Crawl",
+  },
+  { src: "/Pet_Parade.jpg", alt: "FAUNA pet parade event" },
+]
+
 const eventTypes = [
   {
     title: "Adoption Events",
@@ -49,45 +83,108 @@ const eventTypes = [
   },
 ]
 
-const eventPhotos = [
-  {
-    src: "/Adoption_Event.jpg",
-    alt: "FAUNA adoption event",
-  },
-  {
-    src: "/pet-health-fair-october-24.jpg",
-    alt: "FAUNA Pet Health Fair",
-  },
-  {
-    src: "/Pub_Crawl.jpg",
-    alt: "FAUNA St. Patrick's Day Pub Crawl",
-  },
-  {
-    src: "/Pet_Parade.jpg",
-    alt: "FAUNA pet parade event",
-  },
-]
+type HealthFairProps = {
+  date: string
+  image: string
+  imageAlt: string
+  venue: string
+  street: string
+  city: string
+}
 
-const socialLinks = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/FaunaNatchitoches",
-    icon: Facebook,
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/fauna_natchitoches/",
-    icon: Instagram,
-  },
-  {
-    label: "TikTok",
-    href: "https://www.tiktok.com/@faunanatchitochesrescue",
-    icon: Music2,
-  },
-]
+function HealthFairCard({
+  date,
+  image,
+  imageAlt,
+  venue,
+  street,
+  city,
+}: HealthFairProps) {
+  return (
+    <Card className="overflow-hidden border-0 bg-white shadow-xl">
+      <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+        <a
+          href={image}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open the ${date} Pet Health Fair graphic at full size`}
+          className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+        >
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+          />
 
-const healthFairRegistration =
-  "https://new.shelterluv.com/form/community/FAUN/14824-health-fair"
+          <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+            <ZoomIn className="h-4 w-4" />
+            Click to Enlarge
+          </span>
+        </a>
+
+        <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+          <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+            Saturday, {date}
+          </p>
+
+          <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+            Pet Health Fair
+          </h3>
+
+          <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+            9:00 a.m. - 12:00 p.m.
+          </p>
+
+          <p className="mt-4 text-xl font-bold text-[#0a1e3d]">{venue}</p>
+
+          <p className="mt-2 leading-7 text-gray-600">
+            {street}
+            <br />
+            {city}
+          </p>
+
+          <div className="mt-5 space-y-3 text-gray-600">
+            <p>
+              <span className="font-bold text-[#0a1e3d]">
+                Free vaccines:
+              </span>{" "}
+              DAPPv canine and HCP feline vaccines.
+            </p>
+
+            <p>
+              <span className="font-bold text-[#0a1e3d]">
+                Rabies vaccines:
+              </span>{" "}
+              $10 for eligible cats and dogs, approximately 16 weeks and older.
+            </p>
+
+            <p>
+              <span className="font-bold text-[#0a1e3d]">Microchips:</span>{" "}
+              $15.
+            </p>
+
+            <p>
+              Please complete the registration form in advance to speed up
+              the process. The form can accommodate up to five pets.
+            </p>
+          </div>
+
+          <a
+            href={healthFairRegistration}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 inline-flex w-fit items-center rounded-lg bg-[#0099FF] px-6 py-3 font-bold text-white shadow-md transition hover:bg-[#007acc]"
+          >
+            Pre-Register
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </CardContent>
+      </div>
+    </Card>
+  )
+}
 
 export default function EventsPage() {
   return (
@@ -104,9 +201,9 @@ export default function EventsPage() {
           </h1>
 
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-200">
-            Join FAUNA at adoption events, Community Health Fairs,
-            fundraisers, volunteer activities, and other gatherings throughout
-            Natchitoches Parish.
+            Join FAUNA at adoption events, Community Health Fairs, fundraisers,
+            volunteer activities, and other gatherings throughout Natchitoches
+            Parish.
           </p>
         </div>
       </section>
@@ -247,37 +344,205 @@ export default function EventsPage() {
               </div>
             </Card>
 
-            {/* October 24 Pet Health Fair */}
-            <Card className="overflow-hidden border-0 bg-white shadow-xl">
-              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
-                <a
-                  href="/pet-health-fair-october-24.jpg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open the October 24 Pet Health Fair graphic at full size"
-                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
-                >
+            {/* October 24 Health Fair */}
+            <HealthFairCard
+              date="October 24, 2026"
+              image="/pet-health-fair-october-24.jpg"
+              imageAlt="Pet Health Fair on October 24, 2026, at Flying Heart Brewery"
+              venue="Flying Heart Brewery"
+              street="108 Mill Street"
+              city="Natchitoches, LA 71457"
+            />
+
+            {/* November 14 Health Fair */}
+            <HealthFairCard
+              date="November 14, 2026"
+              image="/pet-health-fair-november-14.jpg"
+              imageAlt="Pet Health Fair on November 14, 2026, at Northeast Branch Natchitoches Public Library"
+              venue="Northeast Branch Natchitoches Public Library"
+              street="3129 Hwy. 71"
+              city="Campti, LA 71411"
+            />
+
+            {/* St. Patrick's Day Pub Crawl */}
+            <Card className="overflow-hidden border-0 bg-[#0a1e3d] text-white shadow-xl">
+              <CardContent className="p-8 sm:p-10 lg:p-12">
+                <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-[#8AFF00] text-[#0a1e3d]">
+                    <CalendarDays className="h-10 w-10" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#33CCCC]">
+                      March 13, 2027
+                    </p>
+
+                    <h3 className="font-script mt-3 text-5xl text-white">
+                      10th Annual St. Patrick&apos;s Day Pub Crawl
+                    </h3>
+
+                    <div className="mt-5 space-y-4 leading-8 text-gray-200">
+                      <p>
+                        Come join us for a night of fun at the 10th Annual St.
+                        Patrick&apos;s Day Pub Crawl hosted by FAUNA.
+                      </p>
+
+                      <p>
+                        Get ready to hop between restaurants, bars, and shops
+                        in historic downtown Natchitoches, Louisiana, and enjoy
+                        great drink specials, music, shopping, and company.
+                      </p>
+
+                      <p>
+                        Visit all the stops on the Poker Run to fill out your
+                        card for a chance to win a big-screen television, and
+                        join in the costume contest as well.
+                      </p>
+
+                      <p>
+                        Don&apos;t miss a great way to have fun and support
+                        local rescue animals. We hope to see you there.
+                      </p>
+
+                      <p className="font-bold text-[#8AFF00]">
+                        A T-shirt is included with registration.
+                      </p>
+
+                      <p className="text-sm italic text-gray-300">
+                        Event takes place rain or shine.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-gray-600">
+              Registration links and additional event information will be
+              shared through FAUNA&apos;s social-media pages.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Gallery and Event Types */}
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="font-script text-4xl text-[#33CCCC]">
+              Gather for good
+            </p>
+
+            <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d]">
+              Events You May See from FAUNA
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-6 sm:grid-cols-4">
+            {eventPhotos.map((photo) => (
+              <div key={photo.src} className="mx-auto w-full max-w-[220px]">
+                <div className="relative aspect-square overflow-hidden rounded-full border-8 border-sky-50 bg-sky-100 shadow-xl">
                   <Image
-                    src="/pet-health-fair-october-24.jpg"
-                    alt="Pet Health Fair on Saturday, October 24, 2026, at Flying Heart Brewery"
+                    src={photo.src}
+                    alt={photo.alt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 45vw, 220px"
+                    className="object-cover transition duration-300 hover:scale-105"
                   />
+                </div>
+              </div>
+            ))}
+          </div>
 
-                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
-                    <ZoomIn className="h-4 w-4" />
-                    Click to Enlarge
-                  </span>
-                </a>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {eventTypes.map(({ title, description, icon: Icon }) => (
+              <Card key={title} className="border-0 shadow-md">
+                <CardContent className="p-7">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8AFF00]/25">
+                    <Icon className="h-7 w-7 text-[#0a1e3d]" />
+                  </div>
 
-                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
-                    Saturday, October 24, 2026
-                  </p>
-
-                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
-                    Pet Health Fair
+                  <h3 className="mt-5 text-xl font-extrabold text-[#0a1e3d]">
+                    {title}
                   </h3>
 
-                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    {description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media and Volunteering */}
+      <section className="bg-sky-50 px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
+          <Card className="border-0 bg-[#0a1e3d] text-white shadow-xl">
+            <CardContent className="p-8">
+              <p className="font-script text-4xl text-[#8AFF00]">
+                Follow along
+              </p>
+
+              <h2 className="mt-2 text-2xl font-extrabold">
+                Follow Us on Social Media
+              </h2>
+
+              <p className="mt-4 leading-7 text-gray-200">
+                See event announcements, adoptable animals, volunteer
+                opportunities, community updates, and stories from animals in
+                FAUNA&apos;s care.
+              </p>
+
+              <div className="mt-6 space-y-3">
+                {socialLinks.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-xl bg-white/10 px-5 py-4 font-bold transition hover:bg-white/20"
+                  >
+                    <span className="flex items-center gap-3">
+                      <Icon className="h-6 w-6 text-[#8AFF00]" />
+                      Follow FAUNA on {label}
+                    </span>
+
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-[#33CCCC]/15 shadow-xl">
+            <CardContent className="p-8">
+              <p className="font-script text-4xl text-[#0099FF]">
+                Lend a hand
+              </p>
+
+              <h2 className="mt-2 text-2xl font-extrabold text-[#0a1e3d]">
+                Volunteer at FAUNA Events
+              </h2>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Volunteers help with setup, animal care, adoption tables,
+                Community Health Fair activities, cleanup, transportation, and
+                welcoming guests.
+              </p>
+
+              <Link href="/volunteer">
+                <Button className="mt-6 bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+                  Volunteer with FAUNA
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    </main>
+  )
+}
