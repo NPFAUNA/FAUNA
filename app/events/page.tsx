@@ -1,7 +1,6 @@
-```tsx
+
 import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 import {
   CalendarDays,
   ExternalLink,
@@ -314,3 +313,134 @@ export default function EventsPage() {
 
                       <p>
                         Get ready to hop between restaurants, bars, and shops
+                        while supporting FAUNA&apos;s mission to help animals
+                        in need throughout Natchitoches Parish.
+                      </p>
+                    </div>
+
+                    <div className="mt-8">
+                      <a
+                        href="https://www.facebook.com/FaunaNatchitoches"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-lg bg-[#8AFF00] px-6 py-3 font-bold text-[#0a1e3d] transition hover:bg-[#76dc00]"
+                      >
+                        Follow Us for Event Updates
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Types of Events */}
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="font-script text-4xl text-[#33CCCC]">
+              Get involved
+            </p>
+
+            <h2 className="mt-2 text-3xl font-extrabold text-[#0a1e3d]">
+              More Ways to Join FAUNA
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-3xl leading-7 text-gray-600">
+              Follow our social-media pages for announcements about upcoming
+              activities and opportunities to support local animals.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {eventTypes.map(({ title, description, icon: Icon }) => (
+              <Card
+                key={title}
+                className="border border-gray-100 shadow-sm transition hover:shadow-md"
+              >
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#8AFF00]/30 text-[#0a1e3d]">
+                    <Icon className="h-6 w-6" />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-[#0a1e3d]">
+                    {title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-gray-600">
+                    {description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Event Photo Gallery */}
+      <section className="bg-sky-50 px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-extrabold text-[#0a1e3d]">
+              FAUNA in the Community
+            </h2>
+
+            <p className="mt-3 text-gray-600">
+              Thank you for being part of our community and supporting animals
+              in need.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {eventPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-square overflow-hidden rounded-2xl bg-white shadow-sm"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Call to Action */}
+      <section className="bg-gradient-to-br from-[#061424] to-[#0a1e3d] px-6 py-16 text-center text-white">
+        <div className="mx-auto max-w-3xl">
+          <PawPrint className="mx-auto h-12 w-12 text-[#8AFF00]" />
+
+          <h2 className="mt-5 text-3xl font-extrabold">
+            Be Part of the FAUNA Community
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-200">
+            Every event helps us support animals and the people who care for
+            them. Follow FAUNA online for the latest announcements.
+          </p>
+
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <a
+              href="https://www.facebook.com/FaunaNatchitoches"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-[#0099FF] font-bold text-white hover:bg-[#007acc]">
+                Follow FAUNA
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
