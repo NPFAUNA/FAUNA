@@ -108,7 +108,7 @@ function HealthFairCard({
           href={image}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Open the ${date} Pet Health Fair graphic at full size`}
+          aria-label={"Open the " + date + " Pet Health Fair graphic at full size"}
           className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
         >
           <Image
