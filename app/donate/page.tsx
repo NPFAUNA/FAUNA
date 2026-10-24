@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -164,6 +165,37 @@ export default function DonatePage() {
         </div>
       </section>
 
+      {/* PayPal and Venmo */}
+      <section className="border-y border-sky-100 bg-[#33CCCC] py-14 text-white">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
+            <ScriptTitle title="Donate via PayPal or Venmo" />
+          </h2>
+
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="https://www.paypal.com/donate/?hosted_button_id=7KDF67TNWVHLL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="h-auto bg-[#003087] px-8 py-4 text-base font-bold text-white hover:bg-[#00256e]">
+                Donate via PayPal
+              </Button>
+            </Link>
+
+            <Link
+              href="https://account.venmo.com/u/NPFauna"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="h-auto bg-[#3D95CE] px-8 py-4 text-base font-bold text-white hover:bg-[#3080b0]">
+                Donate via Venmo @NPFauna
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Square Donate */}
       <section className="bg-gradient-to-r from-[#1DA1F2] via-[#2CBFD3] to-[#33CCCC] py-16">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
@@ -209,44 +241,6 @@ export default function DonatePage() {
                 If you wish to Donate &quot;In Memory/Honor&quot; of someone, see link below.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PayPal and Venmo */}
-      <section className="border-y border-sky-100 bg-[#33CCCC] py-14 text-white">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="font-script text-4xl text-[#0a1e3d] sm:text-5xl">
-            <ScriptTitle title="Donate via PayPal or Venmo" />
-          </h2>
-
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="https://www.paypal.com/donate/?hosted_button_id=7KDF67TNWVHLL"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="h-auto bg-[#003087] px-8 py-4 text-base font-bold text-white hover:bg-[#00256e]">
-                Donate via PayPal
-              </Button>
-            </Link>
-
-            <Link
-              href="https://account.venmo.com/u/NPFauna"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="h-auto bg-[#3D95CE] px-8 py-4 text-base font-bold text-white hover:bg-[#3080b0]">
-                <Image
-                  src="/Venmo.png"
-                  alt="Venmo"
-                  width={24}
-                  height={24}
-                  className="mr-2 h-6 w-6 rounded-full"
-                />
-                Donate via Venmo @NPFauna
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
