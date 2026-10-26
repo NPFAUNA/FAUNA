@@ -268,15 +268,6 @@ export default function EventsPage() {
           </div>
 
           <div className="mt-12 space-y-10">
-            {/* October 24 Health Fair */}
-            <HealthFairCard
-              date="October 24, 2026"
-              image="/pet-health-fair-october-24.jpg"
-              imageAlt="Pet Health Fair on October 24, 2026, at Flying Heart Brewery"
-              venue="Flying Heart Brewery"
-              street="108 Mill Street"
-              city="Natchitoches, LA 71457"
-            />
 
             {/* November 14 Health Fair */}
             <HealthFairCard
