@@ -279,6 +279,124 @@ export default function EventsPage() {
               city="Campti, LA 71411"
             />
 
+            {/* Fleur de Lis Christmas Craft Market */}
+            <Card className="overflow-hidden border-0 bg-white shadow-xl">
+              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+                <a
+                  href="/FDL-2026.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the Fleur de Lis Christmas Craft Market flyer"
+                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+                >
+                  <Image
+                    src="/FDL-2026.png"
+                    alt="Fleur de Lis Christmas Craft Market flyer"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                  />
+
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+
+                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+                    Saturday, November 28, 2026
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                    Fleur de Lis Christmas Craft Market
+                  </h3>
+
+                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+                    9:00 a.m. - 4:30 p.m.
+                  </p>
+
+                  <p className="mt-4 text-xl font-bold text-[#0a1e3d]">
+                    Natchitoches Event Center
+                  </p>
+
+                  <div className="mt-5 space-y-3 leading-7 text-gray-600">
+                    <p>
+                      Visit the FAUNA booth at the Fleur de Lis Christmas
+                      Craft Market!
+                    </p>
+
+                    <p>
+                      Stop by for coffee, a hot cocoa bar, water, FAUNA
+                      T-shirts and socks, pet treats, and baked goods.
+                    </p>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+
+            {/* Jazz for Pups (& Cats) */}
+            <Card className="overflow-hidden border-0 bg-white shadow-xl">
+              <div className="grid items-stretch lg:grid-cols-[0.95fr_1.05fr]">
+                <a
+                  href="/Jazz-for-Pups-2026.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the Jazz for Pups and Cats concert flyer"
+                  className="group relative block min-h-[320px] cursor-zoom-in overflow-hidden bg-white sm:min-h-[400px]"
+                >
+                  <Image
+                    src="/Jazz-for-Pups-2026.png"
+                    alt="Jazz for Pups and Cats holiday benefit concert flyer"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-contain p-3 transition duration-300 group-hover:scale-[1.02]"
+                  />
+
+                  <span className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#0a1e3d]/90 px-4 py-2 text-xs font-bold text-white shadow-lg">
+                    <ZoomIn className="h-4 w-4" />
+                    Click to Enlarge
+                  </span>
+                </a>
+
+                <CardContent className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#0099FF]">
+                    Monday, December 7, 2026
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-extrabold text-[#0a1e3d] sm:text-4xl">
+                    Jazz for Pups (&amp; Cats)
+                  </h3>
+
+                  <p className="mt-4 text-lg font-bold text-[#33CCCC]">
+                    7:00 p.m. - 9:00 p.m.
+                  </p>
+
+                  <p className="mt-4 text-xl font-bold text-[#0a1e3d]">
+                    Flying Heart Brewing
+                  </p>
+
+                  <div className="mt-5 space-y-3 leading-7 text-gray-600">
+                    <p>
+                      Enjoy a holiday benefit concert featuring the NSU Jazz
+                      Combos!
+                    </p>
+
+                    <p>
+                      Admission is free, but donations to FAUNA are
+                      appreciated. We will also be collecting donations and
+                      selling FAUNA merchandise.
+                    </p>
+
+                    <p>
+                      Suggested donations include dog food, treats, toys,
+                      cash, checks, and Venmo.
+                    </p>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+
             {/* St. Patrick's Day Pub Crawl */}
             <Card className="overflow-hidden border-0 bg-[#0a1e3d] text-white shadow-xl">
               <CardContent className="p-8 sm:p-10 lg:p-12">
